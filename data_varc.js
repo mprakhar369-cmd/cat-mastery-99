@@ -1,0 +1,140 @@
+window.VARC_MODULES_DATA = [
+  {
+    "id": "varc_parasummary",
+    "title": "Parasummary: The Scope Filter Protocol",
+    "tier": "Tier S",
+    "weightage": "2 \u2013 3 Questions (6 \u2013 9 Marks)",
+    "prepTime": "1.5 Hours",
+    "theoryHtml": "<h4>The Scope Filter Protocol</h4><p>A true summary covers the author's primary premise and mandatory conclusion in under 100 words. Apply the 3 Scope Elimination Filters:</p><ul><li><strong>Too Narrow:</strong> Mentions an illustrative detail from body paragraphs but drops the conclusion.</li><li><strong>Too Broad:</strong> Over-generalizes the scope beyond the stated experiment or demographic.</li><li><strong>Distorted:</strong> Replaces tentative claims ('may lead to') with absolute causality ('causes').</li></ul>",
+    "drills": [
+      {
+        "id": "PS_01",
+        "paragraph": "Artificial intelligence systems trained on historical lending data frequently reproduce socioeconomic disparities in credit approval. While developers often sanitize explicit protected attributes such as race and gender, deep neural architectures readily infer latent proxy variables\u2014such as ZIP codes, school names, and shopping patterns\u2014which closely correlate with marginalized communities. Consequently, algorithmic impartiality cannot be achieved merely by scrubbing sensitive demographic labels from training sets.",
+        "options": [
+          "A) AI credit systems reproduce historical disparities because developers fail to include race and gender labels in training algorithms.",
+          "B) Algorithmic impartiality in lending cannot be achieved simply by removing demographic labels, as deep neural networks easily reconstruct proxies from correlated non-sensitive data.",
+          "C) Deep neural architectures are fundamentally unsuitable for credit evaluation due to inherent demographic biases in historical training sets.",
+          "D) Scrubbing ZIP codes and shopping patterns is the only reliable engineering method to eliminate bias in automated loan processing."
+        ],
+        "correctAnswer": "B",
+        "explanation": "Option B perfectly captures both the mechanism (latent proxies in correlated data) and the author's conclusion (scrubbing labels is insufficient). A is factually inverted. C is overly broad and fatalistic. D asserts a false claim directly contradicted by the text.",
+        "shortcut": "Look for the sentence with 'Consequently' or 'Therefore' \u2014 Option B mirrors the final sentence while retaining the proxy mechanism.",
+        "trap": "Option A inverts causality; always check the causal direction of nouns!"
+      },
+      {
+        "id": "PS_02",
+        "paragraph": "Biologists long regarded cellular senescence\u2014the irreversible cessation of cell division\u2014primarily as an evolved defense against malignant tumor growth. By permanently disarming damaged cells, senescence prevents unchecked oncogenic proliferation. However, recent discoveries demonstrate that senescent cells remain metabolically hyperactive, secreting a cocktail of inflammatory cytokines termed the SASP. In aging tissue, the chronic accumulation of these non-cleared senescent cells paradoxically degrades extracellular matrix and fosters microenvironments favorable to late-life carcinogenesis.",
+        "options": [
+          "A) Cellular senescence, initially identified as an anticancer mechanism, paradoxically promotes tissue decay and late-life cancer due to the chronic accumulation of inflammatory secretions.",
+          "B) Senescent cells prevent cancer by ceasing cellular division, rendering them inert and harmless in aging tissues.",
+          "C) The SASP cocktail is the primary biological driver of tumor development in young organisms with active cell division.",
+          "D) Eliminating cellular senescence is necessary to ensure that human cells continue dividing without oncogenic risks."
+        ],
+        "correctAnswer": "A",
+        "explanation": "Option A accurately synthesizes the evolutionary dual nature: cancer prevention in youth vs. tissue degradation and late-life carcinogenesis via SASP. B is contradicted ('metabolically hyperactive'). C invents 'young organisms'. D is unscientific extrapolation.",
+        "shortcut": "The passage pivots on 'However'. The correct summary must synthesize both sides of the 'However' pivot.",
+        "trap": "Selecting Option B because Paragraph 1 starts with tumor defense."
+      }
+    ],
+    "videoLecture": {
+      "title": "Rodha VARC: Parasummary The Scope Filter Protocol",
+      "directUrl": "https://www.youtube.com/results?search_query=Rodha+CAT+VARC+Parasummary+Ravi+Prakash",
+      "embedUrl": "https://www.youtube-nocookie.com/embed/videoseries?list=PLG4bwc5fquzgfMh4YFDnv7fttM0RIKiUQ",
+      "highlight": "Narrow, Broad & Distorted Option Elimination Protocols",
+      "duration": "Complete Masterclass \u2022 4 Parts"
+    }
+  },
+  {
+    "id": "varc_insertion",
+    "title": "Sentence Insertion & Para-Completion",
+    "tier": "Tier S",
+    "weightage": "2 Questions (6 Marks)",
+    "prepTime": "1.5 Hours",
+    "theoryHtml": "<h4>Grammatical Tracking & Two-Way Continuity</h4><p>When inserting a sentence into numbered slots [1], [2], [3], [4], verify both connections:</p><ul><li><strong>Backward Link:</strong> If the inserted sentence starts with 'This discrepancy...', the prior sentence MUST define a numerical or factual conflict.</li><li><strong>Forward Link:</strong> The sentence immediately following the chosen slot must not break logical coherence.</li></ul>",
+    "drills": [
+      {
+        "id": "SI_01",
+        "sentenceToInsert": "This apparent contradiction dissolves when one distinguishes between nominal gross domestic product and genuine median household purchasing power.",
+        "passage": "Over the past two decades, national economic indicators consistently reported record-breaking industrial output and steady macro growth. [1] Financial analysts celebrated what appeared to be an unprecedented era of widespread national prosperity. [2] Yet consumer confidence surveys and household savings metrics over the identical period revealed widespread financial anxiety and stagnant living standards. [3] The top decile captured nearly all productivity gains through asset appreciation, while basic costs of housing and healthcare escalated far faster than typical wages. [4]",
+        "correctAnswer": "[3]",
+        "explanation": "Slot [3] is the only valid location. The 'apparent contradiction' refers directly to the conflict between macro prosperity in [2] and household stagnation in the sentence preceding [3]. The sentence immediately following [3] explains why the distinction between nominal GDP and median purchasing power matters.",
+        "shortcut": "Locate the noun behind 'This apparent contradiction'. The contradiction is stated between [2] and [3].",
+        "trap": "Placing it at [1] before the contradiction is even introduced."
+      }
+    ]
+  },
+  {
+    "id": "varc_pj",
+    "title": "TITA Parajumbles & Odd-One-Out (Zero Negative Marks)",
+    "tier": "Tier S",
+    "weightage": "3 Questions (9 Marks | Pure Upside)",
+    "prepTime": "2.0 Hours",
+    "theoryHtml": "<h4>The Mandatory Pair (MP) Protocol</h4><p>In TITA parajumbles, incorrect answers carry 0 negative marks. Always locate pairs first:</p><ul><li><strong>Acronym to Full Form:</strong> 'National Aeronautics and Space Administration' precedes 'NASA'.</li><li><strong>Demonstrative Pronoun Link:</strong> 'Such policies...' must immediately follow the sentence enumerating the policies.</li><li><strong>Chronology:</strong> Historical precedent precedes contemporary outcome.</li></ul>",
+    "drills": [
+      {
+        "id": "PJ_01",
+        "sentences": [
+          "1. Modern urban planners, however, are rediscovering that permeable surfaces and wetlands mitigate storm runoff far more economically than subterranean concrete channels.",
+          "2. Throughout the twentieth century, civil engineers prioritized concrete conduits designed to rapidly evacuate stormwater from municipal centers into neighboring river basins.",
+          "3. This conventional 'gray infrastructure' paradigm regarded rainwater strictly as a municipal hazard to be eliminated rather than a resource to be retained.",
+          "4. Known as 'sponge city' design, this bio-mimetic approach integrates green roofs, bioswales, and urban floodplains to capture and recharge local aquifers."
+        ],
+        "correctAnswer": "2314",
+        "explanation": "Sentence 2 introduces the historical twentieth-century concrete conduits. Sentence 3 directly refers to this as 'This conventional gray infrastructure paradigm' (Mandatory Pair 2-3). Sentence 1 introduces the modern contrast with 'however'. Sentence 4 explains 'this bio-mimetic approach' introduced in 1 (Mandatory Pair 1-4). Final order: 2-3-1-4.",
+        "shortcut": "Mandatory Pair 2-3 (concrete conduits -> gray infrastructure) and 1-4 (permeable wetlands -> sponge city biomimetic approach).",
+        "trap": "Placing 1 as opening sentence despite the contrast marker 'however'."
+      }
+    ]
+  },
+  {
+    "id": "varc_main_idea",
+    "title": "RC Question Archetype: Main Idea & Central Theme",
+    "tier": "Tier A",
+    "weightage": "3 \u2013 4 Questions (9 \u2013 12 Marks)",
+    "prepTime": "2.0 Hours",
+    "theoryHtml": "<h4>The Headline Rule</h4><p>To identify the main idea: combine the Opening Hook (Paragraph 1) with the Author's Final Verdict (Final Paragraph). Eliminate options that are merely true facts from one paragraph.</p>",
+    "drills": [
+      {
+        "id": "RC_MI_01",
+        "context": "Short RC Passage Excerpt on Neuroplasticity & Synaptic Pruning in Developmental Psychology.",
+        "question": "Which of the following best expresses the primary purpose of the author?",
+        "options": [
+          "A) To argue that synaptic pruning during adolescence is not merely a loss of neural connections, but an adaptive optimization process essential for cognitive maturity.",
+          "B) To explain how neural connections grow in childhood through sensory stimulation.",
+          "C) To critique older neurological imaging techniques that failed to distinguish between gray matter volume and white matter myelination.",
+          "D) To prove that adolescents suffer from irrational risk-taking due to underdeveloped prefrontal cortices."
+        ],
+        "correctAnswer": "A",
+        "explanation": "Option A captures the overarching thesis: reframing pruning from a deficit to an adaptive optimization. B, C, and D are isolated secondary claims.",
+        "shortcut": "The thesis always reframes a common misconception. Notice the contrast ('not merely X, but Y').",
+        "trap": "Option D is a popular pop-psychology claim, but too narrow for the passage's neurological focus."
+      }
+    ]
+  },
+  {
+    "id": "varc_rc_science",
+    "title": "RC Passages: Science & Business Architecture",
+    "tier": "Tier A",
+    "weightage": "2 Full Passages (8 Qs | 24 Marks)",
+    "prepTime": "2.5 Hours",
+    "theoryHtml": "<h4>The Problem-Mechanism-Outcome Framework</h4><p>Science and business articles follow linear causal structures. Map them with 3 bullet words per paragraph on your scratchpad to locate all factual answers in under 15 seconds.</p>",
+    "drills": [
+      {
+        "id": "RC_SCI_01",
+        "passageTitle": "CRISPR-Cas9 Off-Target Kinetics and High-Fidelity Engineered Nucleases",
+        "passageText": "The clinical promise of CRISPR-Cas9 genome editing hinges critically on absolute target specificity. While the standard Streptococcus pyogenes Cas9 nuclease reliably recognizes its 20-nucleotide guide RNA sequence adjacent to an NGG protospacer adjacent motif (PAM), it tolerates non-negligible base mismatches across non-seed regions. In therapeutic human applications, these off-target cleavages risk disrupting tumor suppressor genes or inducing genomic translocations. Recent breakthroughs have yielded engineered 'high-fidelity' Cas9 variants (such as SpCas9-HF1 and eSpCas9) that alter contacts with the target DNA strand. By weakening non-specific electrostatic interactions, these engineered nucleases require stringent, perfect guide-target complementarity before undergoing the conformational switch necessary for DNA cleavage, thereby suppressing off-target editing below detectable thresholds while preserving on-target efficacy.",
+        "question": "According to the passage, high-fidelity Cas9 variants achieve improved specificity primarily by:",
+        "options": [
+          "A) Increasing the length of the guide RNA from 20 nucleotides to 30 nucleotides.",
+          "B) Weakening non-specific electrostatic interactions so that conformational activation demands perfect guide-target complementarity.",
+          "C) Replacing the NGG protospacer adjacent motif with an alternative sequence that does not recognize human DNA.",
+          "D) Accelerating the speed of DNA cleavage before mismatched bases can bind to the nuclease."
+        ],
+        "correctAnswer": "B",
+        "explanation": "Option B is explicitly verified in the text: 'By weakening non-specific electrostatic interactions, these engineered nucleases require stringent, perfect guide-target complementarity before undergoing the conformational switch...'.",
+        "shortcut": "Search for 'high-fidelity' in your paragraph map and read the mechanism sentence directly.",
+        "trap": "Option A sounds like a plausible engineering fix, but is nowhere mentioned in the text."
+      }
+    ]
+  }
+];

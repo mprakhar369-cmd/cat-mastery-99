@@ -1,0 +1,57 @@
+{
+  "name": "CAT Mastery 99 - Rapid Exam Accelerator",
+  "short_name": "CAT 99",
+  "id": "/cat-mastery-99/",
+  "description": "High-velocity CAT exam preparation PWA covering 100% Arithmetic, Algebra, DILR, and VARC with Rodha shortcuts, 60s Speed Cardio, and Chook Diary.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#050811",
+  "theme_color": "#050811",
+  "icons": [
+    {
+      "src": "./icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "./icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "60s Speed Math Cardio",
+      "short_name": "Cardio",
+      "description": "Fast-fire mental math calculation drills",
+      "url": "./index.html#cardio",
+      "icons": [{ "src": "./icons/icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Chook Diary Due Today",
+      "short_name": "Chook Diary",
+      "description": "Review Spaced Repetition Blunder Vault",
+      "url": "./index.html#diary",
+      "icons": [{ "src": "./icons/icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "CAT Virtual Calculator",
+      "short_name": "Calculator",
+      "description": "Official TCS iON CAT on-screen calculator",
+      "url": "./index.html#calculator",
+      "icons": [{ "src": "./icons/icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "40-Min Sectional Mock",
+      "short_name": "CBT Mock",
+      "description": "Real exam condition sectional simulator",
+      "url": "./index.html#mock",
+      "icons": [{ "src": "./icons/icon-192.png", "sizes": "192x192" }]
+    }
+  ],
+  "categories": ["education", "productivity", "utilities"]
+}

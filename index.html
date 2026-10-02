@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>CAT Mastery 99 - Rapid Exam Accelerator (QA, DILR, VARC)</title>
+  <meta name="description" content="High-velocity CAT exam preparation PWA covering high-yield Tier S and Tier A topics with the 4-phase sprint engine, Rodha shortcuts, and Chook Diary." />
+  <link rel="manifest" href="./manifest.json" />
+  <meta name="theme-color" content="#050811" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="CAT Mastery 99" />
+  <link rel="apple-touch-icon" href="./icons/icon-192.png" />
+
+  <!-- Google Fonts: Outfit (Display), Plus Jakarta Sans (Headings), Inter & JetBrains Mono (Numbers/Code) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- KaTeX CSS & JS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css" />
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js"></script>
+
+  <!-- PWA Stylesheet -->
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+
+  <!-- =========================================================================
+       SIDEBAR NAVIGATION
+       ========================================================================= -->
+  <aside id="sidebar">
+    <div class="brand-header">
+      <div class="brand-icon">99</div>
+      <div>
+        <div class="brand-title">CAT Mastery</div>
+        <span class="brand-badge">99th %ile Sprint</span>
+      </div>
+    </div>
+
+    <ul class="nav-links">
+      <li class="nav-item">
+        <button id="nav-dashboard" class="active" onclick="switchView('dashboard')">
+          <span>🚀</span> Dashboard
+        </button>
+      </li>
+      <li class="nav-item">
+        <button id="nav-sprint" onclick="switchView('sprint')">
+          <span>⚡</span> 4-Phase Sprint Engine
+        </button>
+      </li>
+
+      <div class="nav-section-title">Curriculum Hubs (Tier S & A)</div>
+      <li class="nav-item">
+        <button id="nav-qa" onclick="switchView('qa')">
+          <span>📐</span> Quant (17 Topics)
+        </button>
+      </li>
+      <li class="nav-item">
+        <button id="nav-dilr" onclick="switchView('dilr')">
+          <span>🧩</span> DILR (6 Archetypes)
+        </button>
+      </li>
+      <li class="nav-item">
+        <button id="nav-varc" onclick="switchView('varc')">
+          <span>📖</span> VARC (5 Modules)
+        </button>
+      </li>
+
+      <div class="nav-section-title">Speed & Review Tools</div>
+      <li class="nav-item">
+        <button id="nav-diary" onclick="switchView('diary')">
+          <span>📔</span> Chook Diary (Error Log)
+        </button>
+      </li>
+      <li class="nav-item">
+        <button id="nav-formulas" onclick="switchView('formulas')">
+          <span>🗂️</span> Formula Flashcards
+        </button>
+      </li>
+      <li class="nav-item">
+        <button id="nav-mock" onclick="switchView('mock')">
+          <span>⏱️</span> CBT Sectional Mock
+        </button>
+      </li>
+    </ul>
+
+    <div class="sidebar-footer">
+      <button class="btn-install-pwa" style="display:flex; margin-bottom:8px; background:rgba(56,189,248,0.12); border:1px solid rgba(56,189,248,0.3); color:#7dd3fc; cursor:pointer;" onclick="openMobileQrModal()">
+        <span>📱</span> Open on Phone (QR)
+      </button>
+      <button id="btn-install-app" class="btn-install-pwa" style="display:none;" onclick="triggerPwaInstall()">
+        <span>📲</span> Install CAT 99 App
+      </button>
+    </div>
+  </aside>
+
+  <!-- =========================================================================
+       MAIN CONTENT CONTAINER
+       ========================================================================= -->
+  <main id="main-container">
+    <!-- Top Header: Linear Cockpit Style -->
+    <header id="top-header">
+      <div class="header-left">
+        <button class="btn-mobile-menu" onclick="toggleMobileSidebar()" aria-label="Toggle navigation">☰</button>
+        <h1 class="view-title" id="page-header-title">Dashboard & Sprint Hub</h1>
+      </div>
+      
+      <!-- Linear-Style Quick Command Search Bar -->
+      <div class="header-center">
+        <button class="header-search-bar" onclick="openSearchModal()" title="Quick Jump (Ctrl+K)">
+          <span style="opacity:0.8;">🔍</span>
+          <span class="search-placeholder">Jump to topic, caselet, or formula...</span>
+          <kbd class="search-kbd">Ctrl K</kbd>
+        </button>
+      </div>
+
+      <div class="header-right">
+        <!-- Live PWA Network Status -->
+        <div id="pwa-network-badge" class="network-badge online" title="PWA Service Worker Active">
+          <span class="status-dot"></span>
+          <span id="network-status-text">Online</span>
+        </div>
+        <div class="badge-target">🎯 Target: 30+ M (99%ile)</div>
+      </div>
+    </header>
+
+    <!-- 1. DASHBOARD VIEW (APPLE TITANIUM BENTO GRID) -->
+    <section id="view-dashboard" class="view-panel active">
+      
+      <!-- Bento Grid Top Row: Welcome Banner + Streak + Spaced Repetition -->
+      <div class="bento-grid-hero">
+        
+        <!-- Tile 1: Welcome Greeting -->
+        <div class="bento-card bento-welcome">
+          <div>
+            <div class="bento-badge-pill">
+              <span class="pulse-dot-amber"></span>
+              <span>Target: 99th Percentile (30+ Marks)</span>
+            </div>
+            <h2>Good Day, CAT Aspirant</h2>
+            <p>Master the top 19 Tier S & A topics across Quant, DILR, and VARC (~150 exam marks) with Ravi Prakash Sir's 4-phase sprint engine.</p>
+          </div>
+          <div class="bento-welcome-actions">
+            <button class="btn-bento-primary" onclick="switchView('qa')">📐 Explore Quant Hub</button>
+            <button class="btn-bento-secondary" onclick="openSearchModal()">🔍 Quick Jump (Ctrl+K)</button>
+          </div>
+        </div>
+
+        <!-- Tile 2: Daily Study Streak -->
+        <div class="bento-card bento-streak">
+          <div class="bento-card-header">
+            <span class="bento-label">Daily Streak</span>
+            <span class="streak-flame-icon">🔥</span>
+          </div>
+          <div class="streak-main">
+            <div class="streak-days" id="streak-days-count">45 Days</div>
+            <div class="streak-flames">🔥🔥🔥🔥🔥</div>
+          </div>
+          <div class="streak-subtext">Active Sprint Habit • Top 1% Discipline</div>
+        </div>
+
+        <!-- Tile 3: Spaced Repetition Due Today -->
+        <div class="bento-card bento-due-card" id="bento-due-box" onclick="reviewDueTodayErrors()">
+          <div class="bento-card-header">
+            <span class="bento-label" style="color:var(--accent-amber);">⚠️ Spaced Repetition</span>
+            <span class="bento-due-pill" id="bento-due-pill-count">0 Due</span>
+          </div>
+          <div class="due-card-body">
+            <div class="due-card-title"><span id="bento-due-number">0</span> Cards Due</div>
+            <div class="due-progress-track">
+              <div class="due-progress-fill" id="bento-due-progress" style="width: 35%;"></div>
+            </div>
+            <div class="due-card-footer">
+              <span>Decay: T+1, T+7, T+21</span>
+              <span class="due-action-link">Review Now ➔</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bento Grid Special: Daily 15-Min Power Challenge (Inspired by Percentyl & MasterExams) -->
+      <div class="bento-challenge-tile">
+        <div class="challenge-content">
+          <div class="challenge-badge-row">
+            <span class="bento-badge-amber">⚡ Daily 15-Min Workout</span>
+            <span class="hotkey-pill" style="color:var(--accent-cyan); border-color:rgba(56,189,248,0.3);">1 RC • 1 DILR • 4 QA</span>
+            <span class="bento-badge-cyan" id="daily-challenge-status">Available Today</span>
+          </div>
+          <div class="challenge-title">Daily CAT 99 Power Workout</div>
+          <div class="challenge-desc">Complete today's curated micro-sprint (1 Reading Comprehension passage, 1 DILR deduction caselet, and 4 high-yield Quant problems) to build full-exam stamina and advance your streak.</div>
+        </div>
+        <div>
+          <button class="btn-launch-challenge" onclick="launchDaily15MinChallenge()">
+            🚀 Start Today's Challenge →
+          </button>
+        </div>
+      </div>
+
+      <!-- Bento Grid Middle Row: Circular Progress Rings + Speed Math Cardio -->
+      <div class="bento-grid-middle">
+        
+        <!-- Tile 4: Circular Progress Rings ("My Learning Progress") -->
+        <div class="bento-card bento-progress-tile">
+          <div class="bento-card-header">
+            <div>
+              <div class="bento-tile-title">My Learning Progress</div>
+              <div class="bento-tile-sub">Curriculum Mastery & Sectional Target Readiness</div>
+            </div>
+            <button class="tag-pill-btn" onclick="switchView('formulas')" style="font-size:0.75rem;">Formula Cards</button>
+          </div>
+          <div class="progress-rings-container">
+            <!-- Ring 1: Quant -->
+            <div class="ring-item">
+              <div class="ring-svg-wrapper">
+                <svg viewBox="0 0 100 100" class="progress-ring-svg">
+                  <circle cx="50" cy="50" r="42" class="ring-bg"></circle>
+                  <circle cx="50" cy="50" r="42" class="ring-val ring-quant" style="stroke-dashoffset: 45;"></circle>
+                </svg>
+                <div class="ring-center-text">
+                  <span class="ring-pct">88%</span>
+                </div>
+              </div>
+              <div class="ring-lbl">Quant Mastery</div>
+              <div class="ring-sub">17 Topics Covered</div>
+            </div>
+
+            <!-- Ring 2: DILR -->
+            <div class="ring-item">
+              <div class="ring-svg-wrapper">
+                <svg viewBox="0 0 100 100" class="progress-ring-svg">
+                  <circle cx="50" cy="50" r="42" class="ring-bg"></circle>
+                  <circle cx="50" cy="50" r="42" class="ring-val ring-dilr" style="stroke-dashoffset: 92;"></circle>
+                </svg>
+                <div class="ring-center-text">
+                  <span class="ring-pct">65%</span>
+                </div>
+              </div>
+              <div class="ring-lbl">DILR Accuracy</div>
+              <div class="ring-sub">6 Archetypes Solved</div>
+            </div>
+
+            <!-- Ring 3: VARC -->
+            <div class="ring-item">
+              <div class="ring-svg-wrapper">
+                <svg viewBox="0 0 100 100" class="progress-ring-svg">
+                  <circle cx="50" cy="50" r="42" class="ring-bg"></circle>
+                  <circle cx="50" cy="50" r="42" class="ring-val ring-varc" style="stroke-dashoffset: 120;"></circle>
+                </svg>
+                <div class="ring-center-text">
+                  <span class="ring-pct">54%</span>
+                </div>
+              </div>
+              <div class="ring-lbl">VARC Speed</div>
+              <div class="ring-sub">5 Modules Active</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tile 5: 60s Speed Math Cardio Arena -->
+        <div class="bento-card bento-cardio-tile">
+          <div class="bento-card-header">
+            <span class="bento-badge-amber">⚡ Speed Cardio</span>
+            <span class="bento-badge-cyan">High-Velocity Engine</span>
+          </div>
+          <h3>60-Second "Speed Math Cardio"</h3>
+          <p>Rapid-fire mental drills: squares (1–35), cubes (1–15), reciprocals (1/7, 1/13, 1/17, 1/19), & fast multiplications.</p>
+          <div class="cardio-stats-row">
+            <div>
+              <div class="cardio-best-lbl">Personal Best</div>
+              <div class="cardio-best-val" id="cardio-dashboard-best">0 pts</div>
+            </div>
+            <button class="btn-cardio-launch" onclick="openSpeedMathCardio()">
+              🔥 Start 60s Cardio
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Stat Counters Strip -->
+      <div class="stat-grid" style="margin-bottom: 28px;">
+        <div class="stat-box">
+          <div class="stat-icon cyan">⚡</div>
+          <div>
+            <div class="stat-val" id="stat-sprints-done">0</div>
+            <div class="stat-lbl">Sprints Completed</div>
+          </div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-icon emerald">🎯</div>
+          <div>
+            <div class="stat-val" id="stat-qs-solved">0</div>
+            <div class="stat-lbl">Questions Solved</div>
+          </div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-icon rose">📔</div>
+          <div>
+            <div class="stat-val" id="stat-errors-logged">0</div>
+            <div class="stat-lbl">Chook Diary Errors</div>
+          </div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-icon indigo">⏱️</div>
+          <div>
+            <div class="stat-val" id="stat-hours-spent">0h</div>
+            <div class="stat-lbl">Sprint Study Time</div>
+          </div>
+        </div>
+      </div>
+
+      <h3 style="margin-bottom: 16px; font-weight: 800;">⚡ Jump into High-Yield Sprints</h3>
+      <div class="topic-grid">
+        <div class="topic-card" onclick="startTopicSprint('qa', 'qa_logs')">
+          <div class="topic-card-header">
+            <span class="tier-pill tier-s">Tier S</span>
+            <span style="font-size:0.8rem; color:var(--accent-cyan); font-weight:700;">Algebra</span>
+          </div>
+          <div class="topic-card-title">Logarithms, Surds & Indices</div>
+          <div class="topic-meta"><span>1-2 Qs</span> • <span>Easiest mark in CAT</span></div>
+          <button class="btn-start-sprint">Start 4-Phase Sprint →</button>
+        </div>
+
+        <div class="topic-card" onclick="startTopicSprint('qa', 'qa_tw')">
+          <div class="topic-card-header">
+            <span class="tier-pill tier-s">Tier S</span>
+            <span style="font-size:0.8rem; color:var(--accent-cyan); font-weight:700;">Arithmetic</span>
+          </div>
+          <div class="topic-card-title">Time & Work (Pipes & Cisterns)</div>
+          <div class="topic-meta"><span>1-2 Qs</span> • <span>LCM Work Unit Engine</span></div>
+          <button class="btn-start-sprint">Start 4-Phase Sprint →</button>
+        </div>
+
+        <div class="topic-card" onclick="startTopicSprint('dilr', 'dilr_chocolate')">
+          <div class="topic-card-header">
+            <span class="tier-pill tier-s">Tier S</span>
+            <span style="font-size:0.8rem; color:var(--accent-emerald); font-weight:700;">DILR</span>
+          </div>
+          <div class="topic-card-title">Venn Maxima-Minima (Chocolate Method)</div>
+          <div class="topic-meta"><span>1 Set (15 M)</span> • <span>Ravi Sir's Signature Method</span></div>
+          <button class="btn-start-sprint">Start 4-Phase Sprint →</button>
+        </div>
+
+        <div class="topic-card" onclick="startTopicSprint('varc', 'varc_parasummary')">
+          <div class="topic-card-header">
+            <span class="tier-pill tier-s">Tier S</span>
+            <span style="font-size:0.8rem; color:var(--accent-indigo); font-weight:700;">VARC</span>
+          </div>
+          <div class="topic-card-title">Parasummary: The Scope Filter</div>
+          <div class="topic-meta"><span>2-3 Qs (6-9 M)</span> • <span>Objective Elimination</span></div>
+          <button class="btn-start-sprint">Start 4-Phase Sprint →</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. SPRINT SESSION VIEW (THE 4-STEP ENGINE) -->
+    <section id="view-sprint" class="view-panel">
+      <!-- 4-Step Stepper -->
+      <div class="sprint-stepper">
+        <div class="step-node active" id="stepper-1" onclick="jumpSprintStep(1)">
+          <div class="step-num">1</div>
+          <span>Concept & Formulas</span>
+        </div>
+        <div class="step-arrow">➔</div>
+        <div class="step-node" id="stepper-2" onclick="jumpSprintStep(2)">
+          <div class="step-num">2</div>
+          <span>Timed Tier-2 Practice</span>
+        </div>
+        <div class="step-arrow">➔</div>
+        <div class="step-node" id="stepper-3" onclick="jumpSprintStep(3)">
+          <div class="step-num">3</div>
+          <span>Method 2 Autopsy</span>
+        </div>
+        <div class="step-arrow">➔</div>
+        <div class="step-node" id="stepper-4" onclick="jumpSprintStep(4)">
+          <div class="step-num">4</div>
+          <span>Log to Chook Diary</span>
+        </div>
+      </div>
+
+      <!-- SPRINT STEP 1: CONCEPT & FORMULAS -->
+      <div id="sprint-step-1" class="sprint-subpanel">
+        <div class="theory-container" id="sprint-theory-box">
+          <!-- Populated dynamically -->
+        </div>
+        <div style="display:flex; justify-content:flex-end;">
+          <button class="btn-start-sprint" style="width:auto; padding:12px 28px;" onclick="advanceSprintStep(2)">
+            Proceed to Timed Tier-2 Practice ➔
+          </button>
+        </div>
+      </div>
+
+      <!-- SPRINT STEP 2: TIMED PRACTICE (CBT PALETTE & PROVENANCE UPGRADE) -->
+      <div id="sprint-step-2" class="sprint-subpanel" style="display:none;">
+        
+        <!-- Sticky Top CBT Question Palette Bar -->
+        <div class="sprint-top-palette-bar">
+          <div class="palette-bar-left">
+            <span class="palette-topic-title" id="sprint-topic-header-title">Topic Sprint Practice</span>
+            <span class="palette-summary-stats" id="sprint-palette-summary">0 answered • 0 flagged • 15 remaining</span>
+          </div>
+          <div class="palette-pill-track" id="sprint-horizontal-palette">
+            <!-- Populated dynamically with pills 1..N -->
+          </div>
+          <div class="palette-bar-right">
+            <span class="hotkey-pill" title="Keyboard hotkeys: A-D / 1-4 to select option, Enter to advance, F to flag, Arrows to navigate">⌨️ Hotkeys (A-D, Enter, F)</span>
+          </div>
+        </div>
+
+        <div class="practice-container">
+          <!-- Question Box -->
+          <div class="question-card">
+            <div class="question-header">
+              <div class="q-badge" id="sprint-q-badge">Question 1 of 15</div>
+              <div style="display:flex; align-items:center; gap:12px; flex-wrap:wrap;">
+                <!-- 90-Second Traffic-Light Pacing Metronome -->
+                <div class="pacing-metronome-box" id="pacing-metronome">
+                  <div class="traffic-lights">
+                    <div class="traffic-bulb green active" id="bulb-green" title="0-60s: Optimal Pacing"></div>
+                    <div class="traffic-bulb amber" id="bulb-amber" title="61-90s: Decision Threshold"></div>
+                    <div class="traffic-bulb red" id="bulb-red" title="90s+: Danger Zone - Bail or Finalize!"></div>
+                  </div>
+                  <div class="pacing-status-text" id="pacing-status-text" style="color:var(--accent-emerald);">Optimal (0-60s)</div>
+                </div>
+                <div class="stopwatch-box">
+                  <span>⏱️</span> <span id="sprint-stopwatch">00:00</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Provenance & 80/20 Yield Badges -->
+            <div class="cat-provenance-badge-bar">
+              <span class="provenance-pill" id="sprint-provenance-pill">QA • CAT 2025 Slot 1 Caliber • MCQ • +3/-1</span>
+              <span class="yield-pill" id="sprint-yield-pill">Tier 1 Master • ~2.0 Qs/paper</span>
+            </div>
+
+            <div class="question-text" id="sprint-q-text">Loading question...</div>
+            <div id="sprint-options-container" class="options-list"></div>
+            
+            <div class="sprint-action-bar">
+              <div style="display:flex; gap:10px; align-items:center; flex-wrap:wrap;">
+                <button class="btn-start-sprint" style="width:auto;" onclick="prevSprintQuestion()">← Prev</button>
+                <button class="btn-start-sprint" style="width:auto; background:var(--accent-amber); color:#080d1a;" onclick="markSprintForReview()">⚑ Flag Review</button>
+                <button class="btn-start-sprint" style="width:auto;" onclick="nextSprintQuestion()">Next →</button>
+              </div>
+              <div style="display:flex; gap:14px; align-items:center; flex-wrap:wrap;">
+                <label class="blind-review-toggle" title="Hide instant answers to force a second unassisted attempt">
+                  <input type="checkbox" id="toggle-blind-review" />
+                  <span>Blind Review Mode</span>
+                </label>
+                <button class="btn-quick-diary" onclick="openQuickDiaryModal()">
+                  📌 Save to Chook Diary
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Question Palette Sidebar (Percentyl-Inspired Filter Tabs) -->
+          <div class="palette-card">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
+              <h4 style="font-weight:800; margin:0;">Question Palette</h4>
+              <span class="palette-summary-stats" id="palette-count-summary" style="font-size:0.75rem; color:var(--accent-cyan); font-weight:700;">0/15 Done</span>
+            </div>
+
+            <!-- Percentyl-Style Filter Tabs -->
+            <div class="palette-filter-row">
+              <button class="palette-filter-btn active" id="pal-filter-all" onclick="setPaletteFilter('all')">All</button>
+              <button class="palette-filter-btn" id="pal-filter-todo" onclick="setPaletteFilter('todo')">To-do</button>
+              <button class="palette-filter-btn" id="pal-filter-flagged" onclick="setPaletteFilter('flagged')">⚑ Flagged</button>
+              <button class="palette-filter-btn" id="pal-filter-done" onclick="setPaletteFilter('done')">✔ Done</button>
+            </div>
+
+            <div class="palette-grid" id="sprint-palette-grid"></div>
+            <button class="btn-start-sprint" style="margin-top:16px; background:var(--accent-emerald); color:#080d1a;" onclick="finishTimedPractice()">
+              Finish & Reveal Autopsy ➔
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- SPRINT STEP 3: METHOD 2 AUTOPSY -->
+      <div id="sprint-step-3" class="sprint-subpanel" style="display:none;">
+        <div class="autopsy-container">
+          <div class="card" style="border-left: 4px solid var(--accent-emerald);">
+            <div style="display:flex; justify-content:space-between; align-items:center;">
+              <h3 id="autopsy-q-title">Solution Autopsy: Question 1</h3>
+              <div id="autopsy-final-ans" style="font-weight:800; color:var(--accent-emerald); font-size:1.1rem;"></div>
+            </div>
+            <p id="autopsy-q-stmt" style="color:var(--text-secondary); margin-top:10px;"></p>
+          </div>
+
+          <div class="dual-method-grid">
+            <div class="method-card m1">
+              <div class="method-title"><span>📘</span> Method 1: Conventional Formal Proof</div>
+              <div id="autopsy-m1-text" style="font-size:0.95rem; line-height:1.7; color:#cbd5e1;"></div>
+            </div>
+            <div class="method-card m2">
+              <div class="method-title" style="color:var(--accent-cyan);"><span>🚀</span> Method 2: Rodha Fast Shortcut / Inspection</div>
+              <div id="autopsy-m2-text" style="font-size:0.95rem; line-height:1.7; color:#f8fafc; font-weight:500;"></div>
+            </div>
+          </div>
+
+          <div class="trap-box" id="autopsy-trap-box">
+            <strong>⚠️ Ravi Sir's Exam Trap:</strong>
+            <span id="autopsy-trap-text"></span>
+          </div>
+
+          <div style="display:flex; justify-content:space-between;">
+            <button class="btn-start-sprint" style="width:auto;" onclick="prevAutopsyQuestion()">← Previous Question</button>
+            <button class="btn-start-sprint" style="width:auto; background:var(--accent-rose); color:#fff;" onclick="advanceSprintStep(4)">
+              Log to Chook Diary (Error) ➔
+            </button>
+            <button class="btn-start-sprint" style="width:auto;" onclick="nextAutopsyQuestion()">Next Question →</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- SPRINT STEP 4: CHOOK DIARY ERROR LOGGER -->
+      <div id="sprint-step-4" class="sprint-subpanel" style="display:none;">
+        <div class="diary-logger-box card">
+          <h3 style="margin-bottom:8px; font-weight:800;">📔 Log Mistake to "Chook Diary"</h3>
+          <p style="color:var(--text-secondary); font-size:0.9rem;">Record unforced errors immediately to trigger the $T+1, T+7, T+21$ spaced repetition review cycle.</p>
+
+          <label style="font-weight:700; font-size:0.85rem; display:block; margin-top:16px;">1. Root-Cause Error Taxonomy:</label>
+          <div class="tag-selector">
+            <button class="tag-pill-btn selected" onclick="selectErrorTag('[CON]')">[CON] Conceptual Gap</button>
+            <button class="tag-pill-btn" onclick="selectErrorTag('[TRP]')">[TRP] Fell for Exam Trap</button>
+            <button class="tag-pill-btn" onclick="selectErrorTag('[CAL]')">[CAL] Calculation Slip</button>
+            <button class="tag-pill-btn" onclick="selectErrorTag('[TIM]')">[TIM] Time Pressure Rush</button>
+            <button class="tag-pill-btn" onclick="selectErrorTag('[SCT]')">[SCT] Shortcut Misapplied</button>
+          </div>
+
+          <label style="font-weight:700; font-size:0.85rem; display:block; margin-top:16px;">2. Your Lesson / Trigger to Avoid Next Time:</label>
+          <textarea id="diary-note-input" class="diary-notes-input" placeholder="e.g. Always check the reciprocal table; +25% means -20% on consumption."></textarea>
+
+          <div style="display:flex; justify-content:flex-end; gap:12px; margin-top:20px;">
+            <button class="btn-start-sprint" style="width:auto; background:transparent; border-color:var(--border-subtle); color:var(--text-secondary);" onclick="switchView('dashboard')">Skip & Finish</button>
+            <button class="btn-start-sprint" style="width:auto; background:var(--accent-emerald); color:#080d1a;" onclick="saveChookDiaryEntry()">Save & Return to Dashboard ➔</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. QUANT HUB VIEW -->
+    <section id="view-qa" class="view-panel">
+      <div style="margin-bottom: 20px;">
+        <h2 style="font-size:1.6rem; font-weight:800;">Quantitative Aptitude (17 Master Topics: 100% Arithmetic & Algebra)</h2>
+        <p style="color:var(--text-secondary);">Covering ~40 marks in CAT. Choose a topic to begin the 4-phase sprint.</p>
+      </div>
+      <div class="topic-grid" id="qa-topics-container"></div>
+    </section>
+
+    <!-- 4. DILR HUB VIEW -->
+    <section id="view-dilr" class="view-panel">
+      <div style="margin-bottom: 20px;">
+        <h2 style="font-size:1.6rem; font-weight:800;">DILR Mastery (6 Core Archetypes)</h2>
+        <p style="color:var(--text-secondary);">Covering ~45 to 60 marks. 2 sets fully solved = 99th percentile.</p>
+      </div>
+      <div class="topic-grid" id="dilr-topics-container"></div>
+    </section>
+
+    <!-- 5. VARC HUB VIEW -->
+    <section id="view-varc" class="view-panel">
+      <div style="margin-bottom: 20px;">
+        <h2 style="font-size:1.6rem; font-weight:800;">VARC Mastery (5 Core Components)</h2>
+        <p style="color:var(--text-secondary);">Scope filters, mandatory pairs, and the problem-mechanism-outcome framework.</p>
+      </div>
+      <div class="topic-grid" id="varc-topics-container"></div>
+    </section>
+
+    <!-- 6. CHOOK DIARY (ACTIVE ERROR LOG) -->
+    <section id="view-diary" class="view-panel">
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:20px;">
+        <div>
+          <h2 style="font-size:1.6rem; font-weight:800;">📔 Chook Diary (Active Mistake Notebook)</h2>
+          <p style="color:var(--text-secondary);">Your personal blunder vault with Spaced Repetition ($T+1, T+7, T+21$).</p>
+        </div>
+        <div style="display:flex; gap:10px;">
+          <button class="btn-start-sprint" style="width:auto; padding:8px 16px; background:rgba(56,189,248,0.15); border-color:var(--accent-cyan);" onclick="generateSampleDueMistakes()">🎲 Sample Due Mistakes</button>
+          <button class="btn-start-sprint" style="width:auto; padding:8px 16px;" onclick="exportErrorLogJson()">📥 Export JSON</button>
+        </div>
+      </div>
+
+      <!-- Filters -->
+      <div style="display:flex; gap:10px; margin-bottom:20px; flex-wrap:wrap;">
+        <button class="tag-pill-btn selected" onclick="filterDiary('ALL')">All Errors</button>
+        <button class="tag-pill-btn" id="filter-due-btn" style="border-color:var(--accent-rose); color:var(--accent-rose); font-weight:700;" onclick="filterDiary('DUE_TODAY')">⚡ Due Today (<span id="diary-due-count">0</span>)</button>
+        <button class="tag-pill-btn" onclick="filterDiary('[CON]')">[CON] Concept</button>
+        <button class="tag-pill-btn" onclick="filterDiary('[TRP]')">[TRP] Trap</button>
+        <button class="tag-pill-btn" onclick="filterDiary('[CAL]')">[CAL] Calculation</button>
+        <button class="tag-pill-btn" onclick="filterDiary('[TIM]')">[TIM] Time</button>
+        <button class="tag-pill-btn" onclick="filterDiary('[SCT]')">[SCT] Shortcut</button>
+      </div>
+
+      <div id="diary-list-container">
+        <!-- Rendered dynamically -->
+      </div>
+    </section>
+
+    <!-- 7. FORMULA FLASHCARDS -->
+    <section id="view-formulas" class="view-panel">
+      <div style="margin-bottom:20px;">
+        <h2 style="font-size:1.6rem; font-weight:800;">🗂️ Rapid Formula Flashcards</h2>
+        <p style="color:var(--text-secondary);">High-yield formulas across Arithmetic, Algebra, Geometry, and Number System.</p>
+      </div>
+      <div class="topic-grid" id="formulas-container"></div>
+    </section>
+
+    <!-- 8. CBT SECTIONAL MOCK SIMULATOR -->
+    <section id="view-mock" class="view-panel">
+      <div class="card" style="margin-bottom:24px;">
+        <h2>⏱️ 40-Minute CAT Sectional CBT Simulator</h2>
+        <p style="color:var(--text-secondary); margin:8px 0 16px;">Simulates live test conditions: 20-22 questions in 40 minutes (+3 / -1 scoring). Strict timer with real percentile projection.</p>
+        <button class="btn-start-sprint" style="width:auto; padding:12px 24px; background:var(--accent-emerald); color:#080d1a;" onclick="launchSectionalMock()">
+          Launch 40-Minute Mock Test Now ➔
+        </button>
+      </div>
+      <div id="mock-test-area" style="display:none;"></div>
+    </section>
+  </main>
+
+  
+  <!-- FLOATING CAT VIRTUAL CALCULATOR (TCS iON OFFICIAL CLONE) -->
+  <button id="btn-toggle-calc" onclick="toggleCatCalculator()">🧮 CAT Calculator</button>
+
+  <div id="cat-calc-window">
+    <div class="calc-header" id="calc-header-bar">
+      <span>🧮 CAT 2026 Virtual Calculator (TCS iON)</span>
+      <button class="calc-close-btn" onclick="toggleCatCalculator()">✕</button>
+    </div>
+    <div class="calc-screen-box">
+      <div class="calc-formula-display" id="calc-expr-display">&nbsp;</div>
+      <div>
+        <span class="calc-mem-indicator" id="calc-mem-flag"></span>
+        <span class="calc-main-display" id="calc-lcd-val">0</span>
+      </div>
+    </div>
+    <div class="calc-keypad">
+      <button class="calc-key mem-key" onclick="calcMem('MC')">MC</button>
+      <button class="calc-key mem-key" onclick="calcMem('MR')">MR</button>
+      <button class="calc-key mem-key" onclick="calcMem('MS')">MS</button>
+      <button class="calc-key mem-key" onclick="calcMem('M+')">M+</button>
+      <button class="calc-key mem-key" onclick="calcMem('M-')">M-</button>
+      
+      <button class="calc-key op-key" onclick="calcAction('backspace')">⌫</button>
+      <button class="calc-key op-key" onclick="calcAction('ce')">CE</button>
+      <button class="calc-key op-key" onclick="calcAction('c')">C</button>
+      <button class="calc-key op-key" onclick="calcAction('neg')">±</button>
+      <button class="calc-key op-key" onclick="calcAction('sqrt')">√</button>
+
+      <button class="calc-key" onclick="calcInput('7')">7</button>
+      <button class="calc-key" onclick="calcInput('8')">8</button>
+      <button class="calc-key" onclick="calcInput('9')">9</button>
+      <button class="calc-key op-key" onclick="calcOp('/')">/</button>
+      <button class="calc-key op-key" onclick="calcAction('pct')">%</button>
+
+      <button class="calc-key" onclick="calcInput('4')">4</button>
+      <button class="calc-key" onclick="calcInput('5')">5</button>
+      <button class="calc-key" onclick="calcInput('6')">6</button>
+      <button class="calc-key op-key" onclick="calcOp('*')">*</button>
+      <button class="calc-key op-key" onclick="calcAction('recip')">1/x</button>
+
+      <button class="calc-key" onclick="calcInput('1')">1</button>
+      <button class="calc-key" onclick="calcInput('2')">2</button>
+      <button class="calc-key" onclick="calcInput('3')">3</button>
+      <button class="calc-key op-key" onclick="calcOp('-')">-</button>
+      <button class="calc-key eq-key" onclick="calcEquals()">=</button>
+
+      <button class="calc-key" onclick="calcInput('0')">0</button>
+      <button class="calc-key" onclick="calcInput('.')">.</button>
+      <button class="calc-key op-key" onclick="calcOp('+')">+</button>
+    </div>
+  </div>
+
+  <!-- 60-SECOND SPEED MATH CARDIO MODAL -->
+  <div id="cardio-modal">
+    <div class="cardio-box">
+      <div class="cardio-top-bar">
+        <div style="font-weight:800; font-size:1.15rem; color:var(--accent-amber); display:flex; align-items:center; gap:8px;">
+          <span>⚡ 60-Second Speed Math Cardio</span>
+        </div>
+        <button class="calc-close-btn" style="color:var(--text-muted); font-size:1.6rem;" onclick="closeSpeedMathCardio()">✕</button>
+      </div>
+      <div class="cardio-timer-container">
+        <div class="cardio-timer-fill" id="cardio-timer-fill"></div>
+      </div>
+      <div class="cardio-hud">
+        <div class="hud-stat-item">
+          <div class="val" id="cardio-timer-sec">60s</div>
+          <div class="lbl">Time Left</div>
+        </div>
+        <div class="hud-stat-item">
+          <div class="val" id="cardio-score">0</div>
+          <div class="lbl">Score</div>
+        </div>
+        <div class="hud-stat-item">
+          <div class="val" id="cardio-streak" style="color:var(--accent-amber);">1x 🔥</div>
+          <div class="lbl">Streak</div>
+        </div>
+        <div class="hud-stat-item">
+          <div class="val" id="cardio-accuracy">100%</div>
+          <div class="lbl">Accuracy</div>
+        </div>
+      </div>
+      <div class="cardio-q-display" id="cardio-question-text">Press Start to Begin!</div>
+      <div class="cardio-options-grid" id="cardio-options-grid"></div>
+      <div id="cardio-feedback" style="min-height:24px; font-weight:700; font-size:0.95rem; color:var(--text-secondary); margin-bottom:12px;">Speed up your mental arithmetic calculation for CAT.</div>
+      <button id="cardio-start-btn" class="btn-start-sprint" style="background:linear-gradient(135deg, var(--accent-amber), var(--accent-rose)); color:#080d1a; font-weight:800; font-size:1.05rem;" onclick="startCardioGame()">
+        🚀 Start 60-Second Sprint
+      </button>
+    </div>
+  </div>
+
+  <!-- RODHA IN-APP VIDEO THEATER MODAL -->
+  <div id="video-theater-modal" onclick="if(event.target === this) closeVideoTheater()">
+    <div class="video-theater-box">
+      <div class="video-theater-header">
+        <div style="display:flex; align-items:center; gap:12px;">
+          <span style="font-size:1.35rem;">📺</span>
+          <div>
+            <div id="video-theater-title" style="font-weight:700; font-size:1.05rem; color:#f8fafc;">Rodha Class Masterclass</div>
+            <div style="font-size:0.75rem; color:var(--accent-cyan); font-weight:600;">Ravi Prakash Sir • Official Zero-to-Zenith Course</div>
+          </div>
+        </div>
+        <div style="display:flex; align-items:center; gap:10px;">
+          <a id="video-theater-external-btn" href="#" target="_blank" rel="noopener noreferrer" class="btn-video-external" title="Open in YouTube App / New Tab">
+            <span>↗</span> Open on YouTube
+          </a>
+          <button class="calc-close-btn" onclick="closeVideoTheater()">✕</button>
+        </div>
+      </div>
+      <div class="video-theater-body" id="video-theater-body">
+        <!-- Rendered dynamically -->
+      </div>
+      <div class="video-theater-footer">
+        <span style="display:flex; align-items:center; gap:6px;">
+          <span>🎯</span> High-velocity focus mode: 0 algorithmic distractions, 100% doubt resolution.
+        </span>
+        <button class="btn-video-dismiss" onclick="closeVideoTheater()">Back to Sprint</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- QUICK COMMAND SEARCH MODAL (LINEAR-STYLE JUMP BAR) -->
+  <div id="search-modal" onclick="if(event.target === this) closeSearchModal()">
+    <div class="search-modal-box">
+      <div class="search-input-wrapper">
+        <span style="font-size:1.2rem; opacity:0.8;">🔍</span>
+        <input type="text" id="quick-search-input" placeholder="Type to search: Logarithms, TSD, Venn, Parasummary..." oninput="handleSearchInput(this.value)" autocomplete="off" />
+        <button class="calc-close-btn" onclick="closeSearchModal()">✕</button>
+      </div>
+      <div class="search-results-list" id="search-results-list">
+        <!-- Rendered dynamically -->
+      </div>
+      <div class="search-modal-footer">
+        <span>Press <kbd>Esc</kbd> to close • Press <kbd>Ctrl + K</kbd> anywhere</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 1-CLICK QUICK CHOOK DIARY MODAL -->
+  <div id="quick-diary-modal" onclick="if(event.target === this) closeQuickDiaryModal()">
+    <div class="quick-diary-box">
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
+        <h3 style="font-weight:800; font-size:1.15rem; color:#fff; display:flex; align-items:center; gap:8px;">
+          <span>📌</span> Quick Log to Chook Diary
+        </h3>
+        <button class="calc-close-btn" onclick="closeQuickDiaryModal()">✕</button>
+      </div>
+      <p style="font-size:0.82rem; color:var(--text-secondary); margin-bottom:14px;">
+        Select the blunder root-cause tag to immediately schedule this question for spaced repetition (T+1, T+7, T+21):
+      </p>
+      
+      <div class="quick-tag-selector">
+        <button class="quick-tag-btn selected" id="qtag-trp" onclick="selectQuickDiaryTag('[TRP]')">
+          ⚠️ [TRP] Trap / Edge Case
+        </button>
+        <button class="quick-tag-btn" id="qtag-calc" onclick="selectQuickDiaryTag('[CALC]')">
+          🔢 [CALC] Calculation Blunder
+        </button>
+        <button class="quick-tag-btn" id="qtag-con" onclick="selectQuickDiaryTag('[CON]')">
+          💡 [CON] Concept Gap
+        </button>
+        <button class="quick-tag-btn" id="qtag-time" onclick="selectQuickDiaryTag('[TIME]')">
+          ⏱️ [TIME] Time Panic / Rush
+        </button>
+      </div>
+
+      <div style="margin-bottom:16px;">
+        <label style="font-size:0.75rem; color:var(--text-muted); font-weight:700; display:block; margin-bottom:6px;">Personal Lesson / Note (Optional):</label>
+        <input type="text" id="quick-diary-note" class="tita-input" style="width:100%; font-size:0.85rem;" placeholder="e.g. Always check domain restrictions before applying log rules..." />
+      </div>
+
+      <div style="display:flex; justify-content:flex-end; gap:10px;">
+        <button class="btn-start-sprint" style="width:auto; padding:8px 16px; background:rgba(255,255,255,0.08);" onclick="closeQuickDiaryModal()">Cancel</button>
+        <button class="btn-start-sprint" style="width:auto; padding:8px 20px; background:var(--accent-rose); color:#fff;" onclick="submitQuickDiaryBlunder()">Save Blunder</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- MOBILE QR MODAL -->
+  <div id="mobile-qr-modal" class="modal-overlay" onclick="if(event.target === this) closeMobileQrModal()" style="display:none; position:fixed; inset:0; background:rgba(4,7,18,0.85); backdrop-filter:blur(12px); z-index:12600; align-items:center; justify-content:center; padding:20px;">
+    <div class="quick-diary-box" style="max-width:440px; text-align:center;">
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
+        <h3 style="font-weight:800; font-size:1.15rem; color:#fff; display:flex; align-items:center; gap:8px; margin:0;">
+          <span>📱</span> Open CAT Mastery on Your Phone
+        </h3>
+        <button class="calc-close-btn" onclick="closeMobileQrModal()">✕</button>
+      </div>
+      <p style="font-size:0.82rem; color:var(--text-secondary); margin-bottom:16px;">
+        Connect your phone to the same Wi-Fi network and scan this QR code with your camera:
+      </p>
+      
+      <div style="background:#fff; padding:16px; border-radius:12px; display:inline-block; margin-bottom:16px; box-shadow:0 8px 30px rgba(0,0,0,0.5);">
+        <img src="./assets/mobile_qr.png" alt="Mobile Access QR Code" style="width:200px; height:200px; display:block;" />
+      </div>
+
+      <div style="background:rgba(255,255,255,0.06); padding:10px 14px; border-radius:8px; border:1px solid rgba(255,255,255,0.1); margin-bottom:16px;">
+        <div style="font-size:0.75rem; color:var(--text-muted); margin-bottom:4px;">Or type this URL in your mobile browser:</div>
+        <div style="font-family:'JetBrains Mono', monospace; font-size:0.95rem; font-weight:700; color:var(--accent-cyan); user-select:all;">http://192.168.29.86:8085/</div>
+      </div>
+
+      <div style="text-align:left; font-size:0.8rem; color:var(--text-secondary); background:rgba(15,23,42,0.6); padding:12px 14px; border-radius:8px; line-height:1.5;">
+        <strong style="color:#fff; display:block; margin-bottom:4px;">📲 How to Install as an App:</strong>
+        <div>• <strong>Android (Chrome):</strong> Tap 3 dots (⋮) → "Add to Home screen" or "Install App".</div>
+        <div>• <strong>iPhone (Safari):</strong> Tap Share (↑) → "Add to Home Screen".</div>
+      </div>
+
+      <button class="btn-start-sprint" style="margin-top:16px; background:rgba(255,255,255,0.1); width:100%;" onclick="closeMobileQrModal()">Got it!</button>
+    </div>
+  </div>
+
+  <!-- NATIVE PWA MOBILE BOTTOM NAVIGATION BAR -->
+  <nav id="mobile-bottom-nav">
+    <button class="mob-nav-btn active" id="mob-nav-dashboard" onclick="switchView('dashboard')">
+      <span class="mob-icon">🚀</span>
+      <span class="mob-lbl">Dashboard</span>
+    </button>
+    <button class="mob-nav-btn" id="mob-nav-sprint" onclick="switchView('sprint')">
+      <span class="mob-icon">⚡</span>
+      <span class="mob-lbl">Sprint</span>
+    </button>
+    <button class="mob-nav-btn" id="mob-nav-qa" onclick="switchView('qa')">
+      <span class="mob-icon">📐</span>
+      <span class="mob-lbl">Quant</span>
+    </button>
+    <button class="mob-nav-btn" id="mob-nav-dilr" onclick="switchView('dilr')">
+      <span class="mob-icon">🧩</span>
+      <span class="mob-lbl">DILR</span>
+    </button>
+    <button class="mob-nav-btn" id="mob-nav-diary" onclick="switchView('diary')">
+      <span class="mob-icon">📔</span>
+      <span class="mob-lbl">Diary</span>
+    </button>
+  </nav>
+
+  <!-- Load Data Engines -->
+  <script src="./data_qa.js"></script>
+  <script src="./data_dilr.js"></script>
+  <script src="./data_varc.js"></script>
+  <!-- Load App Controller -->
+  <script src="./app.js"></script>
+</body>
+</html>

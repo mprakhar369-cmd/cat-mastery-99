@@ -1,0 +1,16 @@
+# Python / Scratch files
+__pycache__/
+*.pyc
+*.py
+*.log
+
+# Temp screenshots (keep icons & assets)
+*.png
+!icons/*.png
+!assets/*.png
+
+# IDE / OS
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
