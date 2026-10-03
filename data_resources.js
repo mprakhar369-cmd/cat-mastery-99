@@ -1,0 +1,4148 @@
+window.PERCENTYL_RESOURCES_DATA = [
+  {
+    "id": "res_0",
+    "topic": "Speed Math",
+    "section": "Quants",
+    "subSection": "Arithmetics",
+    "videoCount": 6,
+    "videos": [
+      {
+        "id": "VT9-jeEmlJ8",
+        "url": "https://www.youtube.com/watch?v=VT9-jeEmlJ8",
+        "title": "Speed Maths 1 | Arithmetic |  Quantitative Aptitude  | CAT PREPARATION",
+        "durationSec": 1881,
+        "durationFormatted": "31:21",
+        "channel": "Rodha"
+      },
+      {
+        "id": "45rr2MJmXfA",
+        "url": "https://www.youtube.com/watch?v=45rr2MJmXfA",
+        "title": "Speed Maths 2 | Arithmetic |  Quantitative Aptitude  | CAT PREPARATION",
+        "durationSec": 1200,
+        "durationFormatted": "20:00",
+        "channel": "Rodha"
+      },
+      {
+        "id": "sMiFeodSLPU",
+        "url": "https://www.youtube.com/watch?v=sMiFeodSLPU",
+        "title": "Speed Maths 3 | Arithmetic |  Quantitative Aptitude  | CAT PREPARATION 2024",
+        "durationSec": 1339,
+        "durationFormatted": "22:19",
+        "channel": "Rodha"
+      },
+      {
+        "id": "y6IWvihLWws",
+        "url": "https://www.youtube.com/watch?v=y6IWvihLWws",
+        "title": "Speed Maths 4 | CAT Preparation | Arithmetic | Quantitative Aptitude",
+        "durationSec": 1231,
+        "durationFormatted": "20:31",
+        "channel": "Rodha"
+      },
+      {
+        "id": "CikoluNIjFY",
+        "url": "https://www.youtube.com/watch?v=CikoluNIjFY",
+        "title": "Speed Maths 5 | CAT Preparation | Arithmetic | Quantitative Aptitude",
+        "durationSec": 1659,
+        "durationFormatted": "27:39",
+        "channel": "Rodha"
+      },
+      {
+        "id": "H8ItErX0044",
+        "url": "https://www.youtube.com/watch?v=H8ItErX0044",
+        "title": "Speed Maths 6 | Arithmetic |  Quantitative Aptitude  | CAT PREPARATION",
+        "durationSec": 1242,
+        "durationFormatted": "20:42",
+        "channel": "Rodha"
+      }
+    ]
+  },
+  {
+    "id": "res_1",
+    "topic": "Averages",
+    "section": "Quants",
+    "subSection": "Arithmetics",
+    "videoCount": 4,
+    "videos": [
+      {
+        "id": "TBhanaOLNvc",
+        "url": "https://www.youtube.com/watch?v=TBhanaOLNvc",
+        "title": "Averages 1 | CAT  Exam Preparation  | Arithmetic | Quantitative Aptitude",
+        "durationSec": 1390,
+        "durationFormatted": "23:10",
+        "channel": "Rodha"
+      },
+      {
+        "id": "q-ZUkah-xys",
+        "url": "https://www.youtube.com/watch?v=q-ZUkah-xys",
+        "title": "Averages 2 | CAT  Exam Preparation | Arithmetic | Quantitative Aptitude",
+        "durationSec": 1837,
+        "durationFormatted": "30:37",
+        "channel": "Rodha"
+      },
+      {
+        "id": "lxCGzzUZBj8",
+        "url": "https://www.youtube.com/watch?v=lxCGzzUZBj8",
+        "title": "CAT Exam Preparation | Averages 3  | Arithmetic | Quantitative Aptitude 2024",
+        "durationSec": 1918,
+        "durationFormatted": "31:58",
+        "channel": "Rodha"
+      },
+      {
+        "id": "i3o8REcdEXQ",
+        "url": "https://www.youtube.com/watch?v=i3o8REcdEXQ",
+        "title": "Averages 4 | CAT  Exam Preparation | Arithmetic | Quantitative Aptitude",
+        "durationSec": 1604,
+        "durationFormatted": "26:44",
+        "channel": "Rodha"
+      }
+    ]
+  },
+  {
+    "id": "res_2",
+    "topic": "Alligation & Mixtures",
+    "section": "Quants",
+    "subSection": "Arithmetics",
+    "videoCount": 6,
+    "videos": [
+      {
+        "id": "3LmRyBpIhgQ",
+        "url": "https://www.youtube.com/watch?v=3LmRyBpIhgQ",
+        "title": "Alligation & Mixture - 1  | Arithmetic | Quantitative Aptitude | CAT  Exam Preparation",
+        "durationSec": 1907,
+        "durationFormatted": "31:47",
+        "channel": "Rodha"
+      },
+      {
+        "id": "RVF9kKdJJE8",
+        "url": "https://www.youtube.com/watch?v=RVF9kKdJJE8",
+        "title": "Alligation & Mixture 2  | Arithmetic | Quantitative Aptitude | CAT  Exam Preparation",
+        "durationSec": 1040,
+        "durationFormatted": "17:20",
+        "channel": "Rodha"
+      },
+      {
+        "id": "qQcGkxuf4ws",
+        "url": "https://www.youtube.com/watch?v=qQcGkxuf4ws",
+        "title": "Alligation & Mixture 3  | Arithmetic | Quantitative Aptitude | CAT  Exam Preparation",
+        "durationSec": 1414,
+        "durationFormatted": "23:34",
+        "channel": "Rodha"
+      },
+      {
+        "id": "Y5OkBhdVDIk",
+        "url": "https://www.youtube.com/watch?v=Y5OkBhdVDIk",
+        "title": "Alligation & Mixture 4  | Arithmetic | Quantitative Aptitude | CAT  Exam Preparation",
+        "durationSec": 1588,
+        "durationFormatted": "26:28",
+        "channel": "Rodha"
+      },
+      {
+        "id": "1jONQi6zFcw",
+        "url": "https://www.youtube.com/watch?v=1jONQi6zFcw",
+        "title": "Alligation & Mixture 5  | Arithmetic | Quantitative Aptitude | CAT  Exam Preparation",
+        "durationSec": 1603,
+        "durationFormatted": "26:43",
+        "channel": "Rodha"
+      },
+      {
+        "id": "cCE1_cKXlsk",
+        "url": "https://www.youtube.com/watch?v=cCE1_cKXlsk",
+        "title": "Alligation & Mixture 6  | Arithmetic | Quantitative Aptitude | CAT  Exam Preparation",
+        "durationSec": 1288,
+        "durationFormatted": "21:28",
+        "channel": "Rodha"
+      }
+    ]
+  },
+  {
+    "id": "res_3",
+    "topic": "Ratio",
+    "section": "Quants",
+    "subSection": "Arithmetics",
+    "videoCount": 6,
+    "videos": [
+      {
+        "id": "ns_yVxRFmZw",
+        "url": "https://www.youtube.com/watch?v=ns_yVxRFmZw",
+        "title": "Ratio 1 | CAT Preparation  | Arithmetic | Quantitative Aptitude",
+        "durationSec": 1438,
+        "durationFormatted": "23:58",
+        "channel": "Rodha"
+      },
+      {
+        "id": "pCBYFUpDduw",
+        "url": "https://www.youtube.com/watch?v=pCBYFUpDduw",
+        "title": "Ratio 2 | CAT Preparation  | Arithmetic | Quantitative Aptitude",
+        "durationSec": 1125,
+        "durationFormatted": "18:45",
+        "channel": "Rodha"
+      },
+      {
+        "id": "eruwLy2vGV4",
+        "url": "https://www.youtube.com/watch?v=eruwLy2vGV4",
+        "title": "Ratio 3 | CAT Preparation  | Arithmetic | Quantitative Aptitude",
+        "durationSec": 2315,
+        "durationFormatted": "38:35",
+        "channel": "Rodha"
+      },
+      {
+        "id": "lyU93VH81s8",
+        "url": "https://www.youtube.com/watch?v=lyU93VH81s8",
+        "title": "Ratio 4 | CAT Preparation  | Arithmetic | Quantitative Aptitude",
+        "durationSec": 1437,
+        "durationFormatted": "23:57",
+        "channel": "Rodha"
+      },
+      {
+        "id": "a6VLSdHMjEk",
+        "url": "https://www.youtube.com/watch?v=a6VLSdHMjEk",
+        "title": "Ratio 5 | CAT Preparation  | Arithmetic | Quantitative Aptitude",
+        "durationSec": 1913,
+        "durationFormatted": "31:53",
+        "channel": "Rodha"
+      },
+      {
+        "id": "dRrLKUiuoHc",
+        "url": "https://www.youtube.com/watch?v=dRrLKUiuoHc",
+        "title": "Ratio 6 | CAT Preparation  | Arithmetic | Quantitative Aptitude",
+        "durationSec": 996,
+        "durationFormatted": "16:36",
+        "channel": "Rodha"
+      }
+    ]
+  },
+  {
+    "id": "res_4",
+    "topic": "Proportion, Variation",
+    "section": "Quants",
+    "subSection": "Arithmetics",
+    "videoCount": 2,
+    "videos": [
+      {
+        "id": "nkCvpSojMhI",
+        "url": "https://www.youtube.com/watch?v=nkCvpSojMhI",
+        "title": "Proportion Variation 1 | CAT Preparation  | Arithmetic | Quantitative Aptitude",
+        "durationSec": 1554,
+        "durationFormatted": "25:54",
+        "channel": "Rodha"
+      },
+      {
+        "id": "yH3JaXo7RQA",
+        "url": "https://www.youtube.com/watch?v=yH3JaXo7RQA",
+        "title": "Proportion Variation 2 | CAT Preparation  | Arithmetic | Quantitative Aptitude",
+        "durationSec": 1674,
+        "durationFormatted": "27:54",
+        "channel": "Rodha"
+      }
+    ]
+  },
+  {
+    "id": "res_5",
+    "topic": "Percentages, Profit & Loss",
+    "section": "Quants",
+    "subSection": "Arithmetics",
+    "videoCount": 9,
+    "videos": [
+      {
+        "id": "x-k8iSNr85g",
+        "url": "https://www.youtube.com/watch?v=x-k8iSNr85g",
+        "title": "Percentages  - 1 | CAT Preparation | Arithmetic | Quantitative Aptitude",
+        "durationSec": 1579,
+        "durationFormatted": "26:19",
+        "channel": "Rodha"
+      },
+      {
+        "id": "lzI_bpPpezE",
+        "url": "https://www.youtube.com/watch?v=lzI_bpPpezE",
+        "title": "Percentages - 2 | CAT Preparation | Arithmetic | Quantitative Aptitude",
+        "durationSec": 1366,
+        "durationFormatted": "22:46",
+        "channel": "Rodha"
+      },
+      {
+        "id": "3ox1DwbOOx0",
+        "url": "https://www.youtube.com/watch?v=3ox1DwbOOx0",
+        "title": "Percentages  - 3 | CAT Preparation |Arithmetic | Quantitative Aptitude",
+        "durationSec": 1216,
+        "durationFormatted": "20:16",
+        "channel": "Rodha"
+      },
+      {
+        "id": "bigCbKeUPO4",
+        "url": "https://www.youtube.com/watch?v=bigCbKeUPO4",
+        "title": "Profit and Loss  - 1 | CAT Preparation | Arithmetic | Quantitative Aptitude",
+        "durationSec": 1565,
+        "durationFormatted": "26:05",
+        "channel": "Rodha"
+      },
+      {
+        "id": "KKWvT_cqFkw",
+        "url": "https://www.youtube.com/watch?v=KKWvT_cqFkw",
+        "title": "Profit and Loss 2 | CAT Exam Preparation  | Arithmetic | Quantitative Aptitude",
+        "durationSec": 1464,
+        "durationFormatted": "24:24",
+        "channel": "Rodha"
+      },
+      {
+        "id": "3Q6V7qVGReo",
+        "url": "https://www.youtube.com/watch?v=3Q6V7qVGReo",
+        "title": "Profit and Loss  - 3 | CAT Preparation | Arithmetic | Quantitative Aptitude",
+        "durationSec": 2311,
+        "durationFormatted": "38:31",
+        "channel": "Rodha"
+      },
+      {
+        "id": "xDU1mvVga_o",
+        "url": "https://www.youtube.com/watch?v=xDU1mvVga_o",
+        "title": "Profit and Loss  - 4 | CAT Preparation  | Arithmetic | Quantitative Aptitude",
+        "durationSec": 1620,
+        "durationFormatted": "27:00",
+        "channel": "Rodha"
+      },
+      {
+        "id": "czMjyZAy6Io",
+        "url": "https://www.youtube.com/watch?v=czMjyZAy6Io",
+        "title": "Profit and Loss  - 5 | CAT Preparation  | Arithmetic | Quantitative Aptitude",
+        "durationSec": 1466,
+        "durationFormatted": "24:26",
+        "channel": "Rodha"
+      },
+      {
+        "id": "QPk0yLakPQE",
+        "url": "https://www.youtube.com/watch?v=QPk0yLakPQE",
+        "title": "Profit and Loss  - 6 | CAT Preparation | Arithmetic | Quantitative Aptitude",
+        "durationSec": 1298,
+        "durationFormatted": "21:38",
+        "channel": "Rodha"
+      }
+    ]
+  },
+  {
+    "id": "res_6",
+    "topic": "Simple & Compound Interest",
+    "section": "Quants",
+    "subSection": "Arithmetics",
+    "videoCount": 6,
+    "videos": [
+      {
+        "id": "hvikOiSu_D4",
+        "url": "https://www.youtube.com/watch?v=hvikOiSu_D4",
+        "title": "Simple Interest & Compound Interest 1 | CAT Preparation  | Arithmetic | Quantitative Aptitude",
+        "durationSec": 1297,
+        "durationFormatted": "21:37",
+        "channel": "Rodha"
+      },
+      {
+        "id": "TG3M3QFyY0k",
+        "url": "https://www.youtube.com/watch?v=TG3M3QFyY0k",
+        "title": "Simple Interest & Compound Interest 2 | CAT Preparation  | Arithmetic | Quantitative Aptitude",
+        "durationSec": 1573,
+        "durationFormatted": "26:13",
+        "channel": "Rodha"
+      },
+      {
+        "id": "CUy55eQjeqw",
+        "url": "https://www.youtube.com/watch?v=CUy55eQjeqw",
+        "title": "Simple Interest & Compound Interest 3 | CAT Preparation  | Arithmetic | Quantitative Aptitude",
+        "durationSec": 1424,
+        "durationFormatted": "23:44",
+        "channel": "Rodha"
+      },
+      {
+        "id": "h3kqTD6hwp8",
+        "url": "https://www.youtube.com/watch?v=h3kqTD6hwp8",
+        "title": "Simple Interest & Compound Interest 4 | CAT Preparation  | Arithmetic | Quantitative Aptitude",
+        "durationSec": 1122,
+        "durationFormatted": "18:42",
+        "channel": "Rodha"
+      },
+      {
+        "id": "g0dQhbyZdeo",
+        "url": "https://www.youtube.com/watch?v=g0dQhbyZdeo",
+        "title": "Simple Interest & Compound Interest 5 | CAT Preparation  | Arithmetic | Quantitative Aptitude",
+        "durationSec": 991,
+        "durationFormatted": "16:31",
+        "channel": "Rodha"
+      },
+      {
+        "id": "NPvRXZ2-KwE",
+        "url": "https://www.youtube.com/watch?v=NPvRXZ2-KwE",
+        "title": "Simple Interest & Compound Interest 6 | CAT Preparation | Arithmetic | Quantitative Aptitude",
+        "durationSec": 1421,
+        "durationFormatted": "23:41",
+        "channel": "Rodha"
+      }
+    ]
+  },
+  {
+    "id": "res_7",
+    "topic": "Time & Work",
+    "section": "Quants",
+    "subSection": "Arithmetics",
+    "videoCount": 3,
+    "videos": [
+      {
+        "id": "oApzHGJNx38",
+        "url": "https://www.youtube.com/watch?v=oApzHGJNx38",
+        "title": "Time and Work 1 | CAT Preparation | Arithmetic | Quantitative Aptitude",
+        "durationSec": 1317,
+        "durationFormatted": "21:57",
+        "channel": "Rodha"
+      },
+      {
+        "id": "6IbA-nSj28g",
+        "url": "https://www.youtube.com/watch?v=6IbA-nSj28g",
+        "title": "Time and Work 2 | CAT Preparation  | Arithmetic | Quantitative Aptitude",
+        "durationSec": 1465,
+        "durationFormatted": "24:25",
+        "channel": "Rodha"
+      },
+      {
+        "id": "MJIlrpc2oKc",
+        "url": "https://www.youtube.com/watch?v=MJIlrpc2oKc",
+        "title": "Time and Work 3 | CAT Preparation | Arithmetic | Quantitative Aptitude",
+        "durationSec": 1565,
+        "durationFormatted": "26:05",
+        "channel": "Rodha"
+      }
+    ]
+  },
+  {
+    "id": "res_8",
+    "topic": "Time, Speed & Distance",
+    "section": "Quants",
+    "subSection": "Arithmetics",
+    "videoCount": 8,
+    "videos": [
+      {
+        "id": "CKiP208avbc",
+        "url": "https://www.youtube.com/watch?v=CKiP208avbc",
+        "title": "Time Speed and Distance 1 | CAT Preparation | Arithmetic | Quantitative Aptitude",
+        "durationSec": 1337,
+        "durationFormatted": "22:17",
+        "channel": "Rodha"
+      },
+      {
+        "id": "PQvBSkJDF_E",
+        "url": "https://www.youtube.com/watch?v=PQvBSkJDF_E",
+        "title": "Time Speed and Distance 2 | CAT Preparation  | Arithmetic | Quantitative Aptitude",
+        "durationSec": 1417,
+        "durationFormatted": "23:37",
+        "channel": "Rodha"
+      },
+      {
+        "id": "tLsP7smddvQ",
+        "url": "https://www.youtube.com/watch?v=tLsP7smddvQ",
+        "title": "Time Speed and Distance 3 | CAT Preparation  | Arithmetic | Quantitative Aptitude",
+        "durationSec": 1608,
+        "durationFormatted": "26:48",
+        "channel": "Rodha"
+      },
+      {
+        "id": "5EzNLs_jExs",
+        "url": "https://www.youtube.com/watch?v=5EzNLs_jExs",
+        "title": "Time Speed and Distance 4 | CAT Preparation | Arithmetic | Quantitative Aptitude",
+        "durationSec": 1916,
+        "durationFormatted": "31:56",
+        "channel": "Rodha"
+      },
+      {
+        "id": "D6Xrdj_Eoj0",
+        "url": "https://www.youtube.com/watch?v=D6Xrdj_Eoj0",
+        "title": "Time Speed and Distance 5 | CAT Preparation | Arithmetic | Quantitative Aptitude",
+        "durationSec": 1516,
+        "durationFormatted": "25:16",
+        "channel": "Rodha"
+      },
+      {
+        "id": "PKBj39PP8DA",
+        "url": "https://www.youtube.com/watch?v=PKBj39PP8DA",
+        "title": "Time Speed and Distance 6 | CAT Preparation  | Arithmetic | Quantitative Aptitude",
+        "durationSec": 1680,
+        "durationFormatted": "28:00",
+        "channel": "Rodha"
+      },
+      {
+        "id": "yzLtv86sWgI",
+        "url": "https://www.youtube.com/watch?v=yzLtv86sWgI",
+        "title": "Time Speed and Distance 7 | (Escalators) CAT Preparation | Arithmetic | Quantitative Aptitude",
+        "durationSec": 1587,
+        "durationFormatted": "26:27",
+        "channel": "Rodha"
+      },
+      {
+        "id": "RHflaojKVlI",
+        "url": "https://www.youtube.com/watch?v=RHflaojKVlI",
+        "title": "Time Speed and Distance 8 | (Escalators contd)  | Arithmetic | Quantitative Aptitude",
+        "durationSec": 1452,
+        "durationFormatted": "24:12",
+        "channel": "Rodha"
+      }
+    ]
+  },
+  {
+    "id": "res_9",
+    "topic": "Boats & Streams",
+    "section": "Quants",
+    "subSection": "Arithmetics",
+    "videoCount": 2,
+    "videos": [
+      {
+        "id": "vx3DfHuuY6Y",
+        "url": "https://www.youtube.com/watch?v=vx3DfHuuY6Y",
+        "title": "TSD Boat Streams 1 | CAT Preparation | Arithmetic | Quantitative Aptitude",
+        "durationSec": 1786,
+        "durationFormatted": "29:46",
+        "channel": "Rodha"
+      },
+      {
+        "id": "QEtURAyIdRY",
+        "url": "https://www.youtube.com/watch?v=QEtURAyIdRY",
+        "title": "TSD Boat Streams 2 | CAT Preparation | Arithmetic | Quantitative Aptitude",
+        "durationSec": 1356,
+        "durationFormatted": "22:36",
+        "channel": "Rodha"
+      }
+    ]
+  },
+  {
+    "id": "res_10",
+    "topic": "Relative Speed",
+    "section": "Quants",
+    "subSection": "Arithmetics",
+    "videoCount": 4,
+    "videos": [
+      {
+        "id": "pRFl8NnqID8",
+        "url": "https://www.youtube.com/watch?v=pRFl8NnqID8",
+        "title": "TSD Relative Speed 2 | CAT Preparation | Arithmetic | Quantitative Aptitude",
+        "durationSec": 1331,
+        "durationFormatted": "22:11",
+        "channel": "Rodha"
+      },
+      {
+        "id": "fniDbYcNYaI",
+        "url": "https://www.youtube.com/watch?v=fniDbYcNYaI",
+        "title": "TSD Relative Speed 3 | CAT Preparation 2| Arithmetic | Quantitative Aptitude",
+        "durationSec": 1641,
+        "durationFormatted": "27:21",
+        "channel": "Rodha"
+      },
+      {
+        "id": "tnZ6zfCHmAc",
+        "url": "https://www.youtube.com/watch?v=tnZ6zfCHmAc",
+        "title": "TSD Relative Speed 4 | CAT Preparation 2024 | Arithmetic | Quantitative Aptitude",
+        "durationSec": 1634,
+        "durationFormatted": "27:14",
+        "channel": "Rodha"
+      },
+      {
+        "id": "cWKD8HHunkM",
+        "url": "https://www.youtube.com/watch?v=cWKD8HHunkM",
+        "title": "TSD Relative Speed 4 | CAT Preparation | Arithmetic | Quantitative Aptitude",
+        "durationSec": 1301,
+        "durationFormatted": "21:41",
+        "channel": "Rodha"
+      }
+    ]
+  },
+  {
+    "id": "res_11",
+    "topic": "Linear Tracks",
+    "section": "Quants",
+    "subSection": "Arithmetics",
+    "videoCount": 3,
+    "videos": [
+      {
+        "id": "nSctNv6Q3nA",
+        "url": "https://www.youtube.com/watch?v=nSctNv6Q3nA",
+        "title": "TSD Linear Tracks 1 | CAT Preparation  | Arithmetic | Quantitative Aptitude",
+        "durationSec": 1660,
+        "durationFormatted": "27:40",
+        "channel": "Rodha"
+      },
+      {
+        "id": "rhqjhvFEmAo",
+        "url": "https://www.youtube.com/watch?v=rhqjhvFEmAo",
+        "title": "TSD Linear Tracks 2 | CAT Preparation  | Arithmetic | Quantitative Aptitude",
+        "durationSec": 1747,
+        "durationFormatted": "29:07",
+        "channel": "Rodha"
+      },
+      {
+        "id": "XtgtOReqpng",
+        "url": "https://www.youtube.com/watch?v=XtgtOReqpng",
+        "title": "TSD Linear Tracks 3 | CAT Preparation | Arithmetic | Quantitative Aptitude",
+        "durationSec": 1473,
+        "durationFormatted": "24:33",
+        "channel": "Rodha"
+      }
+    ]
+  },
+  {
+    "id": "res_12",
+    "topic": "Circular Tracks",
+    "section": "Quants",
+    "subSection": "Arithmetics",
+    "videoCount": 3,
+    "videos": [
+      {
+        "id": "rdleefuXHQk",
+        "url": "https://www.youtube.com/watch?v=rdleefuXHQk",
+        "title": "Circular Tracks 1 |Cat Exam Preparation  |  Arithmetic",
+        "durationSec": 1339,
+        "durationFormatted": "22:19",
+        "channel": "Rodha"
+      },
+      {
+        "id": "hkNVVMX06FE",
+        "url": "https://www.youtube.com/watch?v=hkNVVMX06FE",
+        "title": "Circular Tracks |Cat Exam Preparation | Arithmetic",
+        "durationSec": 1412,
+        "durationFormatted": "23:32",
+        "channel": "Rodha"
+      },
+      {
+        "id": "7-MKc9p6AwU",
+        "url": "https://www.youtube.com/watch?v=7-MKc9p6AwU",
+        "title": "Circular Tracks 3 |cat exam preparation videos  | Arithmetic",
+        "durationSec": 1140,
+        "durationFormatted": "19:00",
+        "channel": "Rodha"
+      }
+    ]
+  },
+  {
+    "id": "res_13",
+    "topic": "Linear Races",
+    "section": "Quants",
+    "subSection": "Arithmetics",
+    "videoCount": 2,
+    "videos": [
+      {
+        "id": "UMJ4X1LwYxQ",
+        "url": "https://www.youtube.com/watch?v=UMJ4X1LwYxQ",
+        "title": "TSD Linear Races 1 | CAT Preparation | Arithmetic | Quantitative Aptitude",
+        "durationSec": 1343,
+        "durationFormatted": "22:23",
+        "channel": "Rodha"
+      },
+      {
+        "id": "s9tyhivTaQM",
+        "url": "https://www.youtube.com/watch?v=s9tyhivTaQM",
+        "title": "TSD Linear Races 2 | CAT Preparation  | Arithmetic | Quantitative Aptitude",
+        "durationSec": 1592,
+        "durationFormatted": "26:32",
+        "channel": "Rodha"
+      }
+    ]
+  },
+  {
+    "id": "res_14",
+    "topic": "Clocks",
+    "section": "Quants",
+    "subSection": "Arithmetics",
+    "videoCount": 1,
+    "videos": [
+      {
+        "id": "Rqj9wEc2SfA",
+        "url": "https://www.youtube.com/watch?v=Rqj9wEc2SfA",
+        "title": "Time & Distance clocks   1 | CAT Exam Preparation   | Quantitative Aptitude",
+        "durationSec": 1338,
+        "durationFormatted": "22:18",
+        "channel": "Rodha"
+      }
+    ]
+  },
+  {
+    "id": "res_15",
+    "topic": "Simple Equations",
+    "section": "Quants",
+    "subSection": "Algebra & Modern Math",
+    "videoCount": 6,
+    "videos": [
+      {
+        "id": "W6MKuAnB0h4",
+        "url": "https://www.youtube.com/watch?v=W6MKuAnB0h4",
+        "title": "Simple Equations 1 | CAT Preparation  | Algebra | Quantitative Aptitude",
+        "durationSec": 1569,
+        "durationFormatted": "26:09",
+        "channel": "Rodha"
+      },
+      {
+        "id": "P-emknCdeZE",
+        "url": "https://www.youtube.com/watch?v=P-emknCdeZE",
+        "title": "Simple Equations 2 | CAT Preparation | Algebra | Quantitative Aptitude",
+        "durationSec": 1712,
+        "durationFormatted": "28:32",
+        "channel": "Rodha"
+      },
+      {
+        "id": "vrtKzaspVjs",
+        "url": "https://www.youtube.com/watch?v=vrtKzaspVjs",
+        "title": "Simple Equations 3 | CAT Preparation  | Algebra | Quantitative Aptitude",
+        "durationSec": 1298,
+        "durationFormatted": "21:38",
+        "channel": "Rodha"
+      },
+      {
+        "id": "hlEjsEVLkbg",
+        "url": "https://www.youtube.com/watch?v=hlEjsEVLkbg",
+        "title": "Simple Equations 4 | CAT Preparation  | Algebra | Quantitative Aptitude",
+        "durationSec": 1368,
+        "durationFormatted": "22:48",
+        "channel": "Rodha"
+      },
+      {
+        "id": "9foBHml4Ls0",
+        "url": "https://www.youtube.com/watch?v=9foBHml4Ls0",
+        "title": "Simple Equations 5 | CAT Preparation | Algebra | Quantitative Aptitude",
+        "durationSec": 1557,
+        "durationFormatted": "25:57",
+        "channel": "Rodha"
+      },
+      {
+        "id": "UkhgxUqT9qE",
+        "url": "https://www.youtube.com/watch?v=UkhgxUqT9qE",
+        "title": "Simple Equations 6 | CAT Preparation  | Algebra | Quantitative Aptitude",
+        "durationSec": 1339,
+        "durationFormatted": "22:19",
+        "channel": "Rodha"
+      }
+    ]
+  },
+  {
+    "id": "res_16",
+    "topic": "Quadratic Equations",
+    "section": "Quants",
+    "subSection": "Algebra & Modern Math",
+    "videoCount": 3,
+    "videos": [
+      {
+        "id": "rk64bqehuto",
+        "url": "https://www.youtube.com/watch?v=rk64bqehuto",
+        "title": "Quadratic Equation 1 | CAT Preparation  | Algebra | Quantitative Aptitude",
+        "durationSec": 1707,
+        "durationFormatted": "28:27",
+        "channel": "Rodha"
+      },
+      {
+        "id": "X3c60CCB18U",
+        "url": "https://www.youtube.com/watch?v=X3c60CCB18U",
+        "title": "Quadratic Equation 2 | CAT Preparation  | Algebra | Quantitative Aptitude",
+        "durationSec": 1253,
+        "durationFormatted": "20:53",
+        "channel": "Rodha"
+      },
+      {
+        "id": "27OVCl0b0nQ",
+        "url": "https://www.youtube.com/watch?v=27OVCl0b0nQ",
+        "title": "Quadratic Equation 3 | CAT Preparation  | Algebra | Quantitative Aptitude",
+        "durationSec": 1218,
+        "durationFormatted": "20:18",
+        "channel": "Rodha"
+      }
+    ]
+  },
+  {
+    "id": "res_17",
+    "topic": "Cubic Equations",
+    "section": "Quants",
+    "subSection": "Algebra & Modern Math",
+    "videoCount": 3,
+    "videos": [
+      {
+        "id": "NDe4t_eO_mE",
+        "url": "https://www.youtube.com/watch?v=NDe4t_eO_mE",
+        "title": "Cubic Equation 1 | CAT Preparation 2024 | Algebra | Quantitative Aptitude",
+        "durationSec": 1136,
+        "durationFormatted": "18:56",
+        "channel": "Rodha"
+      },
+      {
+        "id": "nYJpeFaon9Y",
+        "url": "https://www.youtube.com/watch?v=nYJpeFaon9Y",
+        "title": "Cubic Equation 2 | CAT Preparation  | Algebra | Quantitative Aptitude",
+        "durationSec": 1422,
+        "durationFormatted": "23:42",
+        "channel": "Rodha"
+      },
+      {
+        "id": "vG-Z3bagJek",
+        "url": "https://www.youtube.com/watch?v=vG-Z3bagJek",
+        "title": "Quadratic Equation 4| CAT Preparation | Algebra | Quantitative Aptitude",
+        "durationSec": 1543,
+        "durationFormatted": "25:43",
+        "channel": "Rodha"
+      }
+    ]
+  },
+  {
+    "id": "res_18",
+    "topic": "Inequalities",
+    "section": "Quants",
+    "subSection": "Algebra & Modern Math",
+    "videoCount": 8,
+    "videos": [
+      {
+        "id": "zIrr1lkvyBY",
+        "url": "https://www.youtube.com/watch?v=zIrr1lkvyBY",
+        "title": "Inequalities 1 | CAT Preparation  | Algebra | Quantitative Aptitude",
+        "durationSec": 1131,
+        "durationFormatted": "18:51",
+        "channel": "Rodha"
+      },
+      {
+        "id": "q6FeaM_18Pk",
+        "url": "https://www.youtube.com/watch?v=q6FeaM_18Pk",
+        "title": "Inequalities 2 | CAT Preparation | Algebra | Quantitative Aptitude",
+        "durationSec": 1787,
+        "durationFormatted": "29:47",
+        "channel": "Rodha"
+      },
+      {
+        "id": "lY11kL2EREk",
+        "url": "https://www.youtube.com/watch?v=lY11kL2EREk",
+        "title": "Inequalities 3 | CAT Preparation  | Algebra | Quantitative Aptitude",
+        "durationSec": 1134,
+        "durationFormatted": "18:54",
+        "channel": "Rodha"
+      },
+      {
+        "id": "joZU568s8T4",
+        "url": "https://www.youtube.com/watch?v=joZU568s8T4",
+        "title": "Inequalities 4 | CAT Preparation  | Algebra | Quantitative Aptitude",
+        "durationSec": 1201,
+        "durationFormatted": "20:01",
+        "channel": "Rodha"
+      },
+      {
+        "id": "TMOq7m_OKUw",
+        "url": "https://www.youtube.com/watch?v=TMOq7m_OKUw",
+        "title": "Inequalities 5 | CAT Preparation | Algebra | Quantitative Aptitude",
+        "durationSec": 1357,
+        "durationFormatted": "22:37",
+        "channel": "Rodha"
+      },
+      {
+        "id": "EDLqKDO4ruY",
+        "url": "https://www.youtube.com/watch?v=EDLqKDO4ruY",
+        "title": "Inequalities 6 | CAT Preparation | Algebra | Quantitative Aptitude",
+        "durationSec": 1697,
+        "durationFormatted": "28:17",
+        "channel": "Rodha"
+      },
+      {
+        "id": "gxO5nVZFO4I",
+        "url": "https://www.youtube.com/watch?v=gxO5nVZFO4I",
+        "title": "INEQUALITIES   7 | Quantitative Aptitude for CAT",
+        "durationSec": 701,
+        "durationFormatted": "11:41",
+        "channel": "Rodha"
+      },
+      {
+        "id": "0Q1Lz5z3HeM",
+        "url": "https://www.youtube.com/watch?v=0Q1Lz5z3HeM",
+        "title": "Inequalities - 8 | Quantitative Aptitude for CAT",
+        "durationSec": 444,
+        "durationFormatted": "7:24",
+        "channel": "Rodha"
+      }
+    ]
+  },
+  {
+    "id": "res_19",
+    "topic": "Advance Algebra",
+    "section": "Quants",
+    "subSection": "Algebra & Modern Math",
+    "videoCount": 7,
+    "videos": [
+      {
+        "id": "PcORsQLuja8",
+        "url": "https://www.youtube.com/watch?v=PcORsQLuja8",
+        "title": "Advance Algebra 1 | Algebra | Quantitative Aptitude  | CAT Preparation",
+        "durationSec": 2081,
+        "durationFormatted": "34:41",
+        "channel": "Rodha"
+      },
+      {
+        "id": "u6gP3BHbU1c",
+        "url": "https://www.youtube.com/watch?v=u6gP3BHbU1c",
+        "title": "Advance Algebra 2 | CAT Preparation  | Algebra | Quantitative Aptitude",
+        "durationSec": 1688,
+        "durationFormatted": "28:08",
+        "channel": "Rodha"
+      },
+      {
+        "id": "TpTIG0saIrY",
+        "url": "https://www.youtube.com/watch?v=TpTIG0saIrY",
+        "title": "Advance Algebra 3 | CAT Preparation  | Algebra | Quantitative Aptitude",
+        "durationSec": 1148,
+        "durationFormatted": "19:08",
+        "channel": "Rodha"
+      },
+      {
+        "id": "eW6vBToDaYE",
+        "url": "https://www.youtube.com/watch?v=eW6vBToDaYE",
+        "title": "Advance Algebra 4 | CAT Preparation  | Algebra | Quantitative Aptitude",
+        "durationSec": 1198,
+        "durationFormatted": "19:58",
+        "channel": "Rodha"
+      },
+      {
+        "id": "0Hs-4Dc5SgQ",
+        "url": "https://www.youtube.com/watch?v=0Hs-4Dc5SgQ",
+        "title": "Advance Algebra - Part 5 | Quantitative Aptitude for CAT",
+        "durationSec": 854,
+        "durationFormatted": "14:14",
+        "channel": "Rodha"
+      },
+      {
+        "id": "gNOb9Q61f-w",
+        "url": "https://www.youtube.com/watch?v=gNOb9Q61f-w",
+        "title": "Advance Algebra  - 6 I Algebra for CAT  I Quantitative Aptitude Preparation 2024",
+        "durationSec": 664,
+        "durationFormatted": "11:04",
+        "channel": "Rodha"
+      },
+      {
+        "id": "r6JYnOTv6hs",
+        "url": "https://www.youtube.com/watch?v=r6JYnOTv6hs",
+        "title": "Advance Algebra  - 7 I Algebra for CAT 2021 I Quantitative Aptitude Preparation 2021",
+        "durationSec": 484,
+        "durationFormatted": "8:04",
+        "channel": "Rodha"
+      }
+    ]
+  },
+  {
+    "id": "res_20",
+    "topic": "Arithmetic Progression",
+    "section": "Quants",
+    "subSection": "Algebra & Modern Math",
+    "videoCount": 2,
+    "videos": [
+      {
+        "id": "wSbjXsULtrI",
+        "url": "https://www.youtube.com/watch?v=wSbjXsULtrI",
+        "title": "Arithmetic Progression 1 | CAT Exam Preparation | Algebra | Quantitative Aptitude",
+        "durationSec": 1345,
+        "durationFormatted": "22:25",
+        "channel": "Rodha"
+      },
+      {
+        "id": "V69nA_XihxI",
+        "url": "https://www.youtube.com/watch?v=V69nA_XihxI",
+        "title": "Arithmetic Progression 2  | Algebra | Quantitative Aptitude | CAT Exam Preparation",
+        "durationSec": 1399,
+        "durationFormatted": "23:19",
+        "channel": "Rodha"
+      }
+    ]
+  },
+  {
+    "id": "res_21",
+    "topic": "Graphs",
+    "section": "Quants",
+    "subSection": "Algebra & Modern Math",
+    "videoCount": 2,
+    "videos": [
+      {
+        "id": "BLXcly1Dvu4",
+        "url": "https://www.youtube.com/watch?v=BLXcly1Dvu4",
+        "title": "Graphs 1 | CAT Preparation | Algebra | Quantitative Aptitude",
+        "durationSec": 825,
+        "durationFormatted": "13:45",
+        "channel": "Rodha"
+      },
+      {
+        "id": "kOlcYqzYMQY",
+        "url": "https://www.youtube.com/watch?v=kOlcYqzYMQY",
+        "title": "Graphs 2 | CAT Preparation | Algebra | Quantitative Aptitude",
+        "durationSec": 1230,
+        "durationFormatted": "20:30",
+        "channel": "Rodha"
+      }
+    ]
+  },
+  {
+    "id": "res_22",
+    "topic": "Indices Surds",
+    "section": "Quants",
+    "subSection": "Algebra & Modern Math",
+    "videoCount": 5,
+    "videos": [
+      {
+        "id": "zgxx5FpvCus",
+        "url": "https://www.youtube.com/watch?v=zgxx5FpvCus",
+        "title": "Indices Surds 1 | CAT Preparation  | Algebra | Quantitative Aptitude",
+        "durationSec": 1202,
+        "durationFormatted": "20:02",
+        "channel": "Rodha"
+      },
+      {
+        "id": "GdaRjTRJ_rg",
+        "url": "https://www.youtube.com/watch?v=GdaRjTRJ_rg",
+        "title": "Indices Surds 2 | CAT Preparation  | Algebra | Quantitative Aptitude",
+        "durationSec": 1489,
+        "durationFormatted": "24:49",
+        "channel": "Rodha"
+      },
+      {
+        "id": "AhpAzlI-WQA",
+        "url": "https://www.youtube.com/watch?v=AhpAzlI-WQA",
+        "title": "Indices Surds 3 | CAT Preparation | Algebra | Quantitative Aptitude",
+        "durationSec": 1298,
+        "durationFormatted": "21:38",
+        "channel": "Rodha"
+      },
+      {
+        "id": "zOGkoKJkgRw",
+        "url": "https://www.youtube.com/watch?v=zOGkoKJkgRw",
+        "title": "Indices Surds 4 | CAT Preparation  | Algebra | Quantitative Aptitude",
+        "durationSec": 1218,
+        "durationFormatted": "20:18",
+        "channel": "Rodha"
+      },
+      {
+        "id": "bzrqhfqYOgY",
+        "url": "https://www.youtube.com/watch?v=bzrqhfqYOgY",
+        "title": "Indices & Surds - Part 5 | Quantitative Aptitude for CAT",
+        "durationSec": 719,
+        "durationFormatted": "11:59",
+        "channel": "Rodha"
+      }
+    ]
+  },
+  {
+    "id": "res_23",
+    "topic": "Sequence & Series",
+    "section": "Quants",
+    "subSection": "Algebra & Modern Math",
+    "videoCount": 2,
+    "videos": [
+      {
+        "id": "XrbkOHqFQqA",
+        "url": "https://www.youtube.com/watch?v=XrbkOHqFQqA",
+        "title": "Sequence Series - 1 | Quantitative Aptitude for CAT",
+        "durationSec": 1509,
+        "durationFormatted": "25:09",
+        "channel": "Rodha"
+      },
+      {
+        "id": "FKFwQG0TvKA",
+        "url": "https://www.youtube.com/watch?v=FKFwQG0TvKA",
+        "title": "Sequence Series - 2",
+        "durationSec": 932,
+        "durationFormatted": "15:32",
+        "channel": "Rodha"
+      }
+    ]
+  },
+  {
+    "id": "res_24",
+    "topic": "Logarithms",
+    "section": "Quants",
+    "subSection": "Algebra & Modern Math",
+    "videoCount": 2,
+    "videos": [
+      {
+        "id": "K6Jk3uEkIMA",
+        "url": "https://www.youtube.com/watch?v=K6Jk3uEkIMA",
+        "title": "| Logarithms part 1 |Algebra| CAT Preparation |",
+        "durationSec": 1842,
+        "durationFormatted": "30:42",
+        "channel": "Rodha"
+      },
+      {
+        "id": "SzseQAYENMc",
+        "url": "https://youtu.be/SzseQAYENMc",
+        "title": "| Logarithms 2|Cat Exam Preparation  | Quantitative Aptitude for CAT EXAM",
+        "durationSec": 1446,
+        "durationFormatted": "24:06",
+        "channel": "Rodha"
+      }
+    ]
+  },
+  {
+    "id": "res_25",
+    "topic": "Functions",
+    "section": "Quants",
+    "subSection": "Algebra & Modern Math",
+    "videoCount": 10,
+    "videos": [
+      {
+        "id": "6FEnbG2Ux5o",
+        "url": "https://www.youtube.com/watch?v=6FEnbG2Ux5o",
+        "title": "Functions - 1 (Basics along with Number of possible functions from set A to B ) | CAT EXAM",
+        "durationSec": 1275,
+        "durationFormatted": "21:15",
+        "channel": "Rodha"
+      },
+      {
+        "id": "EWB1NaL4N4U",
+        "url": "https://www.youtube.com/watch?v=EWB1NaL4N4U",
+        "title": "Functions - 2 ( Excellent concept of Number of Onto Functions from set A to B) | CAT 2024",
+        "durationSec": 1152,
+        "durationFormatted": "19:12",
+        "channel": "Rodha"
+      },
+      {
+        "id": "6ca_RfR4A8Y",
+        "url": "https://www.youtube.com/watch?v=6ca_RfR4A8Y",
+        "title": "Functions - 3 (Subsets in function and typical CAT level problems) | CAT",
+        "durationSec": 1166,
+        "durationFormatted": "19:26",
+        "channel": "Rodha"
+      },
+      {
+        "id": "LChCPuxO83s",
+        "url": "https://www.youtube.com/watch?v=LChCPuxO83s",
+        "title": "Functions - 4 (General solutions shortcut) | CAT 2024",
+        "durationSec": 994,
+        "durationFormatted": "16:34",
+        "channel": "Rodha"
+      },
+      {
+        "id": "-tgziXRn-1k",
+        "url": "https://www.youtube.com/watch?v=-tgziXRn-1k",
+        "title": "Functions-5 | Quantitative Aptitude for CAT 2024",
+        "durationSec": 986,
+        "durationFormatted": "16:26",
+        "channel": "Rodha"
+      },
+      {
+        "id": "J1KIc8IEidw",
+        "url": "https://www.youtube.com/watch?v=J1KIc8IEidw",
+        "title": "Functions - 6 | Quantitative Aptitude for CAT 2024",
+        "durationSec": 817,
+        "durationFormatted": "13:37",
+        "channel": "Rodha"
+      },
+      {
+        "id": "nHOh5GHiw30",
+        "url": "https://www.youtube.com/watch?v=nHOh5GHiw30",
+        "title": "Functions - 7 | Quantitative Aptitude for CAT",
+        "durationSec": 1045,
+        "durationFormatted": "17:25",
+        "channel": "Rodha"
+      },
+      {
+        "id": "tK3U9u0jHJE",
+        "url": "https://www.youtube.com/watch?v=tK3U9u0jHJE",
+        "title": "Functions -  8 | Quantitative Aptitude for CAT 2024",
+        "durationSec": 938,
+        "durationFormatted": "15:38",
+        "channel": "Rodha"
+      },
+      {
+        "id": "cK1IejfD0I8",
+        "url": "https://www.youtube.com/watch?v=cK1IejfD0I8",
+        "title": "Functions - 9 I Algebra for CATI Quantitative Aptitude Preparation",
+        "durationSec": 590,
+        "durationFormatted": "9:50",
+        "channel": "Rodha"
+      },
+      {
+        "id": "rSbAIaV34Yg",
+        "url": "https://www.youtube.com/watch?v=rSbAIaV34Yg",
+        "title": "Functions - 10 | Quantitative Aptitude for CAT",
+        "durationSec": 782,
+        "durationFormatted": "13:02",
+        "channel": "Rodha"
+      }
+    ]
+  },
+  {
+    "id": "res_26",
+    "topic": "Statistics",
+    "section": "Quants",
+    "subSection": "Algebra & Modern Math",
+    "videoCount": 3,
+    "videos": [
+      {
+        "id": "VlYCQXSHutM",
+        "url": "https://www.youtube.com/watch?v=VlYCQXSHutM",
+        "title": "Statistics for CAT/XAT - Part 1 II CAT PREPARATION II XAT PREPARATION",
+        "durationSec": 988,
+        "durationFormatted": "16:28",
+        "channel": "Rodha"
+      },
+      {
+        "id": "zWI2Nv5_7iE",
+        "url": "https://www.youtube.com/watch?v=zWI2Nv5_7iE",
+        "title": "Statistics for CAT/XAT - Part 2 II CAT PREPARATION  II XAT PREPARATION",
+        "durationSec": 1025,
+        "durationFormatted": "17:05",
+        "channel": "Rodha"
+      },
+      {
+        "id": "FhsHkHjE0v4",
+        "url": "https://www.youtube.com/watch?v=FhsHkHjE0v4",
+        "title": "Statistics for CAT/XAT - Part 3 II CAT PREPARATION  II XAT PREPARATION",
+        "durationSec": 896,
+        "durationFormatted": "14:56",
+        "channel": "Rodha"
+      }
+    ]
+  },
+  {
+    "id": "res_27",
+    "topic": "Probability",
+    "section": "Quants",
+    "subSection": "Algebra & Modern Math",
+    "videoCount": 2,
+    "videos": [
+      {
+        "id": "b6hmLsjbA7E",
+        "url": "https://www.youtube.com/watch?v=b6hmLsjbA7E",
+        "title": "Probability 1 | CAT Preparation  | Quantitative Aptitude",
+        "durationSec": 1290,
+        "durationFormatted": "21:30",
+        "channel": "Rodha"
+      },
+      {
+        "id": "1KYf9l1wGTY",
+        "url": "https://www.youtube.com/watch?v=1KYf9l1wGTY",
+        "title": "Probability 2 | CAT Preparation  | Quantitative Aptitude",
+        "durationSec": 1269,
+        "durationFormatted": "21:09",
+        "channel": "Rodha"
+      }
+    ]
+  },
+  {
+    "id": "res_28",
+    "topic": "Permutation & Combination",
+    "section": "Quants",
+    "subSection": "Algebra & Modern Math",
+    "videoCount": 22,
+    "videos": [
+      {
+        "id": "8kvqSY1-W5Y",
+        "url": "https://www.youtube.com/watch?v=8kvqSY1-W5Y",
+        "title": "Permutations and Combinations 1 |  Quantitative Aptitude  | CAT Preparation 2024",
+        "durationSec": 1615,
+        "durationFormatted": "26:55",
+        "channel": "Rodha"
+      },
+      {
+        "id": "hdp7hrc5Ams",
+        "url": "https://www.youtube.com/watch?v=hdp7hrc5Ams",
+        "title": "Permutations Combinations 2 | CAT Exam Preparation  | Quantitative Aptitude",
+        "durationSec": 2189,
+        "durationFormatted": "36:29",
+        "channel": "Rodha"
+      },
+      {
+        "id": "fx30pQ4Qd_g",
+        "url": "https://www.youtube.com/watch?v=fx30pQ4Qd_g",
+        "title": "Permutations Combinations 3 | CAT Exam Preparation  | Quantitative Aptitude",
+        "durationSec": 2087,
+        "durationFormatted": "34:47",
+        "channel": "Rodha"
+      },
+      {
+        "id": "xl62EuAtYTc",
+        "url": "https://www.youtube.com/watch?v=xl62EuAtYTc",
+        "title": "Permutations Combinations 4 | CAT Exam Preparation  | Quantitative Aptitude",
+        "durationSec": 1722,
+        "durationFormatted": "28:42",
+        "channel": "Rodha"
+      },
+      {
+        "id": "ngV_itTBZr8",
+        "url": "https://www.youtube.com/watch?v=ngV_itTBZr8",
+        "title": "Permutations Combinations 5 | CAT Exam Preparation | Quantitative Aptitude",
+        "durationSec": 1496,
+        "durationFormatted": "24:56",
+        "channel": "Rodha"
+      },
+      {
+        "id": "Nt7yqNocfg4",
+        "url": "https://www.youtube.com/watch?v=Nt7yqNocfg4",
+        "title": "Permutations and Combinations 6 | CAT Preparation  |  Quantitative Aptitude",
+        "durationSec": 1510,
+        "durationFormatted": "25:10",
+        "channel": "Rodha"
+      },
+      {
+        "id": "jnEtA2CxPpA",
+        "url": "https://www.youtube.com/watch?v=jnEtA2CxPpA",
+        "title": "Permutations and Combinations 7 | CAT Preparation |  Quantitative Aptitude",
+        "durationSec": 1516,
+        "durationFormatted": "25:16",
+        "channel": "Rodha"
+      },
+      {
+        "id": "kHR2TecGao8",
+        "url": "https://www.youtube.com/watch?v=kHR2TecGao8",
+        "title": "Permutations and Combinations 8 | CAT Preparation  |  Quantitative Aptitude",
+        "durationSec": 1020,
+        "durationFormatted": "17:00",
+        "channel": "Rodha"
+      },
+      {
+        "id": "8xtquD6djG8",
+        "url": "https://www.youtube.com/watch?v=8xtquD6djG8",
+        "title": "Permutations and Combinations 09 (Similar to Different Distribution) | CAT Quantitative Aptitude",
+        "durationSec": 1666,
+        "durationFormatted": "27:46",
+        "channel": "Rodha"
+      },
+      {
+        "id": "jzE_pUpgN6k",
+        "url": "https://www.youtube.com/watch?v=jzE_pUpgN6k",
+        "title": "Permutations and Combinations 10 (Similar to Different Distribution with atleast atmost concept)",
+        "durationSec": 1510,
+        "durationFormatted": "25:10",
+        "channel": "Rodha"
+      },
+      {
+        "id": "_lQk4wQ0wQM",
+        "url": "https://www.youtube.com/watch?v=_lQk4wQ0wQM",
+        "title": "Permutations and Combinations 11 (Sum of digits as integral solution concept) | CAT Exam Preparation",
+        "durationSec": 1273,
+        "durationFormatted": "21:13",
+        "channel": "Rodha"
+      },
+      {
+        "id": "3ijB7Q9A8XI",
+        "url": "https://www.youtube.com/watch?v=3ijB7Q9A8XI",
+        "title": "Permutations and Combinations 12(When Sum of digits close to upper limit) | CAT",
+        "durationSec": 1936,
+        "durationFormatted": "32:16",
+        "channel": "Rodha"
+      },
+      {
+        "id": "QjH6rkTCehk",
+        "url": "https://www.youtube.com/watch?v=QjH6rkTCehk",
+        "title": "Permutations and Combinations 13 | CAT Preparation 2024 |  Quantitative Aptitude",
+        "durationSec": 1734,
+        "durationFormatted": "28:54",
+        "channel": "Rodha"
+      },
+      {
+        "id": "R179XB7ePbc",
+        "url": "https://www.youtube.com/watch?v=R179XB7ePbc",
+        "title": "Permutations and Combinations 13 ( The \"GAPS\" Concept) | CAT",
+        "durationSec": 1193,
+        "durationFormatted": "19:53",
+        "channel": "Rodha"
+      },
+      {
+        "id": "DdWtVJe-f6Q",
+        "url": "https://www.youtube.com/watch?v=DdWtVJe-f6Q",
+        "title": "Permutations and Combinations 14 ( The GAPS concept contd. & Ring fingers concept) | CAT",
+        "durationSec": 1035,
+        "durationFormatted": "17:15",
+        "channel": "Rodha"
+      },
+      {
+        "id": "y9qX5tnMM8o",
+        "url": "https://www.youtube.com/watch?v=y9qX5tnMM8o",
+        "title": "Permutations and Combinations 15 (Different to Similar Distribution) | CAT",
+        "durationSec": 1619,
+        "durationFormatted": "26:59",
+        "channel": "Rodha"
+      },
+      {
+        "id": "p5uqB2WUdfQ",
+        "url": "https://www.youtube.com/watch?v=p5uqB2WUdfQ",
+        "title": "Permutations and Combinations 16 (Ordered Unordered concept ) | CAT",
+        "durationSec": 1544,
+        "durationFormatted": "25:44",
+        "channel": "Rodha"
+      },
+      {
+        "id": "hDyInCduxfU",
+        "url": "https://www.youtube.com/watch?v=hDyInCduxfU",
+        "title": "Permutations and Combinations 17 (Writing any no. as sum of 3 Natural Nos., ordered and unordered)",
+        "durationSec": 953,
+        "durationFormatted": "15:53",
+        "channel": "Rodha"
+      },
+      {
+        "id": "IlcIDDwMTpQ",
+        "url": "https://www.youtube.com/watch?v=IlcIDDwMTpQ",
+        "title": "Permutations and Combinations 18 (Similar to Similar Distribution- Fantastic Approach without cases)",
+        "durationSec": 1262,
+        "durationFormatted": "21:02",
+        "channel": "Rodha"
+      },
+      {
+        "id": "9iQKD66yQzY",
+        "url": "https://www.youtube.com/watch?v=9iQKD66yQzY",
+        "title": "Permutations and Combinations - 19 ( Different to Different Distribution) | CAT",
+        "durationSec": 1485,
+        "durationFormatted": "24:45",
+        "channel": "Rodha"
+      },
+      {
+        "id": "D982GSUr-zI",
+        "url": "https://www.youtube.com/watch?v=D982GSUr-zI",
+        "title": "Permutations and Combinations 20 (Writing a number as product of 3 natural numbers) | CAT",
+        "durationSec": 1621,
+        "durationFormatted": "27:01",
+        "channel": "Rodha"
+      },
+      {
+        "id": "jCok-U5nxT4",
+        "url": "https://www.youtube.com/watch?v=jCok-U5nxT4",
+        "title": "Permutations and Combinations 21 (Circular Permutations, Removing Symmetry) | CAT",
+        "durationSec": 1039,
+        "durationFormatted": "17:19",
+        "channel": "Rodha"
+      }
+    ]
+  },
+  {
+    "id": "res_29",
+    "topic": "Numbers",
+    "section": "Quants",
+    "subSection": "Number System",
+    "videoCount": 3,
+    "videos": [
+      {
+        "id": "_g89_8Bb57g",
+        "url": "https://www.youtube.com/watch?v=_g89_8Bb57g",
+        "title": "Numbers 1 || Number Systems | CAT Preparation | Quantitative Aptitude CAT 2026 | Ravi Prakash Rodha",
+        "durationSec": 1690,
+        "durationFormatted": "28:10",
+        "channel": "Rodha"
+      },
+      {
+        "id": "KiG0yg61alo",
+        "url": "https://www.youtube.com/watch?v=KiG0yg61alo",
+        "title": "Numbers 2 || Number Systems | CAT Preparation | Quantitative Aptitude CAT 2026 | Ravi Prakash Rodha",
+        "durationSec": 1382,
+        "durationFormatted": "23:02",
+        "channel": "Rodha"
+      },
+      {
+        "id": "JU-b_Zu-z7U",
+        "url": "https://www.youtube.com/watch?v=JU-b_Zu-z7U",
+        "title": "Numbers 3 || Number Systems | CAT Preparation | Quantitative Aptitude CAT 2026 | Ravi Prakash Rodha",
+        "durationSec": 1566,
+        "durationFormatted": "26:06",
+        "channel": "Rodha"
+      }
+    ]
+  },
+  {
+    "id": "res_30",
+    "topic": "Factorials",
+    "section": "Quants",
+    "subSection": "Number System",
+    "videoCount": 6,
+    "videos": [
+      {
+        "id": "V85eME7WS0E",
+        "url": "https://www.youtube.com/watch?v=V85eME7WS0E",
+        "title": "Factorials 1||  Number Systems || Quantitative Aptitude || CAT Preparation",
+        "durationSec": 2058,
+        "durationFormatted": "34:18",
+        "channel": "Rodha"
+      },
+      {
+        "id": "5AbOcjrxJ34",
+        "url": "https://www.youtube.com/watch?v=5AbOcjrxJ34",
+        "title": "Factorials  2 ||  Number Systems || Quantitative Aptitude || CAT Preparation",
+        "durationSec": 2092,
+        "durationFormatted": "34:52",
+        "channel": "Rodha"
+      },
+      {
+        "id": "mmj4QW5p8Bc",
+        "url": "https://www.youtube.com/watch?v=mmj4QW5p8Bc",
+        "title": "Factorials 3 ||  Number Systems || Quantitative Aptitude ||CAT Preparation",
+        "durationSec": 2141,
+        "durationFormatted": "35:41",
+        "channel": "Rodha"
+      },
+      {
+        "id": "sbyU48ZOsVM",
+        "url": "https://www.youtube.com/watch?v=sbyU48ZOsVM",
+        "title": "Factorials 4 ||  Number Systems || Quantitative Aptitude || CAT Preparation",
+        "durationSec": 1407,
+        "durationFormatted": "23:27",
+        "channel": "Rodha"
+      },
+      {
+        "id": "Roj0wDIN0ck",
+        "url": "https://www.youtube.com/watch?v=Roj0wDIN0ck",
+        "title": "Factorials 5 ||  Number Systems || Quantitative Aptitude || CAT Preparation",
+        "durationSec": 1128,
+        "durationFormatted": "18:48",
+        "channel": "Rodha"
+      },
+      {
+        "id": "GrbyiWvFYwA",
+        "url": "https://www.youtube.com/watch?v=GrbyiWvFYwA",
+        "title": "Factorials 6 ||  Number Systems || Quantitative Aptitude || CAT Preparation",
+        "durationSec": 1711,
+        "durationFormatted": "28:31",
+        "channel": "Rodha"
+      }
+    ]
+  },
+  {
+    "id": "res_31",
+    "topic": "Remainders",
+    "section": "Quants",
+    "subSection": "Number System",
+    "videoCount": 9,
+    "videos": [
+      {
+        "id": "1PYOIpFFwC4",
+        "url": "https://www.youtube.com/watch?v=1PYOIpFFwC4",
+        "title": "Remainders 1  || Number Systems || Quantitative Aptitude || CAT Exam Preparation",
+        "durationSec": 1802,
+        "durationFormatted": "30:02",
+        "channel": "Rodha"
+      },
+      {
+        "id": "kB3BaJcrnJA",
+        "url": "https://www.youtube.com/watch?v=kB3BaJcrnJA",
+        "title": "Remainders 2  || Number Systems || Quantitative Aptitude || CAT Exam Preparation",
+        "durationSec": 1440,
+        "durationFormatted": "24:00",
+        "channel": "Rodha"
+      },
+      {
+        "id": "hzlafE36Zvc",
+        "url": "https://www.youtube.com/watch?v=hzlafE36Zvc",
+        "title": "CAT exam preparation videos 2024 |  Number System  | Remainders 3",
+        "durationSec": 2069,
+        "durationFormatted": "34:29",
+        "channel": "Rodha"
+      },
+      {
+        "id": "NEDVnjh26JE",
+        "url": "https://www.youtube.com/watch?v=NEDVnjh26JE",
+        "title": "Remainders 4  Part 1  || Number Systems || Quantitative Aptitude || CAT Exam Preparation",
+        "durationSec": 1110,
+        "durationFormatted": "18:30",
+        "channel": "Rodha"
+      },
+      {
+        "id": "WY49oDwCoDo",
+        "url": "https://www.youtube.com/watch?v=WY49oDwCoDo",
+        "title": "Remainders 4 Part 2  || Number Systems || Quantitative Aptitude || CAT Exam Preparation",
+        "durationSec": 1656,
+        "durationFormatted": "27:36",
+        "channel": "Rodha"
+      },
+      {
+        "id": "DsyZWi6R9cw",
+        "url": "https://www.youtube.com/watch?v=DsyZWi6R9cw",
+        "title": "Remainders 5  || Number Systems || Quantitative Aptitude || CAT Exam Preparation",
+        "durationSec": 1459,
+        "durationFormatted": "24:19",
+        "channel": "Rodha"
+      },
+      {
+        "id": "z7_vHO9JL9Y",
+        "url": "https://www.youtube.com/watch?v=z7_vHO9JL9Y",
+        "title": "Remainders 6  || Number Systems || Quantitative Aptitude || CAT Exam Preparation",
+        "durationSec": 1460,
+        "durationFormatted": "24:20",
+        "channel": "Rodha"
+      },
+      {
+        "id": "nZasw0eAO1M",
+        "url": "https://www.youtube.com/watch?v=nZasw0eAO1M",
+        "title": "Remainders 7  || Number Systems || CAT Exam Preparation || Quantitative Aptitude",
+        "durationSec": 1667,
+        "durationFormatted": "27:47",
+        "channel": "Rodha"
+      },
+      {
+        "id": "zhfDQvS7EnU",
+        "url": "https://www.youtube.com/watch?v=zhfDQvS7EnU",
+        "title": "Remainders 8  || Number Systems || Quantitative Aptitude || CAT Exam Preparation",
+        "durationSec": 1765,
+        "durationFormatted": "29:25",
+        "channel": "Rodha"
+      }
+    ]
+  },
+  {
+    "id": "res_32",
+    "topic": "Divisibility Rules",
+    "section": "Quants",
+    "subSection": "Number System",
+    "videoCount": 4,
+    "videos": [
+      {
+        "id": "p0JbJd5DpWY",
+        "url": "https://www.youtube.com/watch?v=p0JbJd5DpWY",
+        "title": "Divisibility Rules 1 || Number Systems || Quantitative Aptitude || CAT Preparation",
+        "durationSec": 1808,
+        "durationFormatted": "30:08",
+        "channel": "Rodha"
+      },
+      {
+        "id": "SSq9C2O6cco",
+        "url": "https://www.youtube.com/watch?v=SSq9C2O6cco",
+        "title": "Divisibility Rules 2 ||  Number Systems || Quantitative Aptitude || CAT Preparation",
+        "durationSec": 1536,
+        "durationFormatted": "25:36",
+        "channel": "Rodha"
+      },
+      {
+        "id": "NqgFXVIrRmY",
+        "url": "https://www.youtube.com/watch?v=NqgFXVIrRmY",
+        "title": "Divisibility Rules  3 ||  Number Systems || Quantitative Aptitude || CAT Preparation",
+        "durationSec": 1229,
+        "durationFormatted": "20:29",
+        "channel": "Rodha"
+      },
+      {
+        "id": "rb3Sk_L7vMQ",
+        "url": "https://www.youtube.com/watch?v=rb3Sk_L7vMQ",
+        "title": "Divisibility Rules  4 ||  Number Systems || Quantitative Aptitude || CAT Preparation",
+        "durationSec": 1512,
+        "durationFormatted": "25:12",
+        "channel": "Rodha"
+      }
+    ]
+  },
+  {
+    "id": "res_33",
+    "topic": "Difference of Perfect Square",
+    "section": "Quants",
+    "subSection": "Number System",
+    "videoCount": 3,
+    "videos": [
+      {
+        "id": "JdPktfXuY0k",
+        "url": "https://www.youtube.com/watch?v=JdPktfXuY0k",
+        "title": "Difference of Perfect Square 1  | Number Systems | CAT Exam Preparation",
+        "durationSec": 1275,
+        "durationFormatted": "21:15",
+        "channel": "Rodha"
+      },
+      {
+        "id": "sdQfevZ77vg",
+        "url": "https://www.youtube.com/watch?v=sdQfevZ77vg",
+        "title": "Difference of Perfect Square 2  | Number System| CAT Exam Preparation",
+        "durationSec": 1132,
+        "durationFormatted": "18:52",
+        "channel": "Rodha"
+      },
+      {
+        "id": "fJKyC5IyTr4",
+        "url": "https://www.youtube.com/watch?v=fJKyC5IyTr4",
+        "title": "Difference of Perfect Square 3  | Number Systems | CAT Exam Preparation",
+        "durationSec": 918,
+        "durationFormatted": "15:18",
+        "channel": "Rodha"
+      }
+    ]
+  },
+  {
+    "id": "res_34",
+    "topic": "Factors",
+    "section": "Quants",
+    "subSection": "Number System",
+    "videoCount": 12,
+    "videos": [
+      {
+        "id": "co30DI-DAlU",
+        "url": "https://www.youtube.com/watch?v=co30DI-DAlU",
+        "title": "Factors 1  || Number Systems || Quantitative Aptitude || CAT Preparation",
+        "durationSec": 1694,
+        "durationFormatted": "28:14",
+        "channel": "Rodha"
+      },
+      {
+        "id": "2QzEjiXOtfc",
+        "url": "https://www.youtube.com/watch?v=2QzEjiXOtfc",
+        "title": "Factors 2  || Number Systems || Quantitative Aptitude || CAT Preparation",
+        "durationSec": 1648,
+        "durationFormatted": "27:28",
+        "channel": "Rodha"
+      },
+      {
+        "id": "_Rp6Pzfk8r0",
+        "url": "https://www.youtube.com/watch?v=_Rp6Pzfk8r0",
+        "title": "Factors 3  || Number Systems || Quantitative Aptitude || CAT Preparation",
+        "durationSec": 1498,
+        "durationFormatted": "24:58",
+        "channel": "Rodha"
+      },
+      {
+        "id": "Y4v_WqJGfE0",
+        "url": "https://www.youtube.com/watch?v=Y4v_WqJGfE0",
+        "title": "Factors 4  || Number Systems || Quantitative Aptitude || CAT Preparation",
+        "durationSec": 2205,
+        "durationFormatted": "36:45",
+        "channel": "Rodha"
+      },
+      {
+        "id": "KWfgORk6XAk",
+        "url": "https://www.youtube.com/watch?v=KWfgORk6XAk",
+        "title": "Factors 5  || Number Systems || Quantitative Aptitude || CAT Preparation",
+        "durationSec": 1526,
+        "durationFormatted": "25:26",
+        "channel": "Rodha"
+      },
+      {
+        "id": "Fb4OWYnCwrw",
+        "url": "https://www.youtube.com/watch?v=Fb4OWYnCwrw",
+        "title": "Factors 6  || Number Systems || Quantitative Aptitude || CAT Preparation 2024",
+        "durationSec": 2152,
+        "durationFormatted": "35:52",
+        "channel": "Rodha"
+      },
+      {
+        "id": "fYrmFUomDYU",
+        "url": "https://www.youtube.com/watch?v=fYrmFUomDYU",
+        "title": "Factors 7  || Number Systems || Quantitative Aptitude || CAT Preparation 2024",
+        "durationSec": 1926,
+        "durationFormatted": "32:06",
+        "channel": "Rodha"
+      },
+      {
+        "id": "okXfBsuXsbk",
+        "url": "https://www.youtube.com/watch?v=okXfBsuXsbk",
+        "title": "Factors 8  || Number Systems || Quantitative Aptitude || CAT Preparation",
+        "durationSec": 1626,
+        "durationFormatted": "27:06",
+        "channel": "Rodha"
+      },
+      {
+        "id": "MZ2tVjANADY",
+        "url": "https://www.youtube.com/watch?v=MZ2tVjANADY",
+        "title": "Factors 9  || Number Systems || Quantitative Aptitude || CAT Preparation",
+        "durationSec": 1393,
+        "durationFormatted": "23:13",
+        "channel": "Rodha"
+      },
+      {
+        "id": "p-Rcw7dikaM",
+        "url": "https://www.youtube.com/watch?v=p-Rcw7dikaM",
+        "title": "Factors 10  || Number Systems || Quantitative Aptitude || CAT Preparation",
+        "durationSec": 1487,
+        "durationFormatted": "24:47",
+        "channel": "Rodha"
+      },
+      {
+        "id": "BM4NMqu7qbc",
+        "url": "https://www.youtube.com/watch?v=BM4NMqu7qbc",
+        "title": "Factors 11  || Number Systems || Quantitative Aptitude || CAT Preparation",
+        "durationSec": 1314,
+        "durationFormatted": "21:54",
+        "channel": "Rodha"
+      },
+      {
+        "id": "ql8lPaV4b6g",
+        "url": "https://www.youtube.com/watch?v=ql8lPaV4b6g",
+        "title": "Factors 12  || Number Systems || Quantitative Aptitude || CAT Preparation",
+        "durationSec": 1663,
+        "durationFormatted": "27:43",
+        "channel": "Rodha"
+      }
+    ]
+  },
+  {
+    "id": "res_35",
+    "topic": "HCF LCM",
+    "section": "Quants",
+    "subSection": "Number System",
+    "videoCount": 5,
+    "videos": [
+      {
+        "id": "JyN6EROdhrw",
+        "url": "https://www.youtube.com/watch?v=JyN6EROdhrw",
+        "title": "HCF LCM 1  || Number Systems || Quantitative Aptitude || CAT Preparation",
+        "durationSec": 1543,
+        "durationFormatted": "25:43",
+        "channel": "Rodha"
+      },
+      {
+        "id": "0S_rT7720t8",
+        "url": "https://www.youtube.com/watch?v=0S_rT7720t8",
+        "title": "HCF LCM 2  || Number Systems || Quantitative Aptitude || CAT Preparation",
+        "durationSec": 1181,
+        "durationFormatted": "19:41",
+        "channel": "Rodha"
+      },
+      {
+        "id": "GUsdagnVKFA",
+        "url": "https://www.youtube.com/watch?v=GUsdagnVKFA",
+        "title": "HCF LCM 3  || Number Systems || Quantitative Aptitude || CAT Preparation",
+        "durationSec": 1320,
+        "durationFormatted": "22:00",
+        "channel": "Rodha"
+      },
+      {
+        "id": "Ikxsz4En-RQ",
+        "url": "https://www.youtube.com/watch?v=Ikxsz4En-RQ",
+        "title": "HCF LCM 4  || Number Systems || Quantitative Aptitude || CAT Preparation",
+        "durationSec": 1533,
+        "durationFormatted": "25:33",
+        "channel": "Rodha"
+      },
+      {
+        "id": "pHyuUy_spww",
+        "url": "https://www.youtube.com/watch?v=pHyuUy_spww",
+        "title": "HCF LCM 5  || Number Systems || Quantitative Aptitude || CAT Preparation",
+        "durationSec": 1512,
+        "durationFormatted": "25:12",
+        "channel": "Rodha"
+      }
+    ]
+  },
+  {
+    "id": "res_36",
+    "topic": "Last 2 Digits Even/Odd",
+    "section": "Quants",
+    "subSection": "Number System",
+    "videoCount": 2,
+    "videos": [
+      {
+        "id": "8s1Na4rE1nU",
+        "url": "https://www.youtube.com/watch?v=8s1Na4rE1nU",
+        "title": "Number Systems ||  CAT Preparation || Quantitative Aptitude || Last 2 digits Even numbers 1",
+        "durationSec": 1435,
+        "durationFormatted": "23:55",
+        "channel": "Rodha"
+      },
+      {
+        "id": "lk_gmCe96ss",
+        "url": "https://www.youtube.com/watch?v=lk_gmCe96ss",
+        "title": "Number Systems ||  CAT Preparation || Quantitative Aptitude || Last 2 digits Odd numbers 2",
+        "durationSec": 1373,
+        "durationFormatted": "22:53",
+        "channel": "Rodha"
+      }
+    ]
+  },
+  {
+    "id": "res_37",
+    "topic": "Base Systems",
+    "section": "Quants",
+    "subSection": "Number System",
+    "videoCount": 4,
+    "videos": [
+      {
+        "id": "lR2znNLWryk",
+        "url": "https://www.youtube.com/watch?v=lR2znNLWryk",
+        "title": "CAT EXAM SYLLABUS 2024 | Numbers | Base Systems 1",
+        "durationSec": 2341,
+        "durationFormatted": "39:01",
+        "channel": "Rodha"
+      },
+      {
+        "id": "Dgk10V8cvOs",
+        "url": "https://www.youtube.com/watch?v=Dgk10V8cvOs",
+        "title": "Base Systems 2|CAT EXAM 2024 | Numbers",
+        "durationSec": 1395,
+        "durationFormatted": "23:15",
+        "channel": "Rodha"
+      },
+      {
+        "id": "fF8ptwkxjVA",
+        "url": "https://www.youtube.com/watch?v=fF8ptwkxjVA",
+        "title": "Base Systems 3|CAT EXAM SYLLABUS 2024 |  Numbers",
+        "durationSec": 1286,
+        "durationFormatted": "21:26",
+        "channel": "Rodha"
+      },
+      {
+        "id": "XIKlSIM9f3M",
+        "url": "https://www.youtube.com/watch?v=XIKlSIM9f3M",
+        "title": "Base Systems 4|CAT PREPARATION | Numbers",
+        "durationSec": 1174,
+        "durationFormatted": "19:34",
+        "channel": "Rodha"
+      }
+    ]
+  },
+  {
+    "id": "res_38",
+    "topic": "Recurring Decimals",
+    "section": "Quants",
+    "subSection": "Number System",
+    "videoCount": 1,
+    "videos": [
+      {
+        "id": "NKY2Y3nS8cw",
+        "url": "https://www.youtube.com/watch?v=NKY2Y3nS8cw",
+        "title": "Recurring Decimal Cyclicity |CAT exam preparation videos   |",
+        "durationSec": 3467,
+        "durationFormatted": "57:47",
+        "channel": "Rodha"
+      }
+    ]
+  },
+  {
+    "id": "res_39",
+    "topic": "Introduction to Geometry",
+    "section": "Quants",
+    "subSection": "Geometry",
+    "videoCount": 1,
+    "videos": [
+      {
+        "id": "rUI1bbCvk7E",
+        "url": "https://www.youtube.com/watch?v=rUI1bbCvk7E",
+        "title": "Geometry Introduction  | Quantitative Aptitude I CAT PREPARATION",
+        "durationSec": 1290,
+        "durationFormatted": "21:30",
+        "channel": "Rodha"
+      }
+    ]
+  },
+  {
+    "id": "res_40",
+    "topic": "Triangles",
+    "section": "Quants",
+    "subSection": "Geometry",
+    "videoCount": 13,
+    "videos": [
+      {
+        "id": "25P2O9r3AfM",
+        "url": "https://www.youtube.com/watch?v=25P2O9r3AfM",
+        "title": "Triangles 1 | CAT Preparation 2024 | Geometry | Quantitative Aptitude for CAT",
+        "durationSec": 1973,
+        "durationFormatted": "32:53",
+        "channel": "Rodha"
+      },
+      {
+        "id": "8T1yLs03Y74",
+        "url": "https://www.youtube.com/watch?v=8T1yLs03Y74",
+        "title": "Triangles 2 | CAT Preparation | Geometry | Quantitative Aptitude",
+        "durationSec": 1422,
+        "durationFormatted": "23:42",
+        "channel": "Rodha"
+      },
+      {
+        "id": "uDGOgVvUrcc",
+        "url": "https://www.youtube.com/watch?v=uDGOgVvUrcc",
+        "title": "Triangles 3 | CAT Preparation | Geometry | Quantitative Aptitude",
+        "durationSec": 1364,
+        "durationFormatted": "22:44",
+        "channel": "Rodha"
+      },
+      {
+        "id": "rfCcWNh3cjs",
+        "url": "https://www.youtube.com/watch?v=rfCcWNh3cjs",
+        "title": "Triangles 4 | CAT Preparation | Geometry | Quantitative Aptitude",
+        "durationSec": 1696,
+        "durationFormatted": "28:16",
+        "channel": "Rodha"
+      },
+      {
+        "id": "8VwTpi1xHnc",
+        "url": "https://www.youtube.com/watch?v=8VwTpi1xHnc",
+        "title": "Triangles 5 | CAT Preparation | Geometry | Quantitative Aptitude",
+        "durationSec": 1217,
+        "durationFormatted": "20:17",
+        "channel": "Rodha"
+      },
+      {
+        "id": "GAWnMfYzQKQ",
+        "url": "https://www.youtube.com/watch?v=GAWnMfYzQKQ",
+        "title": "Triangles 6 | CAT Preparation | Geometry | Quantitative Aptitude",
+        "durationSec": 2300,
+        "durationFormatted": "38:20",
+        "channel": "Rodha"
+      },
+      {
+        "id": "wVc1sXfYSyI",
+        "url": "https://www.youtube.com/watch?v=wVc1sXfYSyI",
+        "title": "Triangles 7 | CAT Preparation | Quantitative Aptitude",
+        "durationSec": 1321,
+        "durationFormatted": "22:01",
+        "channel": "Rodha"
+      },
+      {
+        "id": "Q5IDYE6e4mo",
+        "url": "https://www.youtube.com/watch?v=Q5IDYE6e4mo",
+        "title": "Triangles 8 | CAT Preparation | Geometry Basic To Advance | Quantitative Aptitude for CAT",
+        "durationSec": 1656,
+        "durationFormatted": "27:36",
+        "channel": "Rodha"
+      },
+      {
+        "id": "hKyCT4T4Q4M",
+        "url": "https://www.youtube.com/watch?v=hKyCT4T4Q4M",
+        "title": "Triangles 9 | CAT Preparation | Geometry | Quantitative Aptitude",
+        "durationSec": 1671,
+        "durationFormatted": "27:51",
+        "channel": "Rodha"
+      },
+      {
+        "id": "c_Abx1YkGbE",
+        "url": "https://www.youtube.com/watch?v=c_Abx1YkGbE",
+        "title": "Triangles 10 | CAT Preparation | Geometry | Quantitative Aptitude",
+        "durationSec": 1329,
+        "durationFormatted": "22:09",
+        "channel": "Rodha"
+      },
+      {
+        "id": "GJu0L7KeXAg",
+        "url": "https://www.youtube.com/watch?v=GJu0L7KeXAg",
+        "title": "Triangles 11 | CAT Preparation | Geometry | Quantitative Aptitude",
+        "durationSec": 1629,
+        "durationFormatted": "27:09",
+        "channel": "Rodha"
+      },
+      {
+        "id": "hlwCd_1zVgY",
+        "url": "https://www.youtube.com/watch?v=hlwCd_1zVgY",
+        "title": "Triangles 12 | CAT Preparation | Geometry | Quantitative Aptitude",
+        "durationSec": 1460,
+        "durationFormatted": "24:20",
+        "channel": "Rodha"
+      },
+      {
+        "id": "Y68H-ARhV90",
+        "url": "https://www.youtube.com/watch?v=Y68H-ARhV90",
+        "title": "Triangles 13 | CAT Preparation | Geometry | Quantitative Aptitude",
+        "durationSec": 1448,
+        "durationFormatted": "24:08",
+        "channel": "Rodha"
+      }
+    ]
+  },
+  {
+    "id": "res_41",
+    "topic": "Quadrilaterals",
+    "section": "Quants",
+    "subSection": "Geometry",
+    "videoCount": 3,
+    "videos": [
+      {
+        "id": "TZadcVDti64",
+        "url": "https://www.youtube.com/watch?v=TZadcVDti64",
+        "title": "Quadrilaterals 1 | CAT Preparation | Geometry | Quantitative Aptitude",
+        "durationSec": 2313,
+        "durationFormatted": "38:33",
+        "channel": "Rodha"
+      },
+      {
+        "id": "0h9-VSm6Hfo",
+        "url": "https://www.youtube.com/watch?v=0h9-VSm6Hfo",
+        "title": "Quadrilaterals 2 | CAT Preparation | Geometry | Quantitative Aptitude",
+        "durationSec": 1329,
+        "durationFormatted": "22:09",
+        "channel": "Rodha"
+      },
+      {
+        "id": "Dy4_ESXGjeY",
+        "url": "https://www.youtube.com/watch?v=Dy4_ESXGjeY",
+        "title": "Quadrilaterals 3 | CAT Preparation| Geometry | Quantitative Aptitude",
+        "durationSec": 796,
+        "durationFormatted": "13:16",
+        "channel": "Rodha"
+      }
+    ]
+  },
+  {
+    "id": "res_42",
+    "topic": "Circles",
+    "section": "Quants",
+    "subSection": "Geometry",
+    "videoCount": 3,
+    "videos": [
+      {
+        "id": "EAz4sd6svzo",
+        "url": "https://www.youtube.com/watch?v=EAz4sd6svzo",
+        "title": "Circles 1 | CAT Preparation | Geometry | Quantitative Aptitude",
+        "durationSec": 1547,
+        "durationFormatted": "25:47",
+        "channel": "Rodha"
+      },
+      {
+        "id": "nZR9cijpmkQ",
+        "url": "https://www.youtube.com/watch?v=nZR9cijpmkQ",
+        "title": "Circles 2 | CAT Preparation | Geometry | Quantitative Aptitude",
+        "durationSec": 1196,
+        "durationFormatted": "19:56",
+        "channel": "Rodha"
+      },
+      {
+        "id": "BAlO-DvSWic",
+        "url": "https://www.youtube.com/watch?v=BAlO-DvSWic",
+        "title": "Circles 3 | CAT Preparation | Geometry | Quantitative Aptitude",
+        "durationSec": 1465,
+        "durationFormatted": "24:25",
+        "channel": "Rodha"
+      }
+    ]
+  },
+  {
+    "id": "res_43",
+    "topic": "Mensuration",
+    "section": "Quants",
+    "subSection": "Geometry",
+    "videoCount": 4,
+    "videos": [
+      {
+        "id": "HhtLt2JZKu4",
+        "url": "https://www.youtube.com/watch?v=HhtLt2JZKu4",
+        "title": "Mensuration 1 | CAT Preparation | Geometry | Quantitative Aptitude",
+        "durationSec": 1487,
+        "durationFormatted": "24:47",
+        "channel": "Rodha"
+      },
+      {
+        "id": "jQmPUysLjlg",
+        "url": "https://www.youtube.com/watch?v=jQmPUysLjlg",
+        "title": "Mensuration 2 | CAT Preparation | Geometry | Quantitative Aptitude",
+        "durationSec": 1742,
+        "durationFormatted": "29:02",
+        "channel": "Rodha"
+      },
+      {
+        "id": "fxu0gBgnB78",
+        "url": "https://www.youtube.com/watch?v=fxu0gBgnB78",
+        "title": "Mensuration 3 | CAT Preparation | Geometry | Quantitative Aptitude",
+        "durationSec": 1294,
+        "durationFormatted": "21:34",
+        "channel": "Rodha"
+      },
+      {
+        "id": "ADkdD9aEhas",
+        "url": "https://www.youtube.com/watch?v=ADkdD9aEhas",
+        "title": "Mensuration 4 | CAT Preparation | Geometry | Quantitative Aptitude",
+        "durationSec": 1431,
+        "durationFormatted": "23:51",
+        "channel": "Rodha"
+      }
+    ]
+  },
+  {
+    "id": "res_44",
+    "topic": "Arithmetic Advance Questions",
+    "section": "Quants",
+    "subSection": "Practice Questions",
+    "videoCount": 48,
+    "videos": [
+      {
+        "id": "urCelR1e9KU",
+        "url": "https://www.youtube.com/watch?v=urCelR1e9KU",
+        "title": "Arithmetic Advance Level Questions - 1 I CAT PREPARATION 2024 I QUANTITATIVE APTITUDE PREPARATION",
+        "durationSec": 596,
+        "durationFormatted": "9:56",
+        "channel": "Rodha"
+      },
+      {
+        "id": "ajKhAUuQt9Q",
+        "url": "https://www.youtube.com/watch?v=ajKhAUuQt9Q",
+        "title": "Arithmetic Advance Level Questions - 2 I CAT PREPARATION  I QUANTITATIVE APTITUDE PREPARATION",
+        "durationSec": 232,
+        "durationFormatted": "3:52",
+        "channel": "Rodha"
+      },
+      {
+        "id": "ULKLAEiHc6E",
+        "url": "https://www.youtube.com/watch?v=ULKLAEiHc6E",
+        "title": "Arithmetic Advance Level Questions - 3 I CAT PREPARATION 2024 I QUANTITATIVE APTITUDE PREPARATION",
+        "durationSec": 746,
+        "durationFormatted": "12:26",
+        "channel": "Rodha"
+      },
+      {
+        "id": "Y_-DUF38qI8",
+        "url": "https://www.youtube.com/watch?v=Y_-DUF38qI8",
+        "title": "Arithmetic Advance Level Questions - 4 I CAT PREPARATION 2024 I QUANTITATIVE APTITUDE PREPARATION",
+        "durationSec": 427,
+        "durationFormatted": "7:07",
+        "channel": "Rodha"
+      },
+      {
+        "id": "w6GAiDODViw",
+        "url": "https://www.youtube.com/watch?v=w6GAiDODViw",
+        "title": "Arithmetic Advance Level Questions - 6 I CAT PREPARATION 2024 I QUANTITATIVE APTITUDE PREPARATION",
+        "durationSec": 304,
+        "durationFormatted": "5:04",
+        "channel": "Rodha"
+      },
+      {
+        "id": "70f831uLy34",
+        "url": "https://www.youtube.com/watch?v=70f831uLy34",
+        "title": "Arithmetic Advance Level Questions - 5 I CAT PREPARATION 2024 I QUANTITATIVE APTITUDE PREPARATION",
+        "durationSec": 616,
+        "durationFormatted": "10:16",
+        "channel": "Rodha"
+      },
+      {
+        "id": "VWh2Bqwd4Bc",
+        "url": "https://www.youtube.com/watch?v=VWh2Bqwd4Bc",
+        "title": "Arithmetic Advance Level Questions - 7 I CAT PREPARATION 2024 I QUANTITATIVE APTITUDE PREPARATION",
+        "durationSec": 286,
+        "durationFormatted": "4:46",
+        "channel": "Rodha"
+      },
+      {
+        "id": "V7HS1ngqOh8",
+        "url": "https://www.youtube.com/watch?v=V7HS1ngqOh8",
+        "title": "Arithmetic Advance Level Questions - 8 I CAT PREPARATION I QUANTITATIVE APTITUDE PREPARATION",
+        "durationSec": 480,
+        "durationFormatted": "8:00",
+        "channel": "Rodha"
+      },
+      {
+        "id": "ZklTL119DDI",
+        "url": "https://www.youtube.com/watch?v=ZklTL119DDI",
+        "title": "Arithmetic Advance Level Questions - 9 I CAT PREPARATION  I QUANTITATIVE APTITUDE PREPARATION",
+        "durationSec": 444,
+        "durationFormatted": "7:24",
+        "channel": "Rodha"
+      },
+      {
+        "id": "rG6aPiwijTg",
+        "url": "https://www.youtube.com/watch?v=rG6aPiwijTg",
+        "title": "Arithmetic Advance Level Questions - 10 I CAT PREPARATION 2024 I QUANTITATIVE APTITUDE PREPARATION",
+        "durationSec": 525,
+        "durationFormatted": "8:45",
+        "channel": "Rodha"
+      },
+      {
+        "id": "92FN33wXsAU",
+        "url": "https://www.youtube.com/watch?v=92FN33wXsAU",
+        "title": "Arithmetic Advance Level Questions - 11 I CAT PREPARATION  I QUANTITATIVE APTITUDE PREPARATION",
+        "durationSec": 404,
+        "durationFormatted": "6:44",
+        "channel": "Rodha"
+      },
+      {
+        "id": "PyWDpFB0udg",
+        "url": "https://www.youtube.com/watch?v=PyWDpFB0udg",
+        "title": "Arithmetic Advance Level Questions - 12 I CAT PREPARATION  I QUANTITATIVE APTITUDE PREPARATION",
+        "durationSec": 708,
+        "durationFormatted": "11:48",
+        "channel": "Rodha"
+      },
+      {
+        "id": "vaV3mBgpdc4",
+        "url": "https://www.youtube.com/watch?v=vaV3mBgpdc4",
+        "title": "Arithmetic Advance Level Questions - 13 I CAT PREPARATION  I QUANTITATIVE APTITUDE PREPARATION",
+        "durationSec": 369,
+        "durationFormatted": "6:09",
+        "channel": "Rodha"
+      },
+      {
+        "id": "aoP7vyYaIQY",
+        "url": "https://www.youtube.com/watch?v=aoP7vyYaIQY",
+        "title": "Arithmetic Advance Level Questions - 14 I CAT PREPARATION  I QUANTITATIVE APTITUDE PREPARATION",
+        "durationSec": 214,
+        "durationFormatted": "3:34",
+        "channel": "Rodha"
+      },
+      {
+        "id": "zltyBzyGBRw",
+        "url": "https://www.youtube.com/watch?v=zltyBzyGBRw",
+        "title": "Arithmetic Advance Level Questions - 15I CAT PREPARATION I QUANTITATIVE APTITUDE PREPARATION",
+        "durationSec": 551,
+        "durationFormatted": "9:11",
+        "channel": "Rodha"
+      },
+      {
+        "id": "-pe2ZhJ23vc",
+        "url": "https://www.youtube.com/watch?v=-pe2ZhJ23vc",
+        "title": "Arithmetic Advance Level Questions - 16 I CAT PREPARATION 2024 I QUANTITATIVE APTITUDE PREPARATION",
+        "durationSec": 689,
+        "durationFormatted": "11:29",
+        "channel": "Rodha"
+      },
+      {
+        "id": "2hWenZYcu-Y",
+        "url": "https://www.youtube.com/watch?v=2hWenZYcu-Y",
+        "title": "Arithmetic Advance Level Questions - 17 I CAT PREPARATION 2024 I QUANTITATIVE APTITUDE PREPARATION",
+        "durationSec": 357,
+        "durationFormatted": "5:57",
+        "channel": "Rodha"
+      },
+      {
+        "id": "gQ7T825UArY",
+        "url": "https://www.youtube.com/watch?v=gQ7T825UArY",
+        "title": "Arithmetic Advance Level Questions - 18 I CAT PREPARATION 2024 I QUANTITATIVE APTITUDE PREPARATION",
+        "durationSec": 646,
+        "durationFormatted": "10:46",
+        "channel": "Rodha"
+      },
+      {
+        "id": "5USrB1ryJ60",
+        "url": "https://www.youtube.com/watch?v=5USrB1ryJ60",
+        "title": "Arithmetic Advance Level Questions - 19 I CAT PREPARATION 2024 I QUANTITATIVE APTITUDE PREPARATION",
+        "durationSec": 622,
+        "durationFormatted": "10:22",
+        "channel": "Rodha"
+      },
+      {
+        "id": "M0RzuG7jhCI",
+        "url": "https://www.youtube.com/watch?v=M0RzuG7jhCI",
+        "title": "Arithmetic Advance Level Questions - 20 I CAT PREPARATION 2024 I QUANTITATIVE APTITUDE PREPARATION",
+        "durationSec": 290,
+        "durationFormatted": "4:50",
+        "channel": "Rodha"
+      },
+      {
+        "id": "oUY29_88hm8",
+        "url": "https://www.youtube.com/watch?v=oUY29_88hm8",
+        "title": "Arithmetic Advance Level Questions - 21 I CAT PREPARATION 2024 I QUANTITATIVE APTITUDE PREPARATION",
+        "durationSec": 314,
+        "durationFormatted": "5:14",
+        "channel": "Rodha"
+      },
+      {
+        "id": "EfhcFMQaKhQ",
+        "url": "https://www.youtube.com/watch?v=EfhcFMQaKhQ",
+        "title": "Arithmetic Advance Level Questions - 22 I CAT PREPARATION 2024 I QUANTITATIVE APTITUDE PREPARATION",
+        "durationSec": 325,
+        "durationFormatted": "5:25",
+        "channel": "Rodha"
+      },
+      {
+        "id": "Zos-F3DugHI",
+        "url": "https://www.youtube.com/watch?v=Zos-F3DugHI",
+        "title": "Arithmetic Advance Level Questions - 23 I CAT PREPARATION I QUANTITATIVE APTITUDE PREPARATION",
+        "durationSec": 771,
+        "durationFormatted": "12:51",
+        "channel": "Rodha"
+      },
+      {
+        "id": "u0usAYxptYY",
+        "url": "https://www.youtube.com/watch?v=u0usAYxptYY",
+        "title": "Arithmetic Advance Level Questions - 24 I CAT PREPARATION 2024 I QUANTITATIVE APTITUDE PREPARATION",
+        "durationSec": 444,
+        "durationFormatted": "7:24",
+        "channel": "Rodha"
+      },
+      {
+        "id": "KsZbC165p5g",
+        "url": "https://www.youtube.com/watch?v=KsZbC165p5g",
+        "title": "Arithmetic Advance Level Questions - 25 I CAT PREPARATION 2024 I QUANTITATIVE APTITUDE PREPARATION",
+        "durationSec": 458,
+        "durationFormatted": "7:38",
+        "channel": "Rodha"
+      },
+      {
+        "id": "7Gw7F0OLG_0",
+        "url": "https://www.youtube.com/watch?v=7Gw7F0OLG_0",
+        "title": "Arithmetic Advance Level Questions - 26 I CAT PREPARATION 2024 I QUANTITATIVE APTITUDE PREPARATION",
+        "durationSec": 464,
+        "durationFormatted": "7:44",
+        "channel": "Rodha"
+      },
+      {
+        "id": "mRN6-OGxZto",
+        "url": "https://www.youtube.com/watch?v=mRN6-OGxZto",
+        "title": "Arithmetic Advance Level Questions - 27 I CAT PREPARATION 2024 I QUANTITATIVE APTITUDE PREPARATION",
+        "durationSec": 620,
+        "durationFormatted": "10:20",
+        "channel": "Rodha"
+      },
+      {
+        "id": "w5zoJTrw5es",
+        "url": "https://www.youtube.com/watch?v=w5zoJTrw5es",
+        "title": "Arithmetic Advance Level Questions - 28 I CAT PREPARATION 2024 I QUANTITATIVE APTITUDE PREPARATION",
+        "durationSec": 526,
+        "durationFormatted": "8:46",
+        "channel": "Rodha"
+      },
+      {
+        "id": "U4atirr1L30",
+        "url": "https://www.youtube.com/watch?v=U4atirr1L30",
+        "title": "Arithmetic Advance Level Questions - 29 I CAT PREPARATION 2024 I QUANTITATIVE APTITUDE PREPARATION",
+        "durationSec": 444,
+        "durationFormatted": "7:24",
+        "channel": "Rodha"
+      },
+      {
+        "id": "0PDAnOENuoM",
+        "url": "https://www.youtube.com/watch?v=0PDAnOENuoM",
+        "title": "Arithmetic Advance Level Questions - 30 I CAT PREPARATION 2024 I QUANTITATIVE APTITUDE PREPARATION",
+        "durationSec": 455,
+        "durationFormatted": "7:35",
+        "channel": "Rodha"
+      },
+      {
+        "id": "xcLTKtDHZY0",
+        "url": "https://www.youtube.com/watch?v=xcLTKtDHZY0",
+        "title": "Arithmetic Advance Level Questions - 31 I CAT PREPARATION 2024 I QUANTITATIVE APTITUDE PREPARATION",
+        "durationSec": 489,
+        "durationFormatted": "8:09",
+        "channel": "Rodha"
+      },
+      {
+        "id": "jkJmfAqUfFU",
+        "url": "https://www.youtube.com/watch?v=jkJmfAqUfFU",
+        "title": "Arithmetic Advance Level Questions - 32 I CAT PREPARATION 2024 I QUANTITATIVE APTITUDE PREPARATION",
+        "durationSec": 646,
+        "durationFormatted": "10:46",
+        "channel": "Rodha"
+      },
+      {
+        "id": "_LnmbCo39k4",
+        "url": "https://www.youtube.com/watch?v=_LnmbCo39k4",
+        "title": "Arithmetic Advance Level Questions - 33 I CAT PREPARATION  I QUANTITATIVE APTITUDE PREPARATION",
+        "durationSec": 540,
+        "durationFormatted": "9:00",
+        "channel": "Rodha"
+      },
+      {
+        "id": "Ku2dOKzCMEo",
+        "url": "https://www.youtube.com/watch?v=Ku2dOKzCMEo",
+        "title": "Arithmetic Advance Level Questions - 34 I CAT PREPARATION 2024 I QUANTITATIVE APTITUDE PREPARATION",
+        "durationSec": 677,
+        "durationFormatted": "11:17",
+        "channel": "Rodha"
+      },
+      {
+        "id": "vLydl_PnlVY",
+        "url": "https://www.youtube.com/watch?v=vLydl_PnlVY",
+        "title": "Arithmetic Advance Level Questions - 35 I CAT PREPARATION 2024 I QUANTITATIVE APTITUDE PREPARATION",
+        "durationSec": 399,
+        "durationFormatted": "6:39",
+        "channel": "Rodha"
+      },
+      {
+        "id": "LyRWWC0b4sE",
+        "url": "https://www.youtube.com/watch?v=LyRWWC0b4sE",
+        "title": "Arithmetic Advance Level Questions - 36 I CAT PREPARATION 2024 I QUANTITATIVE APTITUDE PREPARATION",
+        "durationSec": 917,
+        "durationFormatted": "15:17",
+        "channel": "Rodha"
+      },
+      {
+        "id": "2Myw9fLyiLQ",
+        "url": "https://www.youtube.com/watch?v=2Myw9fLyiLQ",
+        "title": "Arithmetic Advance Level Questions - 37 I CAT PREPARATION 2024 I QUANTITATIVE APTITUDE PREPARATION",
+        "durationSec": 959,
+        "durationFormatted": "15:59",
+        "channel": "Rodha"
+      },
+      {
+        "id": "Q-uUicFDReg",
+        "url": "https://www.youtube.com/watch?v=Q-uUicFDReg",
+        "title": "Arithmetic Advance Level Questions - 38 I CAT PREPARATION 2024 I QUANTITATIVE APTITUDE PREPARATION",
+        "durationSec": 370,
+        "durationFormatted": "6:10",
+        "channel": "Rodha"
+      },
+      {
+        "id": "6L76H5QmoBk",
+        "url": "https://www.youtube.com/watch?v=6L76H5QmoBk",
+        "title": "Arithmetic Advance Level Questions - 39 I CAT PREPARATION 2024 I QUANTITATIVE APTITUDE PREPARATION",
+        "durationSec": 661,
+        "durationFormatted": "11:01",
+        "channel": "Rodha"
+      },
+      {
+        "id": "umqnmukDY4Y",
+        "url": "https://www.youtube.com/watch?v=umqnmukDY4Y",
+        "title": "Arithmetic Advance Level Questions - 40 I CAT PREPARATION 2024 I QUANTITATIVE APTITUDE PREPARATION",
+        "durationSec": 521,
+        "durationFormatted": "8:41",
+        "channel": "Rodha"
+      },
+      {
+        "id": "JSaU14JmHxY",
+        "url": "https://www.youtube.com/watch?v=JSaU14JmHxY",
+        "title": "Arithmetic Advance Level Questions - 41 I CAT PREPARATION 2024 I QUANTITATIVE APTITUDE PREPARATION",
+        "durationSec": 465,
+        "durationFormatted": "7:45",
+        "channel": "Rodha"
+      },
+      {
+        "id": "Ta7OsDXMtJQ",
+        "url": "https://www.youtube.com/watch?v=Ta7OsDXMtJQ",
+        "title": "Arithmetic Advance Level Questions - 42 I CAT PREPARATION 2024 I QUANTITATIVE APTITUDE PREPARATION",
+        "durationSec": 1082,
+        "durationFormatted": "18:02",
+        "channel": "Rodha"
+      },
+      {
+        "id": "Cx1ZhPvi1XI",
+        "url": "https://www.youtube.com/watch?v=Cx1ZhPvi1XI",
+        "title": "Arithmetic Advance Level Questions - 43 I CAT PREPARATION 2024 I QUANTITATIVE APTITUDE PREPARATION",
+        "durationSec": 707,
+        "durationFormatted": "11:47",
+        "channel": "Rodha"
+      },
+      {
+        "id": "MTdAQnGCUtM",
+        "url": "https://www.youtube.com/watch?v=MTdAQnGCUtM",
+        "title": "Arithmetic Advance Level Questions - 44 I CAT PREPARATION  I QUANTITATIVE APTITUDE PREPARATION",
+        "durationSec": 874,
+        "durationFormatted": "14:34",
+        "channel": "Rodha"
+      },
+      {
+        "id": "5PaYD9xwlys",
+        "url": "https://www.youtube.com/watch?v=5PaYD9xwlys",
+        "title": "Arithmetic Advance Level Questions - 45 I CAT PREPARATION 2024 I QUANTITATIVE APTITUDE PREPARATION",
+        "durationSec": 512,
+        "durationFormatted": "8:32",
+        "channel": "Rodha"
+      },
+      {
+        "id": "UHXOlp9pXl4",
+        "url": "https://www.youtube.com/watch?v=UHXOlp9pXl4",
+        "title": "Arithmetic Advance Level Questions - 46 I CAT PREPARATION 2024 I QUANTITATIVE APTITUDE PREPARATION",
+        "durationSec": 691,
+        "durationFormatted": "11:31",
+        "channel": "Rodha"
+      },
+      {
+        "id": "19n-KYfDWac",
+        "url": "https://www.youtube.com/watch?v=19n-KYfDWac",
+        "title": "Arithmetic Advance Level Questions - 47 I CAT PREPARATION 2024 I QUANTITATIVE APTITUDE PREPARATION",
+        "durationSec": 604,
+        "durationFormatted": "10:04",
+        "channel": "Rodha"
+      },
+      {
+        "id": "ITYRPnnnYmU",
+        "url": "https://www.youtube.com/watch?v=ITYRPnnnYmU",
+        "title": "Arithmetic Advance Level Questions - 48 I CAT PREPARATION 2024 I QUANTITATIVE APTITUDE PREPARATION",
+        "durationSec": 710,
+        "durationFormatted": "11:50",
+        "channel": "Rodha"
+      }
+    ]
+  },
+  {
+    "id": "res_45",
+    "topic": "Algebra Practice Sessions",
+    "section": "Quants",
+    "subSection": "Practice Questions",
+    "videoCount": 19,
+    "videos": [
+      {
+        "id": "mRY1JjCczNw",
+        "url": "https://www.youtube.com/watch?v=mRY1JjCczNw",
+        "title": "Algebra Practice Session - 1 II Advance Algebra Questions & Concepts II CAT PREPARATION 2024",
+        "durationSec": 666,
+        "durationFormatted": "11:06",
+        "channel": "Rodha"
+      },
+      {
+        "id": "Thp8W014e00",
+        "url": "https://www.youtube.com/watch?v=Thp8W014e00",
+        "title": "Algebra Practice Session - 2 II Advance Algebra Questions & Concepts II CAT PREPARATION 2024",
+        "durationSec": 428,
+        "durationFormatted": "7:08",
+        "channel": "Rodha"
+      },
+      {
+        "id": "e3yhCLrcdH8",
+        "url": "https://www.youtube.com/watch?v=e3yhCLrcdH8",
+        "title": "Algebra Practice Session - 3 II Advance Algebra Questions & Concepts II CAT PREPARATION 2024",
+        "durationSec": 311,
+        "durationFormatted": "5:11",
+        "channel": "Rodha"
+      },
+      {
+        "id": "fMRun-Z9XX0",
+        "url": "https://www.youtube.com/watch?v=fMRun-Z9XX0",
+        "title": "Algebra Practice Session - 4 II Advance Algebra Questions & Concepts II CAT PREPARATION 2024",
+        "durationSec": 401,
+        "durationFormatted": "6:41",
+        "channel": "Rodha"
+      },
+      {
+        "id": "CkLqEplB0dI",
+        "url": "https://www.youtube.com/watch?v=CkLqEplB0dI",
+        "title": "Algebra Practice Session - 5 II Advance Algebra Questions & Concepts II CAT PREPARATION 2024",
+        "durationSec": 468,
+        "durationFormatted": "7:48",
+        "channel": "Rodha"
+      },
+      {
+        "id": "U3Lj_J9m584",
+        "url": "https://www.youtube.com/watch?v=U3Lj_J9m584",
+        "title": "Algebra Practice Session - 6 II Advance Algebra Questions & Concepts II CAT PREPARATION 2024",
+        "durationSec": 565,
+        "durationFormatted": "9:25",
+        "channel": "Rodha"
+      },
+      {
+        "id": "QsXu98-lqc0",
+        "url": "https://www.youtube.com/watch?v=QsXu98-lqc0",
+        "title": "Algebra Practice Session - 7 II Advance Algebra Questions & Concepts II CAT PREPARATION 2024",
+        "durationSec": 744,
+        "durationFormatted": "12:24",
+        "channel": "Rodha"
+      },
+      {
+        "id": "LMbZgUcwZOk",
+        "url": "https://www.youtube.com/watch?v=LMbZgUcwZOk",
+        "title": "Algebra Practice Session - 8 II Advance Algebra Questions & Concepts II CAT PREPARATION 2024",
+        "durationSec": 562,
+        "durationFormatted": "9:22",
+        "channel": "Rodha"
+      },
+      {
+        "id": "CTCCyAvP6T8",
+        "url": "https://www.youtube.com/watch?v=CTCCyAvP6T8",
+        "title": "Algebra Practice Session - 9 II Advance Algebra Questions & Concepts II CAT PREPARATION",
+        "durationSec": 486,
+        "durationFormatted": "8:06",
+        "channel": "Rodha"
+      },
+      {
+        "id": "VZTHTstJ8ME",
+        "url": "https://www.youtube.com/watch?v=VZTHTstJ8ME",
+        "title": "Algebra Practice Session - 10 II Advance Algebra Questions & Concepts II CAT PREPARATION",
+        "durationSec": 463,
+        "durationFormatted": "7:43",
+        "channel": "Rodha"
+      },
+      {
+        "id": "40pj0PS4Cx4",
+        "url": "https://www.youtube.com/watch?v=40pj0PS4Cx4",
+        "title": "Algebra Practice Session - 11 II Advance Algebra Questions & Concepts II CAT PREPARATION",
+        "durationSec": 440,
+        "durationFormatted": "7:20",
+        "channel": "Rodha"
+      },
+      {
+        "id": "RrRZkbZ1aZk",
+        "url": "https://www.youtube.com/watch?v=RrRZkbZ1aZk",
+        "title": "Algebra Practice Session - 12 II Advance Algebra Questions & Concepts II CAT PREPARATION 2024",
+        "durationSec": 688,
+        "durationFormatted": "11:28",
+        "channel": "Rodha"
+      },
+      {
+        "id": "Q52KzZFzpvo",
+        "url": "https://www.youtube.com/watch?v=Q52KzZFzpvo",
+        "title": "Algebra Practice Session - 13 II Advance Algebra Questions & Concepts II CAT PREPARATION 2024",
+        "durationSec": 433,
+        "durationFormatted": "7:13",
+        "channel": "Rodha"
+      },
+      {
+        "id": "8A6PayUMCc4",
+        "url": "https://www.youtube.com/watch?v=8A6PayUMCc4",
+        "title": "Algebra Practice Session - 14 II Advance Algebra Questions & Concepts II CAT PREPARATION 2024",
+        "durationSec": 595,
+        "durationFormatted": "9:55",
+        "channel": "Rodha"
+      },
+      {
+        "id": "ZwdaAv0nFew",
+        "url": "https://www.youtube.com/watch?v=ZwdaAv0nFew",
+        "title": "Algebra Practice Session - 15 II Advance Algebra Questions & Concepts II CAT PREPARATION",
+        "durationSec": 448,
+        "durationFormatted": "7:28",
+        "channel": "Rodha"
+      },
+      {
+        "id": "wjVPAKdalSs",
+        "url": "https://www.youtube.com/watch?v=wjVPAKdalSs",
+        "title": "Algebra Practice Session - 16 II Advance Algebra Questions & Concepts II CAT PREPARATION 2024",
+        "durationSec": 539,
+        "durationFormatted": "8:59",
+        "channel": "Rodha"
+      },
+      {
+        "id": "otvH2IEw_RQ",
+        "url": "https://www.youtube.com/watch?v=otvH2IEw_RQ",
+        "title": "Algebra Practice Session - 17 II Advance Algebra Questions & Concepts II CAT PREPARATION 2024",
+        "durationSec": 227,
+        "durationFormatted": "3:47",
+        "channel": "Rodha"
+      },
+      {
+        "id": "3iXH8IOMNls",
+        "url": "https://www.youtube.com/watch?v=3iXH8IOMNls",
+        "title": "Algebra Practice Session - 18 II Advance Algebra Questions & Concepts II CAT PREPARATION 2024",
+        "durationSec": 294,
+        "durationFormatted": "4:54",
+        "channel": "Rodha"
+      },
+      {
+        "id": "4jE6wlPhpQA",
+        "url": "https://www.youtube.com/watch?v=4jE6wlPhpQA",
+        "title": "Algebra Practice Sessions",
+        "durationSec": 900,
+        "durationFormatted": "15:00",
+        "channel": "Rodha"
+      }
+    ]
+  },
+  {
+    "id": "res_46",
+    "topic": "Number System Practice",
+    "section": "Quants",
+    "subSection": "Practice Questions",
+    "videoCount": 13,
+    "videos": [
+      {
+        "id": "TEkmL_HSSs8",
+        "url": "https://www.youtube.com/watch?v=TEkmL_HSSs8",
+        "title": "Practice Question on Numbers - Part 1 I QUANTITATIVE APTITUDE I CAT PREPARATION  I Advance Level",
+        "durationSec": 778,
+        "durationFormatted": "12:58",
+        "channel": "Rodha"
+      },
+      {
+        "id": "dyt-7vmS1TM",
+        "url": "https://www.youtube.com/watch?v=dyt-7vmS1TM",
+        "title": "Practice Question on Numbers - Part 2 I QUANTITATIVE APTITUDE I CAT PREPARATION I Advance Level",
+        "durationSec": 746,
+        "durationFormatted": "12:26",
+        "channel": "Rodha"
+      },
+      {
+        "id": "9Cghsszgwd4",
+        "url": "https://www.youtube.com/watch?v=9Cghsszgwd4",
+        "title": "Practice Question on Numbers - Part 3 I QUANTITATIVE APTITUDE I CAT PREPARATION 2024 I Advance Level",
+        "durationSec": 1261,
+        "durationFormatted": "21:01",
+        "channel": "Rodha"
+      },
+      {
+        "id": "Pd1znXf7QHI",
+        "url": "https://www.youtube.com/watch?v=Pd1znXf7QHI",
+        "title": "Practice Question on Numbers - Part 4 I QUANTITATIVE APTITUDE I CAT PREPARATION 2024 I Advance Level",
+        "durationSec": 702,
+        "durationFormatted": "11:42",
+        "channel": "Rodha"
+      },
+      {
+        "id": "6jCt3CQ9blY",
+        "url": "https://www.youtube.com/watch?v=6jCt3CQ9blY",
+        "title": "Practice Question on Numbers - Part 5 I QUANTITATIVE APTITUDE I CAT PREPARATION 2024 I Advance Level",
+        "durationSec": 959,
+        "durationFormatted": "15:59",
+        "channel": "Rodha"
+      },
+      {
+        "id": "vgcG1NI0pcc",
+        "url": "https://www.youtube.com/watch?v=vgcG1NI0pcc",
+        "title": "Practice Question on Numbers - Part 6 I QUANTITATIVE APTITUDE I CAT PREPARATION 2024 I Advance Level",
+        "durationSec": 712,
+        "durationFormatted": "11:52",
+        "channel": "Rodha"
+      },
+      {
+        "id": "M4hZcS9yHoc",
+        "url": "https://www.youtube.com/watch?v=M4hZcS9yHoc",
+        "title": "Practice Question on Numbers - Part 7 I QUANTITATIVE APTITUDE I CAT PREPARATION 2024 I Advance Level",
+        "durationSec": 926,
+        "durationFormatted": "15:26",
+        "channel": "Rodha"
+      },
+      {
+        "id": "ZRmXy8XgITU",
+        "url": "https://www.youtube.com/watch?v=ZRmXy8XgITU",
+        "title": "Practice Question on Numbers - Part 8 I QUANTITATIVE APTITUDE I CAT PREPARATION  I Advance Level",
+        "durationSec": 699,
+        "durationFormatted": "11:39",
+        "channel": "Rodha"
+      },
+      {
+        "id": "8wSRoqYQTCw",
+        "url": "https://www.youtube.com/watch?v=8wSRoqYQTCw",
+        "title": "Practice Question on Numbers - Part 9 I QUANTITATIVE APTITUDE I CAT PREPARATION 2024 I Advance Level",
+        "durationSec": 629,
+        "durationFormatted": "10:29",
+        "channel": "Rodha"
+      },
+      {
+        "id": "D59cGmXX2jM",
+        "url": "https://www.youtube.com/watch?v=D59cGmXX2jM",
+        "title": "Practice Question I Numbers - Part 10 I QUANTITATIVE APTITUDE I CAT PREPARATION I Advance Level",
+        "durationSec": 878,
+        "durationFormatted": "14:38",
+        "channel": "Rodha"
+      },
+      {
+        "id": "GS8TqNqyoG8",
+        "url": "https://www.youtube.com/watch?v=GS8TqNqyoG8",
+        "title": "Practice Question I Numbers - Part 11 I QUANTITATIVE APTITUDE I CAT PREPARATION  I Advance Level",
+        "durationSec": 879,
+        "durationFormatted": "14:39",
+        "channel": "Rodha"
+      },
+      {
+        "id": "tiQ6ag9HxHI",
+        "url": "https://www.youtube.com/watch?v=tiQ6ag9HxHI",
+        "title": "Practice Question I Numbers - Part 12 I QUANTITATIVE APTITUDE I CAT PREPARATION I Advance Level",
+        "durationSec": 701,
+        "durationFormatted": "11:41",
+        "channel": "Rodha"
+      },
+      {
+        "id": "ELocXL1plak",
+        "url": "https://www.youtube.com/watch?v=ELocXL1plak",
+        "title": "Practice Question I Numbers - Part 13 I QUANTITATIVE APTITUDE I CAT PREPARATION I Advance Level",
+        "durationSec": 977,
+        "durationFormatted": "16:17",
+        "channel": "Rodha"
+      }
+    ]
+  },
+  {
+    "id": "res_47",
+    "topic": "Geometry Practice Session",
+    "section": "Quants",
+    "subSection": "Practice Questions",
+    "videoCount": 3,
+    "videos": [
+      {
+        "id": "tcVXuTo00wk",
+        "url": "https://www.youtube.com/watch?v=tcVXuTo00wk",
+        "title": "Practice Session on Geometry ( High Level) - Part - 1 II CAT PREPARATION 2024 I CAT PREPARATION 2024",
+        "durationSec": 1242,
+        "durationFormatted": "20:42",
+        "channel": "Rodha"
+      },
+      {
+        "id": "GBgaQz5q_Ww",
+        "url": "https://www.youtube.com/watch?v=GBgaQz5q_Ww",
+        "title": "Practice Session on Geometry ( High Level) - Part - 2 II CAT PREPARATION  I CAT PREPARATION 2024",
+        "durationSec": 1069,
+        "durationFormatted": "17:49",
+        "channel": "Rodha"
+      },
+      {
+        "id": "NXlFmkHm0N0",
+        "url": "https://www.youtube.com/watch?v=NXlFmkHm0N0",
+        "title": "Practice Session on Geometry ( High Level) - Part - 3 II CAT PREPARATION 2024 I CAT PREPARATION 2024",
+        "durationSec": 906,
+        "durationFormatted": "15:06",
+        "channel": "Rodha"
+      }
+    ]
+  },
+  {
+    "id": "res_48",
+    "topic": "Introduction to DILR",
+    "section": "DILR",
+    "subSection": "DILR",
+    "videoCount": 1,
+    "videos": [
+      {
+        "id": "KhNeTrBYbYo",
+        "url": "https://www.youtube.com/watch?v=KhNeTrBYbYo",
+        "title": "Introduction | Logic Reasoning and Data Interpretation | CAT Preparation",
+        "durationSec": 488,
+        "durationFormatted": "8:08",
+        "channel": "Rodha"
+      }
+    ]
+  },
+  {
+    "id": "res_49",
+    "topic": "Seating Arrangements",
+    "section": "DILR",
+    "subSection": "DILR",
+    "videoCount": 6,
+    "videos": [
+      {
+        "id": "nRuRNnyi19o",
+        "url": "https://www.youtube.com/watch?v=nRuRNnyi19o",
+        "title": "LRDI BASICS(Important tricks for CAT and Bank exam) | LESSON - 1",
+        "durationSec": 1450,
+        "durationFormatted": "24:10",
+        "channel": "ELITES GRID - CAT PREP"
+      },
+      {
+        "id": "Xy32CqkoWwg",
+        "url": "https://www.youtube.com/watch?v=Xy32CqkoWwg",
+        "title": "LRDI BASICS(Important tricks for CAT and Bank exam) | LESSON - 2",
+        "durationSec": 1784,
+        "durationFormatted": "29:44",
+        "channel": "ELITES GRID - CAT PREP"
+      },
+      {
+        "id": "Fwp6SOsYqZA",
+        "url": "https://www.youtube.com/watch?v=Fwp6SOsYqZA",
+        "title": "LRDI BASICS(Important tricks for CAT and Bank exam) | LESSON - 3",
+        "durationSec": 1932,
+        "durationFormatted": "32:12",
+        "channel": "ELITES GRID - CAT PREP"
+      },
+      {
+        "id": "-84_EAjopG8",
+        "url": "https://www.youtube.com/watch?v=-84_EAjopG8",
+        "title": "LRDI BASICS(Important tricks for CAT and Bank exam) | LESSON - 4",
+        "durationSec": 1280,
+        "durationFormatted": "21:20",
+        "channel": "ELITES GRID - CAT PREP"
+      },
+      {
+        "id": "4GVbV3HABIQ",
+        "url": "https://www.youtube.com/watch?v=4GVbV3HABIQ",
+        "title": "LRDI BASICS(Important tricks for CAT and Bank exam) | LESSON - 5",
+        "durationSec": 1796,
+        "durationFormatted": "29:56",
+        "channel": "ELITES GRID - CAT PREP"
+      },
+      {
+        "id": "AeLinc16pFI",
+        "url": "https://www.youtube.com/watch?v=AeLinc16pFI",
+        "title": "CAT LRDI | Table Formation/ Matrix Formation.",
+        "durationSec": 1196,
+        "durationFormatted": "19:56",
+        "channel": "ELITES GRID - CAT PREP"
+      }
+    ]
+  },
+  {
+    "id": "res_50",
+    "topic": "Linear & Circular Arrangement",
+    "section": "DILR",
+    "subSection": "DILR",
+    "videoCount": 5,
+    "videos": [
+      {
+        "id": "4tI-h-GKWVk",
+        "url": "https://www.youtube.com/watch?v=4tI-h-GKWVk",
+        "title": "Linear and Circular Arrangement - I for CAT I Logical Reasoning Preparation I Basic to Advance",
+        "durationSec": 1210,
+        "durationFormatted": "20:10",
+        "channel": "Rodha"
+      },
+      {
+        "id": "htsJtjvaoXE",
+        "url": "https://www.youtube.com/watch?v=htsJtjvaoXE",
+        "title": "Linear and Cirular Arrangement - II for CAT I Logical Reasoning Preparation I Basic to Advance",
+        "durationSec": 555,
+        "durationFormatted": "9:15",
+        "channel": "Rodha"
+      },
+      {
+        "id": "spET6FqiBZ8",
+        "url": "https://www.youtube.com/watch?v=spET6FqiBZ8",
+        "title": "Linear Arrangement I Set - 1 I Logical Reasoning Preparation for CAT  I Basic to Advance",
+        "durationSec": 657,
+        "durationFormatted": "10:57",
+        "channel": "Rodha"
+      },
+      {
+        "id": "nP3Lgm4Q66k",
+        "url": "https://www.youtube.com/watch?v=nP3Lgm4Q66k",
+        "title": "Linear Arrangement I Set - 2 I Logical Reasoning Preparation for CAT  I Basic to Advance",
+        "durationSec": 1066,
+        "durationFormatted": "17:46",
+        "channel": "Rodha"
+      },
+      {
+        "id": "e513BAOTyU8",
+        "url": "https://www.youtube.com/watch?v=e513BAOTyU8",
+        "title": "Linear Arrangement I Set - 3 I Logical Reasoning Preparation for CAT  I Basic to Advance",
+        "durationSec": 879,
+        "durationFormatted": "14:39",
+        "channel": "Rodha"
+      }
+    ]
+  },
+  {
+    "id": "res_51",
+    "topic": "Bar Graphs",
+    "section": "DILR",
+    "subSection": "DILR",
+    "videoCount": 1,
+    "videos": [
+      {
+        "id": "9_bd0mNYx1U",
+        "url": "https://www.youtube.com/watch?v=9_bd0mNYx1U",
+        "title": "Bar Graphs | Data Interpretation | LRDI Starter Kit 05 | CAT 2024 | MBA Wallah",
+        "durationSec": 4359,
+        "durationFormatted": "1:12:39",
+        "channel": "MBA Wallah"
+      }
+    ]
+  },
+  {
+    "id": "res_52",
+    "topic": "Caselets (Quant-Based)",
+    "section": "DILR",
+    "subSection": "DILR",
+    "videoCount": 21,
+    "videos": [
+      {
+        "id": "sQofq1SfL1M",
+        "url": "https://www.youtube.com/watch?v=sQofq1SfL1M",
+        "title": "Quant Based Puzzles - Set -1  || LR & DI Preparation for CAT || CAT exam Preparation",
+        "durationSec": 787,
+        "durationFormatted": "13:07",
+        "channel": "Rodha"
+      },
+      {
+        "id": "PnspTTuquqM",
+        "url": "https://www.youtube.com/watch?v=PnspTTuquqM",
+        "title": "Quant Based Puzzles - Set 2 -  I LRDI PREPARATION II CAT PREPARATION",
+        "durationSec": 1777,
+        "durationFormatted": "29:37",
+        "channel": "Rodha"
+      },
+      {
+        "id": "9aOLBqs43qM",
+        "url": "https://www.youtube.com/watch?v=9aOLBqs43qM",
+        "title": "Quant Based Puzzles - Set - 3  || LR & DI Preparation for CAT || CAT exam Preparation",
+        "durationSec": 2212,
+        "durationFormatted": "36:52",
+        "channel": "Rodha"
+      },
+      {
+        "id": "uyF0vc9_fH4",
+        "url": "https://www.youtube.com/watch?v=uyF0vc9_fH4",
+        "title": "Quant Based Puzzles - Set - 4  || LR & DI Preparation for CAT || CAT exam Preparation",
+        "durationSec": 1638,
+        "durationFormatted": "27:18",
+        "channel": "Rodha"
+      },
+      {
+        "id": "8m5mtFx9UFM",
+        "url": "https://www.youtube.com/watch?v=8m5mtFx9UFM",
+        "title": "Quant Based Puzzles - Set 5 I CAT PREPARATION  I ULTIMATE CONCEPT OF MAGIC BOX 3 X 3 I LRDI",
+        "durationSec": 949,
+        "durationFormatted": "15:49",
+        "channel": "Rodha"
+      },
+      {
+        "id": "QvyPr627ZKw",
+        "url": "https://www.youtube.com/watch?v=QvyPr627ZKw",
+        "title": "Quant Based Puzzles - Set 6 (1st Part)  RING CUTTING SET (Ultimate Concept)  || LR & DI || CAT",
+        "durationSec": 1091,
+        "durationFormatted": "18:11",
+        "channel": "Rodha"
+      },
+      {
+        "id": "U7RpC9NDW6Y",
+        "url": "https://www.youtube.com/watch?v=U7RpC9NDW6Y",
+        "title": "Quant Based Puzzles - Set 6 (2nd Part)  RING CUTTING SET (Ultimate Concept)  || LR & DI || CAT",
+        "durationSec": 751,
+        "durationFormatted": "12:31",
+        "channel": "Rodha"
+      },
+      {
+        "id": "X0eX7DG-4Xc",
+        "url": "https://www.youtube.com/watch?v=X0eX7DG-4Xc",
+        "title": "Quant Based Puzzles - Set 7 (Part - I) - Ultimate Concept of Weighing Balls II CAT PREPARATION",
+        "durationSec": 495,
+        "durationFormatted": "8:15",
+        "channel": "Rodha"
+      },
+      {
+        "id": "wKs8tSaz1Mc",
+        "url": "https://www.youtube.com/watch?v=wKs8tSaz1Mc",
+        "title": "Quant Based Puzzles - Set 7 (Part - II) - Ultimate Concept of Weighing Balls II CAT PREPARATION",
+        "durationSec": 902,
+        "durationFormatted": "15:02",
+        "channel": "Rodha"
+      },
+      {
+        "id": "VuWXMWtDiDU",
+        "url": "https://www.youtube.com/watch?v=VuWXMWtDiDU",
+        "title": "Quant Based Puzzles - Set 7 (Part - III) |  CAT",
+        "durationSec": 387,
+        "durationFormatted": "6:27",
+        "channel": "Rodha"
+      },
+      {
+        "id": "6Fbqmd_kcyQ",
+        "url": "https://www.youtube.com/watch?v=6Fbqmd_kcyQ",
+        "title": "Quant Based Puzzles - Set 8 (Perfect CAT LEVEL ) II LRDI PREPARATION II CAT PREPARATION",
+        "durationSec": 1235,
+        "durationFormatted": "20:35",
+        "channel": "Rodha"
+      },
+      {
+        "id": "BhtO9Ydj-Bs",
+        "url": "https://www.youtube.com/watch?v=BhtO9Ydj-Bs",
+        "title": "Quant Based Puzzles - Set 9 - Tough Set II LRDI PREPARATION II CAT PREPARATION",
+        "durationSec": 1600,
+        "durationFormatted": "26:40",
+        "channel": "Rodha"
+      },
+      {
+        "id": "EthHS2K3p1U",
+        "url": "https://www.youtube.com/watch?v=EthHS2K3p1U",
+        "title": "Quant Based Puzzles - Set 10 - Good Set to Make You Think I LRDI PREPARATION II CAT PREPARATION",
+        "durationSec": 640,
+        "durationFormatted": "10:40",
+        "channel": "Rodha"
+      },
+      {
+        "id": "F4gALovZ2CQ",
+        "url": "https://www.youtube.com/watch?v=F4gALovZ2CQ",
+        "title": "Quant Based Puzzles - Set 11 I Amazing Way to form 4*4 Magic Box I CAT PREPARATION I",
+        "durationSec": 630,
+        "durationFormatted": "10:30",
+        "channel": "Rodha"
+      },
+      {
+        "id": "anJ7pZ3NywE",
+        "url": "https://www.youtube.com/watch?v=anJ7pZ3NywE",
+        "title": "Quant Based Puzzles - Set - 12  || LR & DI Preparation for CAT || CAT exam Preparation",
+        "durationSec": 928,
+        "durationFormatted": "15:28",
+        "channel": "Rodha"
+      },
+      {
+        "id": "zGRh7H3GrDY",
+        "url": "https://www.youtube.com/watch?v=zGRh7H3GrDY",
+        "title": "Quant Based Puzzles - Set 13 - Logical Set II LRDI PREPARATION II CAT PREPARATION",
+        "durationSec": 1058,
+        "durationFormatted": "17:38",
+        "channel": "Rodha"
+      },
+      {
+        "id": "AxjsYq1jI_U",
+        "url": "https://www.youtube.com/watch?v=AxjsYq1jI_U",
+        "title": "Quant Based Puzzles - Set 14 -CryptArithmetic II LRDI PREPARATION II CAT PREPARATION",
+        "durationSec": 1238,
+        "durationFormatted": "20:38",
+        "channel": "Rodha"
+      },
+      {
+        "id": "1xta40lS3co",
+        "url": "https://www.youtube.com/watch?v=1xta40lS3co",
+        "title": "Quant Based Puzzles - Set 15  I LRDI PREPARATION II CAT PREPARATION",
+        "durationSec": 841,
+        "durationFormatted": "14:01",
+        "channel": "Rodha"
+      },
+      {
+        "id": "eKkk9jeMOqY",
+        "url": "https://www.youtube.com/watch?v=eKkk9jeMOqY",
+        "title": "Quant Based Puzzles - Set 16  I LRDI PREPARATION II CAT PREPARATION",
+        "durationSec": 1165,
+        "durationFormatted": "19:25",
+        "channel": "Rodha"
+      },
+      {
+        "id": "r6lrQ10w1a8",
+        "url": "https://www.youtube.com/watch?v=r6lrQ10w1a8",
+        "title": "Quant Based Puzzles - Set 17  I LRDI PREPARATION II CAT PREPARATION",
+        "durationSec": 841,
+        "durationFormatted": "14:01",
+        "channel": "Rodha"
+      },
+      {
+        "id": "l0Af8Ta8Dy8",
+        "url": "https://www.youtube.com/watch?v=l0Af8Ta8Dy8",
+        "title": "Quant Based Puzzles - Set 18  I LRDI PREPARATION II CAT PREPARATION",
+        "durationSec": 1295,
+        "durationFormatted": "21:35",
+        "channel": "Rodha"
+      }
+    ]
+  },
+  {
+    "id": "res_53",
+    "topic": "Column Graphs",
+    "section": "DILR",
+    "subSection": "DILR",
+    "videoCount": 2,
+    "videos": [
+      {
+        "id": "LlCFnLd_xlU",
+        "url": "https://www.youtube.com/watch?v=LlCFnLd_xlU",
+        "title": "Multiple Charts - 1 | Data Interpretation | LRDI Starter Kit 09 | CAT 2024 | MBA Wallah",
+        "durationSec": 2218,
+        "durationFormatted": "36:58",
+        "channel": "MBA Wallah"
+      },
+      {
+        "id": "mLPhqizx_u4",
+        "url": "https://www.youtube.com/watch?v=mLPhqizx_u4",
+        "title": "Multiple Charts - 2 | Data Interpretation | LRDI Starter Kit 10 | CAT 2024 | MBA Wallah",
+        "durationSec": 1740,
+        "durationFormatted": "29:00",
+        "channel": "MBA Wallah"
+      }
+    ]
+  },
+  {
+    "id": "res_54",
+    "topic": "Line Charts",
+    "section": "DILR",
+    "subSection": "DILR",
+    "videoCount": 1,
+    "videos": [
+      {
+        "id": "soFubyN_QZc",
+        "url": "https://www.youtube.com/watch?v=soFubyN_QZc",
+        "title": "Line Graphs | Data Interpretation | LRDI Starter Kit 06 | CAT 2024 | MBA Wallah",
+        "durationSec": 5840,
+        "durationFormatted": "1:37:20",
+        "channel": "MBA Wallah"
+      }
+    ]
+  },
+  {
+    "id": "res_55",
+    "topic": "Cubes",
+    "section": "DILR",
+    "subSection": "DILR",
+    "videoCount": 4,
+    "videos": [
+      {
+        "id": "0TdF_yyNkZk",
+        "url": "https://www.youtube.com/watch?v=0TdF_yyNkZk",
+        "title": "CUBES 1 | CAT Exam Preparation  | Logical Reasoning",
+        "durationSec": 1505,
+        "durationFormatted": "25:05",
+        "channel": "Rodha"
+      },
+      {
+        "id": "SXGVyDsuHds",
+        "url": "https://www.youtube.com/watch?v=SXGVyDsuHds",
+        "title": "CUBES 2 | CAT Exam Preparation  | Logical Reasoning",
+        "durationSec": 1628,
+        "durationFormatted": "27:08",
+        "channel": "Rodha"
+      },
+      {
+        "id": "-a9xMpOq7ns",
+        "url": "https://www.youtube.com/watch?v=-a9xMpOq7ns",
+        "title": "CUBES 3 | CAT Exam Preparation   | Logical Reasoning",
+        "durationSec": 1116,
+        "durationFormatted": "18:36",
+        "channel": "Rodha"
+      },
+      {
+        "id": "JNAyzPhHrRE",
+        "url": "https://www.youtube.com/watch?v=JNAyzPhHrRE",
+        "title": "Cubes 4  || LR & DI Preparation || CAT exam Preparation",
+        "durationSec": 1886,
+        "durationFormatted": "31:26",
+        "channel": "Rodha"
+      }
+    ]
+  },
+  {
+    "id": "res_56",
+    "topic": "Pie Charts",
+    "section": "DILR",
+    "subSection": "DILR",
+    "videoCount": 5,
+    "videos": [
+      {
+        "id": "Kn17_JoFmjU",
+        "url": "https://www.youtube.com/watch?v=Kn17_JoFmjU",
+        "title": "Pie Chart 1 || LR & DI Preparation || CAT Exam Preparation",
+        "durationSec": 1809,
+        "durationFormatted": "30:09",
+        "channel": "Rodha"
+      },
+      {
+        "id": "A6K2pPl0BLA",
+        "url": "https://www.youtube.com/watch?v=A6K2pPl0BLA",
+        "title": "Pie Chart 2 || LR & DI Preparation || CAT Exam Preparation",
+        "durationSec": 1037,
+        "durationFormatted": "17:17",
+        "channel": "Rodha"
+      },
+      {
+        "id": "8OhqPdBcGOc",
+        "url": "https://www.youtube.com/watch?v=8OhqPdBcGOc",
+        "title": "Pie Chart 3 || LR & DI PreparationT || CAT Exam Preparation",
+        "durationSec": 1091,
+        "durationFormatted": "18:11",
+        "channel": "Rodha"
+      },
+      {
+        "id": "FpGBpIyIIA4",
+        "url": "https://www.youtube.com/watch?v=FpGBpIyIIA4",
+        "title": "Pie Chart 4 || LR & DI Preparation || CAT Exam Preparation",
+        "durationSec": 1527,
+        "durationFormatted": "25:27",
+        "channel": "Rodha"
+      },
+      {
+        "id": "Y2OTzU5fG8s",
+        "url": "https://www.youtube.com/watch?v=Y2OTzU5fG8s",
+        "title": "Pie Chart 5 || LR & DI Preparation for CAT || CAT exam Preparation",
+        "durationSec": 1738,
+        "durationFormatted": "28:58",
+        "channel": "Rodha"
+      }
+    ]
+  },
+  {
+    "id": "res_57",
+    "topic": "Tables",
+    "section": "DILR",
+    "subSection": "DILR",
+    "videoCount": 1,
+    "videos": [
+      {
+        "id": "gqYVcVjqW0k",
+        "url": "https://www.youtube.com/watch?v=gqYVcVjqW0k",
+        "title": "Tabular Set || LR & DI Preparation for CAT || CAT exam Preparation",
+        "durationSec": 1298,
+        "durationFormatted": "21:38",
+        "channel": "Rodha"
+      }
+    ]
+  },
+  {
+    "id": "res_58",
+    "topic": "Charts Mixed",
+    "section": "DILR",
+    "subSection": "DILR",
+    "videoCount": 1,
+    "videos": [
+      {
+        "id": "CqqkHAeeoPg",
+        "url": "https://www.youtube.com/watch?v=CqqkHAeeoPg",
+        "title": "Miscellaneous Charts | Data Interpretation | LRDI Starter Kit 08 | CAT 2024 | MBA Wallah",
+        "durationSec": 3766,
+        "durationFormatted": "1:02:46",
+        "channel": "MBA Wallah"
+      }
+    ]
+  },
+  {
+    "id": "res_59",
+    "topic": "Venn Diagrams",
+    "section": "DILR",
+    "subSection": "DILR",
+    "videoCount": 7,
+    "videos": [
+      {
+        "id": "D3iR5cIr_VQ",
+        "url": "https://www.youtube.com/watch?v=D3iR5cIr_VQ",
+        "title": "Venn Diagram & Chocolate Distribution (Introduction) - 1  | LR & DI  || CAT Exam Preparation",
+        "durationSec": 578,
+        "durationFormatted": "9:38",
+        "channel": "Rodha"
+      },
+      {
+        "id": "dRbw57eHvuo",
+        "url": "https://www.youtube.com/watch?v=dRbw57eHvuo",
+        "title": "Venn Diagrams - 2 |  4 parameter Venn Diagram | CAT Preparation",
+        "durationSec": 1782,
+        "durationFormatted": "29:42",
+        "channel": "Rodha"
+      },
+      {
+        "id": "Mj3OpZ5uzbE",
+        "url": "https://www.youtube.com/watch?v=Mj3OpZ5uzbE",
+        "title": "Venn Diagrams - 3 || Logical Reasoning & Data Interpretation || CAT Exam Preparation",
+        "durationSec": 1849,
+        "durationFormatted": "30:49",
+        "channel": "Rodha"
+      },
+      {
+        "id": "ihqJj0HqcnU",
+        "url": "https://www.youtube.com/watch?v=ihqJj0HqcnU",
+        "title": "Venn Diagrams - 4 || Logical Reasoning & Data Interpretation || CAT Exam Preparation",
+        "durationSec": 1380,
+        "durationFormatted": "23:00",
+        "channel": "Rodha"
+      },
+      {
+        "id": "Ys-FF3FpDC0",
+        "url": "https://www.youtube.com/watch?v=Ys-FF3FpDC0",
+        "title": "Venn Diagrams - 6 || Logical Reasoning & Data Interpretation || CAT Exam Preparation",
+        "durationSec": 1244,
+        "durationFormatted": "20:44",
+        "channel": "Rodha"
+      },
+      {
+        "id": "AxKzMdr8pno",
+        "url": "https://www.youtube.com/watch?v=AxKzMdr8pno",
+        "title": "Venn Diagrams - 5 || Logical Reasoning & Data Interpretation || CAT Exam Preparation",
+        "durationSec": 1410,
+        "durationFormatted": "23:30",
+        "channel": "Rodha"
+      },
+      {
+        "id": "417AgC9u_6U",
+        "url": "https://www.youtube.com/watch?v=417AgC9u_6U",
+        "title": "Venn Diagrams - 7 || Logical Reasoning & Data Interpretation || CAT Exam Preparation",
+        "durationSec": 1398,
+        "durationFormatted": "23:18",
+        "channel": "Rodha"
+      }
+    ]
+  },
+  {
+    "id": "res_60",
+    "topic": "Games & Tournaments",
+    "section": "DILR",
+    "subSection": "DILR",
+    "videoCount": 7,
+    "videos": [
+      {
+        "id": "bC3Wlg6DIRg",
+        "url": "https://www.youtube.com/watch?v=bC3Wlg6DIRg",
+        "title": "Games and Tournaments 1 || LR & DI Preparation for CAT || CAT Exam Preparation",
+        "durationSec": 1574,
+        "durationFormatted": "26:14",
+        "channel": "Rodha"
+      },
+      {
+        "id": "-eGbg9Ks5hg",
+        "url": "https://www.youtube.com/watch?v=-eGbg9Ks5hg",
+        "title": "Games and Tournaments 2 || LR & DI Preparation for CAT || CAT Exam Preparation",
+        "durationSec": 1266,
+        "durationFormatted": "21:06",
+        "channel": "Rodha"
+      },
+      {
+        "id": "_DdVSBBF0uw",
+        "url": "https://www.youtube.com/watch?v=_DdVSBBF0uw",
+        "title": "Games And Tournaments 3|| LR & DI Preparation for CAT || CAT Exam Preparation",
+        "durationSec": 1243,
+        "durationFormatted": "20:43",
+        "channel": "Rodha"
+      },
+      {
+        "id": "tkumi5op3WM",
+        "url": "https://www.youtube.com/watch?v=tkumi5op3WM",
+        "title": "Games And Tournaments 4 || LR & DI Preparation for CAT || CAT Exam Preparation",
+        "durationSec": 1383,
+        "durationFormatted": "23:03",
+        "channel": "Rodha"
+      },
+      {
+        "id": "6dRzG9hqkzg",
+        "url": "https://www.youtube.com/watch?v=6dRzG9hqkzg",
+        "title": "Games And Tournaments 5 || LR & DI Preparation for CAT || CAT Exam Preparation",
+        "durationSec": 1638,
+        "durationFormatted": "27:18",
+        "channel": "Rodha"
+      },
+      {
+        "id": "Tv5kTEQjCwI",
+        "url": "https://www.youtube.com/watch?v=Tv5kTEQjCwI",
+        "title": "Games And Tournaments 6|| LR & DI Preparation for CAT || CAT Exam Preparation",
+        "durationSec": 1246,
+        "durationFormatted": "20:46",
+        "channel": "Rodha"
+      },
+      {
+        "id": "CQ2c5nX2mwM",
+        "url": "https://www.youtube.com/watch?v=CQ2c5nX2mwM",
+        "title": "Games & Tournaments - 8 (Knockout tournaments advanced level ) | CAT",
+        "durationSec": 1412,
+        "durationFormatted": "23:32",
+        "channel": "Rodha"
+      }
+    ]
+  },
+  {
+    "id": "res_61",
+    "topic": "Syllogisms",
+    "section": "DILR",
+    "subSection": "DILR",
+    "videoCount": 1,
+    "videos": [
+      {
+        "id": "ZReJzvlYWng",
+        "url": "https://www.youtube.com/watch?v=ZReJzvlYWng",
+        "title": "MAH CET 2026 Complete Syllogism | LR Made Easy | Saral Nashier (CAT 100%iler)",
+        "durationSec": 3888,
+        "durationFormatted": "1:04:48",
+        "channel": "Unacademy CAT"
+      }
+    ]
+  },
+  {
+    "id": "res_62",
+    "topic": "Clocks/Calendars",
+    "section": "DILR",
+    "subSection": "DILR",
+    "videoCount": 3,
+    "videos": [
+      {
+        "id": "fnGRCej5qUw",
+        "url": "https://www.youtube.com/watch?v=fnGRCej5qUw",
+        "title": "Calendars 1  || LR & DI Preparation || CAT Exam Preparation",
+        "durationSec": 1868,
+        "durationFormatted": "31:08",
+        "channel": "Rodha"
+      },
+      {
+        "id": "NnOena8Al98",
+        "url": "https://www.youtube.com/watch?v=NnOena8Al98",
+        "title": "Calendars 2  || LR & DI Preparation || CAT Exam Preparation",
+        "durationSec": 695,
+        "durationFormatted": "11:35",
+        "channel": "Rodha"
+      },
+      {
+        "id": "UbLOaYv5doY",
+        "url": "https://www.youtube.com/watch?v=UbLOaYv5doY",
+        "title": "Calendars 3  || LR & DI Preparation || CAT Exam Preparation",
+        "durationSec": 1516,
+        "durationFormatted": "25:16",
+        "channel": "Rodha"
+      }
+    ]
+  },
+  {
+    "id": "res_63",
+    "topic": "Number Series",
+    "section": "DILR",
+    "subSection": "DILR",
+    "videoCount": 6,
+    "videos": [
+      {
+        "id": "vonVQlKY3hc",
+        "url": "https://www.youtube.com/watch?v=vonVQlKY3hc",
+        "title": "Numbers Series 1 || LR & DI Preparation for CAT || CAT exam Preparation",
+        "durationSec": 1452,
+        "durationFormatted": "24:12",
+        "channel": "Rodha"
+      },
+      {
+        "id": "PyBRlquvVOs",
+        "url": "https://www.youtube.com/watch?v=PyBRlquvVOs",
+        "title": "Numbers Series 2 || LR & DI Preparation for CAT || CAT exam Preparation",
+        "durationSec": 1046,
+        "durationFormatted": "17:26",
+        "channel": "Rodha"
+      },
+      {
+        "id": "S-3VsQ-m0qI",
+        "url": "https://www.youtube.com/watch?v=S-3VsQ-m0qI",
+        "title": "Numbers Series 3 || LR & DI Preparation for CAT || CAT exam Preparation",
+        "durationSec": 1574,
+        "durationFormatted": "26:14",
+        "channel": "Rodha"
+      },
+      {
+        "id": "8euEBR3hY20",
+        "url": "https://www.youtube.com/watch?v=8euEBR3hY20",
+        "title": "Numbers Series 4 || LR & DI Preparation for CAT || CAT exam Preparation",
+        "durationSec": 1239,
+        "durationFormatted": "20:39",
+        "channel": "Rodha"
+      },
+      {
+        "id": "QO4pctfewO0",
+        "url": "https://www.youtube.com/watch?v=QO4pctfewO0",
+        "title": "NUMBER SERIES  - PART 5 || LR & DI Preparation for CAT || CAT exam Preparation",
+        "durationSec": 896,
+        "durationFormatted": "14:56",
+        "channel": "Rodha"
+      },
+      {
+        "id": "dB7jWl4ka_o",
+        "url": "https://www.youtube.com/watch?v=dB7jWl4ka_o",
+        "title": "NUMBER SERIES  - PART 6 || LR & DI Preparation for CAT || CAT exam Preparation",
+        "durationSec": 1213,
+        "durationFormatted": "20:13",
+        "channel": "Rodha"
+      }
+    ]
+  },
+  {
+    "id": "res_64",
+    "topic": "Logical Connectives & Other Reasoning",
+    "section": "DILR",
+    "subSection": "DILR",
+    "videoCount": 1,
+    "videos": [
+      {
+        "id": "z_2JXOW8c4s",
+        "url": "https://www.youtube.com/watch?v=z_2JXOW8c4s",
+        "title": "CAT 2021 Daily Live | LRDI  | Logical Connectives | Unacademy live CATalyst | Akash Singh",
+        "durationSec": 1603,
+        "durationFormatted": "26:43",
+        "channel": "Unacademy CAT-alyst"
+      }
+    ]
+  },
+  {
+    "id": "res_65",
+    "topic": "Coding & Decoding",
+    "section": "DILR",
+    "subSection": "DILR",
+    "videoCount": 1,
+    "videos": [
+      {
+        "id": "g7PbJXGOBCs",
+        "url": "https://www.youtube.com/watch?v=g7PbJXGOBCs",
+        "title": "Coding & Decoding for NMAT/SNAP",
+        "durationSec": 1186,
+        "durationFormatted": "19:46",
+        "channel": "ELITES GRID - CAT PREP"
+      }
+    ]
+  },
+  {
+    "id": "res_66",
+    "topic": "Selection & Distribution",
+    "section": "DILR",
+    "subSection": "DILR",
+    "videoCount": 1,
+    "videos": [
+      {
+        "id": "DcX3oOYVDh0",
+        "url": "https://www.youtube.com/watch?v=DcX3oOYVDh0",
+        "title": "Selections and Distribution Puzzles by Elites Grid | Best Approach",
+        "durationSec": 745,
+        "durationFormatted": "12:25",
+        "channel": "ELITES GRID - CAT PREP"
+      }
+    ]
+  },
+  {
+    "id": "res_67",
+    "topic": "Order Based Puzzles",
+    "section": "DILR",
+    "subSection": "DILR",
+    "videoCount": 1,
+    "videos": [
+      {
+        "id": "syl6frSao4w",
+        "url": "https://www.youtube.com/watch?v=syl6frSao4w",
+        "title": "Order based puzzles | Tabular way to solve such puzzles.",
+        "durationSec": 554,
+        "durationFormatted": "9:14",
+        "channel": "ELITES GRID - CAT PREP"
+      }
+    ]
+  },
+  {
+    "id": "res_68",
+    "topic": "Progressive Marking",
+    "section": "DILR",
+    "subSection": "DILR",
+    "videoCount": 1,
+    "videos": [
+      {
+        "id": "jvRRH23mXZs",
+        "url": "https://www.youtube.com/watch?v=jvRRH23mXZs",
+        "title": "WAY TO IIM LRDI SET 14 || PROGRESSIVE MARKING METHOD TO SOLVE LRDI ||HUNNY MALHOTRA||ELITESGRID",
+        "durationSec": 1104,
+        "durationFormatted": "18:24",
+        "channel": "ELITES GRID - CAT PREP"
+      }
+    ]
+  },
+  {
+    "id": "res_69",
+    "topic": "Routes & Networks",
+    "section": "DILR",
+    "subSection": "DILR",
+    "videoCount": 2,
+    "videos": [
+      {
+        "id": "UcBNNLkeuz8",
+        "url": "https://www.youtube.com/watch?v=UcBNNLkeuz8",
+        "title": "Routes and Networks - 1 || LR & DI Preparation for CAT || CAT exam Preparation",
+        "durationSec": 1467,
+        "durationFormatted": "24:27",
+        "channel": "Rodha"
+      },
+      {
+        "id": "Bd8ciUPzKtk",
+        "url": "https://www.youtube.com/watch?v=Bd8ciUPzKtk",
+        "title": "Routes and Networks - 2 || LR & DI Preparation for CAT || CAT exam Preparation",
+        "durationSec": 1158,
+        "durationFormatted": "19:18",
+        "channel": "Rodha"
+      }
+    ]
+  },
+  {
+    "id": "res_70",
+    "topic": "Chocolate Distribution",
+    "section": "DILR",
+    "subSection": "DILR",
+    "videoCount": 2,
+    "videos": [
+      {
+        "id": "hOUKSCHy5Zc",
+        "url": "https://www.youtube.com/watch?v=hOUKSCHy5Zc",
+        "title": "Chocolate Distribution Method - 1 II LRDI for CAT  I",
+        "durationSec": 1161,
+        "durationFormatted": "19:21",
+        "channel": "Rodha"
+      },
+      {
+        "id": "pzDYc4VmlGk",
+        "url": "https://www.youtube.com/watch?v=pzDYc4VmlGk",
+        "title": "Chocolate Distribution Method -2 II LRDI for CAT  II CAT",
+        "durationSec": 1259,
+        "durationFormatted": "20:59",
+        "channel": "Rodha"
+      }
+    ]
+  },
+  {
+    "id": "res_71",
+    "topic": "Maximization Minimization",
+    "section": "DILR",
+    "subSection": "DILR",
+    "videoCount": 4,
+    "videos": [
+      {
+        "id": "940TyNpKTfU",
+        "url": "https://www.youtube.com/watch?v=940TyNpKTfU",
+        "title": "Maximization & Minimization  - 1 I Chocolate distribution Concept | LRDI | CAT",
+        "durationSec": 1207,
+        "durationFormatted": "20:07",
+        "channel": "Rodha"
+      },
+      {
+        "id": "ck6I_qzesGg",
+        "url": "https://www.youtube.com/watch?v=ck6I_qzesGg",
+        "title": "Maximization and Minimization - 2 || Chocolate distribution Concept || CAT Exam Preparation",
+        "durationSec": 1275,
+        "durationFormatted": "21:15",
+        "channel": "Rodha"
+      },
+      {
+        "id": "24O0yOYRB8M",
+        "url": "https://www.youtube.com/watch?v=24O0yOYRB8M",
+        "title": "LRDI - Maximisation Minimisation 5 ( Good set - Put your thinking CAP  on ;) ) | CAT",
+        "durationSec": 1050,
+        "durationFormatted": "17:30",
+        "channel": "Rodha"
+      },
+      {
+        "id": "kuYLqiKcJyM",
+        "url": "https://www.youtube.com/watch?v=kuYLqiKcJyM",
+        "title": "LRDI - Maximisation minimisation 6 ( Excellent logical set ) | CAT Exam Preparation",
+        "durationSec": 1180,
+        "durationFormatted": "19:40",
+        "channel": "Rodha"
+      }
+    ]
+  },
+  {
+    "id": "res_72",
+    "topic": "Allegations Approach",
+    "section": "DILR",
+    "subSection": "DILR",
+    "videoCount": 1,
+    "videos": [
+      {
+        "id": "t8jLWUCCxMI",
+        "url": "https://www.youtube.com/watch?v=t8jLWUCCxMI",
+        "title": "DATA INTERPRETATION | Allegation Approach | LRDI for CAT",
+        "durationSec": 1720,
+        "durationFormatted": "28:40",
+        "channel": "ELITES GRID - CAT PREP"
+      }
+    ]
+  },
+  {
+    "id": "res_73",
+    "topic": "Reading Comprehension",
+    "section": "VARC",
+    "subSection": "VARC",
+    "videoCount": 17,
+    "videos": [
+      {
+        "id": "ozhEHygD3YY",
+        "url": "https://youtu.be/ozhEHygD3YY",
+        "title": "Reading Comprehension Strategy [Solved Example - CAT 2019 passage]",
+        "durationSec": 3738,
+        "durationFormatted": "1:02:18",
+        "channel": "Gejo Speaks"
+      },
+      {
+        "id": "6-dN3Qh2rsw",
+        "url": "https://youtu.be/6-dN3Qh2rsw",
+        "title": "Effective \"use\" of tone - Reading Comprehension | CAT-RC series | GejoSpeaks",
+        "durationSec": 1086,
+        "durationFormatted": "18:06",
+        "channel": "Gejo Speaks"
+      },
+      {
+        "id": "IzzDC2qCYu0",
+        "url": "https://youtu.be/IzzDC2qCYu0",
+        "title": "How to read a passage effectively | CAT-RC-Series | GejoSpeaks | Reading Comprehension",
+        "durationSec": 1125,
+        "durationFormatted": "18:45",
+        "channel": "Gejo Speaks"
+      },
+      {
+        "id": "inaZ4ezqMu0",
+        "url": "https://youtu.be/inaZ4ezqMu0",
+        "title": "Identify the unidentified | Learn to ELIMINATE wrong options in Reading Comprehension | GejoSpeaks",
+        "durationSec": 1472,
+        "durationFormatted": "24:32",
+        "channel": "Gejo Speaks"
+      },
+      {
+        "id": "PyqrqlWUQRg",
+        "url": "https://youtu.be/PyqrqlWUQRg",
+        "title": "What CAT RC Actually Tests | CAT 2017-2021 RC Analysis with Gejo",
+        "durationSec": 2475,
+        "durationFormatted": "41:15",
+        "channel": "Career Launcher MBA"
+      },
+      {
+        "id": "JVkPx46yK0I",
+        "url": "https://youtu.be/JVkPx46yK0I",
+        "title": "CAT RC Got a Difficult Topic? Here's Exactly What to Do | CAT 2026 VARC Strategy | #PrepWithCL",
+        "durationSec": 3365,
+        "durationFormatted": "56:05",
+        "channel": "Career Launcher MBA"
+      },
+      {
+        "id": "_rjuDn3G3p0",
+        "url": "https://youtu.be/_rjuDn3G3p0",
+        "title": "Why You're Getting Inference Questions Wrong in CAT RC (And How to Fix It) | CAT 2026 VARC",
+        "durationSec": 1594,
+        "durationFormatted": "26:34",
+        "channel": "Career Launcher MBA"
+      },
+      {
+        "id": "2HO5GZ5JEn8",
+        "url": "https://youtu.be/2HO5GZ5JEn8",
+        "title": "CAT 2024 VARC Strategy | Dealing with Dense Sentences | Reading Comprehension for CAT with Gejo",
+        "durationSec": 2341,
+        "durationFormatted": "39:01",
+        "channel": "Career Launcher MBA"
+      },
+      {
+        "id": "6IezpEOMEpQ",
+        "url": "https://www.youtube.com/watch?v=6IezpEOMEpQ",
+        "title": "LAKSHYA 1.O | CAT 2021 & IPMAT | Reading Comprehension-Foundation | Harpreet Kaur",
+        "durationSec": 2822,
+        "durationFormatted": "47:02",
+        "channel": "Unacademy CAT"
+      },
+      {
+        "id": "TOveIaXMaLY",
+        "url": "https://www.youtube.com/watch?v=TOveIaXMaLY",
+        "title": "LAKSHYA 1.O | CAT 2021 & IPMAT | Reading Comprehension-idea flow | Harpreet Kaur",
+        "durationSec": 4225,
+        "durationFormatted": "1:10:25",
+        "channel": "Unacademy CAT"
+      },
+      {
+        "id": "MDlk_uVAqak",
+        "url": "https://www.youtube.com/watch?v=MDlk_uVAqak",
+        "title": "LAKSHYA 1.O | CAT 2021 & IPMAT | Reading Comprehension-Tones | Harpreet Kaur",
+        "durationSec": 3787,
+        "durationFormatted": "1:03:07",
+        "channel": "Unacademy CAT"
+      },
+      {
+        "id": "HNy_V66FrPQ",
+        "url": "https://www.youtube.com/watch?v=HNy_V66FrPQ",
+        "title": "LAKSHYA 1.O | CAT 2021 & IPMAT | Reading Comprehension-speed reading | Harpreet Kaur",
+        "durationSec": 4054,
+        "durationFormatted": "1:07:34",
+        "channel": "Unacademy CAT"
+      },
+      {
+        "id": "txAXk3TCNGw",
+        "url": "https://www.youtube.com/watch?v=txAXk3TCNGw",
+        "title": "LAKSHYA 1.O | CAT 2021 & IPMAT | Reading Comprehension -short passages | Harpreet Kaur",
+        "durationSec": 3275,
+        "durationFormatted": "54:35",
+        "channel": "Unacademy CAT"
+      },
+      {
+        "id": "BfPIaC9YQnc",
+        "url": "https://www.youtube.com/watch?v=BfPIaC9YQnc",
+        "title": "LAKSHYA 1.O | CAT 2021 & IPMAT | Reading Comprehension -Main idea | Harpreet Kaur",
+        "durationSec": 3334,
+        "durationFormatted": "55:34",
+        "channel": "Unacademy CAT"
+      },
+      {
+        "id": "1RnqNFcuLh8",
+        "url": "https://www.youtube.com/watch?v=1RnqNFcuLh8",
+        "title": "LAKSHYA 1.O | CAT 2021 & IPMAT | Reading Comprehension -CR questions  | Harpreet Kaur",
+        "durationSec": 3761,
+        "durationFormatted": "1:02:41",
+        "channel": "Unacademy CAT"
+      },
+      {
+        "id": "YcfDaMzFVMY",
+        "url": "https://www.youtube.com/watch?v=YcfDaMzFVMY",
+        "title": "LAKSHYA 1.O | CAT 2021 & IPMAT | Reading Comprehension-skimming /scanning | Harpreet Kaur",
+        "durationSec": 3805,
+        "durationFormatted": "1:03:25",
+        "channel": "Unacademy CAT"
+      },
+      {
+        "id": "SfLtQA-h4A8",
+        "url": "https://www.youtube.com/watch?v=SfLtQA-h4A8",
+        "title": "LAKSHYA 1.O | CAT 2021 & IPMAT | Reading Comprehension- Test | Harpreet Kaur",
+        "durationSec": 2409,
+        "durationFormatted": "40:09",
+        "channel": "Unacademy CAT"
+      }
+    ]
+  },
+  {
+    "id": "res_74",
+    "topic": "Para Summary",
+    "section": "VARC",
+    "subSection": "VARC",
+    "videoCount": 2,
+    "videos": [
+      {
+        "id": "1nUeQaoLuXc",
+        "url": "https://youtu.be/1nUeQaoLuXc",
+        "title": "Learn how to deal with CAT Para Summary questions | Gejo Speaks | by Gejo Sreenivasan",
+        "durationSec": 1316,
+        "durationFormatted": "21:56",
+        "channel": "Gejo Speaks"
+      },
+      {
+        "id": "1W1erWwb36w",
+        "url": "https://www.youtube.com/watch?v=1W1erWwb36w",
+        "title": "LAKSHYA 1.O | CAT 2021 & IPMAT |Verbal REAsoning-para summary  | Harpreet Kaur",
+        "durationSec": 3419,
+        "durationFormatted": "56:59",
+        "channel": "Unacademy CAT"
+      }
+    ]
+  },
+  {
+    "id": "res_75",
+    "topic": "Para Jumbles",
+    "section": "VARC",
+    "subSection": "VARC",
+    "videoCount": 3,
+    "videos": [
+      {
+        "id": "PgNBT_Zp_Us",
+        "url": "https://youtu.be/PgNBT_Zp_Us",
+        "title": "Learn the ultimate mantra to solve Para Jumbles questions | GejoSpeaks | CAT Questions",
+        "durationSec": 2757,
+        "durationFormatted": "45:57",
+        "channel": "Gejo Speaks"
+      },
+      {
+        "id": "mvOtomTXXAM",
+        "url": "https://www.youtube.com/watch?v=mvOtomTXXAM",
+        "title": "LAKSHYA 1.O | CAT 2021 & IPMAT | Verbal Reasoning Para-jumbles | Harpreet Kaur",
+        "durationSec": 2658,
+        "durationFormatted": "44:18",
+        "channel": "Unacademy CAT"
+      },
+      {
+        "id": "_EVvVO3-5G4",
+        "url": "https://www.youtube.com/watch?v=_EVvVO3-5G4",
+        "title": "LAKSHYA 1.O | CAT 2021 & IPMAT | Verbal Reasoning-Para-jumble practice | Harpreet Kaur",
+        "durationSec": 3845,
+        "durationFormatted": "1:04:05",
+        "channel": "Unacademy CAT"
+      }
+    ]
+  },
+  {
+    "id": "res_76",
+    "topic": "Odd One Out",
+    "section": "VARC",
+    "subSection": "VARC",
+    "videoCount": 2,
+    "videos": [
+      {
+        "id": "In0aLW6hKiU",
+        "url": "https://youtu.be/In0aLW6hKiU",
+        "title": "Why You're Getting Odd Sentence Out Wrong in CAT VARC — And How to Fix It | CAT 2026 | #PrepWithCL",
+        "durationSec": 3187,
+        "durationFormatted": "53:07",
+        "channel": "Career Launcher MBA"
+      },
+      {
+        "id": "2DSK-Q2Rd1w",
+        "url": "https://www.youtube.com/watch?v=2DSK-Q2Rd1w",
+        "title": "LAKSHYA 1.O | CAT 2021 & IPMAT | Verbal Reasoning odd-man out | Harpreet Kaur",
+        "durationSec": 3769,
+        "durationFormatted": "1:02:49",
+        "channel": "Unacademy CAT"
+      }
+    ]
+  },
+  {
+    "id": "res_77",
+    "topic": "Para Completion",
+    "section": "VARC",
+    "subSection": "VARC",
+    "videoCount": 2,
+    "videos": [
+      {
+        "id": "k6MniuvwcCg",
+        "url": "https://www.youtube.com/watch?v=k6MniuvwcCg",
+        "title": "LAKSHYA 1.O | CAT 2021 & IPMAT | Verbal Reasoning-Para-completion| Harpreet Kaur",
+        "durationSec": 3560,
+        "durationFormatted": "59:20",
+        "channel": "Unacademy CAT"
+      },
+      {
+        "id": "giSUat4Unac",
+        "url": "https://www.youtube.com/watch?v=giSUat4Unac",
+        "title": "LAKSHYA 1.O | CAT 2021 & IPMAT | Verbal Reasoning- Para Completion  | Harpreet Kaur",
+        "durationSec": 3553,
+        "durationFormatted": "59:13",
+        "channel": "Unacademy CAT"
+      }
+    ]
+  },
+  {
+    "id": "res_78",
+    "topic": "Overall Verbal",
+    "section": "VARC",
+    "subSection": "VARC",
+    "videoCount": 1,
+    "videos": [
+      {
+        "id": "6TtpnFT2DyE",
+        "url": "https://youtu.be/6TtpnFT2DyE",
+        "title": "CAT 2026 VARC Preparation | Parajumbles Concepts, Tricks, & Solved Questions",
+        "durationSec": 1819,
+        "durationFormatted": "30:19",
+        "channel": "Career Launcher MBA"
+      }
+    ]
+  },
+  {
+    "id": "res_79",
+    "topic": "Verbal Reasoning",
+    "section": "VARC",
+    "subSection": "VARC",
+    "videoCount": 1,
+    "videos": [
+      {
+        "id": "nHwi23ZAJIw",
+        "url": "https://www.youtube.com/watch?v=nHwi23ZAJIw",
+        "title": "LAKSHYA 1.O | CAT 2021 & IPMAT | Verbal Reasoning Basics | Harpreet Kaur",
+        "durationSec": 4054,
+        "durationFormatted": "1:07:34",
+        "channel": "Unacademy CAT"
+      }
+    ]
+  },
+  {
+    "id": "res_80",
+    "topic": "Vocabulary",
+    "section": "VARC",
+    "subSection": "VARC",
+    "videoCount": 8,
+    "videos": [
+      {
+        "id": "b6JWVRFhIDA",
+        "url": "https://www.youtube.com/watch?v=b6JWVRFhIDA",
+        "title": "LAKSHYA 1.O | CAT 2021 & IPMAT | Vocabulary Building - Groups of words | Harpreet Kaur",
+        "durationSec": 4195,
+        "durationFormatted": "1:09:55",
+        "channel": "Unacademy CAT"
+      },
+      {
+        "id": "i8Vpz-Csn5A",
+        "url": "https://www.youtube.com/watch?v=i8Vpz-Csn5A",
+        "title": "LAKSHYA 1.O | CAT 2021 & IPMAT | Vocabulary Building Quiz | Harpreet Kaur",
+        "durationSec": 3970,
+        "durationFormatted": "1:06:10",
+        "channel": "Unacademy CAT"
+      },
+      {
+        "id": "uVY9OGOYhCM",
+        "url": "https://www.youtube.com/watch?v=uVY9OGOYhCM",
+        "title": "LAKSHYA 1.O | CAT 2021 & IPMAT | Allusions/ Words of Mythology Foreign Expressions | Harpreet Kaur",
+        "durationSec": 2454,
+        "durationFormatted": "40:54",
+        "channel": "Unacademy CAT"
+      },
+      {
+        "id": "XfgNFGWiSxg",
+        "url": "https://www.youtube.com/watch?v=XfgNFGWiSxg",
+        "title": "LAKSHYA 1.O | CAT 2021 & IPMAT | Vocabulary -Activity | Harpreet Kaur",
+        "durationSec": 4507,
+        "durationFormatted": "1:15:07",
+        "channel": "Unacademy CAT"
+      },
+      {
+        "id": "AwWDksT2aeA",
+        "url": "https://www.youtube.com/watch?v=AwWDksT2aeA",
+        "title": "LAKSHYA 1.O | CAT 2021 & IPMAT | Learn new words | Harpreet Kaur",
+        "durationSec": 3919,
+        "durationFormatted": "1:05:19",
+        "channel": "Unacademy CAT"
+      },
+      {
+        "id": "tWYBz3btCD4",
+        "url": "https://www.youtube.com/watch?v=tWYBz3btCD4",
+        "title": "LAKSHYA 1.O | CAT 2021 & IPMAT | Verbal- idioms phrases confusable words | Harpreet Kaur",
+        "durationSec": 4463,
+        "durationFormatted": "1:14:23",
+        "channel": "Unacademy CAT"
+      },
+      {
+        "id": "B9v5EYPUx5Q",
+        "url": "https://www.youtube.com/watch?v=B9v5EYPUx5Q",
+        "title": "LAKSHYA 1.O | CAT 2021 & IPMAT | Verbal Ability -Drill | Harpreet Kaur",
+        "durationSec": 4533,
+        "durationFormatted": "1:15:33",
+        "channel": "Unacademy CAT"
+      },
+      {
+        "id": "k16iL8r8LAY",
+        "url": "https://www.youtube.com/watch?v=k16iL8r8LAY",
+        "title": "LAKSHYA 1.O | CAT 2021 & IPMAT | Vocabulary-Activity | Harpreet Kaur",
+        "durationSec": 2866,
+        "durationFormatted": "47:46",
+        "channel": "Unacademy CAT"
+      }
+    ]
+  },
+  {
+    "id": "res_81",
+    "topic": "Critical Reasoning",
+    "section": "VARC",
+    "subSection": "VARC",
+    "videoCount": 6,
+    "videos": [
+      {
+        "id": "UkP9rA2ie7o",
+        "url": "https://www.youtube.com/watch?v=UkP9rA2ie7o",
+        "title": "LAKSHYA 1.O | CAT 2021 & IPMAT | Critcal Reasoning -Foundation | Harpreet Kaur",
+        "durationSec": 4543,
+        "durationFormatted": "1:15:43",
+        "channel": "Unacademy CAT"
+      },
+      {
+        "id": "rUqZfE-KlBM",
+        "url": "https://www.youtube.com/watch?v=rUqZfE-KlBM",
+        "title": "LAKSHYA 1.O | CAT 2021 & IPMAT | Critical Reasoning Assumptions | Harpreet Kaur",
+        "durationSec": 4570,
+        "durationFormatted": "1:16:10",
+        "channel": "Unacademy CAT"
+      },
+      {
+        "id": "H3XxJW8L-jE",
+        "url": "https://www.youtube.com/watch?v=H3XxJW8L-jE",
+        "title": "LAKSHYA 1.O | CAT 2021 & IPMAT | Critical Reasoning-Weakening \\Strengthening | Harpreet Kaur",
+        "durationSec": 4589,
+        "durationFormatted": "1:16:29",
+        "channel": "Unacademy CAT"
+      },
+      {
+        "id": "BvJdE9chElE",
+        "url": "https://www.youtube.com/watch?v=BvJdE9chElE",
+        "title": "LAKSHYA 1.O | CAT 2021 & IPMAT | Critical Reasoning-Paradox | Harpreet Kaur",
+        "durationSec": 2567,
+        "durationFormatted": "42:47",
+        "channel": "Unacademy CAT"
+      },
+      {
+        "id": "0aTBFzTuSQo",
+        "url": "https://www.youtube.com/watch?v=0aTBFzTuSQo",
+        "title": "LAKSHYA 1.O | CAT 2021 & IPMAT | Critical Reasoning -Practice 2 | Harpreet Kaur",
+        "durationSec": 3016,
+        "durationFormatted": "50:16",
+        "channel": "Unacademy CAT"
+      },
+      {
+        "id": "TwINv5jNciM",
+        "url": "https://www.youtube.com/watch?v=TwINv5jNciM",
+        "title": "LAKSHYA 1.O | CAT 2021 & IPMAT | Critical Reasoning-conclusion | Harpreet Kaur",
+        "durationSec": 4203,
+        "durationFormatted": "1:10:03",
+        "channel": "Unacademy CAT"
+      }
+    ]
+  }
+];

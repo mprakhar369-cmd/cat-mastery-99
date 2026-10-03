@@ -13,10 +13,10 @@
   <link rel="apple-touch-icon" href="./icons/icon-192.png" />
   <link rel="icon" type="image/png" href="./icons/icon-192.png" />
 
-  <!-- Google Fonts: Outfit (Display), Plus Jakarta Sans (Headings), Inter & JetBrains Mono (Numbers/Code) -->
+  <!-- Google Fonts: Space Grotesk (Headings/Display), Manrope (Body/UI), JetBrains Mono (Numbers/Code) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 
   <!-- KaTeX CSS & JS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css" />
@@ -85,9 +85,18 @@
           <span>⏱️</span> CBT Sectional Mock
         </button>
       </li>
+      <li class="nav-item">
+        <button id="nav-resources" onclick="switchView('resources')">
+          <span>📺</span> Video Resources (Rodha)
+        </button>
+      </li>
     </ul>
 
     <div class="sidebar-footer">
+      <button id="btn-theme-toggle" class="btn-theme-toggle" onclick="toggleTheme()" title="Toggle Light/Dark Theme">
+        <span id="theme-toggle-icon">☀</span>
+        <span id="theme-toggle-text">Light reading mode</span>
+      </button>
       <button class="btn-install-pwa" style="display:flex; margin-bottom:8px; background:rgba(56,189,248,0.12); border:1px solid rgba(56,189,248,0.3); color:#7dd3fc; cursor:pointer;" onclick="openMobileQrModal()">
         <span>📱</span> Open on Phone (QR)
       </button>
@@ -118,6 +127,10 @@
       </div>
 
       <div class="header-right">
+        <!-- Theme Toggle Icon Button -->
+        <button id="header-theme-toggle" class="header-theme-btn" onclick="toggleTheme()" title="Toggle Light / Dark Mode">
+          <span id="header-theme-toggle-icon">☀</span>
+        </button>
         <!-- Live PWA Network Status -->
         <div id="pwa-network-badge" class="network-badge online" title="PWA Service Worker Active">
           <span class="status-dot"></span>
@@ -632,6 +645,90 @@
       </div>
       <div id="mock-test-area" style="display:none;"></div>
     </section>
+
+    <!-- 9. VIDEO RESOURCES (PERCENTYL-STYLE RODHA CONCEPT THEATER) -->
+    <section id="view-resources" class="view-panel">
+      <!-- Hero Header -->
+      <div class="resources-hero-header">
+        <div class="res-hero-text">
+          <div class="res-hero-badge">
+            <span class="pulse-dot-cyan"></span>
+            <span>425+ Free Concept Lectures · Curated Rodha Masterclasses</span>
+          </div>
+          <h2 class="resources-hero-title">Free CAT Concept Videos</h2>
+          <p class="resources-hero-desc">Zero-to-zenith concept clarity across Quant, DILR & VARC by Ravi Prakash Sir. 100% distraction-free video player with chapter breakdowns.</p>
+        </div>
+      </div>
+
+      <!-- Percentyl Split Architecture -->
+      <div class="resources-layout">
+        <!-- Left Sub-Sidebar: Chapter Navigation -->
+        <aside class="resources-sidebar">
+          <!-- Section Switcher Tabs -->
+          <div class="resources-subject-tabs">
+            <button class="res-tab active" id="res-tab-quants" onclick="setResourceSection('Quants')">Quant</button>
+            <button class="res-tab" id="res-tab-dilr" onclick="setResourceSection('DILR')">DILR</button>
+            <button class="res-tab" id="res-tab-varc" onclick="setResourceSection('VARC')">VARC</button>
+          </div>
+
+          <!-- Chapter Search Bar with ⌘K Badge -->
+          <div class="resources-search-wrap">
+            <span class="res-search-icon">🔍</span>
+            <input type="text" id="res-search-input" class="res-search-field" placeholder="Search all chapters..." oninput="handleResourceSearch(this.value)" autocomplete="off" />
+            <kbd class="res-kbd">⌘K</kbd>
+          </div>
+
+          <!-- Grouped Chapter List -->
+          <div class="resources-chapter-list" id="resources-chapter-list">
+            <!-- Rendered dynamically -->
+          </div>
+        </aside>
+
+        <!-- Right Main Stage: Facade Player & Lessons -->
+        <div class="resources-main-stage">
+          <!-- Breadcrumb -->
+          <div class="res-breadcrumb" id="res-breadcrumb">
+            <span>🏠 Home</span>
+            <span class="res-bc-sep">›</span>
+            <span>Videos</span>
+            <span class="res-bc-sep">›</span>
+            <span id="res-bc-section">Quant</span>
+            <span class="res-bc-sep">›</span>
+            <span id="res-bc-sub">Arithmetics</span>
+            <span class="res-bc-sep">›</span>
+            <strong id="res-bc-topic">Speed Math</strong>
+          </div>
+
+          <!-- Dynamic Video Stage (Facade Cover or Iframe) -->
+          <div class="res-player-card" id="res-player-container">
+            <!-- Facade or Iframe injected dynamically -->
+          </div>
+
+          <!-- Active Video Bar: Title, Sub, Next Video Button -->
+          <div class="res-video-bar">
+            <div class="res-video-info">
+              <h3 class="res-active-title" id="res-active-title">Speed Maths 1 | Arithmetic | Quantitative Aptitude</h3>
+              <div class="res-active-sub" id="res-active-sub">Video 1 of 6 · 31:21 · Rodha</div>
+            </div>
+            <button class="res-btn-next" id="res-btn-next" onclick="playNextResourceVideo()">
+              <span>Next video</span>
+              <span class="next-arrow">⏭</span>
+            </button>
+          </div>
+
+          <!-- Lessons in This Chapter List -->
+          <div class="res-lessons-section">
+            <div class="res-lessons-header">
+              <h4>Lessons in this chapter</h4>
+              <span class="res-lessons-count" id="res-lessons-count">6 videos</span>
+            </div>
+            <div class="res-lessons-grid" id="res-lessons-grid">
+              <!-- Rendered dynamically -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
   
@@ -873,6 +970,7 @@
   <script src="./data_qa.js"></script>
   <script src="./data_dilr.js"></script>
   <script src="./data_varc.js"></script>
+  <script src="./data_resources.js"></script>
   <!-- Load App Controller -->
   <script src="./app.js"></script>
 </body>

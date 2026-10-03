@@ -33,8 +33,15 @@ let activeMock = {
   userAnswers: {}
 };
 
+// Set theme early to prevent flash of wrong mode
+(function() {
+  const earlyTheme = localStorage.getItem('cat_theme') || 'dark';
+  document.documentElement.setAttribute('data-theme', earlyTheme);
+})();
+
 // --- Initialization ---
 document.addEventListener('DOMContentLoaded', () => {
+  initTheme();
   initServiceWorker();
   initPwaInstall();
   renderHubs();
@@ -104,9 +111,14 @@ function switchView(viewName) {
     'varc': 'VARC Hub (5 Core Components)',
     'diary': 'Chook Diary (Active Mistake Vault)',
     'formulas': 'High-Yield Formula Flashcards',
-    'mock': '40-Minute CAT Sectional CBT Simulator'
+    'mock': '40-Minute CAT Sectional CBT Simulator',
+    'resources': 'Free CAT Concept Videos (Curated Rodha Masterclasses)'
   };
   document.getElementById('page-header-title').innerText = titles[viewName] || 'CAT Mastery 99';
+
+  if (viewName === 'resources') {
+    renderResourcesView();
+  }
 
   // Close mobile sidebar if open
   document.getElementById('sidebar').classList.remove('open');
@@ -3071,8 +3083,10 @@ function closeVideoTheater() {
 
 function openTopicVideoLecture() {
   const t = activeSprint.topic;
-  if (t && t.videoLecture) {
-    openVideoTheater(encodeURIComponent(t.videoLecture.title), t.videoLecture.embedUrl, t.videoLecture.directUrl);
+  if (t) {
+    jumpToResourceTopic(t.title, activeSprint.subject);
+  } else {
+    switchView('resources');
   }
 }
 
@@ -3082,30 +3096,15 @@ function openTopicVideoLectureById(subject, id) {
   else if (subject === 'dilr' && window.DILR_ARCHETYPES_DATA) topic = window.DILR_ARCHETYPES_DATA.find(d => d.id === id);
   else if (subject === 'varc' && window.VARC_MODULES_DATA) topic = window.VARC_MODULES_DATA.find(v => v.id === id);
 
-  if (topic && topic.videoLecture) {
-    openVideoTheater(encodeURIComponent(topic.videoLecture.title), topic.videoLecture.embedUrl, topic.videoLecture.directUrl);
+  if (topic) {
+    jumpToResourceTopic(topic.title, subject);
   } else {
-    window.open('https://www.youtube.com/playlist?list=PLG4bwc5fquzgfMh4YFDnv7fttM0RIKiUQ', '_blank');
+    switchView('resources');
   }
 }
 
 function openDiaryTopicVideo(topicTitle) {
-  let found = null;
-  if (window.QA_TOPICS_DATA) {
-    found = window.QA_TOPICS_DATA.find(t => t.title.toLowerCase().includes(topicTitle.toLowerCase()) || topicTitle.toLowerCase().includes(t.title.toLowerCase()));
-  }
-  if (!found && window.DILR_ARCHETYPES_DATA) {
-    found = window.DILR_ARCHETYPES_DATA.find(d => d.title.toLowerCase().includes(topicTitle.toLowerCase()) || topicTitle.toLowerCase().includes(d.title.toLowerCase()));
-  }
-  if (!found && window.VARC_MODULES_DATA) {
-    found = window.VARC_MODULES_DATA.find(v => v.title.toLowerCase().includes(topicTitle.toLowerCase()) || topicTitle.toLowerCase().includes(v.title.toLowerCase()));
-  }
-
-  if (found && found.videoLecture) {
-    openVideoTheater(encodeURIComponent(found.videoLecture.title), found.videoLecture.embedUrl, found.videoLecture.directUrl);
-  } else {
-    window.open(`https://www.youtube.com/results?search_query=Rodha+CAT+${encodeURIComponent(topicTitle)}+Ravi+Prakash`, '_blank');
-  }
+  jumpToResourceTopic(topicTitle);
 }
 
 // ==========================================================================
@@ -3319,6 +3318,294 @@ function openMobileQrModal() {
 function closeMobileQrModal() {
   const modal = document.getElementById('mobile-qr-modal');
   if (modal) modal.style.display = 'none';
+}
+
+// ==========================================================================
+// PERCENTYL THEME SYSTEM (LIGHT READING MODE & MIDNIGHT SLATE DARK MODE)
+// ==========================================================================
+function initTheme() {
+  const saved = localStorage.getItem('cat_theme') || 'dark';
+  setTheme(saved);
+}
+
+function setTheme(theme) {
+  document.documentElement.setAttribute('data-theme', theme);
+  localStorage.setItem('cat_theme', theme);
+  
+  const isLight = theme === 'light';
+  const icon = document.getElementById('theme-toggle-icon');
+  const txt = document.getElementById('theme-toggle-text');
+  if (icon) icon.innerText = isLight ? '☾' : '☀';
+  if (txt) txt.innerText = isLight ? 'Dark mode' : 'Light reading mode';
+
+  const headerIcon = document.getElementById('header-theme-toggle-icon');
+  if (headerIcon) headerIcon.innerText = isLight ? '☾' : '☀';
+}
+
+function toggleTheme() {
+  const current = document.documentElement.getAttribute('data-theme') || 'dark';
+  setTheme(current === 'dark' ? 'light' : 'dark');
+}
+
+// ==========================================================================
+// PERCENTYL-STYLE VIDEO RESOURCES & FACADE THEATER CONTROLLER
+// ==========================================================================
+let currentResourceSection = 'Quants';
+let activeResourceChapterId = 'res_0';
+let activeResourceVideoIdx = 0;
+let isResourceVideoPlaying = false;
+let resourceSearchQuery = '';
+
+function setResourceSection(sec) {
+  currentResourceSection = sec;
+  document.querySelectorAll('.res-tab').forEach(b => b.classList.remove('active'));
+  const btn = document.getElementById('res-tab-' + sec.toLowerCase());
+  if (btn) btn.classList.add('active');
+
+  // Select first chapter in this section
+  if (window.PERCENTYL_RESOURCES_DATA) {
+    const firstCh = window.PERCENTYL_RESOURCES_DATA.find(c => c.section.toLowerCase() === sec.toLowerCase());
+    if (firstCh) {
+      activeResourceChapterId = firstCh.id;
+      activeResourceVideoIdx = 0;
+      isResourceVideoPlaying = false;
+    }
+  }
+  renderResourcesView();
+}
+
+function handleResourceSearch(q) {
+  resourceSearchQuery = (q || '').trim().toLowerCase();
+  renderResourceChapterList();
+}
+
+function selectResourceChapter(chId) {
+  activeResourceChapterId = chId;
+  activeResourceVideoIdx = 0;
+  isResourceVideoPlaying = false;
+  renderResourcesView();
+}
+
+function playResourceVideo(videoIdx) {
+  activeResourceVideoIdx = videoIdx;
+  isResourceVideoPlaying = true;
+  renderResourcePlayerStage();
+  renderResourceLessonsList();
+}
+
+function playCurrentResourceVideo() {
+  isResourceVideoPlaying = true;
+  renderResourcePlayerStage();
+}
+
+function playNextResourceVideo() {
+  if (!window.PERCENTYL_RESOURCES_DATA) return;
+  const chapter = window.PERCENTYL_RESOURCES_DATA.find(c => c.id === activeResourceChapterId);
+  if (!chapter) return;
+
+  if (activeResourceVideoIdx < chapter.videos.length - 1) {
+    activeResourceVideoIdx++;
+    isResourceVideoPlaying = true;
+  } else {
+    // Advance to next chapter
+    const currentIdx = window.PERCENTYL_RESOURCES_DATA.findIndex(c => c.id === activeResourceChapterId);
+    if (currentIdx < window.PERCENTYL_RESOURCES_DATA.length - 1) {
+      const nextCh = window.PERCENTYL_RESOURCES_DATA[currentIdx + 1];
+      activeResourceChapterId = nextCh.id;
+      activeResourceVideoIdx = 0;
+      isResourceVideoPlaying = true;
+      currentResourceSection = nextCh.section;
+      document.querySelectorAll('.res-tab').forEach(b => b.classList.remove('active'));
+      const btn = document.getElementById('res-tab-' + nextCh.section.toLowerCase());
+      if (btn) btn.classList.add('active');
+    }
+  }
+  renderResourcesView();
+}
+
+function jumpToResourceTopic(topicTitle, subjectHint) {
+  if (!window.PERCENTYL_RESOURCES_DATA) {
+    switchView('resources');
+    return;
+  }
+
+  const clean = (topicTitle || '').toLowerCase();
+  let found = window.PERCENTYL_RESOURCES_DATA.find(c => {
+    const t = c.topic.toLowerCase();
+    return clean.includes(t) || t.includes(clean);
+  });
+
+  if (!found && subjectHint) {
+    const secName = subjectHint === 'qa' ? 'Quants' : (subjectHint === 'dilr' ? 'DILR' : 'VARC');
+    found = window.PERCENTYL_RESOURCES_DATA.find(c => c.section.toLowerCase() === secName.toLowerCase());
+  }
+
+  if (found) {
+    currentResourceSection = found.section;
+    activeResourceChapterId = found.id;
+    activeResourceVideoIdx = 0;
+    isResourceVideoPlaying = true;
+    document.querySelectorAll('.res-tab').forEach(b => b.classList.remove('active'));
+    const btn = document.getElementById('res-tab-' + found.section.toLowerCase());
+    if (btn) btn.classList.add('active');
+  }
+
+  switchView('resources');
+  renderResourcesView();
+}
+
+function renderResourcesView() {
+  renderResourceChapterList();
+  renderResourcePlayerStage();
+  renderResourceLessonsList();
+}
+
+function renderResourceChapterList() {
+  const listEl = document.getElementById('resources-chapter-list');
+  if (!listEl || !window.PERCENTYL_RESOURCES_DATA) return;
+
+  const chapters = window.PERCENTYL_RESOURCES_DATA.filter(c => {
+    const matchSec = c.section.toLowerCase() === currentResourceSection.toLowerCase();
+    if (!matchSec) return false;
+    if (!resourceSearchQuery) return true;
+    return c.topic.toLowerCase().includes(resourceSearchQuery) ||
+           (c.subSection && c.subSection.toLowerCase().includes(resourceSearchQuery));
+  });
+
+  // Group by subSection
+  const groups = {};
+  chapters.forEach(c => {
+    const sub = c.subSection || 'General';
+    if (!groups[sub]) groups[sub] = [];
+    groups[sub].push(c);
+  });
+
+  let html = '';
+  Object.keys(groups).forEach(sub => {
+    html += `
+      <div class="res-sub-heading">
+        <span>${sub}</span>
+        <span>${groups[sub].length}</span>
+      </div>
+    `;
+    groups[sub].forEach(c => {
+      const isActive = c.id === activeResourceChapterId;
+      html += `
+        <button class="res-chapter-btn ${isActive ? 'active' : ''}" onclick="selectResourceChapter('${c.id}')">
+          <span>${c.topic}</span>
+          <span class="res-ch-count">${c.videoCount}</span>
+        </button>
+      `;
+    });
+  });
+
+  if (chapters.length === 0) {
+    html = `<div style="padding:20px; text-align:center; color:var(--text-muted); font-size:0.85rem;">No chapters found matching "${resourceSearchQuery}"</div>`;
+  }
+
+  listEl.innerHTML = html;
+}
+
+function renderResourcePlayerStage() {
+  if (!window.PERCENTYL_RESOURCES_DATA) return;
+  const chapter = window.PERCENTYL_RESOURCES_DATA.find(c => c.id === activeResourceChapterId) || window.PERCENTYL_RESOURCES_DATA[0];
+  if (!chapter) return;
+
+  const video = chapter.videos[activeResourceVideoIdx] || chapter.videos[0];
+  if (!video) return;
+
+  // Update Breadcrumb
+  const secEl = document.getElementById('res-bc-section');
+  const subEl = document.getElementById('res-bc-sub');
+  const topEl = document.getElementById('res-bc-topic');
+  if (secEl) secEl.innerText = chapter.section;
+  if (subEl) subEl.innerText = chapter.subSection || 'General';
+  if (topEl) topEl.innerText = chapter.topic;
+
+  // Update Video Bar
+  const titleEl = document.getElementById('res-active-title');
+  const subBarEl = document.getElementById('res-active-sub');
+  if (titleEl) titleEl.innerText = video.title;
+  if (subBarEl) subBarEl.innerText = `Video ${activeResourceVideoIdx + 1} of ${chapter.videos.length} · ${video.durationFormatted} · ${video.channel}`;
+
+  // Update Player Container
+  const playerContainer = document.getElementById('res-player-container');
+  if (!playerContainer) return;
+
+  if (isResourceVideoPlaying) {
+    playerContainer.innerHTML = `
+      <div class="res-iframe-wrapper">
+        <iframe 
+          src="https://www.youtube.com/embed/${video.id}?autoplay=1&rel=0" 
+          title="${video.title}"
+          class="res-iframe"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+          allowfullscreen>
+        </iframe>
+      </div>
+    `;
+  } else {
+    // Render Percentyl Facade Cover
+    playerContainer.innerHTML = `
+      <div class="video-facade-cover" onclick="playCurrentResourceVideo()">
+        <div class="facade-overlay"></div>
+        <div class="facade-top-bar">
+          <div class="facade-channel-pill">
+            <span class="yt-play-icon">▶</span>
+            <span>Curated playlist · all credit to ${video.channel || 'Rodha'}</span>
+          </div>
+          <div class="facade-subject-pill">${(chapter.section || 'QUANT').toUpperCase()}</div>
+        </div>
+        <div class="facade-center-content">
+          <div class="facade-subtitle">— Start the playlist here</div>
+          <h2 class="facade-title">${video.title}</h2>
+          <button class="facade-play-btn" aria-label="Play Video">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+          </button>
+        </div>
+        <div class="facade-bottom-bar">
+          <div class="facade-status-pill">
+            <span class="status-dot-active"></span>
+            <span class="status-text">START PLAYLIST · Video ${activeResourceVideoIdx + 1} of ${chapter.videos.length} · ${video.durationFormatted}</span>
+          </div>
+        </div>
+      </div>
+    `;
+  }
+}
+
+function renderResourceLessonsList() {
+  if (!window.PERCENTYL_RESOURCES_DATA) return;
+  const chapter = window.PERCENTYL_RESOURCES_DATA.find(c => c.id === activeResourceChapterId);
+  if (!chapter) return;
+
+  const countEl = document.getElementById('res-lessons-count');
+  if (countEl) countEl.innerText = `${chapter.videos.length} videos`;
+
+  const gridEl = document.getElementById('res-lessons-grid');
+  if (!gridEl) return;
+
+  gridEl.innerHTML = chapter.videos.map((v, idx) => {
+    const isActive = idx === activeResourceVideoIdx;
+    return `
+      <button class="res-lesson-card ${isActive ? 'active' : ''}" onclick="playResourceVideo(${idx})">
+        <div class="res-lesson-thumb-wrap">
+          <img src="https://img.youtube.com/vi/${v.id}/mqdefault.jpg" class="res-lesson-thumb" alt="${v.title}" loading="lazy" />
+          ${isActive ? '<span class="res-lesson-tag-active">NOW</span>' : ''}
+        </div>
+        <div class="res-lesson-info">
+          <div class="res-lesson-title">${v.title}</div>
+          <div class="res-lesson-meta">
+            <span>Video ${idx + 1}</span>
+            <span>•</span>
+            <span class="duration">${v.durationFormatted}</span>
+            <span>•</span>
+            <span>${v.channel}</span>
+          </div>
+        </div>
+      </button>
+    `;
+  }).join('');
 }
 
 

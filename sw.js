@@ -1,4 +1,4 @@
-const CACHE_NAME = 'cat-mastery-v7';
+const CACHE_NAME = 'cat-mastery-v8';
 const ASSETS_TO_CACHE = [
   './',
   './index.html',
@@ -7,6 +7,7 @@ const ASSETS_TO_CACHE = [
   './data_qa.js',
   './data_dilr.js',
   './data_varc.js',
+  './data_resources.js',
   './manifest.json',
   './assets/mobile_qr.png',
   './icons/icon-192.png',
