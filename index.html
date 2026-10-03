@@ -18,10 +18,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 
-  <!-- KaTeX CSS & JS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css" />
-  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
-  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js"></script>
+  <!-- KaTeX loads on demand via ensureKaTeX() in app.js to keep first paint lean -->
 
   <!-- PWA Stylesheet -->
   <link rel="stylesheet" href="./styles.css" />
@@ -40,7 +37,8 @@
       </div>
     </div>
 
-    <ul class="nav-links">
+    <div class="nav-links">
+      <ul class="nav-group" aria-label="Main views">
       <li class="nav-item">
         <button id="nav-dashboard" class="active" onclick="switchView('dashboard')">
           <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="9" rx="1.5"></rect><rect x="14" y="3" width="7" height="5" rx="1.5"></rect><rect x="14" y="12" width="7" height="9" rx="1.5"></rect><rect x="3" y="16" width="7" height="5" rx="1.5"></rect></svg>
@@ -54,7 +52,9 @@
         </button>
       </li>
 
-      <div class="nav-section-title">Curriculum Hubs (Tier S & A)</div>
+      </ul>
+      <div class="nav-section-title">Curriculum Hubs (Tier S &amp; A)</div>
+      <ul class="nav-group" aria-label="Curriculum hubs">
       <li class="nav-item">
         <button id="nav-qa" onclick="switchView('qa')">
           <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="9" x2="20" y2="9"></line><line x1="4" y1="15" x2="20" y2="15"></line><line x1="10" y1="3" x2="8" y2="21"></line><line x1="16" y1="3" x2="14" y2="21"></line></svg>
@@ -74,7 +74,9 @@
         </button>
       </li>
 
-      <div class="nav-section-title">Speed & Review Tools</div>
+      </ul>
+      <div class="nav-section-title">Speed &amp; Review Tools</div>
+      <ul class="nav-group" aria-label="Speed and review tools">
       <li class="nav-item">
         <button id="nav-diary" onclick="switchView('diary')">
           <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg>
@@ -99,7 +101,7 @@
           <span>Video Resources (Rodha)</span>
         </button>
       </li>
-    </ul>
+    </div>
 
     <div class="sidebar-footer">
       <button id="btn-theme-toggle" class="btn-theme-toggle" onclick="toggleTheme()" title="Toggle Light/Dark Theme">
@@ -126,7 +128,7 @@
     <!-- Top Header: Linear Cockpit Style -->
     <header id="top-header">
       <div class="header-left">
-        <button class="btn-mobile-menu" onclick="toggleMobileSidebar()" aria-label="Toggle navigation">☰</button>
+        <button class="btn-mobile-menu" onclick="toggleMobileSidebar()" aria-label="Open navigation">☰</button>
         <h1 class="view-title" id="page-header-title">Dashboard & Sprint Hub</h1>
       </div>
       
@@ -141,7 +143,7 @@
 
       <div class="header-right">
         <!-- TCS iON CAT Calculator Trigger Button in Header -->
-        <button id="header-calc-btn" class="header-theme-btn" onclick="toggleCatCalculator()" title="CAT Virtual Calculator (TCS iON)">
+        <button id="header-calc-btn" class="header-theme-btn" onclick="toggleCatCalculator()" title="CAT Virtual Calculator (TCS iON)" aria-label="CAT Virtual Calculator (TCS iON)">
           <svg class="header-icon" viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
             <rect x="4" y="2" width="16" height="20" rx="2"></rect>
             <line x1="8" y1="6" x2="16" y2="6"></line>
@@ -156,7 +158,7 @@
           </svg>
         </button>
         <!-- Theme Toggle Icon Button -->
-        <button id="header-theme-toggle" class="header-theme-btn" onclick="toggleTheme()" title="Toggle Light / Dark Mode">
+        <button id="header-theme-toggle" class="header-theme-btn" onclick="toggleTheme()" title="Toggle Light / Dark Mode" aria-label="Toggle Light / Dark Mode">
           <span id="header-theme-toggle-icon">
             <svg class="header-icon" viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
           </span>
@@ -1025,12 +1027,11 @@
     </button>
   </nav>
 
-  <!-- Load Data Engines -->
-  <script src="./data_qa.js"></script>
-  <script src="./data_dilr.js"></script>
-  <script src="./data_varc.js"></script>
-  <script src="./data_resources.js"></script>
+  <!-- Curriculum data engines (deferred, non-blocking). Video catalog lazy-loads on demand. -->
+  <script defer src="./data_qa.min.js"></script>
+  <script defer src="./data_dilr.min.js"></script>
+  <script defer src="./data_varc.min.js"></script>
   <!-- Load App Controller -->
-  <script src="./app.js"></script>
+  <script defer src="./app.min.js"></script>
 </body>
 </html>

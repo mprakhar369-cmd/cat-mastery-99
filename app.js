@@ -7,6 +7,65 @@
 let currentView = 'dashboard';
 let deferredInstallPrompt = null;
 
+// ==========================================================================
+// LAZY ASSET LOADER (perf: keep first paint lean — video catalog + KaTeX
+// load on demand instead of blocking initial render)
+// ==========================================================================
+const _lazyScriptCache = {};
+function loadScriptOnce(src) {
+  if (_lazyScriptCache[src]) return _lazyScriptCache[src];
+  const fallback = src.replace('.min.js', '.js');
+  _lazyScriptCache[src] = new Promise((resolve, reject) => {
+    const s = document.createElement('script');
+    s.src = src;
+    s.async = true;
+    s.onload = () => resolve(true);
+    s.onerror = () => {
+      if (fallback !== src) {
+        const f = document.createElement('script');
+        f.src = fallback;
+        f.async = true;
+        f.onload = () => resolve(true);
+        f.onerror = () => reject(new Error('Failed to load ' + src));
+        document.head.appendChild(f);
+      } else {
+        reject(new Error('Failed to load ' + src));
+      }
+    };
+    document.head.appendChild(s);
+  });
+  return _lazyScriptCache[src];
+}
+
+const LAZY_DATA_SRC = {
+  resources: './data_resources.min.js'
+};
+const LAZY_DATA_GLOBAL = {
+  resources: 'PERCENTYL_RESOURCES_DATA'
+};
+function ensureDataLoaded(name) {
+  if (window[LAZY_DATA_GLOBAL[name]]) return Promise.resolve(true);
+  return loadScriptOnce(LAZY_DATA_SRC[name]).then(() => true);
+}
+
+let _katexPromise = null;
+function ensureKaTeX() {
+  if (window.renderMathInElement) return Promise.resolve(true);
+  if (_katexPromise) return _katexPromise;
+  if (!document.querySelector('link[data-katex]')) {
+    const l = document.createElement('link');
+    l.rel = 'stylesheet';
+    l.href = 'https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css';
+    l.setAttribute('data-katex', '1');
+    document.head.appendChild(l);
+  }
+  _katexPromise = loadScriptOnce('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js')
+    .then(() => loadScriptOnce('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js'))
+    .then(() => true)
+    .catch((e) => { console.warn('KaTeX failed to load', e); return false; });
+  return _katexPromise;
+}
+
 // Sprint State
 let activeSprint = {
   subject: 'qa',
@@ -45,10 +104,11 @@ document.addEventListener('DOMContentLoaded', () => {
   initServiceWorker();
   initPwaInstall();
   renderHubs();
-  renderFormulaCards();
+  // NOTE: renderFormulaCards() is deferred to first formulas-view open —
+  // its $$ math would otherwise pull KaTeX into first paint.
   renderChookDiaryList();
   updateDashboardStats();
-  runKaTeX();
+  runKaTeX(document.getElementById('diary-list-container'));
 });
 
 // ==========================================================================
@@ -127,13 +187,17 @@ function switchView(viewName) {
   document.getElementById('page-header-title').innerText = titles[viewName] || 'CAT Mastery 99';
 
   if (viewName === 'resources') {
-    renderResourcesView();
+    ensureDataLoaded('resources').then(() => renderResourcesView());
+  }
+
+  if (viewName === 'formulas') {
+    renderFormulaCards();
   }
 
   // Close mobile sidebar if open
   document.getElementById('sidebar').classList.remove('open');
-
-  runKaTeX();
+  // NOTE: no blanket runKaTeX() here — math views typeset their own
+  // containers on render, keeping dashboard switches KaTeX-free.
 }
 
 function toggleMobileSidebar() {
@@ -144,18 +208,28 @@ function toggleMobileSidebar() {
 // KATEX RENDERING HELPER
 // ==========================================================================
 function runKaTeX(element = document.body) {
-  if (window.renderMathInElement) {
-    try {
-      window.renderMathInElement(element, {
-        delimiters: [
-          { left: '$$', right: '$$', display: true },
-          { left: '$', right: '$', display: false }
-        ],
-        throwOnError: false
-      });
-    } catch (e) {
-      console.warn('KaTeX rendering error', e);
+  // Skip entirely when there is no math to typeset — avoids loading KaTeX
+  const text = (element && element.textContent) || '';
+  if (!text.includes('$')) return;
+  const render = () => {
+    if (window.renderMathInElement) {
+      try {
+        window.renderMathInElement(element, {
+          delimiters: [
+            { left: '$$', right: '$$', display: true },
+            { left: '$', right: '$', display: false }
+          ],
+          throwOnError: false
+        });
+      } catch (e) {
+        console.warn('KaTeX rendering error', e);
+      }
     }
+  };
+  if (window.renderMathInElement) {
+    render();
+  } else {
+    ensureKaTeX().then((ok) => { if (ok) render(); });
   }
 }
 
@@ -361,8 +435,8 @@ function jumpSprintStep(stepNum) {
   if (stepNum === 3) {
     renderAutopsyQuestion();
   }
-
-  runKaTeX();
+  // NOTE: step renders typeset their own containers (see renderSprintStep1,
+  // renderSprintQuestion, renderAutopsyQuestion) — no blanket call here.
 }
 
 function advanceSprintStep(nextStep) {
@@ -523,7 +597,7 @@ function renderSprintStep1() {
   `;
 
   initSandboxSliders(t.id);
-  runKaTeX();
+  runKaTeX(box);
 }
 
 // Step 2: Timed Practice Stopwatch with 90-Second Traffic-Light Pacing Metronome
@@ -668,7 +742,7 @@ function renderSprintQuestion() {
     `;
   }
 
-  runKaTeX();
+  runKaTeX(document.querySelector('#view-sprint .question-card'));
 }
 
 function selectSprintAnswer(val) {
@@ -868,7 +942,7 @@ function renderAutopsyQuestion() {
     }
   }
 
-  runKaTeX();
+  runKaTeX(document.querySelector('#view-sprint .autopsy-container'));
 }
 
 function nextAutopsyQuestion() {
@@ -978,6 +1052,7 @@ function renderChookDiaryList(filterTag = 'ALL') {
       </div>
     </div>
   `).join('');
+  runKaTeX(container);
 }
 
 function filterDiary(tag) {
@@ -1045,6 +1120,7 @@ function renderFormulaCards() {
       <div style="font-size:1.25rem; color:var(--accent-cyan); font-weight:700; margin:16px 0;">$$${item.formula}$$</div>
     </div>
   `).join('');
+  runKaTeX(container);
 }
 
 // ==========================================================================
@@ -1127,7 +1203,7 @@ function launchSectionalMock() {
 
   renderMockQuestion();
   renderMockPalette();
-  runKaTeX();
+  // NOTE: renderMockQuestion typesets #mock-test-area itself — no blanket call.
 }
 
 function renderMockQuestion() {
@@ -1175,7 +1251,7 @@ function renderMockQuestion() {
       </div>
     `;
   }
-  runKaTeX();
+  runKaTeX(document.getElementById('mock-test-area'));
 }
 
 function renderMockPalette() {
@@ -2832,6 +2908,14 @@ function openSearchModal() {
     setTimeout(() => input.focus(), 50);
   }
   renderSearchResults('');
+  // Video catalog lazy-loads; refresh results once it arrives if still open
+  ensureDataLoaded('resources').then(() => {
+    const m = document.getElementById('search-modal');
+    const inp = document.getElementById('quick-search-input');
+    if (m && m.classList.contains('active')) {
+      renderSearchResults(inp ? inp.value.trim().toLowerCase() : '');
+    }
+  });
 }
 
 function closeSearchModal() {
@@ -3434,7 +3518,7 @@ function playNextResourceVideo() {
 
 function jumpToResourceTopic(topicTitle, subjectHint) {
   if (!window.PERCENTYL_RESOURCES_DATA) {
-    switchView('resources');
+    ensureDataLoaded('resources').then(() => jumpToResourceTopic(topicTitle, subjectHint));
     return;
   }
 

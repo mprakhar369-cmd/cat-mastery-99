@@ -3987,3 +3987,105 @@ html[data-theme="light"] select {
   border-color: #cbd5e1;
 }
 
+/* ==========================================================================
+   PERF/A11Y/POLISH PASS (Lighthouse-driven, Percentyl-caliber)
+   ========================================================================== */
+
+/* A11Y-01: valid nav list groups (ul contains only li) */
+.nav-group {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+/* A11Y-02: pill contrast — rose/purple text failed 4.5:1 on dark */
+html[data-theme="dark"] .dash-due-pill {
+  color: #fecdd3;
+  border-color: rgba(253, 164, 175, 0.5);
+  background: rgba(244, 63, 94, 0.22);
+}
+html[data-theme="dark"] .dash-link-action {
+  color: #fda4af;
+}
+html[data-theme="dark"] .tag-varc {
+  color: #d8b4fe;
+  border-color: rgba(216, 180, 254, 0.45);
+  background: rgba(168, 85, 247, 0.2);
+}
+html[data-theme="dark"] #filter-due-btn {
+  color: #fda4af !important;
+  border-color: rgba(253, 164, 175, 0.55) !important;
+}
+/* Same hues fail on light — use deeper tones there */
+html[data-theme="light"] .dash-due-pill,
+html[data-theme="light"] .dash-link-action,
+html[data-theme="light"] #filter-due-btn {
+  color: #be123c;
+}
+html[data-theme="light"] .dash-due-pill {
+  border-color: rgba(190, 18, 60, 0.4);
+  background: rgba(190, 18, 60, 0.08);
+}
+html[data-theme="light"] .tag-varc {
+  color: #7e22af;
+  border-color: rgba(126, 34, 175, 0.35);
+  background: rgba(126, 34, 175, 0.08);
+}
+
+/* A11Y-03: visible keyboard focus everywhere */
+:focus-visible {
+  outline: 2px solid var(--accent-cyan);
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+/* POLISH-01: tactile primary buttons */
+.btn-start-sprint {
+  transition: transform 0.12s ease, background 0.2s ease, border-color 0.2s ease;
+}
+.btn-start-sprint:active {
+  transform: scale(0.98);
+}
+
+/* POLISH-02: Percentyl-style breadcrumb pill bar */
+.res-breadcrumb {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: 12px;
+  padding: 9px 16px;
+  margin-bottom: 14px;
+  overflow-x: auto;
+  white-space: nowrap;
+  scrollbar-width: none;
+}
+.res-breadcrumb::-webkit-scrollbar {
+  display: none;
+}
+html[data-theme="light"] .res-breadcrumb {
+  background: #ffffff;
+  border-color: #e3e7ed;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+/* POLISH-03: player card ring + theme-aware shadow */
+.res-player-card {
+  border: 1px solid var(--border-subtle);
+}
+html[data-theme="light"] .res-player-card {
+  border-color: #dbe2ea;
+  box-shadow: 0 12px 32px -12px rgba(15, 23, 42, 0.25);
+}
+
+/* POLISH-04: tiny screens — network badge collapses to status dot */
+@media (max-width: 480px) {
+  #network-status-text {
+    display: none;
+  }
+  .network-badge {
+    padding: 6px;
+  }
+}
+

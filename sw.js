@@ -1,25 +1,26 @@
-const CACHE_NAME = 'cat-mastery-v10';
+const CACHE_NAME = 'cat-mastery-v11';
 const ASSETS_TO_CACHE = [
   './',
   './index.html',
   './styles.css',
-  './app.js',
-  './data_qa.js',
-  './data_dilr.js',
-  './data_varc.js',
-  './data_resources.js',
+  './app.min.js',
+  './data_qa.min.js',
+  './data_dilr.min.js',
+  './data_varc.min.js',
   './manifest.json',
   './assets/mobile_qr.png',
   './icons/icon-192.png',
   './icons/icon-512.png'
 ];
+// NOTE: data_resources.min.js + KaTeX are lazy-loaded on demand and cached
+// at runtime by the network-first fetch handler below — not precached.
 
 // Install Event - immediately activate new worker
 self.addEventListener('install', (event) => {
   self.skipWaiting();
   event.waitUntil(
     caches.open(CACHE_NAME).then((cache) => {
-      console.log('[SW] Pre-caching v10 assets');
+      console.log('[SW] Pre-caching v11 assets');
       return cache.addAll(ASSETS_TO_CACHE);
     })
   );
