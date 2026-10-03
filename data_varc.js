@@ -465,5 +465,589 @@ window.VARC_MODULES_DATA = [
       "highlight": "Concession-Pivot Thesis Extraction",
       "duration": "Complete Masterclass"
     }
+  },
+  {
+    "id": "varc_rc_history",
+    "title": "RC Passages: Trade & Empires",
+    "tier": "Tier A",
+    "weightage": "1 Full RC (3-4 Qs | 9-12 Marks)",
+    "prepTime": "1.5 Hours",
+    "theoryHtml": "<h4>History RC Protocol</h4><p>Distinguish the <strong>received story</strong> (what textbooks say) from the <strong>revision</strong> (what new evidence shows). The thesis is always the revision; options restating only the received story are half-credit traps.</p>",
+    "drills": [
+      {
+        "id": "varc_hist_1",
+        "paragraph": "The textbook story credits European ships and cannon for the age of oceanic trade, as if technology alone opened the seas. Recent port records tell a less flattering tale: the monsoon routes of the Indian Ocean were already carrying more tonnage in 1500 than the Atlantic would for another century, moved by sailors who read winds Europeans could not yet parse. What caravels added was not navigation but artillery — the capacity to tax, rather than join, a thriving system. Europe did not invent long-distance trade; it militarized someone else's.",
+        "options": [
+          "A) European naval technology created Indian Ocean trade from nothing in the sixteenth century.",
+          "B) The passage revises the technology story: the ocean system predated Europe, which added coercion, not commerce.",
+          "C) Monsoon sailors used cannon to tax European ships entering Asian waters.",
+          "D) Atlantic trade exceeded Indian Ocean tonnage well before 1500."
+        ],
+        "correctAnswer": "B",
+        "explanation": "B holds revision (pre-existing system) + Europe's actual contribution (militarized taxation). A affirms the received story the passage attacks. C swaps the cannon's owners. D inverts the tonnage comparison.",
+        "shortcut": "'Not X but Y' sentences are thesis machines — the answer paraphrases Y.",
+        "trap": "A is the textbook story quoted only to be demolished; never pick the setup as the conclusion."
+      },
+      {
+        "id": "varc_hist_2",
+        "paragraph": "The textbook story credits European ships and cannon for the age of oceanic trade, as if technology alone opened the seas. Recent port records tell a less flattering tale: the monsoon routes of the Indian Ocean were already carrying more tonnage in 1500 than the Atlantic would for another century, moved by sailors who read winds Europeans could not yet parse. What caravels added was not navigation but artillery — the capacity to tax, rather than join, a thriving system. Europe did not invent long-distance trade; it militarized someone else's.",
+        "options": [
+          "A) Monsoon literacy exceeded European navigational knowledge on those routes at the time.",
+          "B) European sailors read monsoon winds better than local sailors did.",
+          "C) Port records prove Europeans invented the monsoon routes.",
+          "D) Tonnage figures are irrelevant to the author's argument."
+        ],
+        "correctAnswer": "A",
+        "explanation": "'Winds Europeans could not yet parse' directly supports A. B inverts it. C contradicts the records' point. D dismisses the passage's own evidence.",
+        "shortcut": "'Could not yet parse' is an explicit comparison — match it literally.",
+        "trap": "C confuses who-taxed-whom fallout; the records humble Europe, not crown it."
+      },
+      {
+        "id": "varc_hist_3",
+        "paragraph": "The textbook story credits European ships and cannon for the age of oceanic trade, as if technology alone opened the seas. Recent port records tell a less flattering tale: the monsoon routes of the Indian Ocean were already carrying more tonnage in 1500 than the Atlantic would for another century, moved by sailors who read winds Europeans could not yet parse. What caravels added was not navigation but artillery — the capacity to tax, rather than join, a thriving system. Europe did not invent long-distance trade; it militarized someone else's.",
+        "options": [
+          "A) Taxing an existing network can be more profitable than building one, on the author's logic.",
+          "B) The author believes artillery improves navigational accuracy.",
+          "C) Joining a trade system is always costlier than taxing it.",
+          "D) The Atlantic eventually failed to develop any significant trade."
+        ],
+        "correctAnswer": "A",
+        "explanation": "'Capacity to tax, rather than join' implies extraction beat participation as strategy. B confuses cannon's role. C universalizes one case ('always'). D contradicts 'for another century' (Atlantic later grew).",
+        "shortcut": "'Rather than' constructions rank the author's two alternatives — the first wins.",
+        "trap": "C's 'always' is the tell; the passage claims one historical instance, not a law."
+      },
+      {
+        "id": "varc_hist_4",
+        "paragraph": "The textbook story credits European ships and cannon for the age of oceanic trade, as if technology alone opened the seas. Recent port records tell a less flattering tale: the monsoon routes of the Indian Ocean were already carrying more tonnage in 1500 than the Atlantic would for another century, moved by sailors who read winds Europeans could not yet parse. What caravels added was not navigation but artillery — the capacity to tax, rather than join, a thriving system. Europe did not invent long-distance trade; it militarized someone else's.",
+        "options": [
+          "A) The author's tone is celebratory toward European naval achievement.",
+          "B) The author's tone is revisionist and mildly accusatory toward Eurocentric histories.",
+          "C) The author is neutral, presenting port data without interpretation.",
+          "D) The author's tone is nostalgic for pre-colonial sailing techniques."
+        ],
+        "correctAnswer": "B",
+        "explanation": "'Less flattering tale', 'militaryized someone else's' — judgment words signal revisionist accusation. A inverts. C ignores loaded diction. D invents nostalgia absent from the text.",
+        "shortcut": "Tone = collect the adjectives ('flattering', 'militarized') and average their charge.",
+        "trap": "C mistakes presenting evidence for neutrality; diction always votes."
+      }
+    ],
+    "videoLecture": {
+      "title": "Rodha VARC: History & Civilization RC Frameworks",
+      "directUrl": "https://www.youtube.com/results?search_query=Rodha+CAT+VARC+History+RC+Ravi+Prakash",
+      "embedUrl": "https://www.youtube-nocookie.com/embed/videoseries?list=PLG4bwc5fquzgfMh4YFDnv7fttM0RIKiUQ",
+      "highlight": "Received-Story vs Revision Mapping",
+      "duration": "Complete Masterclass"
+    }
+  },
+  {
+    "id": "varc_rc_habits",
+    "title": "RC Passages: Psychology of Habits",
+    "tier": "Tier A",
+    "weightage": "1 Full RC (3-4 Qs | 9-12 Marks)",
+    "prepTime": "1.5 Hours",
+    "theoryHtml": "<h4>Psychology RC Protocol</h4><p>Find the <strong>redefined term</strong>: pop psychology uses word W one way; the researcher redefines it. Every correct option uses the researcher's definition; every trap uses the pop one.</p>",
+    "drills": [
+      {
+        "id": "varc_hab_1",
+        "paragraph": "Willpower, in the laboratory sense, is not a character trait but a depletable budget and, more importantly, a mislabelled one. Subjects who 'resist' dessert for an hour perform worse on subsequent puzzles — but only when they believe willpower is finite. Tell the same subjects that effort energizes rather than drains, and the depletion effect vanishes. What tires us, it seems, is less the exertion than the story we tell about exertion: fatigue as self-fulfilling accounting.",
+        "options": [
+          "A) Beliefs about willpower modulate whether exertion produces measurable fatigue.",
+          "B) Dessert consumption has no effect on subsequent cognitive performance.",
+          "C) Willpower is proven to be an unlimited resource regardless of belief.",
+          "D) Puzzle performance depends solely on sugar levels, not psychology."
+        ],
+        "correctAnswer": "A",
+        "explanation": "A captures the interaction (belief × exertion → fatigue). B ignores the belief condition. C overclaims ('proven unlimited'). D reduces psychology to sugar, unmentioned.",
+        "shortcut": "'But only when' sentences state the boundary condition — the answer lives there.",
+        "trap": "C affirms the pop redefinition's opposite extreme; the claim is conditional, not absolute."
+      },
+      {
+        "id": "varc_hab_2",
+        "paragraph": "Willpower, in the laboratory sense, is not a character trait but a depletable budget and, more importantly, a mislabelled one. Subjects who 'resist' dessert for an hour perform worse on subsequent puzzles — but only when they believe willpower is finite. Tell the same subjects that effort energizes rather than drains, and the depletion effect vanishes. What tires us, it seems, is less the exertion than the story we tell about exertion: fatigue as self-fulfilling accounting.",
+        "options": [
+          "A) The depletion effect is a pure artefact with no basis in any observation.",
+          "B) The effect is real under one belief and absent under another, implicating the belief itself.",
+          "C) Researchers fabricated the dessert experiment to support a theory.",
+          "D) Accounting metaphors prove that fatigue is entirely imaginary."
+        ],
+        "correctAnswer": "B",
+        "explanation": "The effect replicates conditionally — real phenomenon, belief-mediated mechanism. A denies the observed dip. C alleges fraud, absent. D mistakes 'self-fulfilling accounting' (a mechanism) for unreality.",
+        "shortcut": "Conditional replication = the phenomenon is real, the theory of it was wrong.",
+        "trap": "A confuses 'explained differently' with 'debunked entirely'."
+      },
+      {
+        "id": "varc_hab_3",
+        "paragraph": "Willpower, in the laboratory sense, is not a character trait but a depletable budget and, more importantly, a mislabelled one. Subjects who 'resist' dessert for an hour perform worse on subsequent puzzles — but only when they believe willpower is finite. Tell the same subjects that effort energizes rather than drains, and the depletion effect vanishes. What tires us, it seems, is less the exertion than the story we tell about exertion: fatigue as self-fulfilling accounting.",
+        "options": [
+          "A) A coach who reframes effort as energizing should expect better sustained performance, on this logic.",
+          "B) Beliefs are irrelevant; only rest restores performance.",
+          "C) Dessert should be banned before competitions to preserve willpower budgets.",
+          "D) Telling stories about exertion always worsens fatigue."
+        ],
+        "correctAnswer": "A",
+        "explanation": "Direct application: energizing-frame removes the dip. B denies the demonstrated belief effect. C prescribes beyond the data. D inverts — the right story helps.",
+        "shortcut": "Application = replay the experiment with new actors; keep conditionals intact.",
+        "trap": "B restates the old budget theory the passage just qualified."
+      },
+      {
+        "id": "varc_hab_4",
+        "paragraph": "Willpower, in the laboratory sense, is not a character trait but a depletable budget and, more importantly, a mislabelled one. Subjects who 'resist' dessert for an hour perform worse on subsequent puzzles — but only when they believe willpower is finite. Tell the same subjects that effort energizes rather than drains, and the depletion effect vanishes. What tires us, it seems, is less the exertion than the story we tell about exertion: fatigue as self-fulfilling accounting.",
+        "options": [
+          "A) 'Self-fulfilling accounting' means ledgers cause tiredness through arithmetic errors.",
+          "B) The phrase means expectations about effort shape the fatigue actually experienced.",
+          "C) The author argues accountants experience more fatigue than others.",
+          "D) Stories about exertion are always false but useful."
+        ],
+        "correctAnswer": "B",
+        "explanation": "The gloss sentence ('what tires us is the story') defines it: expectation-driven fatigue. A literalizes accounting. C invents an occupational claim. D adds 'always false', unclaimed.",
+        "shortcut": "Colon and em-dash phrases are author-supplied definitions — quote them back.",
+        "trap": "A reads a metaphor as bookkeeping; the passage's metaphors never leave psychology."
+      }
+    ],
+    "videoLecture": {
+      "title": "Rodha VARC: Psychology & Behaviour RC Frameworks",
+      "directUrl": "https://www.youtube.com/results?search_query=Rodha+CAT+VARC+Psychology+RC+Ravi+Prakash",
+      "embedUrl": "https://www.youtube-nocookie.com/embed/videoseries?list=PLG4bwc5fquzgfMh4YFDnv7fttM0RIKiUQ",
+      "highlight": "Redefined-Term Tracking",
+      "duration": "Complete Masterclass"
+    }
+  },
+  {
+    "id": "varc_rc_climate",
+    "title": "RC Passages: Climate & Collective Action",
+    "tier": "Tier S",
+    "weightage": "1 Full RC (3-4 Qs | 9-12 Marks)",
+    "prepTime": "2.0 Hours",
+    "theoryHtml": "<h4>Environment RC Protocol</h4><p>These passages hinge on a <strong>scale mismatch</strong>: individual virtue vs systemic payoff. The thesis always arbitrates which scale matters; options praising the other scale are traps.</p>",
+    "drills": [
+      {
+        "id": "varc_cli_1",
+        "paragraph": "The cult of the personal carbon footprint — shorter showers, canvas totes, flight shame — flatters a comforting equation: virtue in, climate out. Yet the arithmetic is brutal. One hundred firms produce the overwhelming share of industrial emissions, and no aggregation of tote bags dents a number set by grid mix and freight logistics. This is not an argument against shorter showers; it is an argument against mistaking them for strategy. Personal restraint is etiquette. Decarbonizing steel, cement, and shipping is policy. Confusing the two lets the hundred firms applaud your tote while they lobby against the grid.",
+        "options": [
+          "A) Individual lifestyle changes are the primary lever against climate change.",
+          "B) Personal restraint has moral but negligible strategic value next to industrial decarbonization.",
+          "C) Canvas totes increase emissions and should be abandoned.",
+          "D) The hundred firms produce no significant emissions."
+        ],
+        "correctAnswer": "B",
+        "explanation": "B preserves both halves (etiquette yes, strategy no). A affirms what the passage demotes. C invents a tote indictment. D inverts the core statistic.",
+        "shortcut": "'Not X but Y' + 'mistaking A for B' = hierarchy thesis; the answer ranks the two scales.",
+        "trap": "A is the cult's slogan quoted to be dethroned — setup, not thesis."
+      },
+      {
+        "id": "varc_cli_2",
+        "paragraph": "The cult of the personal carbon footprint — shorter showers, canvas totes, flight shame — flatters a comforting equation: virtue in, climate out. Yet the arithmetic is brutal. One hundred firms produce the overwhelming share of industrial emissions, and no aggregation of tote bags dents a number set by grid mix and freight logistics. This is not an argument against shorter showers; it is an argument against mistaking them for strategy. Personal restraint is etiquette. Decarbonizing steel, cement, and shipping is policy. Confusing the two lets the hundred firms applaud your tote while they lobby against the grid.",
+        "options": [
+          "A) Firms promote personal-footprint rhetoric to deflect regulatory pressure.",
+          "B) Firms have no influence on climate discourse.",
+          "C) Lobbying against the grid reduces emissions effectively.",
+          "D) Applauding totes is evidence of corporate climate leadership."
+        ],
+        "correctAnswer": "A",
+        "explanation": "'Applaud your tote while they lobby' = deflection strategy. B denies their depicted role. C inverts lobbying's effect. D mistakes the author's sarcasm for praise.",
+        "shortcut": "Final-sentence villains reveal the mechanism: who benefits from the confusion?",
+        "trap": "D reads sarcastic applause as genuine — tone-deaf literalism."
+      },
+      {
+        "id": "varc_cli_3",
+        "paragraph": "The cult of the personal carbon footprint — shorter showers, canvas totes, flight shame — flatters a comforting equation: virtue in, climate out. Yet the arithmetic is brutal. One hundred firms produce the overwhelming share of industrial emissions, and no aggregation of tote bags dents a number set by grid mix and freight logistics. This is not an argument against shorter showers; it is an argument against mistaking them for strategy. Personal restraint is etiquette. Decarbonizing steel, cement, and shipping is policy. Confusing the two lets the hundred firms applaud your tote while they lobby against the grid.",
+        "options": [
+          "A) A city that greens its grid while residents keep long showers outperforms the reverse, on this logic.",
+          "B) Shorter showers alone can decarbonize steel production.",
+          "C) Grid mix and freight logistics are unaffected by policy choices.",
+          "D) Etiquette and policy are interchangeable terms for the author."
+        ],
+        "correctAnswer": "A",
+        "explanation": "Systemic lever (grid) outranks personal virtue — the application follows the hierarchy. B crosses scales absurdly. C denies the policy sentence. D collapses a deliberate distinction.",
+        "shortcut": "Hierarchy travels: whichever scale won in the passage wins in the application.",
+        "trap": "B violates scale — steel is never touched by showers in this argument."
+      },
+      {
+        "id": "varc_cli_4",
+        "paragraph": "The cult of the personal carbon footprint — shorter showers, canvas totes, flight shame — flatters a comforting equation: virtue in, climate out. Yet the arithmetic is brutal. One hundred firms produce the overwhelming share of industrial emissions, and no aggregation of tote bags dents a number set by grid mix and freight logistics. This is not an argument against shorter showers; it is an argument against mistaking them for strategy. Personal restraint is etiquette. Decarbonizing steel, cement, and shipping is policy. Confusing the two lets the hundred firms applaud your tote while they lobby against the grid.",
+        "options": [
+          "A) 'Flatters a comforting equation' indicates the author finds the virtue-in-climate-out view accurate.",
+          "B) The phrase signals the author considers that equation seductive but false.",
+          "C) The author uses 'cult' as praise for organized climate activism.",
+          "D) Arithmetic is irrelevant to the author's case."
+        ],
+        "correctAnswer": "B",
+        "explanation": "'Flatters' + 'comforting' + the brutal arithmetic that follows = seductive-but-false. A misses the irony. C misreads 'cult' (pejorative here). D discards the passage's evidence word.",
+        "shortcut": "Opening metaphors ('cult', 'flatters') set the verdict before evidence arrives.",
+        "trap": "A takes flattering at face value; flattery in criticism is always ironic."
+      }
+    ],
+    "videoLecture": {
+      "title": "Rodha VARC: Environment & Policy RC Frameworks",
+      "directUrl": "https://www.youtube.com/results?search_query=Rodha+CAT+VARC+Environment+RC+Ravi+Prakash",
+      "embedUrl": "https://www.youtube-nocookie.com/embed/videoseries?list=PLG4bwc5fquzgfMh4YFDnv7fttM0RIKiUQ",
+      "highlight": "Scale-Mismatch Arbitration",
+      "duration": "Complete Masterclass"
+    }
+  },
+  {
+    "id": "varc_rc_testing",
+    "title": "RC Passages: Exams & Measurement",
+    "tier": "Tier A",
+    "weightage": "1 Full RC (3-4 Qs | 9-12 Marks)",
+    "prepTime": "1.5 Hours",
+    "theoryHtml": "<h4>Education RC Protocol</h4><p>Track the <strong>proxy problem</strong>: what the test measures vs what society wants. The author's complaint is never 'tests are hard' but 'tests optimize the wrong target'.</p>",
+    "drills": [
+      {
+        "id": "varc_test_1",
+        "paragraph": "Every competitive exam claims to measure merit and ends up measuring preparation — specifically, preparation purchasable by those already ahead. This is not corruption; it is Campbell's Law doing its quiet work: the moment a metric becomes a target, it stops being a good metric, because rational actors optimize the indicator instead of the underlying quality. Coaching factories do not cheat the exam; they complete it, revealing that what was certified all along was not aptitude but access. The scandal is not that the rich buy ranks. The scandal is that we keep calling the purchase merit.",
+        "options": [
+          "A) Coaching institutes cheat by leaking papers, which is the central scandal.",
+          "B) Exams certify access disguised as aptitude, because optimizing the metric replaces cultivating the quality.",
+          "C) Campbell's Law proves all measurement is impossible in education.",
+          "D) The rich perform worse despite coaching, proving merit prevails."
+        ],
+        "correctAnswer": "B",
+        "explanation": "B fuses proxy problem (access vs aptitude) with the mechanism (metric optimization). A invents paper leaks, explicitly denied ('not corruption'). C universalizes one law into impossibility. D contradicts the purchase-medit thesis.",
+        "shortcut": "'Not X; it is Y' = the thesis in one breath. The answer paraphrases Y.",
+        "trap": "A affirms the corruption the first sentence explicitly rules out."
+      },
+      {
+        "id": "varc_test_2",
+        "paragraph": "Every competitive exam claims to measure merit and ends up measuring preparation — specifically, preparation purchasable by those already ahead. This is not corruption; it is Campbell's Law doing its quiet work: the moment a metric becomes a target, it stops being a good metric, because rational actors optimize the indicator instead of the underlying quality. Coaching factories do not cheat the exam; they complete it, revealing that what was certified all along was not aptitude but access. The scandal is not that the rich buy ranks. The scandal is that we keep calling the purchase merit.",
+        "options": [
+          "A) 'They complete it' means coaching perfects the exam's purpose of revealing access.",
+          "B) Coaching destabilizes exams by introducing randomness into scores.",
+          "C) The author admires coaching factories for their efficiency.",
+          "D) Metrics improve the more intensely they are targeted."
+        ],
+        "correctAnswer": "A",
+        "explanation": "'Complete' = carry to its logical end: coaching finishes what the exam started (certifying access). B invents randomness. C mistakes mordant irony for admiration. D states the exact opposite of Campbell's Law.",
+        "shortcut": "Paradoxical verbs ('complete' as accusation) resolve by substituting the thesis.",
+        "trap": "D is Campbell's Law inverted — the passage's load-bearing sentence forbids it."
+      },
+      {
+        "id": "varc_test_3",
+        "paragraph": "Every competitive exam claims to measure merit and ends up measuring preparation — specifically, preparation purchasable by those already ahead. This is not corruption; it is Campbell's Law doing its quiet work: the moment a metric becomes a target, it stops being a good metric, because rational actors optimize the indicator instead of the underlying quality. Coaching factories do not cheat the exam; they complete it, revealing that what was certified all along was not aptitude but access. The scandal is not that the rich buy ranks. The scandal is that we keep calling the purchase merit.",
+        "options": [
+          "A) An exam that cannot be prepared for would, on this logic, measure merit more purely.",
+          "B) Making exams harder would restore their ability to measure merit.",
+          "C) Coaching should be banned to fix the metric problem.",
+          "D) Rich candidates inherently lack aptitude."
+        ],
+        "correctAnswer": "A",
+        "explanation": "If purchasable preparation is the contaminant, unpreppable exams remove it — valid inference. B intensifies the metric (more gaming, per Campbell). C prescribes beyond the diagnosis. D smuggles class essentialism the passage never states.",
+        "shortcut": "Remove-the-contaminant inferences are the safest application form.",
+        "trap": "B prescribes more of the disease; Campbell punishes intensity, not leniency."
+      },
+      {
+        "id": "varc_test_4",
+        "paragraph": "Every competitive exam claims to measure merit and ends up measuring preparation — specifically, preparation purchasable by those already ahead. This is not corruption; it is Campbell's Law doing its quiet work: the moment a metric becomes a target, it stops being a good metric, because rational actors optimize the indicator instead of the underlying quality. Coaching factories do not cheat the exam; they complete it, revealing that what was certified all along was not aptitude but access. The scandal is not that the rich buy ranks. The scandal is that we keep calling the purchase merit.",
+        "options": [
+          "A) The repeated 'scandal is not... scandal is' structure relocates blame from buyers to the naming system.",
+          "B) The repetition indicates the author cannot decide where the scandal lies.",
+          "C) Both scandals described are equally condemned by the author.",
+          "D) The passage defends calling purchased ranks merit."
+        ],
+        "correctAnswer": "A",
+        "explanation": "The parallel structure pivots blame: buying is expected; mislabelling is the outrage. B mistakes rhetoric for indecision. C flattens a ranked pair. D endorses what the final line indicts.",
+        "shortcut": "'Not X. The Y is Z' = X acquitted, Z charged. Map the courtroom.",
+        "trap": "C treats parallel sentences as equal weight; the second always outranks the first."
+      }
+    ],
+    "videoLecture": {
+      "title": "Rodha VARC: Education & Testing RC Frameworks",
+      "directUrl": "https://www.youtube.com/results?search_query=Rodha+CAT+VARC+Education+Testing+RC+Ravi+Prakash",
+      "embedUrl": "https://www.youtube-nocookie.com/embed/videoseries?list=PLG4bwc5fquzgfMh4YFDnv7fttM0RIKiUQ",
+      "highlight": "Proxy-Problem Diagnosis",
+      "duration": "Complete Masterclass"
+    }
+  },
+  {
+    "id": "varc_rc_labor",
+    "title": "RC Passages: Work & Automation",
+    "tier": "Tier A",
+    "weightage": "1 Full RC (3-4 Qs | 9-12 Marks)",
+    "prepTime": "1.5 Hours",
+    "theoryHtml": "<h4>Labour RC Protocol</h4><p>Find the <strong>displaced subject</strong>: headlines say 'robots take jobs', but the passage tracks tasks, not jobs. Options about whole occupations vanishing overstate; options about task bundles shifting are precise.</p>",
+    "drills": [
+      {
+        "id": "varc_lab_1",
+        "paragraph": "Headlines announce that robots will take half of all jobs, conjuring rows of idle humans. Labour economists hear something cruder: jobs are bundles of tasks, and automation unbundles them. The ATM did not abolish the bank teller; it abolished the cash-dispensing task, and tellers multiplied into relationship sellers. Likewise the spreadsheet did not kill the accountant; it killed arithmetic, and accountants multiplied into analysts. What vanishes is never the occupation but the task mix inside it — which is why forecasts counting jobs instead of tasks misfire by design.",
+        "options": [
+          "A) Automation eliminates entire occupations, leaving tellers and accountants jobless.",
+          "B) Automation reshapes task bundles within occupations, so job-count forecasts systematically mislead.",
+          "C) ATMs and spreadsheets had no measurable effect on employment patterns.",
+          "D) Relationship selling requires no human tellers in modern branches."
+        ],
+        "correctAnswer": "B",
+        "explanation": "B states the bundle thesis plus the forecasting implication. A affirms the headline the passage refutes with two counterexamples. C denies the documented transformations. D contradicts tellers multiplying into sellers.",
+        "shortcut": "Two historical counterexamples + one general claim = thesis is the general claim.",
+        "trap": "A is the headline quoted to be dismantled — setup, not conclusion."
+      },
+      {
+        "id": "varc_lab_2",
+        "paragraph": "Headlines announce that robots will take half of all jobs, conjuring rows of idle humans. Labour economists hear something cruder: jobs are bundles of tasks, and automation unbundles them. The ATM did not abolish the bank teller; it abolished the cash-dispensing task, and tellers multiplied into relationship sellers. Likewise the spreadsheet did not kill the accountant; it killed arithmetic, and accountants multiplied into analysts. What vanishes is never the occupation but the task mix inside it — which is why forecasts counting jobs instead of tasks misfire by design.",
+        "options": [
+          "A) 'Misfire by design' means forecasters deliberately falsify their numbers.",
+          "B) The phrase means job-counting methods guarantee error because they measure the wrong unit.",
+          "C) Design refers to robot engineering flaws that cause unemployment.",
+          "D) Forecasts are accurate when they count tasks instead of jobs."
+        ],
+        "correctAnswer": "B",
+        "explanation": "'By design' modifies the method (counting jobs), which ensures the misspecification. A alleges deliberate fraud, unclaimed. C relocates 'design' to robotics. D overclaims — the passage says task-counting avoids this error, not that it guarantees accuracy.",
+        "shortcut": "'By design' always points at method, never motive — match it to the unit-of-analysis claim.",
+        "trap": "A converts a methodological critique into an ethics charge."
+      },
+      {
+        "id": "varc_lab_3",
+        "paragraph": "Headlines announce that robots will take half of all jobs, conjuring rows of idle humans. Labour economists hear something cruder: jobs are bundles of tasks, and automation unbundles them. The ATM did not abolish the bank teller; it abolished the cash-dispensing task, and tellers multiplied into relationship sellers. Likewise the spreadsheet did not kill the accountant; it killed arithmetic, and accountants multiplied into analysts. What vanishes is never the occupation but the task mix inside it — which is why forecasts counting jobs instead of tasks misfire by design.",
+        "options": [
+          "A) A paralegal role composed mostly of document review will likely shrink in headcount but persist in altered form.",
+          "B) All paralegal jobs will vanish entirely within a decade.",
+          "C) Document review cannot be automated because it requires legal judgment.",
+          "D) Headcount always rises after automation, as with tellers."
+        ],
+        "correctAnswer": "A",
+        "explanation": "Bundle logic: automatable tasks shrink, residual tasks persist — partial, not total, change. B asserts whole-occupation death, refuted twice. C denies automatability the examples assume. D universalizes two cases into 'always'.",
+        "shortcut": "Apply the bundle rule proportionally: mostly-automatable → shrink + persist, never vanish-or-explode.",
+        "trap": "D converts 'multiplied in two cases' into a law; the thesis is structural, not directional."
+      },
+      {
+        "id": "varc_lab_4",
+        "paragraph": "Headlines announce that robots will take half of all jobs, conjuring rows of idle humans. Labour economists hear something cruder: jobs are bundles of tasks, and automation unbundles them. The ATM did not abolish the bank teller; it abolished the cash-dispensing task, and tellers multiplied into relationship sellers. Likewise the spreadsheet did not kill the accountant; it killed arithmetic, and accountants multiplied into analysts. What vanishes is never the occupation but the task mix inside it — which is why forecasts counting jobs instead of tasks misfire by design.",
+        "options": [
+          "A) 'Never' in the final claim weakens the argument by overreaching.",
+          "B) The 'never' is defended by the mechanism: unbundling preserves an occupational remainder by construction.",
+          "C) The author provides no evidence for any claim in the passage.",
+          "D) 'Task mix' and 'occupation' are used interchangeably throughout."
+        ],
+        "correctAnswer": "B",
+        "explanation": "'Never' holds because unbundling logically leaves residual tasks — the mechanism guarantees a remainder. A mistakes a derived absolute for a rhetorical one. C ignores two worked examples. D denies the passage's central distinction.",
+        "shortcut": "Absolutes earned by mechanism are safe; absolutes by assertion are traps. Check the derivation.",
+        "trap": "A applies the 'absolutes are guilty' heuristic blindly — mechanism-backed absolutes are the exception."
+      }
+    ],
+    "videoLecture": {
+      "title": "Rodha VARC: Work & Automation RC Frameworks",
+      "directUrl": "https://www.youtube.com/results?search_query=Rodha+CAT+VARC+Automation+Jobs+RC+Ravi+Prakash",
+      "embedUrl": "https://www.youtube-nocookie.com/embed/videoseries?list=PLG4bwc5fquzgfMh4YFDnv7fttM0RIKiUQ",
+      "highlight": "Task-Bundle vs Occupation Analysis",
+      "duration": "Complete Masterclass"
+    }
+  },
+  {
+    "id": "varc_rc_ethics",
+    "title": "RC Passages: AI & Responsibility",
+    "tier": "Tier S",
+    "weightage": "1 Full RC (3-4 Qs | 9-12 Marks)",
+    "prepTime": "2.0 Hours",
+    "theoryHtml": "<h4>Ethics RC Protocol</h4><p>Separate <strong>responsibility gaps</strong> (no one to blame) from <strong>control gaps</strong> (no one steering). Options merging the two describe a different problem than the passage's.</p>",
+    "drills": [
+      {
+        "id": "varc_eth_1",
+        "paragraph": "When an autonomous vehicle kills a pedestrian, the coroner finds no driver to charge: the safety operator was watching a film, the manufacturer cites sensor limits, the software vendor blames training data. This is the responsibility gap — harm without an author. Its bleaker twin is the control gap: at highway speed, no human could have seized the wheel in the 0.4 seconds available, so assigning a 'supervisor' was theatre from the start. Law wants someone to punish; engineering reveals there was no one steering. Until liability tracks control rather than presence, every inquiry will end where this one did: with condolences and a software update.",
+        "options": [
+          "A) The core problem is the absence of any blameworthy agent combined with the impossibility of timely human intervention.",
+          "B) Safety operators should simply pay more attention to prevent all accidents.",
+          "C) Software updates are sufficient redress for autonomous-vehicle fatalities.",
+          "D) Sensor limits are irrelevant to accident liability."
+        ],
+        "correctAnswer": "A",
+        "explanation": "A fuses both gaps (no author + no steering window). B prescribes attention the 0.4-second fact renders moot. C affirms the outcome the passage condemns. D discards cited evidence.",
+        "shortcut": "Twin-diagnosis passages: the answer must contain both twins.",
+        "trap": "B is the theatre the passage names — prescribing the performance it just exposed."
+      },
+      {
+        "id": "varc_eth_2",
+        "paragraph": "When an autonomous vehicle kills a pedestrian, the coroner finds no driver to charge: the safety operator was watching a film, the manufacturer cites sensor limits, the software vendor blames training data. This is the responsibility gap — harm without an author. Its bleaker twin is the control gap: at highway speed, no human could have seized the wheel in the 0.4 seconds available, so assigning a 'supervisor' was theatre from the start. Law wants someone to punish; engineering reveals there was no one steering. Until liability tracks control rather than presence, every inquiry will end where this one did: with condolences and a software update.",
+        "options": [
+          "A) Liability should follow whoever had actual control capacity, not whoever was nominally present.",
+          "B) Presence in the vehicle is sufficient basis for criminal liability.",
+          "C) Software vendors should be exempt since data, not code, causes harm.",
+          "D) Condolences and updates constitute adequate legal closure."
+        ],
+        "correctAnswer": "A",
+        "explanation": "'Liability tracks control rather than presence' is the prescription verbatim. B defends presence-liability, rejected. C carves an exemption the passage never offers. D endorses the condemned ending.",
+        "shortcut": "'Until X, every Y will...' = the prescription is X. Copy it.",
+        "trap": "D mistakes the described failure-mode for the author's approval."
+      },
+      {
+        "id": "varc_eth_3",
+        "paragraph": "When an autonomous vehicle kills a pedestrian, the coroner finds no driver to charge: the safety operator was watching a film, the manufacturer cites sensor limits, the software vendor blames training data. This is the responsibility gap — harm without an author. Both gaps would persist even if the operator had been perfectly attentive, because 0.4 seconds defeats any human response. The gaps are structural, not behavioural.",
+        "options": [
+          "A) Perfect operator attention would close both gaps on this account.",
+          "B) The gaps persist regardless of operator vigilance because the intervention window is sub-human.",
+          "C) Training data quality is the sole cause of the tragedy.",
+          "D) Manufacturers bear no responsibility since sensors have physical limits."
+        ],
+        "correctAnswer": "B",
+        "explanation": "Structural > behavioural: 0.4s defeats even perfect attention. A is the theatre thesis refuted. C isolates one cited factor as sole cause. D converts a cited excuse into exoneration.",
+        "shortcut": "Numbers in ethics passages are load-bearing: 0.4s does all the work here.",
+        "trap": "A is tempting because vigilance sounds virtuous — but the passage quantifies its futility."
+      },
+      {
+        "id": "varc_eth_4",
+        "paragraph": "When an autonomous vehicle kills a pedestrian, the coroner finds no driver to charge: the safety operator was watching a film, the manufacturer cites sensor limits, the software vendor blames training data. Its bleaker twin is the control gap: at highway speed, no human could have seized the wheel in the 0.4 seconds available, so assigning a 'supervisor' was theatre from the start. Law wants someone to punish; engineering reveals there was no one steering.",
+        "options": [
+          "A) The passage treats law and engineering as allies converging on the same verdict.",
+          "B) Law demands an author while engineering dissolves authorship — the passage stages this collision.",
+          "C) Engineers and lawyers agree that supervisors solve the problem.",
+          "D) The passage is primarily a technical manual for sensor calibration."
+        ],
+        "correctAnswer": "B",
+        "explanation": "'Law wants... engineering reveals...' is an explicit collision. A claims convergence the passage denies. C endorses the theatre. D mistakes the vehicle (sensors) for the topic (responsibility).",
+        "shortcut": "'X wants... Y reveals...' = staged collision; the answer names both sides.",
+        "trap": "C affirms the supervisor solution both disciplines supposedly share — the passage calls it theatre."
+      }
+    ],
+    "videoLecture": {
+      "title": "Rodha VARC: AI Ethics & Responsibility RC Frameworks",
+      "directUrl": "https://www.youtube.com/results?search_query=Rodha+CAT+VARC+AI+Ethics+RC+Ravi+Prakash",
+      "embedUrl": "https://www.youtube-nocookie.com/embed/videoseries?list=PLG4bwc5fquzgfMh4YFDnv7fttM0RIKiUQ",
+      "highlight": "Responsibility vs Control Gap Analysis",
+      "duration": "Complete Masterclass"
+    }
+  },
+  {
+    "id": "varc_rc_space",
+    "title": "RC Passages: Space & Exploration",
+    "tier": "Tier A",
+    "weightage": "1 Full RC (3-4 Qs | 9-12 Marks)",
+    "prepTime": "1.5 Hours",
+    "theoryHtml": "<h4>Science-Policy RC Protocol</h4><p>Separate <strong>spin-off accounting</strong> (side benefits) from <strong>mission justification</strong> (why go). Options defending missions purely via spin-offs miss the author's actual ground.</p>",
+    "drills": [
+      {
+        "id": "varc_spa_1",
+        "paragraph": "Asked why we fund Mars rovers while rivers choke on plastic, space agencies reach for the spin-off ledger: memory foam, water filters, CAT scans. The ledger is honest and beside the point. Nobody would fund a ten-billion-dollar mattress program, and no committee ever approved a rover for its filters. We explore, when we are honest, because competence compounds: a civilization that can land on another world can do most other hard things, and one that cannot, cannot. Spin-offs are the interest, not the principal — and confusing the two leaves exploration perpetually apologizing for existing.",
+        "options": [
+          "A) Mars missions are justified primarily by their commercial spin-offs like memory foam.",
+          "B) Exploration is justified by compounding civilizational competence; spin-offs are incidental interest.",
+          "C) Memory foam alone justifies a ten-billion-dollar space budget.",
+          "D) Plastic-choked rivers prove space spending should be zero."
+        ],
+        "correctAnswer": "B",
+        "explanation": "Principal (competence) vs interest (spin-offs) is the thesis. A/C affirm the ledger the passage subordinates. D prescribes abolition, never stated.",
+        "shortcut": "'Honest and beside the point' = concede the fact, deny its relevance. The answer follows the denial.",
+        "trap": "A/C quote the agency's own defense — quoted defenses are exhibits, not verdicts."
+      },
+      {
+        "id": "varc_spa_2",
+        "paragraph": "Asked why we fund Mars rovers while rivers choke on plastic, space agencies reach for the spin-off ledger: memory foam, water filters, CAT scans. The ledger is honest and beside the point. Nobody would fund a ten-billion-dollar mattress program, and no committee ever approved a rover for its filters. We explore, when we are honest, because competence compounds: a civilization that can land on another world can do most other hard things, and one that cannot, cannot. Spin-offs are the interest, not the principal — and confusing the two leaves exploration perpetually apologizing for existing.",
+        "options": [
+          "A) 'Perpetually apologizing' implies exploration needs no justification at all.",
+          "B) The phrase criticizes justifying exploration through side benefits instead of its core value.",
+          "C) Apologies from space agencies are legally required before launches.",
+          "D) The author opposes all attempts to justify public spending."
+        ],
+        "correctAnswer": "B",
+        "explanation": "Apology = defending via spin-offs rather than competence. A overreads into no-justification-needed. C literalizes. D universalizes one case.",
+        "shortcut": "Closing metaphors restate the thesis — map 'apologizing' to 'defending via spin-offs'.",
+        "trap": "A upgrades 'wrong defense' to 'no defense needed' — one step past the text."
+      },
+      {
+        "id": "varc_spa_3",
+        "paragraph": "Asked why we fund Mars rovers while rivers choke on plastic, space agencies reach for the spin-off ledger: memory foam, water filters, CAT scans. The ledger is honest and beside the point. Nobody would fund a ten-billion-dollar mattress program, and no committee ever approved a rover for its filters. We explore, when we are honest, because competence compounds: a civilization that can land on another world can do most other hard things, and one that cannot, cannot. Spin-offs are the interest, not the principal — and confusing the two leaves exploration perpetually apologizing for existing.",
+        "options": [
+          "A) A river-cleanup program that also yields better nets would, on this logic, be justified by the cleanup, not the nets.",
+          "B) Better fishing nets alone justify any river program regardless of cleanup.",
+          "C) Competence never compounds across unrelated domains.",
+          "D) Committees routinely approve rovers specifically for water filters."
+        ],
+        "correctAnswer": "A",
+        "explanation": "Principal-over-interest travels: mission first, side benefits second. B/C/D each affirm a denied claim (C contradicts 'can do most other hard things'; D contradicts 'never approved a rover for its filters').",
+        "shortcut": "Swap domains, keep the principal/interest ranking — the answer preserves the hierarchy.",
+        "trap": "D is directly refuted by the passage's own sentence — the easiest trap to catch by re-reading."
+      },
+      {
+        "id": "varc_spa_4",
+        "paragraph": "Asked why we fund Mars rovers while rivers choke on plastic, space agencies reach for the spin-off ledger: memory foam, water filters, CAT scans. The ledger is honest and beside the point. Nobody would fund a ten-billion-dollar mattress program, and no committee ever approved a rover for its filters. We explore, when we are honest, because competence compounds: a civilization that can land on another world can do most other hard things, and one that cannot, cannot. Spin-offs are the interest, not the principal — and confusing the two leaves exploration perpetually apologizing for existing.",
+        "options": [
+          "A) The rivers-choke framing shows the author concedes the opportunity-cost objection has force.",
+          "B) The author dismisses river pollution as unimportant.",
+          "C) Plastic pollution is caused by Mars rovers.",
+          "D) The passage is a budget proposal allocating funds between rivers and rovers."
+        ],
+        "correctAnswer": "A",
+        "explanation": "Opening with the objection ('while rivers choke') grants its force before answering it — steelmanning. B denies the conceded gravity. C fabricates causation. D mistakes scene-setting for spreadsheet.",
+        "shortcut": "Opening objections are conceded force, not strawmen — the author answers, never ignores.",
+        "trap": "B reads answering an objection as dismissing it; engagement is respect, not contempt."
+      }
+    ],
+    "videoLecture": {
+      "title": "Rodha VARC: Science & Exploration RC Frameworks",
+      "directUrl": "https://www.youtube.com/results?search_query=Rodha+CAT+VARC+Space+Exploration+RC+Ravi+Prakash",
+      "embedUrl": "https://www.youtube-nocookie.com/embed/videoseries?list=PLG4bwc5fquzgfMh4YFDnv7fttM0RIKiUQ",
+      "highlight": "Principal vs Interest Justification",
+      "duration": "Complete Masterclass"
+    }
+  },
+  {
+    "id": "varc_rc_cinema",
+    "title": "RC Passages: Art & Attention",
+    "tier": "Tier A",
+    "weightage": "1 Full RC (3-4 Qs | 9-12 Marks)",
+    "prepTime": "1.5 Hours",
+    "theoryHtml": "<h4>Arts RC Protocol</h4><p>Track the <strong>medium constraint</strong>: every art-form claim is really about what its medium forces (duration, rhythm, frame). Options ignoring the constraint answer a different question.</p>",
+    "drills": [
+      {
+        "id": "varc_cin_1",
+        "paragraph": "Cinema's much-mourned death has been announced since television, yet the obituary misunderstands what films uniquely do. A novel can pause inside a thought for forty pages; a film must externalize interiority into behaviour, light, and duration — the long take that lets discomfort accumulate in real time. Streaming did not kill this capacity; it revealed how rarely it was used, as catalogues filled with content engineered for second screens. Theatres may shrink, but the long take needs darkness and scale the way music needs silence: not as luxury, but as the medium's working condition.",
+        "options": [
+          "A) Television and streaming technically destroyed cinema's unique capacities.",
+          "B) Cinema's distinct power is enforced duration in shared darkness, which streaming underuses rather than destroys.",
+          "C) Novels and films handle interiority identically through the same techniques.",
+          "D) Second screens have improved audience attention spans for long takes."
+        ],
+        "correctAnswer": "B",
+        "explanation": "B holds medium (duration + darkness/scale) and the streaming verdict (underused, not destroyed). A claims destruction the passage denies. C denies the novel/film contrast built in sentence two. D inverts the second-screen complaint.",
+        "shortcut": "'Not X but Y' + medium nouns (duration, darkness) = answer mentions the medium.",
+        "trap": "A is the announced obituary quoted only to be refuted."
+      },
+      {
+        "id": "varc_cin_2",
+        "paragraph": "Cinema's much-mourned death has been announced since television, yet the obituary misunderstands what films uniquely do. A novel can pause inside a thought for forty pages; a film must externalize interiority into behaviour, light, and duration — the long take that lets discomfort accumulate in real time. Streaming did not kill this capacity; it revealed how rarely it was used, as catalogues filled with content engineered for second screens. Theatres may shrink, but the long take needs darkness and scale the way music needs silence: not as luxury, but as the medium's working condition.",
+        "options": [
+          "A) Darkness and scale are mere luxuries that theatres use to justify ticket prices.",
+          "B) They are the working conditions of the long take, like silence for music.",
+          "C) Music requires darkness while cinema requires silence.",
+          "D) Long takes work equally well on phones and in theatres."
+        ],
+        "correctAnswer": "B",
+        "explanation": "The simile's point is explicit: 'not as luxury, but as working condition'. A affirms the luxury reading denied. C swaps the simile's terms. D denies the darkness/scale requirement.",
+        "shortcut": "'Not X but Y' after a simile = the answer is Y applied to the first term.",
+        "trap": "C crosses the simile's wires — similes compare functions, never swap subjects."
+      },
+      {
+        "id": "varc_cin_3",
+        "paragraph": "Cinema's much-mourned death has been announced since television, yet the obituary misunderstands what films uniquely do. A novel can pause inside a thought for forty pages; a film must externalize interiority into behaviour, light, and duration — the long take that lets discomfort accumulate in real time. Streaming did not kill this capacity; it revealed how rarely it was used, as catalogues filled with content engineered for second screens. Theatres may shrink, but the long take needs darkness and scale the way music needs silence: not as luxury, but as the medium's working condition.",
+        "options": [
+          "A) A streaming platform commissioning slow, single-take features for theatres would vindicate the author.",
+          "B) The author would condemn all streaming content regardless of form.",
+          "C) Second-screen engineering proves audiences prefer long takes.",
+          "D) Novels should adopt long takes to stay competitive."
+        ],
+        "correctAnswer": "A",
+        "explanation": "Capacity + proper conditions = vindication, whatever the distributor. B universalizes a formal complaint into blanket condemnation. C inverts the catalogue evidence. D exports a film constraint to novels absurdly.",
+        "shortcut": "Vindication questions: satisfy the stated conditions (duration + darkness) and the author approves.",
+        "trap": "B mistakes medium-criticism for distributor-hatred; the enemy is the form, not the firm."
+      },
+      {
+        "id": "varc_cin_4",
+        "paragraph": "Cinema's much-mourned death has been announced since television, yet the obituary misunderstands what films uniquely do. A novel can pause inside a thought for forty pages; a film must externalize interiority into behaviour, light, and duration — the long take that lets discomfort accumulate in real time. Streaming did not kill this capacity; it revealed how rarely it was used, as catalogues filled with content engineered for second screens. Theatres may shrink, but the few works still demanding full attention prove the capacity survives its underuse.",
+        "options": [
+          "A) Rarity of use implies the capacity itself has vanished.",
+          "B) Underuse and extinction are different; the passage claims the former, not the latter.",
+          "C) Second-screen content has fully replaced attentive cinema.",
+          "D) Theatres shrinking proves the long take is obsolete."
+        ],
+        "correctAnswer": "B",
+        "explanation": "'Did not kill... revealed how rarely used' = underuse ≠ extinction. A equates them. C claims replacement the passage withholds ('few works still'). D reads shrinkage as obsolescence.",
+        "shortcut": "'Did not X; it Y' — the second clause is the precise claim. Quote it.",
+        "trap": "A/D convert decline into death — the passage's whole point is that distinction."
+      }
+    ],
+    "videoLecture": {
+      "title": "Rodha VARC: Arts & Media RC Frameworks",
+      "directUrl": "https://www.youtube.com/results?search_query=Rodha+CAT+VARC+Arts+Media+RC+Ravi+Prakash",
+      "embedUrl": "https://www.youtube-nocookie.com/embed/videoseries?list=PLG4bwc5fquzgfMh4YFDnv7fttM0RIKiUQ",
+      "highlight": "Medium-Constraint Analysis",
+      "duration": "Complete Masterclass"
+    }
   }
 ];

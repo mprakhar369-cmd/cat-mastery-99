@@ -321,6 +321,49 @@ window.DILR_ARCHETYPES_DATA = [
             "trap": "Assuming the minimum must be positive; a negative equation root means zero is feasible."
           }
         ]
+      },
+      {
+        "caseletNum": 53,
+        "title": "Chocolate Distribution: Four-Subject Maxima Set",
+        "context": "80 students. 60 cleared Subject A, 54 cleared B, 48 cleared C, 42 cleared D. Total chocolates = 60 + 54 + 48 + 42 = 204. Each student holds 0 to 4 chocolates.",
+        "questions": [
+          {
+            "qNum": 1,
+            "statement": "What is the MAXIMUM possible number of students who cleared at least 3 subjects?",
+            "options": ["A) 60", "B) 66", "C) 68", "D) 72"],
+            "correctAnswer": "C",
+            "solution": "Give barely-enough (exactly 3) to y students: 3y <= 204 gives y = 68, consuming all 204 chocolates exactly.",
+            "shortcut": "Maximizing (>= m): floor(C / m) = floor(204 / 3) = 68.",
+            "trap": "Capping at the smallest subject count (42) — maximization runs the allocation, not the minimum."
+          },
+          {
+            "qNum": 2,
+            "statement": "What is the MINIMUM possible number of students who cleared at least 3 subjects?",
+            "options": ["A) 24", "B) 22", "C) 20", "D) 28"],
+            "correctAnswer": "B",
+            "solution": "Dump into as few as possible: maximum 4 to x students, buffer 2 to the rest. 4x + 2(80 - x) = 204 gives 2x = 44, so x = 22.",
+            "shortcut": "Minimizing (>= m): fill max K, buffer (m-1). 4x + 2(80-x) = 204.",
+            "trap": "Using 3 as the per-student ceiling — with 4 subjects the maximum is 4 chocolates."
+          },
+          {
+            "qNum": 3,
+            "statement": "What is the MAXIMUM possible number of students who cleared all 4 subjects?",
+            "options": ["A) 48", "B) 54", "C) 51", "D) 60"],
+            "correctAnswer": "C",
+            "solution": "Give exactly 4 to z students: 4z <= 204 gives z = 51, using all chocolates.",
+            "shortcut": "Maximizing all-K: floor(C / K) = floor(204 / 4) = 51.",
+            "trap": "Capping at the smallest subject (42) instead of running floor(C/K)."
+          },
+          {
+            "qNum": 4,
+            "statement": "What is the MINIMUM possible number of students who cleared at least 2 subjects?",
+            "options": ["A) 42", "B) 40", "C) 44", "D) 38"],
+            "correctAnswer": "A",
+            "solution": "Minimize x with >= 2: max 4 to x, buffer 1 to rest. 4x + 1(80 - x) = 204 gives 3x = 124, x = 41.33. x = 41 caps capacity at 41x4 + 39 = 203 < 204 (infeasible); x = 42 works (40x4 + 2x3 + 38x1 = 204). Minimum is 42.",
+            "shortcut": "Fractional x rounds UP after a capacity check — always verify the ceiling holds the total.",
+            "trap": "Rounding 41.33 down to 41; capacity (203 < 204) proves it impossible."
+          }
+        ]
       }
     ],
     "videoLecture": {
@@ -608,6 +651,49 @@ window.DILR_ARCHETYPES_DATA = [
             "solution": "A row or column with a single unknown and a known marginal total yields an exact linear equation with 0 degrees of freedom, bootstrapping the solution grid.",
             "shortcut": "Target equations with 1 unknown first.",
             "trap": "Trying to solve rows with 3 missing values simultaneously."
+          }
+        ]
+      },
+      {
+        "caseletNum": 63,
+        "title": "Pie Chart DI: Market Share Shift Set",
+        "context": "Smartphone market, 2023 total 80 lakh units — A 30% (24), B 25% (20), C 20% (16), D 25% (20). 2024 total 100 lakh units — A 28% (28), B 22% (22), C 30% (30), D 20% (20).",
+        "questions": [
+          {
+            "qNum": 1,
+            "statement": "By how many lakh units did company A's sales grow from 2023 to 2024?",
+            "options": ["A) 2", "B) 3", "C) 4", "D) 5"],
+            "correctAnswer": "C",
+            "solution": "A: 30% of 80 = 24 lakh in 2023; 28% of 100 = 28 lakh in 2024. Growth = 28 - 24 = 4 lakh.",
+            "shortcut": "Convert shares to absolutes first — percentages on different bases never subtract directly.",
+            "trap": "28% - 30% = -2% looks like decline; bases differ (80 vs 100), so convert first."
+          },
+          {
+            "qNum": 2,
+            "statement": "What was company C's percentage growth in sales?",
+            "options": ["A) 75%", "B) 80%", "C) 87.5%", "D) 90%"],
+            "correctAnswer": "C",
+            "solution": "C: 20% of 80 = 16 lakh; 30% of 100 = 30 lakh. Growth = (30-16)/16 = 14/16 = 87.5%.",
+            "shortcut": "14/16 = 7/8 = 87.5% — halve twice, don’t long-divide.",
+            "trap": "30% - 20% = 10pp is NOT the growth rate; divide by the base (16)."
+          },
+          {
+            "qNum": 3,
+            "statement": "Which company recorded the highest absolute growth?",
+            "options": ["A) A", "B) B", "C) C", "D) D"],
+            "correctAnswer": "C",
+            "solution": "Absolute gains: A +4 (24→28), B +2 (20→22), C +14 (16→30), D 0 (20→20). C leads by far.",
+            "shortcut": "Compute all four deltas in one pass — the table is tiny; completeness beats cleverness.",
+            "trap": "A's share fell (30%→28%) yet sales grew — share direction and absolute direction differ."
+          },
+          {
+            "qNum": 4,
+            "statement": "What is the change in B's market share in percentage points?",
+            "options": ["A) -2pp", "B) -3pp", "C) +3pp", "D) -5pp"],
+            "correctAnswer": "B",
+            "solution": "Share moved 25% → 22%, a change of -3 percentage points. (Its sales still grew 20→22 lakh.)",
+            "shortcut": "pp questions need only the two shares — ignore the totals entirely.",
+            "trap": "Answering -2 lakh (absolute growth) to a pp question — read the unit asked."
           }
         ]
       }
@@ -927,6 +1013,49 @@ window.DILR_ARCHETYPES_DATA = [
             "trap": "Including own-half seeds (8) as possible final opponents — bracket halves never cross early."
           }
         ]
+      },
+      {
+        "caseletNum": 57,
+        "title": "Round-Robin Points Table Audit",
+        "context": "4 teams (A, B, C, D) play each other once: 6 matches. Win = 2 pts, Draw = 1 pt each, Loss = 0. Final records — A: 2W 1D 0L (5 pts); B: 1W 1D 1L (3 pts); C: 1W 1D 1L (3 pts); D: 0W 1D 2L (1 pt). Wins total 4 = losses total 4; draws involve 4 participations = 2 drawn matches; 4 decisive + 2 drawn = 6 matches. Consistent.",
+        "questions": [
+          {
+            "qNum": 1,
+            "statement": "How many points did team A finish with?",
+            "options": ["A) 4", "B) 6", "C) 5", "D) 7"],
+            "correctAnswer": "C",
+            "solution": "A: 2 wins × 2 + 1 draw × 1 = 5 points.",
+            "shortcut": "Points = 2W + D — one line, no table needed.",
+            "trap": "3-points-per-win football scoring (would give 7) — CAT uses the stated system only."
+          },
+          {
+            "qNum": 2,
+            "statement": "How many matches ended in a draw?",
+            "options": ["A) 1", "B) 3", "C) 2", "D) 4"],
+            "correctAnswer": "C",
+            "solution": "Draw participations = 1+1+1+1 = 4 across teams; each drawn match contributes 2, so 4/2 = 2 drawn matches.",
+            "shortcut": "Sum the D column, halve it — every draw is counted twice.",
+            "trap": "Answering 4 by counting participations as matches."
+          },
+          {
+            "qNum": 3,
+            "statement": "What were the total points awarded across all teams?",
+            "options": ["A) 10", "B) 12", "C) 14", "D) 16"],
+            "correctAnswer": "B",
+            "solution": "5 + 3 + 3 + 1 = 12. Check: 4 decisive matches × 2 pts + 2 drawn matches × 2 pts = 8 + 4 = 12.",
+            "shortcut": "Cross-verify: every match awards exactly 2 points in a 2-1-0 system, so 6 × 2 = 12.",
+            "trap": "In 3-1-0 football systems draws destroy a point — here every match yields exactly 2."
+          },
+          {
+            "qNum": 4,
+            "statement": "Which team finished the tournament unbeaten?",
+            "options": ["A) A", "B) B", "C) C", "D) D"],
+            "correctAnswer": "A",
+            "solution": "Unbeaten means zero losses: A (2W 1D 0L) is the only team with L = 0.",
+            "shortcut": "Scan the L column, not the points — unbeaten is about losses, not totals.",
+            "trap": "B and C tie on points (3) but both lost once — points and unbeaten are different questions."
+          }
+        ]
       }
     ],
     "videoLecture": {
@@ -1205,6 +1334,92 @@ window.DILR_ARCHETYPES_DATA = [
             "solution": "If a player is faced with a multiple of (k + 1), whatever number m (1 <= m <= k) they pick, the opponent can pick (k + 1 - m) to return the total to another multiple of (k + 1), eventually claiming the final stick.",
             "shortcut": "Cold positions = 0 mod (k + 1).",
             "trap": "Targeting multiples of k instead of (k + 1)."
+          }
+        ]
+      },
+      {
+        "caseletNum": 33,
+        "title": "Coins Puzzle: Exact-Change Invariant Set",
+        "context": "A cashier must make exactly Rs 85 using exactly 7 coins from denominations Rs 5, 10, 20, with at least one coin of each denomination and more Rs 10 coins than Rs 5 coins. Let a, b, c be the counts of 20s, 10s, 5s: a + b + c = 7 and 20a + 10b + 5c = 85, i.e. 4a + 2b + c = 17, so 3a + b = 10.",
+        "questions": [
+          {
+            "qNum": 1,
+            "statement": "How many Rs 20 coins are used?",
+            "options": ["A) 1", "B) 3", "C) 2", "D) 4"],
+            "correctAnswer": "C",
+            "solution": "From 3a + b = 10 with a,b,c ≥ 1: a=1 gives b=7, c=-1 (reject); a=2 gives b=4, c=1; a=3 gives b=1, c=3. The 'more 10s than 5s' clause keeps only (2,4,1). So a = 2.",
+            "shortcut": "Eliminate two variables by subtraction first: (4a+2b+c) − (a+b+c) = 3a + b.",
+            "trap": "Stopping at two candidate triples — constraints after the equations decide, not before."
+          },
+          {
+            "qNum": 2,
+            "statement": "How many Rs 10 coins are used?",
+            "options": ["A) 4", "B) 1", "C) 7", "D) 2"],
+            "correctAnswer": "A",
+            "solution": "The surviving triple (2,4,1) gives b = 4 Rs 10 coins: 2×20 + 4×10 + 1×5 = 40+40+5 = 85 across 7 coins.",
+            "shortcut": "Verify by substitution — 85 total and 7 coins must both close.",
+            "trap": "The rejected triple (3,1,3) also totals 85 — verification must include ALL conditions."
+          },
+          {
+            "qNum": 3,
+            "statement": "How many Rs 5 coins are used?",
+            "options": ["A) 3", "B) 2", "C) 1", "D) 0"],
+            "correctAnswer": "C",
+            "solution": "c = 7 − 2 − 4 = 1, satisfying 'at least one of each' and 'more 10s than 5s' (4 > 1).",
+            "shortcut": "Last variable falls out of the count equation — never re-solve from scratch.",
+            "trap": "Zero is impossible here ('at least one of each') — read every clause."
+          },
+          {
+            "qNum": 4,
+            "statement": "If one Rs 10 coin is replaced by two Rs 5 coins, how many Rs 5 coins are there now?",
+            "options": ["A) 2", "B) 4", "C) 3", "D) 5"],
+            "correctAnswer": "C",
+            "solution": "Value is unchanged (10 = 5+5): Rs 5 count becomes 1 + 2 = 3, with 8 coins total.",
+            "shortcut": "Equal-value swaps preserve the total — only recount the touched denomination.",
+            "trap": "Recomputing the whole split instead of delta-counting the swap."
+          }
+        ]
+      },
+      {
+        "caseletNum": 34,
+        "title": "Weighing Puzzle: Ternary Split Protocol",
+        "context": "27 identical balls with 1 heavier counterfeit. A balance scale compares two pans per weighing. Strategy: always split the suspect pool into three equal groups (left pan, right pan, aside) — each weighing eliminates two-thirds regardless of outcome.",
+        "questions": [
+          {
+            "qNum": 1,
+            "statement": "What is the minimum number of weighings to guarantee finding the heavier ball among 27?",
+            "options": ["A) 2", "B) 4", "C) 3", "D) 5"],
+            "correctAnswer": "C",
+            "solution": "Each weighing ternarizes: 27 → 9 → 3 → 1, so 3 weighings suffice, and 2 weighings cover at most 3² = 9 < 27 balls. Minimum is 3.",
+            "shortcut": "Capacity rule: n weighings handle at most 3^n balls. 3²=9 < 27 ≤ 27=3³.",
+            "trap": "Binary thinking (2^5=32 → 5) — balance scales give THREE outcomes, not two."
+          },
+          {
+            "qNum": 2,
+            "statement": "How many weighings suffice for 9 balls?",
+            "options": ["A) 2", "B) 3", "C) 1", "D) 4"],
+            "correctAnswer": "A",
+            "solution": "9 = 3², so 2 weighings: split 3-3-3, then 1-1-1 on the suspect trio.",
+            "shortcut": "Read the exponent: 9 = 3² → 2 weighings.",
+            "trap": "Carrying over the 27-ball answer — capacity scales with the pool, recompute."
+          },
+          {
+            "qNum": 3,
+            "statement": "What is the correct first split for 27 balls?",
+            "options": ["A) 13 vs 13, 1 aside", "B) 9 vs 9, 9 aside", "C) 10 vs 10, 7 aside", "D) 14 vs 13, 0 aside"],
+            "correctAnswer": "B",
+            "solution": "Three equal groups of 9: if one pan sinks, the fake is in it; if they balance, the fake is in the aside 9. Every outcome isolates exactly 9 suspects.",
+            "shortcut": "Equal thirds, always — asymmetry wastes the aside outcome.",
+            "trap": "Binary-style halving (13 vs 13) squanders the third outcome the scale offers."
+          },
+          {
+            "qNum": 4,
+            "statement": "How many weighings guarantee success with 81 balls?",
+            "options": ["A) 3", "B) 4", "C) 5", "D) 6"],
+            "correctAnswer": "B",
+            "solution": "81 = 3⁴, so 4 weighings (3³ = 27 < 81). Sequence: 81 → 27 → 9 → 3 → 1.",
+            "shortcut": "81 = 3⁴ → 4. Powers of three are the whole game.",
+            "trap": "3 weighings cover only 27 — check 3^n against the pool every time."
           }
         ]
       }
@@ -1863,6 +2078,49 @@ window.DILR_ARCHETYPES_DATA = [
             "solution": "A = 5, C = 1, B = 3 are forced in every valid arrangement; D and E swap between 2 and 4. So 3 residents are fixed.",
             "shortcut": "'Definitely true' questions: test the swap — whoever never moves is fixed.",
             "trap": "Counting 5 by forgetting D/E interchangeability — always run the swap test."
+          }
+        ]
+      },
+      {
+        "caseletNum": 6,
+        "title": "Circular Table: Six Colleagues, Fixed Order",
+        "context": "Six colleagues A, B, C, D, E, F sit around a circular table facing the centre, numbered 1-6 clockwise. Clues: (1) A sits opposite D. (2) B sits immediately clockwise from A. (3) C sits opposite B. (4) F does not sit next to D.",
+        "questions": [
+          {
+            "qNum": 1,
+            "statement": "Fix A at position 1. Who sits opposite B?",
+            "options": ["A) D", "B) E", "C) C", "D) F"],
+            "correctAnswer": "C",
+            "solution": "A=1, D=4 (opposite). B is immediately clockwise from A: position 2. Opposite of 2 is 5. Position 5 must be C: remaining people after A,B,D are C,E,F and clue 3 forces C opposite B. So C.",
+            "shortcut": "Anchor A=1 by rotation symmetry, then place forced neighbours before reading options.",
+            "trap": "Mirroring clockwise/counter-clockwise — fix the direction once and never flip it."
+          },
+          {
+            "qNum": 2,
+            "statement": "With A at position 1, what is F's position number?",
+            "options": ["A) 3", "B) 5", "C) 6", "D) 4"],
+            "correctAnswer": "C",
+            "solution": "Placed: A=1, B=2, D=4, C=5. Free: 3, 6 for E, F. F cannot neighbour D(4): neighbours of 4 are 3 and 5 — so F ≠ 3, giving F = 6 and E = 3.",
+            "shortcut": "Negative clues eliminate: list the forbidden seats, take the survivor.",
+            "trap": "Placing F at 3 by leftover feeling without testing the adjacency ban."
+          },
+          {
+            "qNum": 3,
+            "statement": "E sits between which two colleagues?",
+            "options": ["A) A and C", "B) B and D", "C) D and F", "D) A and F"],
+            "correctAnswer": "B",
+            "solution": "E = 3, whose clockwise neighbours are 2 (B) and 4 (D).",
+            "shortcut": "Neighbours of n are n−1 and n+1 (mod 6) — pure arithmetic, no diagram needed.",
+            "trap": "Answering with E's opposites instead of its neighbours — 'between' means adjacent."
+          },
+          {
+            "qNum": 4,
+            "statement": "Who sits immediately clockwise from D?",
+            "options": ["A) E", "B) F", "C) C", "D) B"],
+            "correctAnswer": "C",
+            "solution": "D = 4; immediately clockwise is position 5 = C.",
+            "shortcut": "Clockwise +1 from any seat — one modular addition answers it.",
+            "trap": "Counter-clockwise (position 3, E) is the classic direction slip."
           }
         ]
       }

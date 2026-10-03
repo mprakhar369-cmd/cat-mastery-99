@@ -1,4 +1,4 @@
-const CACHE_NAME = 'cat-mastery-v13';
+const CACHE_NAME = 'cat-mastery-v14';
 const ASSETS_TO_CACHE = [
   './',
   './index.html',
@@ -20,7 +20,7 @@ self.addEventListener('install', (event) => {
   self.skipWaiting();
   event.waitUntil(
     caches.open(CACHE_NAME).then((cache) => {
-      console.log('[SW] Pre-caching v13 assets');
+      console.log('[SW] Pre-caching v14 assets');
       return cache.addAll(ASSETS_TO_CACHE);
     })
   );
