@@ -278,6 +278,49 @@ window.DILR_ARCHETYPES_DATA = [
             "trap": "Using Venn circles for 4 sets."
           }
         ]
+      },
+      {
+        "caseletNum": 52,
+        "title": "Chocolate Distribution: Three-Subject Sprint Set",
+        "context": "60 students. 42 passed Mathematics, 36 passed Physics, 30 passed Chemistry. Each pass = 1 chocolate. Total chocolates = 42 + 36 + 30 = 108. Each student holds 0 to 3 chocolates.",
+        "questions": [
+          {
+            "qNum": 1,
+            "statement": "What is the MAXIMUM possible number of students who passed at least 2 subjects?",
+            "options": ["A) 36", "B) 45", "C) 54", "D) 60"],
+            "correctAnswer": "C",
+            "solution": "Give barely-enough-to-qualify (exactly 2 chocolates) to as many students y as possible: 2y <= 108 gives y = 54, using all 108 chocolates exactly.",
+            "shortcut": "Maximizing (>= m): fill with exactly m. y = floor(C / m) = floor(108 / 2) = 54.",
+            "trap": "Capping the answer at the smallest subject count (30) — maximization wants the opposite extreme."
+          },
+          {
+            "qNum": 2,
+            "statement": "What is the MINIMUM possible number of students who passed at least 2 subjects?",
+            "options": ["A) 12", "B) 24", "C) 36", "D) 48"],
+            "correctAnswer": "B",
+            "solution": "Dump chocolates into as few students as possible: give the maximum (3) to x students and the most-without-qualifying (1) to the rest. 3x + 1(60 - x) = 108 gives 2x = 48, so x = 24.",
+            "shortcut": "Minimizing (>= m): fill with max K and buffer at (m - 1). 3x + 1(60 - x) = 108.",
+            "trap": "Using 4 as the per-student maximum — with 3 subjects the ceiling is 3 chocolates."
+          },
+          {
+            "qNum": 3,
+            "statement": "What is the MAXIMUM possible number of students who passed all 3 subjects?",
+            "options": ["A) 36", "B) 30", "C) 24", "D) 20"],
+            "correctAnswer": "A",
+            "solution": "Give exactly 3 chocolates to z students: 3z <= 108 gives z = 36, consuming all chocolates.",
+            "shortcut": "Maximizing (all K subjects): floor(C / K) = floor(108 / 3) = 36.",
+            "trap": "Capping at the smallest subject (30) instead of running the allocation equation."
+          },
+          {
+            "qNum": 4,
+            "statement": "What is the MINIMUM possible number of students who passed all 3 subjects?",
+            "options": ["A) 6", "B) 12", "C) 8", "D) 0"],
+            "correctAnswer": "D",
+            "solution": "Try x students with 3 chocolates and buffer 2 to the rest: 3x + 2(60 - x) = 108 gives x = -12, impossible — so even x = 0 works. Check: capping everyone at 2 absorbs at most 120 >= 108 chocolates. Minimum is 0.",
+            "shortcut": "Negative x from the conservation equation means the minimum is 0 — always run the capacity check.",
+            "trap": "Assuming the minimum must be positive; a negative equation root means zero is feasible."
+          }
+        ]
       }
     ],
     "videoLecture": {
@@ -839,6 +882,49 @@ window.DILR_ARCHETYPES_DATA = [
             "solution": "Total matches = 8 * 7 / 2 = 28 matches. In this scoring system, every match generates exactly 2 points (2 for decisive win, 1+1 for draw). Total points = 28 * 2 = 56.",
             "shortcut": "Total points = N(N - 1) = 8 * 7 = 56.",
             "trap": "Treating draws as destroying points in a 2-1-0 system (that happens only in 3-1-0 football systems)."
+          }
+        ]
+      },
+      {
+        "caseletNum": 56,
+        "title": "Knockout Seeds and Bracket Invariants",
+        "context": "8 players seeded 1 to 8 in a single-elimination knockout. Quarterfinals: (1 vs 8), (4 vs 5), (2 vs 7), (3 vs 6). Winners advance to semifinals 1v4-half vs 2v3-half, then the final. Every match eliminates exactly one player.",
+        "questions": [
+          {
+            "qNum": 1,
+            "statement": "How many matches are needed in total to decide the champion?",
+            "options": ["A) 6", "B) 7", "C) 8", "D) 14"],
+            "correctAnswer": "B",
+            "solution": "Each match eliminates exactly one player. To leave 1 champion from 8, exactly 7 eliminations (matches) are needed: 4 QF + 2 SF + 1 F.",
+            "shortcut": "Knockout matches = N - 1 always. 8 - 1 = 7.",
+            "trap": "Counting 14 by doubling legs — single elimination has no return legs."
+          },
+          {
+            "qNum": 2,
+            "statement": "If every higher seed wins its match, which semifinal lineup results?",
+            "options": ["A) 1 vs 2 and 3 vs 4", "B) 1 vs 4 and 2 vs 3", "C) 1 vs 3 and 2 vs 4", "D) 1 vs 8 and 2 vs 7"],
+            "correctAnswer": "B",
+            "solution": "QF winners under no upsets: 1 (beats 8), 4 (beats 5), 2 (beats 7), 3 (beats 6). Semifinals pair the halves: 1 vs 4 and 2 vs 3.",
+            "shortcut": "Read winners straight down each half of the bracket — no re-seeding in CAT knockouts.",
+            "trap": "Re-seeding semifinalists 1v4/2v3 is wrong only if you mix halves — keep bracket halves rigid."
+          },
+          {
+            "qNum": 3,
+            "statement": "What is the lowest seed that can reach the semifinal WITHOUT defeating any top-3 seed?",
+            "options": ["A) Seed 4", "B) Seed 6", "C) Seed 5", "D) Seed 8"],
+            "correctAnswer": "C",
+            "solution": "Seeds 6, 7, 8 face seeds 3, 2, 1 respectively in the QF — all top-3. Seed 4 faces 5 (fine) but then seed 1 in the SF. Seed 5 beats 4 in the QF, reaching the SF while facing only seed 4. So seed 5 is the lowest.",
+            "shortcut": "Scan each seed's fixed QF opponent first — only 4 and 5 dodge top-3 in round one.",
+            "trap": "Picking seed 8 for 'lowest' without checking its QF opponent (seed 1)."
+          },
+          {
+            "qNum": 4,
+            "statement": "With upsets allowed, which seeds can seed 1 possibly face in the final?",
+            "options": ["A) 2 or 3 only", "B) Any of 2, 3, 6, 7", "C) Only seed 2", "D) Seed 8"],
+            "correctAnswer": "B",
+            "solution": "Seed 1 owns the top half. The finalist from the bottom half is whoever survives (2 vs 7) and (3 vs 6) then their SF — any of seeds 2, 7, 3, 6. Seed 8 is in seed 1's own half and can only meet seed 1 before the final.",
+            "shortcut": "Finalist = survivor of the opposite half only. List the half, not the seeds you fear.",
+            "trap": "Including own-half seeds (8) as possible final opponents — bracket halves never cross early."
           }
         ]
       }
@@ -1407,6 +1493,49 @@ window.DILR_ARCHETYPES_DATA = [
             "trap": "Overlooking minimum workforce constraints on lower efficiency plants."
           }
         ]
+      },
+      {
+        "caseletNum": 67,
+        "title": "Table DI: Quarterly Sales Completion Set",
+        "context": "A company reports sales (in lakh units) for products A, B, C across Q1-Q4. Row totals are known: A = 60, B = 48, C = 40. Table: A: [12, 15, ?, 18]; B: [10, ?, 14, 12]; C: [8, 9, 11, ?]. Each '?' is a single missing entry.",
+        "questions": [
+          {
+            "qNum": 1,
+            "statement": "What are the sales of product A in Q3?",
+            "options": ["A) 12", "B) 15", "C) 18", "D) 21"],
+            "correctAnswer": "B",
+            "solution": "A's row must total 60: 12 + 15 + x + 18 = 60, so x = 60 - 45 = 15.",
+            "shortcut": "Single-unknown row + known total = instant linear equation. Solve it first.",
+            "trap": "Averaging the row (60/4 = 15) gives the same number here by coincidence — always use the total equation, not averages."
+          },
+          {
+            "qNum": 2,
+            "statement": "What are the sales of product B in Q2?",
+            "options": ["A) 10", "B) 14", "C) 12", "D) 16"],
+            "correctAnswer": "C",
+            "solution": "B's row must total 48: 10 + x + 14 + 12 = 48, so x = 48 - 36 = 12.",
+            "shortcut": "Same single-unknown bootstrap: 48 - 36 = 12.",
+            "trap": "Copying A's Q3 value (15) by pattern-matching instead of computing the row."
+          },
+          {
+            "qNum": 3,
+            "statement": "What are the sales of product C in Q4?",
+            "options": ["A) 10", "B) 11", "C) 12", "D) 9"],
+            "correctAnswer": "C",
+            "solution": "C's row must total 40: 8 + 9 + 11 + x = 40, so x = 40 - 28 = 12.",
+            "shortcut": "Third single-unknown row falls the same way: 40 - 28 = 12.",
+            "trap": "Stopping after two rows and guessing — the grid always closes fully; finish it."
+          },
+          {
+            "qNum": 4,
+            "statement": "Which quarter recorded the highest total sales?",
+            "options": ["A) Q1", "B) Q2", "C) Q3", "D) Q4"],
+            "correctAnswer": "D",
+            "solution": "Column totals: Q1 = 12+10+8 = 30; Q2 = 15+12+9 = 36; Q3 = 15+14+11 = 40; Q4 = 18+12+12 = 42. Q4 is highest at 42.",
+            "shortcut": "After completing the grid, column sums are one addition each — never eyeball trends.",
+            "trap": "Q3 looks strong (two mid-teens) but Q4's 18+12+12 wins — compute, don't eyeball."
+          }
+        ]
       }
     ],
     "videoLecture": {
@@ -1691,6 +1820,49 @@ window.DILR_ARCHETYPES_DATA = [
             "solution": "Floors 1 to 8 have an intrinsic fixed spatial hierarchy. Using Floors as the primary invariant vertical column eliminates re-ordering and allows direct visual application of 'k floors above/below' clues.",
             "shortcut": "Fix the invariant spatial axis (Floors 1 to 8) first.",
             "trap": "Using person names as rows leads to constant row erasing."
+          }
+        ]
+      },
+      {
+        "caseletNum": 5,
+        "title": "Floor Puzzle: Five Residents, Fixed Axis",
+        "context": "Five residents A, B, C, D, E live on floors 1 to 5 (one per floor). Clues: (1) A lives on the top floor. (2) C lives on the bottom floor. (3) B lives adjacent to neither A nor C.",
+        "questions": [
+          {
+            "qNum": 1,
+            "statement": "Who lives on the middle floor (floor 3)?",
+            "options": ["A) A", "B) B", "C) C", "D) D"],
+            "correctAnswer": "B",
+            "solution": "A = 5, C = 1. B cannot be adjacent to A (not 4) nor to C (not 2), so B = 3, the only remaining non-adjacent floor.",
+            "shortcut": "Elimination on the fixed axis: cross out forbidden floors, take the survivor.",
+            "trap": "Placing B at 4 by 'middle-ish' feeling — adjacency bans are exact, not approximate."
+          },
+          {
+            "qNum": 2,
+            "statement": "Which floors are definitely occupied by A, B, C respectively?",
+            "options": ["A) 5, 3, 1", "B) 5, 4, 1", "C) 4, 3, 1", "D) 5, 3, 2"],
+            "correctAnswer": "A",
+            "solution": "A = 5 (top), C = 1 (bottom) are given; B = 3 by elimination. So 5, 3, 1.",
+            "shortcut": "Lock givens first, deduce second — never float a given.",
+            "trap": "Option D moves C to 2, contradicting a direct clue — re-read givens before options."
+          },
+          {
+            "qNum": 3,
+            "statement": "If D lives on floor 2, on which floor does E live?",
+            "options": ["A) 2", "B) 3", "C) 4", "D) 5"],
+            "correctAnswer": "C",
+            "solution": "Floors taken: A=5, B=3, C=1, D=2. The only free floor is 4, so E = 4.",
+            "shortcut": "Last-person-out: fill the axis, read the gap.",
+            "trap": "Re-deriving everything instead of subtracting placed residents from {1..5}."
+          },
+          {
+            "qNum": 4,
+            "statement": "How many residents have completely fixed floors?",
+            "options": ["A) 5", "B) 2", "C) 3", "D) 4"],
+            "correctAnswer": "C",
+            "solution": "A = 5, C = 1, B = 3 are forced in every valid arrangement; D and E swap between 2 and 4. So 3 residents are fixed.",
+            "shortcut": "'Definitely true' questions: test the swap — whoever never moves is fixed.",
+            "trap": "Counting 5 by forgetting D/E interchangeability — always run the swap test."
           }
         ]
       }

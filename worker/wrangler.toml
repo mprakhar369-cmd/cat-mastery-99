@@ -1,0 +1,12 @@
+name = "cat-mastery-bench"
+main = "src/index.js"
+compatibility_date = "2026-09-01"
+
+# After `npx wrangler d1 create cat-mastery-bench`, paste the id here.
+[[d1_databases]]
+binding = "DB"
+database_name = "cat-mastery-bench"
+database_id = "PASTE-D1-DATABASE-ID-HERE"
+
+[vars]
+# npx wrangler secret put SYNC_SECRET  (do NOT commit the real secret)

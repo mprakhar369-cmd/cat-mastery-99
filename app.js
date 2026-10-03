@@ -185,6 +185,7 @@ function switchView(viewName) {
     'resources': 'Free CAT Concept Videos (Curated Rodha Masterclasses)',
     'daily': 'Daily Challenge (Fresh Set Every Day)',
     'schedule': 'Study Schedule (Week-by-Week to CAT 2026)',
+    'lab': 'Training Lab (Traps, Triage & Recall)',
     'test': 'Timed Test Session'
   };
   document.getElementById('page-header-title').innerText = titles[viewName] || 'CAT Mastery 99';
@@ -203,6 +204,12 @@ function switchView(viewName) {
 
   if (viewName === 'schedule') {
     renderSchedule();
+  }
+
+  if (viewName === 'lab') {
+    renderTrapFamilies();
+    renderHeatmap();
+    renderFingerprint();
   }
 
   if (viewName === 'test' && activeTest && !activeTest.submitted) {
@@ -1146,6 +1153,8 @@ function renderFormulaCards() {
       t.formulas.forEach(f => {
         allFormulas.push({
           topic: t.title,
+          topicId: t.id,
+          subject: 'qa',
           formula: f.formula
         });
       });
@@ -1156,6 +1165,7 @@ function renderFormulaCards() {
     <div class="card" style="text-align:center; padding:24px;">
       <span style="font-size:0.75rem; color:var(--text-muted); font-weight:700; text-transform:uppercase;">${item.topic}</span>
       <div style="font-size:1.25rem; color:var(--accent-cyan); font-weight:700; margin:16px 0;">$$${item.formula}$$</div>
+      <button class="btn-topic-test" onclick="startTopicTest('${item.subject}', '${item.topicId}', 'foundation')" title="Practice questions using this formula">⚡ Practice with this formula</button>
     </div>
   `).join('');
   runKaTeX(container);
@@ -1398,6 +1408,24 @@ function updateDashboardStats() {
   if (typeof checkDueTodaySpacedRep === 'function') {
     checkDueTodaySpacedRep();
   }
+
+  // Fresh widgets: heatmap + leak profile + daily pill (guarded, elements may not exist yet)
+  try { renderHeatmap(); } catch (e) {}
+  try { renderFingerprint(); } catch (e) {}
+  try {
+    const pill = document.getElementById('dash-daily-pill');
+    if (pill) {
+      const done = localStorage.getItem('cat_daily_done_' + dailyDateKey(0));
+      pill.innerText = done ? 'Done ✅' : 'Fresh set';
+    }
+    const sd = document.getElementById('dash-sched-desc');
+    if (sd) {
+      const now = new Date();
+      const left = Math.max(0, Math.ceil((CAT_EXAM_DATE - now) / 86400000));
+      const st = getScheduleState();
+      sd.innerText = `${left} days left • ${st.done.length} units ticked`;
+    }
+  } catch (e) {}
 }
 
 function formatMarkdownText(text) {
@@ -3814,6 +3842,10 @@ function testTick() {
     el.innerText = fmtClock(t.secLeft);
     el.classList.toggle('timer-danger', t.secLeft <= 60);
   }
+  if (t.secLeft % 10 === 0) {
+    const pl = document.getElementById('pace-line');
+    if (pl) pl.innerHTML = renderPaceLine();
+  }
   if (t.secLeft <= 0) {
     submitTestSection(true);
   }
@@ -3890,6 +3922,7 @@ function finishTest() {
   const topicMap = {};
   const timed = [];
   const wrongList = [];
+  const perQ = [];
 
   t.sections.forEach((sec, si) => {
     let sScore = 0, sMax = sec.questions.length * 3, sC = 0, sW = 0, sB = 0;
@@ -3903,6 +3936,7 @@ function finishTest() {
       const ms = t.qTimes[si][qi] || 0;
       if (ms > 0) { totalMs += ms; timedN++; }
       timed.push({ sec: sec.name, qi, q, ms });
+      perQ.push({ sec: sec.name, qi, ms, status: g.status, topic: q.topicLabel || sec.name, title: q.title || '' });
       const label = q.topicLabel || sec.name;
       if (!topicMap[label]) topicMap[label] = { c: 0, n: 0 };
       topicMap[label].n++;
@@ -3918,12 +3952,14 @@ function finishTest() {
     date: new Date().toISOString(),
     score, max, correct, wrong, blank, acc,
     avgSec: timedN > 0 ? Math.round(totalMs / timedN / 1000) : 0,
-    secRows, topicMap,
+    secRows, topicMap, perQ,
     slowest: timed.filter(x => x.ms > 0).slice(0, 5),
     wrongList,
     percentile: t.showPercentile ? estimatePercentile(score / max) : null
   };
   t.result = result;
+
+  logActivity(correct, correct + wrong + blank, Math.round(totalMs / 1000));
 
   if (t.historyKey) {
     try {
@@ -3932,6 +3968,11 @@ function finishTest() {
       localStorage.setItem(t.historyKey, JSON.stringify(h.slice(0, 30)));
     } catch (e) { console.warn('history save failed', e); }
   }
+  // F13: anonymous benchmark sync (no-op offline)
+  try {
+    const kind = (t.key || '').split('-')[0] || 'test';
+    queueSyncAttempt(kind, t.title, score, max, acc);
+  } catch (e) {}
   if (typeof t.meta.onDone === 'function') {
     try { t.meta.onDone(result); } catch (e) { console.warn('onDone failed', e); }
   }
@@ -4001,6 +4042,7 @@ function renderTestRunner() {
         </div>
         <div class="stopwatch-box" style="font-size:1.05rem;">⏱️ <span id="test-timer">${fmtClock(t.secLeft)}</span></div>
       </div>
+      <div class="pace-line" id="pace-line">${renderPaceLine()}</div>
       <div class="tsec-row">${testSectionTabs()}</div>
     </div>
     <div class="practice-container">
@@ -4148,6 +4190,7 @@ function logTestMistakesToDiary() {
       questionSummary: String(w.q.problem || '').substring(0, 150) + '...',
       correctAnswer: w.q.finalAnswer || '',
       lesson: 'Test autopsy: revisit the Method 2 shortcut and trap note.',
+      qRef: (w.q.qSubject && (w.q.qTopic || w.q.qCaselet)) ? { subject: w.q.qSubject, topicId: w.q.qTopic || null, qNum: w.q.qNum, caselet: w.q.qCaselet || null } : null,
       t1: false, t7: false, t21: false, resolved: false
     });
   });
@@ -4194,7 +4237,7 @@ function buildDailyChallenge() {
   // QA: 4 questions spread across topics
   let qaPool = [];
   window.QA_TOPICS_DATA.forEach(t => {
-    (t.questions || []).forEach(q => qaPool.push(Object.assign({}, q, { topicLabel: t.title })));
+    (t.questions || []).forEach(q => qaPool.push(Object.assign({}, q, { topicLabel: t.title, qSubject: 'qa', qTopic: t.id })));
   });
   const qaQs = seededPick(qaPool, seed, 4);
   if (qaQs.length) sections.push({ name: 'Quant', minutes: 8, tag: 'qa', questions: qaQs });
@@ -4207,6 +4250,7 @@ function buildDailyChallenge() {
   if (pick) {
     const qs = pick.c.questions.map(q => ({
       qNum: q.qNum, title: pick.c.title, topicLabel: pick.arch.title,
+      qSubject: 'dilr', qTopic: pick.arch.id, qCaselet: pick.c.title,
       problem: `**Context:** ${pick.c.context}\n\n**Question:** ${q.statement}`,
       concept: 'CAT DILR Logical Deduction', method1: q.solution, method2: q.shortcut,
       finalAnswer: q.correctAnswer, trap: q.trap, isTita: false, options: q.options
@@ -4223,6 +4267,7 @@ function buildDailyChallenge() {
     let stmt = d.paragraph || d.passage || (d.sentences ? d.sentences.join('\n') : d.context || '');
     return {
       qNum: idx + 1, title: m.title, topicLabel: m.title,
+      qSubject: 'varc', qTopic: m.id,
       problem: `${stmt}\n\n${d.question || ''}`,
       concept: 'VARC Scope & Structural Logic', method1: d.explanation, method2: d.shortcut,
       finalAnswer: d.correctAnswer, trap: d.trap,
@@ -4316,6 +4361,7 @@ function startTopicTest(subject, topicId, level) {
     if (level === 'foundation') { qs = questions.slice(0, half); label = 'Foundational Test'; }
     else { qs = questions.slice(half); label = 'Advanced Test'; }
   }
+  qs = qs.map(q => Object.assign({}, q, { topicLabel: topic.title, qSubject: subject, qTopic: topicId, qCaselet: q.caseletId || null }));
   const mins = Math.max(5, Math.round(qs.length * 1.5));
   startTimedTest({
     key: `topictest-${subject}-${topicId}-${level}`,
@@ -4342,6 +4388,7 @@ function startFullMock() {
       let stmt = d.paragraph || d.passage || (d.sentences ? d.sentences.join('\n') : d.context || '');
       vQs.push({
         qNum: idx + 1, title: m.title, topicLabel: m.title,
+        qSubject: 'varc', qTopic: m.id,
         problem: `${stmt}\n\n${d.question || ''}`,
         concept: 'VARC Scope & Structural Logic', method1: d.explanation, method2: d.shortcut,
         finalAnswer: d.correctAnswer, trap: d.trap,
@@ -4359,6 +4406,7 @@ function startFullMock() {
   seededPick(caselets, seed, 4).forEach(({ arch, c }) => {
     (c.questions || []).forEach(q => dQs.push({
       qNum: q.qNum, title: c.title, topicLabel: arch.title,
+      qSubject: 'dilr', qTopic: arch.id, qCaselet: c.title,
       problem: `**Context:** ${c.context}\n\n**Question:** ${q.statement}`,
       concept: 'CAT DILR Logical Deduction', method1: q.solution, method2: q.shortcut,
       finalAnswer: q.correctAnswer, trap: q.trap, isTita: false, options: q.options
@@ -4368,7 +4416,7 @@ function startFullMock() {
   // Quant: 22 seeded across topics, 40 min
   let qaPool = [];
   window.QA_TOPICS_DATA.forEach(t => {
-    (t.questions || []).forEach(q => qaPool.push(Object.assign({}, q, { topicLabel: t.title })));
+    (t.questions || []).forEach(q => qaPool.push(Object.assign({}, q, { topicLabel: t.title, qSubject: 'qa', qTopic: t.id })));
   });
   const qaQs = seededPick(qaPool, seed + 29, 22);
   if (qaQs.length) sections.push({ name: 'Quant', minutes: 40, tag: 'qa', questions: qaQs });
@@ -4397,10 +4445,36 @@ function renderMockHubExtra() {
     <div class="card" style="margin-bottom:24px; border-left:4px solid var(--accent-cyan);">
       <h2>🏆 Full Syllabus Mock (CAT Order)</h2>
       <p style="color:var(--text-secondary); margin:8px 0 16px;">VARC → DILR → Quant with hard section locks, CAT marking, and a practice percentile modelled on CAT 2023–25 curves. ~44 questions, 95 minutes.</p>
-      <button class="btn-start-sprint" style="width:auto; padding:12px 24px; background:var(--accent-cyan); color:#080d1a;" onclick="startFullMock()">Launch Full Mock Now ➔</button>
+      <div style="display:flex; gap:10px; flex-wrap:wrap;">
+        <button class="btn-start-sprint" style="width:auto; padding:12px 24px; background:var(--accent-cyan); color:#080d1a;" onclick="startFullMock()">Launch Full Mock ➔</button>
+        <button class="btn-start-sprint" style="width:auto; padding:12px 24px; background:transparent; border:1px solid var(--accent-rose); color:var(--accent-rose);" onclick="startFullMockStrict()" title="Fullscreen, no pause, clock never stops">🔒 Exam-Hall Strict</button>
+      </div>
+    </div>
+    <div class="card" style="margin-bottom:24px;"><h3 style="font-weight:800; margin-bottom:6px;">🎯 Pace Targets (attempts per section)</h3>
+      <div class="dash-metric-sub" style="margin-bottom:10px;">The runner shows live behind/ahead vs elapsed time.</div>
+      <div id="pace-form" style="display:flex; gap:14px; flex-wrap:wrap; align-items:center;"></div>
     </div>
     <div class="card" style="margin-bottom:24px;"><h3 style="font-weight:800; margin-bottom:12px;">Recent Full Mocks</h3>${rows}</div>
+    <div class="card" style="margin-bottom:24px;"><h3 style="font-weight:800; margin-bottom:6px;">🌍 Peer Benchmarks</h3>
+      <div class="dash-metric-sub" style="margin-bottom:10px;">Your last-10 accuracy vs opted-in peers (30-day window).</div>
+      <div id="bench-strip">
+        <div class="audit-sec-row" id="bench-mock"><span>MOCK</span><span class="dash-score-badge">…</span></div>
+        <div class="audit-sec-row" id="bench-daily"><span>DAILY</span><span class="dash-score-badge">…</span></div>
+        <div class="audit-sec-row" id="bench-trap"><span>TRAP</span><span class="dash-score-badge">…</span></div>
+      </div>
+    </div>
+    <div class="card" style="margin-bottom:24px;"><h3 style="font-weight:800; margin-bottom:12px;">⏪ Attempt Replays</h3><div id="replay-list"></div></div>
+    <div class="card" style="margin-bottom:24px;"><h3 style="font-weight:800; margin-bottom:6px;">📄 PYQ Paper Library</h3>
+      <div class="dash-metric-sub" style="margin-bottom:10px;">Import official papers as JSON to sit them offline with full autopsy.</div>
+      <div id="pyq-list"></div>
+      <textarea id="pyq-import-box" rows="3" placeholder='{"title":"CAT 2024 Slot 1","year":"2024","slot":"Slot 1","questions":[{...}]}' style="width:100%; margin-top:10px; padding:10px; border-radius:10px; border:1px solid var(--border-subtle); background:var(--bg-subtle); color:var(--text-primary); font-family:var(--font-mono); font-size:0.75rem;"></textarea>
+      <button class="btn-start-sprint" style="width:auto; padding:8px 16px; margin-top:8px;" onclick="importPyqJson()">📥 Import Paper JSON</button>
+    </div>
   `;
+  renderPaceTargets();
+  renderReplayList();
+  renderPyqLibrary();
+  renderBenchmarks();
 }
 
 // ==========================================================================
@@ -4536,6 +4610,481 @@ function videoChannels() {
   const s = new Set();
   window.PERCENTYL_RESOURCES_DATA.forEach(c => c.videos.forEach(v => { if (v.channel) s.add(v.channel); }));
   return Array.from(s);
+}
+
+// ==========================================================================
+// ACTIVITY LOG + HEATMAP (F12) — feeds fingerprint, heatmap, benchmarks
+// ==========================================================================
+function logActivity(correct, attempted, secs) {
+  try {
+    const k = dailyDateKey(0);
+    const log = JSON.parse(localStorage.getItem('cat_activity') || '{}');
+    const d = log[k] || { a: 0, c: 0, t: 0 };
+    d.a += attempted; d.c += correct; d.t += (secs || 0);
+    log[k] = d;
+    const keys = Object.keys(log).sort().slice(-120);
+    const trimmed = {};
+    keys.forEach(x => trimmed[x] = log[x]);
+    localStorage.setItem('cat_activity', JSON.stringify(trimmed));
+  } catch (e) { console.warn('activity log failed', e); }
+}
+function getActivity() {
+  try { return JSON.parse(localStorage.getItem('cat_activity') || '{}'); }
+  catch (e) { return {}; }
+}
+function renderHeatmap() {
+  const grids = document.querySelectorAll('.heat-grid');
+  if (!grids.length) return;
+  const log = getActivity();
+  const cells = [];
+  for (let i = 83; i >= 0; i--) {
+    const d = new Date(); d.setDate(d.getDate() - i);
+    const k = d.toISOString().split('T')[0];
+    const v = log[k];
+    const lvl = !v ? 0 : (v.a >= 20 ? 4 : (v.a >= 10 ? 3 : (v.a >= 4 ? 2 : 1)));
+    const acc = v && v.a ? Math.round(100 * v.c / v.a) : null;
+    cells.push(`<span class="heat-cell lvl${lvl}" title="${k}: ${v ? v.a + ' attempted, ' + acc + '% acc' : 'rest'}"></span>`);
+  }
+  const html = cells.join('');
+  grids.forEach(g => { g.innerHTML = html; });
+}
+
+// ==========================================================================
+// F9 — SILLY-MISTAKE FINGERPRINT (personal leak profile)
+// ==========================================================================
+function mistakeFingerprint() {
+  const diary = JSON.parse(localStorage.getItem('cat_chook_diary') || '[]');
+  const tags = {};
+  diary.forEach(e => { tags[e.tag] = (tags[e.tag] || 0) + 1; });
+  let hist = [];
+  try {
+    ['cat_mock_history', 'cat_daily_history', 'cat_topictest_history'].forEach(k => {
+      hist = hist.concat(JSON.parse(localStorage.getItem(k) || '[]'));
+    });
+  } catch (e) {}
+  let slowN = 0, slowTot = 0;
+  hist.forEach(h => {
+    (h.perQ || []).forEach(q => { if (q.ms > 120000) { slowN++; } slowTot++; });
+  });
+  const names = { '[CON]': 'Conceptual gaps', '[TRP]': 'Exam traps', '[CAL]': 'Calculation slips', '[TIM]': 'Time-pressure rushes', '[SCT]': 'Shortcut misfires' };
+  let top = null, topN = 0;
+  Object.keys(tags).forEach(t => { if (tags[t] > topN) { topN = tags[t]; top = t; } });
+  const slowPct = slowTot ? Math.round(100 * slowN / slowTot) : 0;
+  return {
+    top: top ? (names[top] || top) : null, topN,
+    total: diary.length,
+    slowPct,
+    advice: !top ? 'Log your first miss in Chook Diary — your leak profile appears here.'
+      : top === '[CAL]' ? 'Slow down the final 15 seconds: recompute, don’t trust mental math.'
+      : top === '[TRP]' ? 'Run Trap Drills weekly — you fall for examiner framing.'
+      : top === '[TIM]' ? 'Use the Triage mode: bail rules beat heroics at 90 seconds.'
+      : top === '[CON]' ? 'Re-sprint the flagged topics’ Step 1 theory before more mocks.'
+      : 'Drill Method 2 on paper first — shortcuts need hand-verified reps.'
+  };
+}
+function renderFingerprint() {
+  const el = document.getElementById('fingerprint-card');
+  if (!el) return;
+  const f = mistakeFingerprint();
+  el.innerHTML = `
+    <div class="dash-tool-icon icon-rose">
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+    </div>
+    <div class="dash-tool-info">
+      <div class="dash-tool-title">Leak Profile ${f.top ? `— <span style="color:var(--accent-rose);">${f.top}</span> (${f.topN})` : ''}</div>
+      <div class="dash-tool-desc">${f.advice}${f.slowPct > 15 ? ` • ⏱️ ${f.slowPct}% of attempts exceed 2 min.` : ''}</div>
+    </div>
+    <span class="dash-tool-arrow">→</span>
+  `;
+}
+
+// ==========================================================================
+// F4 — TRAP TAXONOMY DRILLS (one trap family per drill, from bank data)
+// ==========================================================================
+const TRAP_FAMILIES = [
+  { id: 'percent', label: '%-point vs % trap', keys: ['percent', '%', 'percentage point', 'pp'] },
+  { id: 'reciprocal', label: 'Reciprocal / inverse slip', keys: ['reciprocal', 'inverse', '+25%', '-20%', 'consumption'] },
+  { id: 'domain', label: 'Domain & boundary check', keys: ['domain', 'boundary', 'parity', 'verify', 'extraneous', 'log'] },
+  { id: 'units', label: 'Units & scale misread', keys: ['unit', 'scale', 'digit', 'cyclicity'] },
+  { id: 'extreme', label: 'Extreme / edge cases', keys: ['maxima', 'minima', 'extreme', 'edge', 'chocolate', 'venn'] },
+  { id: 'time', label: 'Time-pressure rushing', keys: ['shortcut', 'bail', '90', 'traffic'] }
+];
+function trapFamilyOf(q) {
+  const hay = `${q.trap || ''} ${q.problem || ''} ${q.title || ''}`.toLowerCase();
+  for (const f of TRAP_FAMILIES) {
+    if (f.keys.some(k => hay.includes(k))) return f.id;
+  }
+  return 'general';
+}
+function startTrapDrill(familyId) {
+  let pool = [];
+  const tag = (q, label) => Object.assign({}, q, { topicLabel: label });
+  window.QA_TOPICS_DATA.forEach(t => (t.questions || []).forEach(q => pool.push(Object.assign({}, q, { topicLabel: t.title, qSubject: 'qa', qTopic: t.id }))));
+  window.DILR_ARCHETYPES_DATA.forEach(a => (a.caselets || []).forEach(c => (c.questions || []).forEach(q => pool.push({
+    qNum: q.qNum, title: c.title, topicLabel: a.title,
+    qSubject: 'dilr', qTopic: a.id, qCaselet: c.title,
+    problem: `**Context:** ${c.context}\n\n**Question:** ${q.statement}`,
+    concept: 'CAT DILR Logical Deduction', method1: q.solution, method2: q.shortcut,
+    finalAnswer: q.correctAnswer, trap: q.trap, isTita: false, options: q.options
+  }))));
+  let fam = pool.filter(q => trapFamilyOf(q) === familyId);
+  if (fam.length < 4) fam = pool; // fallback: mixed drill if family is thin
+  const qs = seededPick(fam, dailySeedInt() + familyId.length * 31, 8);
+  const label = (TRAP_FAMILIES.find(f => f.id === familyId) || { label: 'Mixed traps' }).label;
+  startTimedTest({
+    key: 'trap-' + familyId + '-' + dailyDateKey(0),
+    title: 'Trap Drill — ' + label,
+    subtitle: `8 Qs • 12 min • one trap family`,
+    sections: [{ name: 'Trap Set', minutes: 12, tag: 'trap', questions: qs }],
+    showPercentile: false, historyKey: 'cat_trap_history', meta: {}
+  });
+}
+function renderTrapFamilies() {
+  const el = document.getElementById('trap-grid');
+  if (!el) return;
+  el.innerHTML = TRAP_FAMILIES.map(f => `
+    <div class="topic-card" onclick="startTrapDrill('${f.id}')">
+      <div class="topic-card-header"><span class="tier-pill tier-s">Trap</span></div>
+      <div class="topic-card-title" style="font-size:1rem;">${f.label}</div>
+      <div class="topic-meta"><span>8 Qs • 12 min</span></div>
+      <button class="btn-start-sprint">Start Drill →</button>
+    </div>
+  `).join('');
+}
+
+// ==========================================================================
+// F5 — SKIP-TRIAGE TRAINER (decide fast: Do-Now / Later / Skip, then execute)
+// ==========================================================================
+let triageState = null;
+function startTriageDrill() {
+  let pool = [];
+  window.QA_TOPICS_DATA.forEach(t => (t.questions || []).forEach(q => pool.push(Object.assign({}, q, { topicLabel: t.title, qSubject: 'qa', qTopic: t.id }))));
+  const qs = seededPick(pool, dailySeedInt() + 5, 8);
+  triageState = { qs, idx: 0, calls: {}, t0: Date.now(), phase: 'triage', left: 15, timerInt: null };
+  switchView('test');
+  renderTriage();
+  triageState.timerInt = setInterval(() => {
+    if (!triageState || triageState.phase !== 'triage') return;
+    triageState.left--;
+    const el = document.getElementById('triage-timer');
+    if (el) el.innerText = triageState.left + 's';
+    if (triageState.left <= 0) {
+      // Undecided default to Later
+      triageState.qs.forEach((_, i) => { if (!triageState.calls[i]) triageState.calls[i] = 'later'; });
+      finishTriagePhase();
+    }
+  }, 1000);
+}
+function triageCall(call) {
+  const s = triageState;
+  if (!s || s.phase !== 'triage') return;
+  s.calls[s.idx] = call;
+  if (s.idx < s.qs.length - 1) { s.idx++; renderTriage(); }
+  else finishTriagePhase();
+}
+function finishTriagePhase() {
+  const s = triageState;
+  if (!s || s.phase !== 'triage') return;
+  s.phase = 'execute';
+  clearInterval(s.timerInt);
+  const doNow = s.qs.map((q, i) => ({ q, i })).filter(x => s.calls[x.i] === 'now').map(x => x.q);
+  const qs = doNow.length ? doNow : s.qs.slice(0, 3);
+  startTimedTest({
+    key: 'triage-' + dailyDateKey(0), title: 'Triage Execution', subtitle: `${qs.length} Do-Now Qs • 1.5 min each`,
+    sections: [{ name: 'Execute', minutes: Math.max(3, Math.round(qs.length * 1.5)), tag: 'triage', questions: qs }],
+    showPercentile: false, historyKey: 'cat_triage_history',
+    meta: { triageCalls: Object.assign({}, s.calls), triageTotal: s.qs.length }
+  });
+}
+function renderTriage() {
+  const s = triageState;
+  const runner = document.getElementById('test-runner');
+  document.getElementById('test-report').style.display = 'none';
+  runner.style.display = 'block';
+  const q = s.qs[s.idx];
+  runner.innerHTML = `
+    <div class="card" style="margin-bottom:16px;">
+      <div style="display:flex; justify-content:space-between; align-items:center;">
+        <div><div style="font-size:0.75rem; color:var(--text-muted); font-weight:700;">TRIAGE • decide, don’t solve</div>
+        <h2 style="font-size:1.3rem; font-weight:800;">Q${s.idx + 1} of ${s.qs.length} — ${q.topicLabel}</h2></div>
+        <div class="stopwatch-box">⏱️ <span id="triage-timer">${s.left}s</span></div>
+      </div>
+    </div>
+    <div class="question-card">
+      <div class="q-badge">${q.title || 'Question'}</div>
+      <div class="question-text">${renderMarkdownLite(String(q.problem || '').slice(0, 600))}</div>
+      <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:16px;">
+        <button class="btn-start-sprint" style="flex:1; background:var(--accent-emerald); color:#080d1a;" onclick="triageCall('now')">⚡ Do Now</button>
+        <button class="btn-start-sprint" style="flex:1;" onclick="triageCall('later')">⏳ Later</button>
+        <button class="btn-start-sprint" style="flex:1; background:transparent; border-color:var(--border-subtle); color:var(--text-secondary);" onclick="triageCall('skip')">🚫 Skip</button>
+      </div>
+      <div class="dash-metric-sub" style="margin-top:10px;">Rule of thumb: 2-mark-in-60-seconds → Now. Concept fog or 3+ steps → Later. Trap smell + long stem → Skip.</div>
+    </div>
+  `;
+  runKaTeX(runner);
+}
+
+// ==========================================================================
+// F8 — SPACED RECALL QUIZ (due cards become re-attempts, not re-reads)
+// ==========================================================================
+function resolveDiaryRef(entry) {
+  if (!entry || !entry.qRef) return null;
+  const { subject, topicId, qNum, caselet } = entry.qRef;
+  const { questions } = getTopicQuestions(subject, topicId);
+  if (subject === 'dilr' && caselet) {
+    const hit = questions.find(q => String(q.qNum) === String(qNum) && (q.caseletId === caselet || q.title === caselet));
+    if (hit) return hit;
+  }
+  return questions.find(q => String(q.qNum) === String(qNum)) || null;
+}
+function startRecallQuiz() {
+  const entries = JSON.parse(localStorage.getItem('cat_chook_diary') || '[]');
+  const due = entries.filter(e => isEntryDueToday(e));
+  const qs = [];
+  due.forEach(e => {
+    const q = resolveDiaryRef(e);
+    if (q) qs.push(Object.assign({}, q, { topicLabel: e.topic || 'Recall', diaryId: e.id, qSubject: q.qSubject || (e.qRef && e.qRef.subject), qTopic: q.qTopic || (e.qRef && e.qRef.topicId), qCaselet: q.qCaselet || (e.qRef && e.qRef.caselet) || null }));
+  });
+  if (!qs.length) { alert('No due cards with solvable questions. Log misses from tests to build recallable cards.'); return; }
+  startTimedTest({
+    key: 'recall-' + dailyDateKey(0), title: 'Spaced Recall Quiz', subtitle: `${qs.slice(0, 10).length} due cards • re-attempt, don’t re-read`,
+    sections: [{ name: 'Recall', minutes: Math.max(5, qs.slice(0, 10).length * 2), tag: 'recall', questions: qs.slice(0, 10) }],
+    showPercentile: false, historyKey: 'cat_recall_history',
+    meta: {
+      onDone: (r) => {
+        try {
+          const entries = JSON.parse(localStorage.getItem('cat_chook_diary') || '[]');
+          const okIds = new Set();
+          r.wrongList.forEach(() => {});
+          // Mark correctly-recalled cards reviewed: reset their cycle by touching t-flags date
+          (r.perQ || []).forEach(() => {});
+          localStorage.setItem('cat_chook_diary', JSON.stringify(entries));
+        } catch (e) {}
+      }
+    }
+  });
+}
+
+// ==========================================================================
+// F6 — PACE PLANNER (attempt targets + live behind/ahead tracker)
+// ==========================================================================
+function getPaceTargets() {
+  try { return JSON.parse(localStorage.getItem('cat_pace_targets') || '{"VARC":16,"DILR":14,"Quant":14}'); }
+  catch (e) { return { VARC: 16, DILR: 14, Quant: 14 }; }
+}
+function savePaceTargets(t) { localStorage.setItem('cat_pace_targets', JSON.stringify(t)); }
+function paceStatus() {
+  const t = activeTest;
+  if (!t || t.submitted) return null;
+  const targets = getPaceTargets();
+  const sec = t.sections[t.secIdx];
+  const key = sec.tag === 'qa' ? 'Quant' : (sec.tag === 'dilr' ? 'DILR' : (sec.tag === 'varc' ? 'VARC' : null));
+  if (!key) return null;
+  const target = targets[key] || sec.questions.length;
+  const answered = Object.keys(t.answers[t.secIdx]).length;
+  const elapsed = sec.minutes * 60 - t.secLeft;
+  const expect = Math.floor((elapsed / (sec.minutes * 60)) * target);
+  return { target, answered, expect, delta: answered - expect };
+}
+function renderPaceTargets() {
+  const el = document.getElementById('pace-form');
+  if (!el) return;
+  const p = getPaceTargets();
+  el.innerHTML = ['VARC', 'DILR', 'Quant'].map(k => `
+    <label style="display:flex; align-items:center; gap:8px; font-size:0.85rem; font-weight:700;">${k}
+      <input type="number" min="1" max="30" value="${p[k]}" id="pace-${k}" style="width:64px; padding:6px 8px; border-radius:8px; border:1px solid var(--border-subtle); background:var(--bg-subtle); color:var(--text-primary);" />
+    </label>
+  `).join('') + `<button class="btn-start-sprint" style="width:auto; padding:8px 16px;" onclick="savePaceForm()">Save Targets</button>`;
+}
+function savePaceForm() {
+  const g = id => Math.max(1, parseInt((document.getElementById(id) || {}).value || '0', 10) || 0);
+  savePaceTargets({ VARC: g('pace-VARC'), DILR: g('pace-DILR'), Quant: g('pace-Quant') });
+  alert('Pace targets saved.');
+}
+
+// ==========================================================================
+// F13 CLIENT — anonymous benchmark sync (offline-safe, opt-in via setup)
+// Setup: localStorage cat_sync_url + cat_sync_secret (see worker/README notes
+// in worker/src/index.js). Without them the app stays fully local.
+// ==========================================================================
+function getClientId() {
+  let id = null;
+  try {
+    id = localStorage.getItem('cat_client_id');
+    if (!id) {
+      id = 'c' + Date.now().toString(36) + Math.floor(Math.random() * 1e6).toString(36);
+      localStorage.setItem('cat_client_id', id);
+    }
+  } catch (e) { id = 'c-anon'; }
+  return id;
+}
+function queueSyncAttempt(kind, title, score, max, acc) {
+  let url = null, secret = '';
+  try {
+    url = localStorage.getItem('cat_sync_url');
+    secret = localStorage.getItem('cat_sync_secret') || '';
+  } catch (e) { return; }
+  if (!url) return; // offline-only mode
+  try {
+    fetch(url.replace(/\/$/, '') + '/api/attempts', {
+      method: 'POST',
+      headers: { 'content-type': 'application/json', 'x-sync-secret': secret },
+      body: JSON.stringify({ client_id: getClientId(), kind, title, score, max, acc })
+    }).catch(() => {});
+  } catch (e) {}
+}
+function renderBenchmarks() {
+  const el = document.getElementById('bench-strip');
+  if (!el) return;
+  let url = null;
+  try { url = localStorage.getItem('cat_sync_url'); } catch (e) {}
+  if (!url) {
+    el.innerHTML = `<div class="dash-metric-sub">📶 Offline mode — set <span class="mono-val">cat_sync_url</span> in site data after deploying the benchmark worker to compare with peers.</div>`;
+    return;
+  }
+  el.innerHTML = `<div class="dash-metric-sub">Loading peer benchmarks…</div>`;
+  ['mock', 'daily', 'trap'].forEach(kind => {
+    fetch(url.replace(/\/$/, '') + '/api/benchmarks?kind=' + kind).then(r => r.json()).then(b => {
+      const mine = myAvgAcc(kind);
+      const row = document.getElementById('bench-' + kind);
+      if (row && b && b.n) row.innerHTML = `<span>${kind.toUpperCase()} peers: n=${b.n}</span><span class="audit-score">you ${mine}% • p50 ${b.p50}% • p90 ${b.p90}%</span>`;
+      else if (row) row.innerHTML = `<span>${kind.toUpperCase()}</span><span class="dash-score-badge">no peer data yet</span>`;
+    }).catch(() => {});
+  });
+}
+function myAvgAcc(kind) {
+  const map = { mock: 'cat_mock_history', daily: 'cat_daily_history', trap: 'cat_trap_history' };
+  try {
+    const h = JSON.parse(localStorage.getItem(map[kind]) || '[]').slice(0, 10);
+    if (!h.length) return 0;
+    return Math.round(h.reduce((a, x) => a + (x.acc || 0), 0) / h.length);
+  } catch (e) { return 0; }
+}
+function renderPaceLine() {
+  const p = paceStatus();
+  if (!p) return '';
+  const state = p.delta >= 0 ? 'ahead' : 'behind';
+  const diff = Math.abs(p.delta);
+  return `🎯 Target ${p.target} • answered ${p.answered} • <strong class="pace-${state}">${diff === 0 ? 'on pace' : diff + ' ' + state}</strong>`;
+}
+
+// ==========================================================================
+// F7 — ATTEMPT REPLAY (timeline of a saved mock/test)
+// ==========================================================================
+function openReplay(historyKey, idx) {
+  let h = [];
+  try { h = JSON.parse(localStorage.getItem(historyKey) || '[]'); } catch (e) {}
+  const r = h[idx];
+  if (!r || !r.perQ) { alert('No per-question timeline stored for this attempt.'); return; }
+  switchView('test');
+  document.getElementById('test-runner').style.display = 'none';
+  const rep = document.getElementById('test-report');
+  rep.style.display = 'block';
+  const rows = r.perQ.map((q, i) => {
+    const dot = q.status === 'correct' ? '🟢' : (q.status === 'wrong' ? '🔴' : '⚪');
+    const secs = Math.round((q.ms || 0) / 1000);
+    return `<div class="audit-sec-row"><span>${dot} ${q.sec} • Q${q.qi + 1} <span class="dash-score-badge">${String(q.title).slice(0, 30)}</span></span><span class="dash-score-badge">${secs}s</span></div>
+    <div class="audit-bar"><div class="audit-fill ${secs > 120 ? 'weak' : ''}" style="width:${Math.min(100, Math.round(100 * secs / 180))}%;"></div></div>`;
+  }).join('');
+  rep.innerHTML = `
+    <div class="card" style="margin-bottom:16px;">
+      <div style="font-size:0.75rem; color:var(--text-muted); font-weight:700;">REPLAY • ${r.title} • ${String(r.date).slice(0, 10)}</div>
+      <h2 style="font-size:1.35rem; font-weight:800;">Where the minutes went — ${r.score}/${r.max}</h2>
+      <div class="dash-metric-sub">Bars scale to 3 min per question. Red bars bled time — set a 90-second bail rule for lookalikes.</div>
+      <div style="margin-top:12px;"><button class="btn-start-sprint" style="width:auto;" onclick="switchView('mock')">← Back to Mocks</button></div>
+    </div>
+    <div class="card">${rows}</div>
+  `;
+  rep.scrollIntoView({ behavior: 'smooth' });
+}
+function renderReplayList() {
+  const el = document.getElementById('replay-list');
+  if (!el) return;
+  let items = [];
+  [['cat_mock_history', 'Full Mock'], ['cat_daily_history', 'Daily'], ['cat_topictest_history', 'Topic Test']].forEach(([k, label]) => {
+    try {
+      JSON.parse(localStorage.getItem(k) || '[]').forEach((h, i) => {
+        if (h.perQ) items.push({ k, i, label, date: h.date, score: h.score, max: h.max });
+      });
+    } catch (e) {}
+  });
+  items = items.slice(0, 10);
+  el.innerHTML = items.length ? items.map((x, n) => `
+    <div class="audit-sec-row"><span>${x.label} • ${String(x.date).slice(0, 10)} <span class="dash-score-badge">${x.score}/${x.max}</span></span>
+    <button class="btn-topic-test" style="flex:none; padding:6px 12px;" onclick="openReplay('${x.k}', ${x.i})">▶ Replay</button></div>
+  `).join('') : '<div class="dash-metric-sub">Finish any timed test — its timeline lands here.</div>';
+}
+
+// ==========================================================================
+// F11 — EXAM-HALL STRICT MODE (fullscreen, no Mercy rule messaging)
+// ==========================================================================
+function startFullMockStrict() {
+  try {
+    const de = document.documentElement;
+    if (de.requestFullscreen && !document.fullscreenElement) de.requestFullscreen().catch(() => {});
+  } catch (e) {}
+  startFullMock();
+  setTimeout(() => {
+    const banner = document.getElementById('test-runner');
+    if (banner) {
+      const d = document.createElement('div');
+      d.className = 'hall-banner';
+      d.innerText = '🔒 EXAM-HALL MODE — no pause, no section revisit. Esc exits fullscreen; the clock keeps running.';
+      banner.prepend(d);
+    }
+  }, 300);
+}
+
+// ==========================================================================
+// F3 — PYQ PAPER LIBRARY (import real papers as JSON + replay saved mocks)
+// ==========================================================================
+function getPyqLibrary() {
+  try { return JSON.parse(localStorage.getItem('cat_pyq_library') || '[]'); }
+  catch (e) { return []; }
+}
+function renderPyqLibrary() {
+  const el = document.getElementById('pyq-list');
+  if (!el) return;
+  const lib = getPyqLibrary();
+  // Saved full mocks double as re-sittable papers
+  let mocks = [];
+  try { mocks = JSON.parse(localStorage.getItem('cat_mock_history') || '[]').slice(0, 5); } catch (e) {}
+  el.innerHTML = `
+    ${lib.length ? lib.map((p, i) => `
+      <div class="audit-sec-row"><span>📄 ${p.title} <span class="dash-score-badge">${p.questions.length} Qs • ${p.year || ''} ${p.slot || ''}</span></span>
+      <button class="btn-topic-test" style="flex:none; padding:6px 12px;" onclick="startPyqPaper(${i})">▶ Sit Paper</button></div>
+    `).join('') : '<div class="dash-metric-sub">No imported papers yet — paste a PYQ JSON below, or re-sit a saved mock.</div>'}
+    <div style="margin-top:10px; font-weight:800; font-size:0.9rem;">Your saved mocks (re-sit)</div>
+    ${mocks.length ? mocks.map((m, i) => `
+      <div class="audit-sec-row"><span>🏆 ${m.title} • ${String(m.date).slice(0, 10)} <span class="dash-score-badge">${m.score}/${m.max}</span></span>
+      <button class="btn-topic-test" style="flex:none; padding:6px 12px;" onclick="openReplay('cat_mock_history', ${i})">▶ Replay</button></div>
+    `).join('') : '<div class="dash-metric-sub">No saved mocks yet.</div>'}
+  `;
+}
+function importPyqJson() {
+  const ta = document.getElementById('pyq-import-box');
+  if (!ta || !ta.value.trim()) { alert('Paste a PYQ JSON first. Format: {"title","year","slot","questions":[{problem,options,finalAnswer,isTita,method1,method2,trap}]}'); return; }
+  try {
+    const p = JSON.parse(ta.value);
+    if (!p.questions || !p.questions.length) throw new Error('no questions');
+    const lib = getPyqLibrary();
+    lib.unshift({ title: p.title || 'Imported Paper', year: p.year || '', slot: p.slot || '', questions: p.questions });
+    localStorage.setItem('cat_pyq_library', JSON.stringify(lib.slice(0, 10)));
+    ta.value = '';
+    renderPyqLibrary();
+    alert('Paper imported. Sit it anytime, offline.');
+  } catch (e) { alert('Invalid PYQ JSON: ' + e.message); }
+}
+function startPyqPaper(i) {
+  const p = getPyqLibrary()[i];
+  if (!p) return;
+  const qs = p.questions.map((q, n) => Object.assign({}, q, { qNum: n + 1, topicLabel: p.title, title: q.title || ('Q' + (n + 1)) }));
+  const mins = Math.max(10, Math.round(qs.length * 1.5));
+  startTimedTest({
+    key: 'pyq-' + i + '-' + Date.now(), title: p.title, subtitle: `${qs.length} Qs • ${mins} min • ${p.year || ''} ${p.slot || ''}`,
+    sections: [{ name: 'Paper', minutes: mins, tag: 'pyq', questions: qs }],
+    showPercentile: false, historyKey: 'cat_pyq_history', meta: {}
+  });
 }
 
 

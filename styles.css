@@ -4326,3 +4326,46 @@ html[data-theme="light"] .vid-check.on {
   }
 }
 
+/* ==========================================================================
+   TRAINING LAB PASS — heatmap, pace, exam-hall
+   ========================================================================== */
+.heat-grid {
+  display: grid;
+  grid-template-columns: repeat(21, 1fr);
+  gap: 4px;
+}
+.heat-cell {
+  aspect-ratio: 1;
+  border-radius: 3px;
+  background: var(--bg-subtle);
+  min-width: 0;
+}
+.heat-cell.lvl1 { background: rgba(22, 104, 167, 0.35); }
+.heat-cell.lvl2 { background: rgba(22, 104, 167, 0.6); }
+.heat-cell.lvl3 { background: var(--accent-cyan); }
+.heat-cell.lvl4 { background: var(--accent-emerald); }
+
+.pace-line {
+  margin-top: 10px;
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  font-weight: 600;
+}
+.pace-ahead { color: var(--accent-emerald); }
+.pace-behind { color: var(--accent-rose); }
+
+.hall-banner {
+  background: rgba(244, 63, 94, 0.12);
+  border: 1px solid rgba(244, 63, 94, 0.4);
+  color: #fda4af;
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 10px 14px;
+  border-radius: 10px;
+  margin-bottom: 14px;
+}
+html[data-theme="light"] .hall-banner {
+  color: #be123c;
+  background: rgba(190, 18, 60, 0.07);
+}
+

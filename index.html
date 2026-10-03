@@ -116,6 +116,12 @@
           <span>Study Schedule</span>
         </button>
       </li>
+      <li class="nav-item">
+        <button id="nav-lab" onclick="switchView('lab')">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+          <span>Training Lab</span>
+        </button>
+      </li>
       </ul>
     </div>
 
@@ -300,6 +306,28 @@
       </div>
 
       <!-- Section Title: Curriculum Section Hubs -->
+      <div class="dash-section-header">
+        <div>
+          <h3 class="dash-section-title">Leak Profile & Consistency</h3>
+          <p class="dash-section-sub">Your personal error fingerprint + 12-week activity</p>
+        </div>
+        <button class="dash-text-btn" onclick="switchView('lab')">Training Lab →</button>
+      </div>
+
+      <div class="dash-duo-grid">
+        <div class="dash-tool-card" id="fingerprint-card" onclick="switchView('diary')">
+          <div class="dash-tool-info">
+            <div class="dash-tool-title">Leak Profile</div>
+            <div class="dash-tool-desc">Log misses to reveal your pattern.</div>
+          </div>
+          <span class="dash-tool-arrow">→</span>
+        </div>
+        <div class="card" style="margin:0;">
+          <div style="font-weight:800; font-size:0.85rem; margin-bottom:8px;">12-Week Heatmap</div>
+          <div id="heatmap-grid" class="heat-grid"></div>
+        </div>
+      </div>
+
       <div class="dash-section-header">
         <div>
           <h3 class="dash-section-title">Curriculum Hubs</h3>
@@ -821,6 +849,35 @@
     <section id="view-test" class="view-panel">
       <div id="test-runner" style="display:none;"></div>
       <div id="test-report" style="display:none;"></div>
+    </section>
+
+    <!-- 13. TRAINING LAB VIEW (trap drills, triage, recall) -->
+    <section id="view-lab" class="view-panel">
+      <div class="dash-hero">
+        <div class="dash-hero-content">
+          <div class="dash-hero-pill"><span class="dash-pulse-dot"></span><span>Decision skills • error immunity • active recall</span></div>
+          <h2 class="dash-hero-title">Training Lab</h2>
+          <p class="dash-hero-desc">Three drills that separate 99 from 97: survive trap families, triage like an examiner, and re-attempt due cards instead of re-reading them.</p>
+          <div class="dash-hero-actions">
+            <button class="btn-dash-primary" onclick="startTriageDrill()"><span>⏱️ Start Skip-Triage Drill</span></button>
+            <button class="btn-dash-secondary" onclick="startRecallQuiz()"><span>🧠 Spaced Recall Quiz</span></button>
+          </div>
+        </div>
+      </div>
+      <div class="dash-section-header" style="margin-top: 28px;">
+        <div>
+          <h3 class="dash-section-title">Trap Taxonomy Drills</h3>
+          <p class="dash-section-sub">8 questions, 12 minutes, one trap family per drill</p>
+        </div>
+      </div>
+      <div class="topic-grid" id="trap-grid"></div>
+      <div class="dash-section-header" style="margin-top: 28px;">
+        <div>
+          <h3 class="dash-section-title">Consistency Heatmap</h3>
+          <p class="dash-section-sub">Last 12 weeks — every timed attempt counts</p>
+        </div>
+      </div>
+      <div class="card"><div class="heat-grid"></div></div>
     </section>
   </main>
 
