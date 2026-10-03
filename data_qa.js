@@ -4,7 +4,7 @@ window.QA_TOPICS_DATA = [
     "title": "Logarithms, Surds & Indices",
     "domain": "Algebra",
     "tier": "Tier S",
-    "weightage": "1 \u2013 2 Questions (3 \u2013 6 Marks)",
+    "weightage": "1 – 2 Questions (3 – 6 Marks)",
     "prepTime": "2.0 Hours",
     "theoryHtml": "<h4>1. Axiomatic Definition of Logarithms & First Principles</h4>\n<div class='theory-block'>A logarithm is the inverse operation to exponentiation:\n$$\\mathbf{\\log_b a = x \\iff b^x = a}$$\n* **Three Non-Negotiable Existence Constraints in $\\mathbb{R}$:**\n  1. $\\mathbf{a > 0}$ (Argument must be strictly positive).\n  2. $\\mathbf{b > 0}$ (Base must be strictly positive).\n  3. $\\mathbf{b \\ne 1}$ (Base can never equal $1$, since $1^x = 1 \\ne a$).\n\n---</div>\n<h4>2. Mathematical Laws of Logarithms: First-Principle Proofs</h4>\n<div class='theory-block'>### 2.1 Product Law: $\\log_b(xy) = \\log_b x + \\log_b y$\n* **Proof:** Let $u = \\log_b x$ and $v = \\log_b y \\implies x = b^u, \\; y = b^v$.  \n  Multiplying: $xy = b^u \\cdot b^v = b^{u + v}$.  \n  Taking $\\log_b$ of both sides: $\\log_b(xy) = u + v = \\log_b x + \\log_b y$. $\\blacksquare$\n\n### 2.2 Quotient Law: $\\log_b\\left(\\frac{x}{y}\\right) = \\log_b x - \\log_b y$\n\n### 2.3 Power Law (Argument & Base Exponents):\n$$\\mathbf{\\log_{b^k} (a^m) = \\frac{m}{k} \\log_b a}$$\n* Exponent of argument ($m$) goes to the **numerator**.\n* Exponent of base ($k$) goes to the **denominator**.\n\n### 2.4 The Base-Change Theorem:\n$$\\mathbf{\\log_b a = \\frac{\\log_c a}{\\log_c b}}$$\n* **Corollary 1 (Reciprocal Rule):** $\\mathbf{\\log_b a = \\frac{1}{\\log_a b}}$\n* **Corollary 2 (Chain Cancellation):** $\\log_b a \\cdot \\log_c b \\cdot \\log_d c = \\log_d a$.\n\n### 2.5 The Power-Base Swap Identity:\n$$\\mathbf{a^{\\log_b c} = c^{\\log_b a}}$$\n* **Proof:** Take $\\log_b$ of both sides:  \n  $\\log_b\\left(a^{\\log_b c}\\right) = (\\log_b c) \\cdot (\\log_b a)$.  \n  $\\log_b\\left(c^{\\log_b a}\\right) = (\\log_b a) \\cdot (\\log_b c)$.  \n  Both expressions are identical! $\\blacksquare$</div>\n<h4>3. Logarithmic Inequalities: The Monotonicity Base Rule</h4>\n<div class='theory-block'>When solving inequalities involving logarithms $\\log_b x > \\log_b y$:\n\n```\nCase 1: Base b > 1 (Monotonically Increasing)\n  log_b x > log_b y  <===>  x > y > 0  (Inequality direction PRESERVED)\n\nCase 2: Base 0 < b < 1 (Monotonically Decreasing)\n  log_b x > log_b y  <===>  0 < x < y  (Inequality direction FLIPS!)\n```\n\n> [!CAUTION] **The Fractional Base Trap:**  \n> If the base is less than 1 (e.g. $\\log_{0.5} x > 2$), the direction of inequality **strictly reverses**: $x < (0.5)^2 = 0.25$!\n\n---</div>\n<h4>4. Characteristic, Mantissa & Number of Digits</h4>\n<div class='theory-block'>Every common logarithm ($\\log_{10} N$) can be written as:\n$$\\log_{10} N = \\text{Characteristic } (C \\in \\mathbb{Z}) + \\text{Mantissa } (M \\in [0, 1))$$\n\n### 4.1 Number of Digits in Large Powers ($a^b$)\n$$\\mathbf{\\text{Number of Digits in } a^b = \\left\\lfloor b \\log_{10} a \\right\\rfloor + 1}$$\n* **Example:** Find number of digits in $2^{50}$ (given $\\log_{10} 2 \\approx 0.3010$):\n  $$50 \\times 0.3010 = 15.05$$\n  $$\\text{Digits} = \\lfloor 15.05 \\rfloor + 1 = 15 + 1 = \\mathbf{16\\text{ digits}}.$$\n\n### 4.2 Number of Leading Zeroes After Decimal Point ($a^{-b}$)\n$$\\mathbf{\\text{Leading Zeroes before first non-zero digit} = |\\lfloor -b \\log_{10} a \\rfloor| - 1 = \\lfloor b \\log_{10} a \\rfloor}$$\n\n---</div>",
     "formulas": [
@@ -37,9 +37,12 @@ window.QA_TOPICS_DATA = [
         "method2": "Rodha fast shortcut or inspection trick.",
         "finalAnswer": "6",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
-          "6"
+          "7",
+          "5",
+          "6",
+          "8"
         ]
       },
       {
@@ -51,8 +54,11 @@ window.QA_TOPICS_DATA = [
         "method2": "Rodha fast shortcut or inspection trick.",
         "finalAnswer": "x = 3",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
+          "x = 4",
+          "x = 2",
+          "x = 6",
           "x = 3"
         ]
       },
@@ -65,9 +71,12 @@ window.QA_TOPICS_DATA = [
         "method2": "Rodha fast shortcut or inspection trick.",
         "finalAnswer": "x = 3/2 (or 1.5)",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
-          "x = 3/2 (or 1.5)"
+          "x = 3/2 (or 1.5)",
+          "4 x = /2 (or 1.5)",
+          "2 x = /2 (or 1.5)",
+          "5 x = /2 (or 1.5)"
         ]
       },
       {
@@ -79,9 +88,12 @@ window.QA_TOPICS_DATA = [
         "method2": "Rodha fast shortcut or inspection trick.",
         "finalAnswer": "x = 8",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
-          "x = 8"
+          "x = 9",
+          "x = 8",
+          "x = 7",
+          "x = 16"
         ]
       },
       {
@@ -94,9 +106,7 @@ window.QA_TOPICS_DATA = [
         "finalAnswer": "x = 4, y = 64",
         "trap": "Watch out for boundary conditions and parity constraints.",
         "isTita": true,
-        "options": [
-          "x = 4, y = 64"
-        ]
+        "options": []
       },
       {
         "qNum": 131,
@@ -107,8 +117,11 @@ window.QA_TOPICS_DATA = [
         "method2": "Rodha fast shortcut or inspection trick.",
         "finalAnswer": "[1, 2) U (3, 4]",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
+          "(1, 2] U [3, 4)",
+          "[1, 4]",
+          "(2, 3)",
           "[1, 2) U (3, 4]"
         ]
       },
@@ -121,9 +134,12 @@ window.QA_TOPICS_DATA = [
         "method2": "Rodha fast shortcut or inspection trick.",
         "finalAnswer": "2^18 (or 262,144)",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
-          "2^18 (or 262,144)"
+          "2^18 (or 262,144)",
+          "(1, 2] U [3, 4)",
+          "[1, 4]",
+          "(2, 3)"
         ]
       },
       {
@@ -135,9 +151,12 @@ window.QA_TOPICS_DATA = [
         "method2": "Rodha fast shortcut or inspection trick.",
         "finalAnswer": "39 digits",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
-          "39 digits"
+          "47 digits",
+          "39 digits",
+          "31 digits",
+          "59 digits"
         ]
       },
       {
@@ -149,9 +168,12 @@ window.QA_TOPICS_DATA = [
         "method2": "Rodha fast shortcut or inspection trick.",
         "finalAnswer": "30 zeroes",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
-          "30 zeroes"
+          "36 zeroes",
+          "24 zeroes",
+          "30 zeroes",
+          "45 zeroes"
         ]
       },
       {
@@ -164,9 +186,7 @@ window.QA_TOPICS_DATA = [
         "finalAnswer": "10",
         "trap": "Watch out for boundary conditions and parity constraints.",
         "isTita": true,
-        "options": [
-          "10"
-        ]
+        "options": []
       },
       {
         "qNum": 136,
@@ -177,9 +197,12 @@ window.QA_TOPICS_DATA = [
         "method2": "Rodha fast shortcut or inspection trick.",
         "finalAnswer": "1",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
-          "1"
+          "1",
+          "2",
+          "0",
+          "3"
         ]
       },
       {
@@ -191,9 +214,12 @@ window.QA_TOPICS_DATA = [
         "method2": "Rodha fast shortcut or inspection trick.",
         "finalAnswer": "2",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
-          "2"
+          "3",
+          "2",
+          "1",
+          "4"
         ]
       },
       {
@@ -205,9 +231,12 @@ window.QA_TOPICS_DATA = [
         "method2": "Rodha fast shortcut or inspection trick.",
         "finalAnswer": "2 solutions",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
-          "2 solutions"
+          "3 solutions",
+          "1 solutions",
+          "2 solutions",
+          "4 solutions"
         ]
       },
       {
@@ -219,8 +248,11 @@ window.QA_TOPICS_DATA = [
         "method2": "Rodha fast shortcut or inspection trick.",
         "finalAnswer": "x = 2, 1/4",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
+          "3 x = , 1/4",
+          "1 x = , 1/4",
+          "4 x = , 1/4",
           "x = 2, 1/4"
         ]
       },
@@ -234,9 +266,7 @@ window.QA_TOPICS_DATA = [
         "finalAnswer": "6",
         "trap": "Watch out for boundary conditions and parity constraints.",
         "isTita": true,
-        "options": [
-          "6"
-        ]
+        "options": []
       }
     ],
     "videoLecture": {
@@ -244,7 +274,7 @@ window.QA_TOPICS_DATA = [
       "directUrl": "https://www.youtube.com/results?search_query=Rodha+CAT+Logarithms+Surds+Indices+Ravi+Prakash",
       "embedUrl": "https://www.youtube-nocookie.com/embed/videoseries?list=PLG4bwc5fquzgfMh4YFDnv7fttM0RIKiUQ",
       "highlight": "Monotonicity Base Rule, Power-Base Swap & Characteristic-Mantissa Digits",
-      "duration": "Complete Playlist \u2022 8 Parts"
+      "duration": "Complete Playlist • 8 Parts"
     }
   },
   {
@@ -252,7 +282,7 @@ window.QA_TOPICS_DATA = [
     "title": "Time & Work, Pipes & Cisterns",
     "domain": "Arithmetic",
     "tier": "Tier S",
-    "weightage": "1 \u2013 2 Questions (3 \u2013 6 Marks)",
+    "weightage": "1 – 2 Questions (3 – 6 Marks)",
     "prepTime": "2.5 Hours",
     "theoryHtml": "<h4>1. The LCM Total Work Units Framework: First Principles</h4>\n<div class='theory-block'>The conventional school approach of setting total work $= 1$ and adding fractions ($\\frac{1}{A} + \\frac{1}{B}$) is slow and prone to arithmetic mistakes in multi-stage CAT problems.\n\n### 1.1 First-Principle Derivation\nWork done is the integral of rate of work over time:\n$$\\mathbf{\\text{Total Work } (W) = \\text{Efficiency } (E) \\times \\text{Time } (T)}$$\n* For two individuals completing the same work in $T_A$ and $T_B$ days:\n  $$E_A \\cdot T_A = E_B \\cdot T_B = W$$\n* Efficiency is **inversely proportional to Time Taken**:\n  $$\\mathbf{\\frac{E_A}{E_B} = \\frac{T_B}{T_A}}$$\n\n### 1.2 The LCM Assumption Rule\nTo ensure all individual efficiencies are **strictly positive integers**, define Total Work as the Least Common Multiple of individual times:\n$$\\mathbf{W = \\operatorname{LCM}(T_1, T_2, \\dots, T_k) \\text{ units}}$$\n$$E_i = \\frac{W}{T_i} \\text{ units/day}$$\n* When working together, individual rates add linearly:\n  $$E_{\\text{combined}} = \\sum E_i \\implies \\mathbf{T_{\\text{combined}} = \\frac{W}{\\sum E_i}}$$\n\n---</div>\n<h4>2. The Universal Man-Days Work Equivalence Formula</h4>\n<div class='theory-block'>If $M$ workers of efficiency $E$ work for $D$ days at $H$ hours per day to produce $W$ units of work:\n$$\\text{Total Work Effort} = M \\times D \\times H \\times E$$\nSince the rate of work per unit output is constant:\n\n$$\\mathbf{\\frac{M_1 \\cdot D_1 \\cdot H_1 \\cdot E_1}{W_1} = \\frac{M_2 \\cdot D_2 \\cdot H_2 \\cdot E_2}{W_2}}$$\n\n---</div>\n<h4>3. Advanced Operational Models</h4>\n<div class='theory-block'>### 3.1 Model 1: Alternating Days Working (Cycles)\nA works on Day 1, B works on Day 2, A on Day 3, etc.\n1. Determine the work done in one complete fundamental cycle of 2 days:\n   $$W_{\\text{cycle}} = E_A + E_B \\text{ units in } 2 \\text{ days}$$\n2. Divide total work $W$ by $W_{\\text{cycle}}$ to find complete cycles:\n   $$\\text{Complete Cycles} = \\left\\lfloor \\frac{W}{W_{\\text{cycle}}} \\right\\rfloor = k$$\n   $$\\text{Work Done} = k \\cdot W_{\\text{cycle}} \\text{ units in } 2k \\text{ days}$$\n3. Address the remaining fractional work $W_{\\text{rem}} = W - k \\cdot W_{\\text{cycle}}$:\n   * Next turn belongs to A. If $W_{\\text{rem}} \\le E_A$:\n     $$\\text{Additional Time} = \\frac{W_{\\text{rem}}}{E_A} \\text{ days}$$\n   * If $W_{\\text{rem}} > E_A$: A works for 1 full day, and B completes the balance $\\frac{W_{\\text{rem}} - E_A}{E_B}$ days.\n\n---\n\n### 3.2 Model 2: Workers Leaving Before Completion (The \"Ghost Work\" Shortcut)\n**Question Pattern:** A and B start together. 3 days before the work is completed, A leaves. Find total days taken.\n\n#### The Rodha \"Virtual Overtime\" Principle:\nInstead of setting up backward algebraic equations:\n* Imagine that **A did NOT leave**, but stayed and worked for those final 3 days!\n* In those 3 days, A would have contributed an additional $3 \\times E_A$ units of work.\n* Add this virtual work to the total target:\n  $$\\mathbf{W_{\\text{augmented}} = W + (3 \\times E_A)}$$</div>\n<h4>4. Ravi Sir's Exam Traps & Strategic Warnings</h4>\n<div class='theory-block'>1. **Trap 1: The Men-Women Equivalence Reduction**  \n   If \"3 men OR 4 women can do a work in 20 days\":\n   * $3M = 4W \\implies \\frac{M}{W} = \\frac{4}{3}$ ($E_M = 4, E_W = 3$).  \n   * Total work $= 3(4) \\times 20 = 240\\text{ units}$.  \n   * Never confuse \"OR\" ($=$) with \"AND\" ($+$)!\n\n2. **Trap 2: The Alternating Work Cycle End Boundary**  \n   In alternating work with a leak (e.g., monkey climbing a greasy pole or inlet filling while leak empties):  \n   * The tank becomes FULL on the inlet's turn before the outlet has a chance to leak it!  \n   * You must subtract 1 day's filling capacity from the target before computing full cycles!\n\n---</div>",
     "formulas": [
@@ -285,9 +315,12 @@ window.QA_TOPICS_DATA = [
         "method2": "Rodha fast shortcut or inspection trick.",
         "finalAnswer": "7.2 days (or 7 1/5 days)",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
-          "7.2 days (or 7 1/5 days)"
+          "9.0 days",
+          "7.2 days (or 7 1/5 days)",
+          "5.8 days",
+          "9.2 days"
         ]
       },
       {
@@ -299,9 +332,12 @@ window.QA_TOPICS_DATA = [
         "method2": "Rodha fast shortcut or inspection trick.",
         "finalAnswer": "5 days",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
-          "5 days"
+          "6 days",
+          "4 days",
+          "5 days",
+          "7 days"
         ]
       },
       {
@@ -313,8 +349,11 @@ window.QA_TOPICS_DATA = [
         "method2": "Rodha fast shortcut or inspection trick.",
         "finalAnswer": "10.2 days (or 10 1/5 days)",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
+          "12.8 days",
+          "8.2 days",
+          "12.2 days",
           "10.2 days (or 10 1/5 days)"
         ]
       },
@@ -327,9 +366,12 @@ window.QA_TOPICS_DATA = [
         "method2": "Rodha fast shortcut or inspection trick.",
         "finalAnswer": "17.5 days",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
-          "17.5 days"
+          "17.5 days",
+          "21.9 days",
+          "14.0 days",
+          "19.5 days"
         ]
       },
       {
@@ -342,9 +384,7 @@ window.QA_TOPICS_DATA = [
         "finalAnswer": "13 2/3 days",
         "trap": "Watch out for boundary conditions and parity constraints.",
         "isTita": true,
-        "options": [
-          "13 2/3 days"
-        ]
+        "options": []
       },
       {
         "qNum": 126,
@@ -355,9 +395,12 @@ window.QA_TOPICS_DATA = [
         "method2": "Rodha fast shortcut or inspection trick.",
         "finalAnswer": "15 5/6 days",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
-          "15 5/6 days"
+          "18 5/6 days",
+          "12 5/6 days",
+          "15 5/6 days",
+          "23 5/6 days"
         ]
       },
       {
@@ -369,8 +412,11 @@ window.QA_TOPICS_DATA = [
         "method2": "Rodha fast shortcut or inspection trick.",
         "finalAnswer": "17.5 days",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
+          "21.9 days",
+          "14.0 days",
+          "19.5 days",
           "17.5 days"
         ]
       },
@@ -383,9 +429,12 @@ window.QA_TOPICS_DATA = [
         "method2": "Rodha fast shortcut or inspection trick.",
         "finalAnswer": "21 men",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
-          "21 men"
+          "21 men",
+          "25 men",
+          "17 men",
+          "32 men"
         ]
       },
       {
@@ -397,9 +446,12 @@ window.QA_TOPICS_DATA = [
         "method2": "Rodha fast shortcut or inspection trick.",
         "finalAnswer": "13.5 men (or 14 men)",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
-          "13.5 men (or 14 men)"
+          "14.85 men (or 14 men)",
+          "13.5 men (or 14 men)",
+          "12.15 men (or 14 men)",
+          "15.5 men (or 14 men)"
         ]
       },
       {
@@ -412,9 +464,7 @@ window.QA_TOPICS_DATA = [
         "finalAnswer": "50 additional men",
         "trap": "Watch out for boundary conditions and parity constraints.",
         "isTita": true,
-        "options": [
-          "50 additional men"
-        ]
+        "options": []
       },
       {
         "qNum": 131,
@@ -425,8 +475,11 @@ window.QA_TOPICS_DATA = [
         "method2": "Rodha fast shortcut or inspection trick.",
         "finalAnswer": "24 days",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
+          "30 days",
+          "19 days",
+          "26 days",
           "24 days"
         ]
       },
@@ -439,9 +492,12 @@ window.QA_TOPICS_DATA = [
         "method2": "Rodha fast shortcut or inspection trick.",
         "finalAnswer": "12.5 days",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
-          "12.5 days"
+          "12.5 days",
+          "15.6 days",
+          "10.0 days",
+          "14.5 days"
         ]
       },
       {
@@ -453,23 +509,29 @@ window.QA_TOPICS_DATA = [
         "method2": "Rodha fast shortcut or inspection trick.",
         "finalAnswer": "113 days",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
-          "113 days"
+          "141 days",
+          "113 days",
+          "90 days",
+          "115 days"
         ]
       },
       {
         "qNum": 134,
         "title": "Wages Divided by Work Done",
-        "problem": "A and B can do a job in 6 days and 8 days respectively. With the help of C, they complete the work in 3 days. If the total payment for the work is \u20b93200, find C's share of the wages.",
+        "problem": "A and B can do a job in 6 days and 8 days respectively. With the help of C, they complete the work in 3 days. If the total payment for the work is ₹3200, find C's share of the wages.",
         "concept": "Wages are distributed in proportion to the work done by each individual.",
         "method1": "Step-by-step algebraic derivation.",
         "method2": "Rodha fast shortcut or inspection trick.",
-        "finalAnswer": "\u20b9400",
+        "finalAnswer": "₹400",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
-          "\u20b9400"
+          "₹320",
+          "₹480",
+          "₹400",
+          "₹600"
         ]
       },
       {
@@ -482,9 +544,7 @@ window.QA_TOPICS_DATA = [
         "finalAnswer": "12 days",
         "trap": "Watch out for boundary conditions and parity constraints.",
         "isTita": true,
-        "options": [
-          "12 days"
-        ]
+        "options": []
       },
       {
         "qNum": 136,
@@ -495,9 +555,12 @@ window.QA_TOPICS_DATA = [
         "method2": "Rodha fast shortcut or inspection trick.",
         "finalAnswer": "25 days",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
-          "25 days"
+          "25 days",
+          "31 days",
+          "20 days",
+          "27 days"
         ]
       },
       {
@@ -509,9 +572,12 @@ window.QA_TOPICS_DATA = [
         "method2": "Rodha fast shortcut or inspection trick.",
         "finalAnswer": "37.5 days",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
-          "37.5 days"
+          "46.9 days",
+          "37.5 days",
+          "30.0 days",
+          "39.5 days"
         ]
       },
       {
@@ -523,9 +589,12 @@ window.QA_TOPICS_DATA = [
         "method2": "Rodha fast shortcut or inspection trick.",
         "finalAnswer": "36 days",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
-          "36 days"
+          "45 days",
+          "29 days",
+          "36 days",
+          "38 days"
         ]
       },
       {
@@ -537,35 +606,43 @@ window.QA_TOPICS_DATA = [
         "method2": "Rodha fast shortcut or inspection trick.",
         "finalAnswer": "7.5 days",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
+          "9.4 days",
+          "6.0 days",
+          "9.5 days",
           "7.5 days"
         ]
       },
       {
         "qNum": 140,
         "title": "Piece Rate Wages with Penalties",
-        "problem": "A worker is paid \u20b9150 for each day he works and is fined \u20b930 for each day he is absent. In a month of 30 days, he receives \u20b93420. For how many days was he absent?",
+        "problem": "A worker is paid ₹150 for each day he works and is fined ₹30 for each day he is absent. In a month of 30 days, he receives ₹3420. For how many days was he absent?",
         "concept": "Alligation or Assumed Presence method.",
         "method1": "Step-by-step algebraic derivation.",
         "method2": "Rodha fast shortcut or inspection trick.",
         "finalAnswer": "6 days",
         "trap": "Watch out for boundary conditions and parity constraints.",
         "isTita": true,
-        "options": [
-          "6 days"
-        ]
+        "options": []
       }
-    ]
+    ],
+    "videoLecture": {
+      "title": "Rodha Quant: Time & Work, Pipes & Cisterns (Zero to Zenith)",
+      "directUrl": "https://www.youtube.com/results?search_query=Rodha+CAT+Time+and+Work+Pipes+and+Cisterns+Ravi+Prakash",
+      "embedUrl": "https://www.youtube-nocookie.com/embed/videoseries?list=PLG4bwc5fquzgfMh4YFDnv7fttM0RIKiUQ",
+      "highlight": "LCM Work Units, Negative Cistern Leakage & Alternate-Day Cyclic Efficiencies",
+      "duration": "Complete Playlist • 9 Parts"
+    }
   },
   {
     "id": "qa_perc",
     "title": "Percentages & Product Constancy",
     "domain": "Arithmetic",
     "tier": "Tier S",
-    "weightage": "1 \u2013 2 Questions (3 \u2013 6 Marks)",
+    "weightage": "1 – 2 Questions (3 – 6 Marks)",
     "prepTime": "2.0 Hours",
-    "theoryHtml": "<h4>1. The Multiplying Factor (MF) & First Principles</h4>\n<div class='theory-block'>In CAT Quantitative Aptitude, never set up equations using $\\frac{x}{100} \\cdot P + P$. Every percentage adjustment must be viewed as an operator\u2014the **Multiplying Factor ($M$)**.\n\n### 1.1 First-Principle Derivation of the Multiplying Factor\nLet a base quantity $Q$ undergo a percentage change of $\\pm x\\%$:\n$$Q_{\\text{new}} = Q \\pm \\left(\\frac{x}{100} \\cdot Q\\right) = Q \\left(1 \\pm \\frac{x}{100}\\right)$$\nDefining the **Multiplying Factor ($M$)**:\n$$\\mathbf{M = 1 \\pm \\frac{x}{100}}$$\n$$\\mathbf{Q_{\\text{new}} = Q \\times M}$$\n\n### 1.2 Fractional Multiplier Equivalence\nConverting decimal percentages into fractions speeds up calculation by $4\\times$:\n\n| Percentage Change ($\\% \\Delta$) | Fractional Shift ($\\Delta$) | Multiplying Factor ($M$) | Algebraic Form |\n| :---: | :---: | :---: | :---: |\n| $+10\\%$ | $+\\frac{1}{10}$ | $1.10$ | $\\times \\frac{11}{10}$ |\n| $+12.5\\%$ | $+\\frac{1}{8}$ | $1.125$ | $\\times \\frac{9}{8}$ |\n| $+16.66\\%$ | $+\\frac{1}{6}$ | $1.166\\dots$ | $\\times \\frac{7}{6}$ |\n| $+20\\%$ | $+\\frac{1}{5}$ | $1.20$ | $\\times \\frac{6}{5}$ |\n| $+25\\%$ | $+\\frac{1}{4}$ | $1.25$ | $\\times \\frac{5}{4}$ |\n| $+33.33\\%$ | $+\\frac{1}{3}$ | $1.333\\dots$ | $\\times \\frac{4}{3}$ |\n| $-10\\%$ | $-\\frac{1}{10}$ | $0.90$ | $\\times \\frac{9}{10}$ |\n| $-12.5\\%$ | $-\\frac{1}{8}$ | $0.875$ | $\\times \\frac{7}{8}$ |\n| $-14.28\\%$ | $-\\frac{1}{7}$ | $0.857\\dots$ | $\\times \\frac{6}{7}$ |</div>\n<h4>2. Successive Percentage Changes: Mathematical Derivations</h4>\n<div class='theory-block'>### 2.1 Two Successive Changes ($a\\%$ followed by $b\\%$)\nLet an initial value $V_0$ change by $a\\%$ to $V_1$, and then $V_1$ change by $b\\%$ to $V_2$:\n$$V_1 = V_0 \\left(1 + \\frac{a}{100}\\right)$$\n$$V_2 = V_1 \\left(1 + \\frac{b}{100}\\right) = V_0 \\left(1 + \\frac{a}{100}\\right)\\left(1 + \\frac{b}{100}\\right)$$\nExpanding the product:\n$$V_2 = V_0 \\left[1 + \\frac{a}{100} + \\frac{b}{100} + \\frac{ab}{10000}\\right] = V_0 \\left[1 + \\frac{a + b + \\frac{ab}{100}}{100}\\right]$$\nComparing this with $V_2 = V_0 \\left(1 + \\frac{\\text{Net } \\%}{100}\\right)$:\n\n$$\\mathbf{\\text{Net Effective } \\% \\Delta = \\left(a + b + \\frac{ab}{100}\\right)\\%}$$\n*(Rule of Signs: Enter increases as positive numbers, decreases as negative numbers).*\n\n#### The Equal Rise and Fall Phenomenon:\nIf a quantity increases by $x\\%$ and then decreases by $x\\%$:\n$$\\text{Net } \\% = x - x + \\frac{x(-x)}{100} = \\mathbf{-\\frac{x^2}{100}\\%}$$\nA rise of $x\\%$ followed by a fall of $x\\%$ **always results in a net decrease** of $\\frac{x^2}{100}\\%$.\n\n---\n\n### 2.2 Multi-Step Successive Changes via Chained Multipliers\nFor $k$ sequential changes, never use the formula repeatedly. Chain the fractional multipliers directly:\n$$\\mathbf{V_{\\text{final}} = V_0 \\times M_1 \\times M_2 \\times \\dots \\times M_k}$$\n* *Example:* A stock rises by $25\\%$ ($+\\frac{1}{4}$), drops by $20\\%$ ($-\\frac{1}{5}$), and rises by $16.66\\%$ ($+\\frac{1}{6}$):\n  $$V_{\\text{final}} = V_0 \\times \\left(\\frac{5}{4}\\right) \\times \\left(\\frac{4}{5}\\right) \\times \\left(\\frac{7}{6}\\right) = V_0 \\times \\frac{7}{6} \\implies \\mathbf{+16.66\\% \\text{ net increase}}.$$</div>\n<h4>3. Product Constancy Ratio ($A \\times B = C$): First Principles</h4>\n<div class='theory-block'>A massive variety of CAT arithmetic models are governed by the equation $A \\times B = C$ where $C$ is invariant:\n* $\\text{Price} \\times \\text{Consumption} = \\text{Expenditure}$\n* $\\text{Speed} \\times \\text{Time} = \\text{Distance}$\n* $\\text{Efficiency} \\times \\text{Time} = \\text{Total Work}$\n* $\\text{Length} \\times \\text{Breadth} = \\text{Area of Rectangle}$\n\n### 3.1 First-Principle Derivation of the Reciprocal Shift\nLet $A_1 \\times B_1 = C$.  \nSuppose $A$ increases by a fraction $+\\frac{a}{b}$:\n$$A_2 = A_1 \\left(1 + \\frac{a}{b}\\right) = A_1 \\left(\\frac{a + b}{b}\\right)$$\nFor the product to remain constant ($A_2 \\times B_2 = C = A_1 \\times B_1$):\n$$\\left[A_1 \\left(\\frac{a + b}{b}\\right)\\right] \\times B_2 = A_1 \\times B_1 \\implies B_2 = B_1 \\times \\left(\\frac{b}{a + b}\\right)$$\nExpressing the change in $B$:\n$$\\Delta B = B_2 - B_1 = B_1 \\left(\\frac{b}{a + b} - 1\\right) = B_1 \\left(\\frac{b - (a + b)}{a + b}\\right) = -B_1 \\left(\\frac{a}{a + b}\\right)$$\n\n### 3.2 The Rodha Golden Shift Rule:\n$$\\mathbf{\\text{If } A \\text{ increases by } +\\frac{a}{b} \\implies B \\text{ MUST decrease by } -\\frac{a}{a + b}}$$\n$$\\mathbf{\\text{If } A \\text{ decreases by } -\\frac{a}{b} \\implies B \\text{ MUST increase by } +\\frac{a}{b - a}}$$\n\n#### Ready Reference Master Pairs:\n| If Factor A Changes By: | Factor B Must Change By: |\n| :---: | :---: |\n| $+\\frac{1}{2} \\; (+50\\%)$ | $-\\frac{1}{3} \\; (-33.33\\%)$ |</div>\n<h4>4. Income, Expenditure & Savings Mechanics</h4>\n<div class='theory-block'>Every personal finance problem follows the identity:\n$$\\mathbf{\\text{Income} = \\text{Expenditure} + \\text{Savings}}$$\n\n### 4.1 Fractional Deviation Form\nIf Income changes by $i\\%$, Expenditure changes by $e\\%$, and Savings changes by $s\\%$:\n$$I_0 \\cdot \\frac{i}{100} = E_0 \\cdot \\frac{e}{100} + S_0 \\cdot \\frac{s}{100}$$\n$$\\mathbf{I_0 \\cdot i = E_0 \\cdot e + S_0 \\cdot s}$$\nThis is mathematically a **Weighted Average (Alligation)** between Expenditure change and Savings change!\n\n---</div>",
+    "theoryHtml": "<h4>1. The Multiplying Factor (MF) & First Principles</h4>\n<div class='theory-block'>In CAT Quantitative Aptitude, never set up equations using $\\frac{x}{100} \\cdot P + P$. Every percentage adjustment must be viewed as an operator—the **Multiplying Factor ($M$)**.\n\n### 1.1 First-Principle Derivation of the Multiplying Factor\nLet a base quantity $Q$ undergo a percentage change of $\\pm x\\%$:\n$$Q_{\\text{new}} = Q \\pm \\left(\\frac{x}{100} \\cdot Q\\right) = Q \\left(1 \\pm \\frac{x}{100}\\right)$$\nDefining the **Multiplying Factor ($M$)**:\n$$\\mathbf{M = 1 \\pm \\frac{x}{100}}$$\n$$\\mathbf{Q_{\\text{new}} = Q \\times M}$$\n\n### 1.2 Fractional Multiplier Equivalence\nConverting decimal percentages into fractions speeds up calculation by $4\\times$:\n\n| Percentage Change ($\\% \\Delta$) | Fractional Shift ($\\Delta$) | Multiplying Factor ($M$) | Algebraic Form |\n| :---: | :---: | :---: | :---: |\n| $+10\\%$ | $+\\frac{1}{10}$ | $1.10$ | $\\times \\frac{11}{10}$ |\n| $+12.5\\%$ | $+\\frac{1}{8}$ | $1.125$ | $\\times \\frac{9}{8}$ |\n| $+16.66\\%$ | $+\\frac{1}{6}$ | $1.166\\dots$ | $\\times \\frac{7}{6}$ |\n| $+20\\%$ | $+\\frac{1}{5}$ | $1.20$ | $\\times \\frac{6}{5}$ |\n| $+25\\%$ | $+\\frac{1}{4}$ | $1.25$ | $\\times \\frac{5}{4}$ |\n| $+33.33\\%$ | $+\\frac{1}{3}$ | $1.333\\dots$ | $\\times \\frac{4}{3}$ |\n| $-10\\%$ | $-\\frac{1}{10}$ | $0.90$ | $\\times \\frac{9}{10}$ |\n| $-12.5\\%$ | $-\\frac{1}{8}$ | $0.875$ | $\\times \\frac{7}{8}$ |\n| $-14.28\\%$ | $-\\frac{1}{7}$ | $0.857\\dots$ | $\\times \\frac{6}{7}$ |</div>\n<h4>2. Successive Percentage Changes: Mathematical Derivations</h4>\n<div class='theory-block'>### 2.1 Two Successive Changes ($a\\%$ followed by $b\\%$)\nLet an initial value $V_0$ change by $a\\%$ to $V_1$, and then $V_1$ change by $b\\%$ to $V_2$:\n$$V_1 = V_0 \\left(1 + \\frac{a}{100}\\right)$$\n$$V_2 = V_1 \\left(1 + \\frac{b}{100}\\right) = V_0 \\left(1 + \\frac{a}{100}\\right)\\left(1 + \\frac{b}{100}\\right)$$\nExpanding the product:\n$$V_2 = V_0 \\left[1 + \\frac{a}{100} + \\frac{b}{100} + \\frac{ab}{10000}\\right] = V_0 \\left[1 + \\frac{a + b + \\frac{ab}{100}}{100}\\right]$$\nComparing this with $V_2 = V_0 \\left(1 + \\frac{\\text{Net } \\%}{100}\\right)$:\n\n$$\\mathbf{\\text{Net Effective } \\% \\Delta = \\left(a + b + \\frac{ab}{100}\\right)\\%}$$\n*(Rule of Signs: Enter increases as positive numbers, decreases as negative numbers).*\n\n#### The Equal Rise and Fall Phenomenon:\nIf a quantity increases by $x\\%$ and then decreases by $x\\%$:\n$$\\text{Net } \\% = x - x + \\frac{x(-x)}{100} = \\mathbf{-\\frac{x^2}{100}\\%}$$\nA rise of $x\\%$ followed by a fall of $x\\%$ **always results in a net decrease** of $\\frac{x^2}{100}\\%$.\n\n---\n\n### 2.2 Multi-Step Successive Changes via Chained Multipliers\nFor $k$ sequential changes, never use the formula repeatedly. Chain the fractional multipliers directly:\n$$\\mathbf{V_{\\text{final}} = V_0 \\times M_1 \\times M_2 \\times \\dots \\times M_k}$$\n* *Example:* A stock rises by $25\\%$ ($+\\frac{1}{4}$), drops by $20\\%$ ($-\\frac{1}{5}$), and rises by $16.66\\%$ ($+\\frac{1}{6}$):\n  $$V_{\\text{final}} = V_0 \\times \\left(\\frac{5}{4}\\right) \\times \\left(\\frac{4}{5}\\right) \\times \\left(\\frac{7}{6}\\right) = V_0 \\times \\frac{7}{6} \\implies \\mathbf{+16.66\\% \\text{ net increase}}.$$</div>\n<h4>3. Product Constancy Ratio ($A \\times B = C$): First Principles</h4>\n<div class='theory-block'>A massive variety of CAT arithmetic models are governed by the equation $A \\times B = C$ where $C$ is invariant:\n* $\\text{Price} \\times \\text{Consumption} = \\text{Expenditure}$\n* $\\text{Speed} \\times \\text{Time} = \\text{Distance}$\n* $\\text{Efficiency} \\times \\text{Time} = \\text{Total Work}$\n* $\\text{Length} \\times \\text{Breadth} = \\text{Area of Rectangle}$\n\n### 3.1 First-Principle Derivation of the Reciprocal Shift\nLet $A_1 \\times B_1 = C$.  \nSuppose $A$ increases by a fraction $+\\frac{a}{b}$:\n$$A_2 = A_1 \\left(1 + \\frac{a}{b}\\right) = A_1 \\left(\\frac{a + b}{b}\\right)$$\nFor the product to remain constant ($A_2 \\times B_2 = C = A_1 \\times B_1$):\n$$\\left[A_1 \\left(\\frac{a + b}{b}\\right)\\right] \\times B_2 = A_1 \\times B_1 \\implies B_2 = B_1 \\times \\left(\\frac{b}{a + b}\\right)$$\nExpressing the change in $B$:\n$$\\Delta B = B_2 - B_1 = B_1 \\left(\\frac{b}{a + b} - 1\\right) = B_1 \\left(\\frac{b - (a + b)}{a + b}\\right) = -B_1 \\left(\\frac{a}{a + b}\\right)$$\n\n### 3.2 The Rodha Golden Shift Rule:\n$$\\mathbf{\\text{If } A \\text{ increases by } +\\frac{a}{b} \\implies B \\text{ MUST decrease by } -\\frac{a}{a + b}}$$\n$$\\mathbf{\\text{If } A \\text{ decreases by } -\\frac{a}{b} \\implies B \\text{ MUST increase by } +\\frac{a}{b - a}}$$\n\n#### Ready Reference Master Pairs:\n| If Factor A Changes By: | Factor B Must Change By: |\n| :---: | :---: |\n| $+\\frac{1}{2} \\; (+50\\%)$ | $-\\frac{1}{3} \\; (-33.33\\%)$ |</div>\n<h4>4. Income, Expenditure & Savings Mechanics</h4>\n<div class='theory-block'>Every personal finance problem follows the identity:\n$$\\mathbf{\\text{Income} = \\text{Expenditure} + \\text{Savings}}$$\n\n### 4.1 Fractional Deviation Form\nIf Income changes by $i\\%$, Expenditure changes by $e\\%$, and Savings changes by $s\\%$:\n$$I_0 \\cdot \\frac{i}{100} = E_0 \\cdot \\frac{e}{100} + S_0 \\cdot \\frac{s}{100}$$\n$$\\mathbf{I_0 \\cdot i = E_0 \\cdot e + S_0 \\cdot s}$$\nThis is mathematically a **Weighted Average (Alligation)** between Expenditure change and Savings change!\n\n---</div>",
     "formulas": [
       {
         "formula": "Q_{\\text{new}} = Q \\pm \\left(\\frac{x}{100} \\cdot Q\\right) = Q \\left(1 \\pm \\frac{x}{100}\\right)"
@@ -596,9 +673,12 @@ window.QA_TOPICS_DATA = [
         "method2": "Rodha fast shortcut or inspection trick.",
         "finalAnswer": "20%",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
-          "20%"
+          "25%",
+          "20%",
+          "16.67%",
+          "10%"
         ]
       },
       {
@@ -610,9 +690,12 @@ window.QA_TOPICS_DATA = [
         "method2": "Rodha fast shortcut or inspection trick.",
         "finalAnswer": "20%",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
-          "20%"
+          "25%",
+          "16.67%",
+          "20%",
+          "10%"
         ]
       },
       {
@@ -624,8 +707,11 @@ window.QA_TOPICS_DATA = [
         "method2": "Rodha fast shortcut or inspection trick.",
         "finalAnswer": "10%",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
+          "15%",
+          "5%",
+          "20%",
           "10%"
         ]
       },
@@ -638,9 +724,12 @@ window.QA_TOPICS_DATA = [
         "method2": "Rodha fast shortcut or inspection trick.",
         "finalAnswer": "4% increase",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
-          "4% increase"
+          "4% increase",
+          "9%",
+          "14%",
+          "8%"
         ]
       },
       {
@@ -653,36 +742,40 @@ window.QA_TOPICS_DATA = [
         "finalAnswer": "14.4% increase",
         "trap": "Watch out for boundary conditions and parity constraints.",
         "isTita": true,
-        "options": [
-          "14.4% increase"
-        ]
+        "options": []
       },
       {
         "qNum": 6,
         "title": "Quantity Purchased under Fixed Budget",
-        "problem": "A reduction of 20% in the price of apples enables a customer to buy 2.5 kg more apples for \u20b9300. Find the original price per kg and the reduced price per kg.",
-        "concept": "Expenditure is constant at \u20b9300. Price ratio is inverse of quantity ratio.",
+        "problem": "A reduction of 20% in the price of apples enables a customer to buy 2.5 kg more apples for ₹300. Find the original price per kg and the reduced price per kg.",
+        "concept": "Expenditure is constant at ₹300. Price ratio is inverse of quantity ratio.",
         "method1": "Step-by-step algebraic derivation.",
         "method2": "Rodha fast shortcut or inspection trick.",
-        "finalAnswer": "Original = \u20b930/kg, Reduced = \u20b924/kg",
+        "finalAnswer": "Original = ₹30/kg, Reduced = ₹24/kg",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
-          "Original = \u20b930/kg, Reduced = \u20b924/kg"
+          "36 Original = ₹/kg, Reduced = ₹24/kg",
+          "24 Original = ₹/kg, Reduced = ₹24/kg",
+          "Original = ₹30/kg, Reduced = ₹24/kg",
+          "45 Original = ₹/kg, Reduced = ₹24/kg"
         ]
       },
       {
         "qNum": 7,
         "title": "Salary Tax & Net Income Percentage Model",
-        "problem": "A man's annual income increases by \u20b92,00,000, but the tax on his income is reduced from 20% to 16%. If he pays the same amount of tax as before, what is his increased income?",
+        "problem": "A man's annual income increases by ₹2,00,000, but the tax on his income is reduced from 20% to 16%. If he pays the same amount of tax as before, what is his increased income?",
         "concept": "Tax paid = Income $\\times$ Tax Rate. If Tax is constant, Income and Tax Rate are inversely proportional.",
         "method1": "Step-by-step algebraic derivation.",
         "method2": "Rodha fast shortcut or inspection trick.",
-        "finalAnswer": "\u20b910,00,000",
+        "finalAnswer": "₹10,00,000",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
-          "\u20b910,00,000"
+          "₹8,00,000",
+          "₹12,00,000",
+          "₹15,00,000",
+          "₹10,00,000"
         ]
       },
       {
@@ -694,9 +787,12 @@ window.QA_TOPICS_DATA = [
         "method2": "Rodha fast shortcut or inspection trick.",
         "finalAnswer": "Max Marks = 400, Passing Percentage = 39%",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
-          "Max Marks = 400, Passing Percentage = 39%"
+          "Max Marks = 400, Passing Percentage = 39%",
+          "480 Max Marks = , Passing Percentage = 39%",
+          "320 Max Marks = , Passing Percentage = 39%",
+          "600 Max Marks = , Passing Percentage = 39%"
         ]
       },
       {
@@ -708,9 +804,12 @@ window.QA_TOPICS_DATA = [
         "method2": "Rodha fast shortcut or inspection trick.",
         "finalAnswer": "400 students",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
-          "400 students"
+          "480 students",
+          "400 students",
+          "320 students",
+          "600 students"
         ]
       },
       {
@@ -723,22 +822,23 @@ window.QA_TOPICS_DATA = [
         "finalAnswer": "0 consumers",
         "trap": "Watch out for boundary conditions and parity constraints.",
         "isTita": true,
-        "options": [
-          "0 consumers"
-        ]
+        "options": []
       },
       {
         "qNum": 11,
         "title": "Successive Percentage Depreciation",
-        "problem": "A machine depreciates at the rate of 10% per annum for the first 2 years and 20% per annum for the next year. If the original price was \u20b91,00,000, find its value at the end of 3 years.",
+        "problem": "A machine depreciates at the rate of 10% per annum for the first 2 years and 20% per annum for the next year. If the original price was ₹1,00,000, find its value at the end of 3 years.",
         "concept": "Depreciation multiplying factor: $V_3 = V_0 \\times (1 - r_1) \\times (1 - r_2) \\times (1 - r_3)$.",
         "method1": "Step-by-step algebraic derivation.",
         "method2": "Rodha fast shortcut or inspection trick.",
-        "finalAnswer": "\u20b964,800",
+        "finalAnswer": "₹64,800",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
-          "\u20b964,800"
+          "₹51,840",
+          "₹77,760",
+          "₹97,200",
+          "₹64,800"
         ]
       },
       {
@@ -750,37 +850,46 @@ window.QA_TOPICS_DATA = [
         "method2": "Rodha fast shortcut or inspection trick.",
         "finalAnswer": "25,000 voters",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
-          "25,000 voters"
+          "25,000 voters",
+          "30 ,000 voters",
+          "20 ,000 voters",
+          "38 ,000 voters"
         ]
       },
       {
         "qNum": 13,
         "title": "Base Effect: Reverse Percentage Calculation",
-        "problem": "After an increment of 15% in salary, A earns \u20b946,000 per month. What was his original salary?",
+        "problem": "After an increment of 15% in salary, A earns ₹46,000 per month. What was his original salary?",
         "concept": "Original Salary $= \\frac{\\text{New Salary}}{1 + r} = \\frac{\\text{New Salary}}{1.15}$.",
         "method1": "Step-by-step algebraic derivation.",
         "method2": "Rodha fast shortcut or inspection trick.",
-        "finalAnswer": "\u20b940,000",
+        "finalAnswer": "₹40,000",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
-          "\u20b940,000"
+          "₹32,000",
+          "₹40,000",
+          "₹48,000",
+          "₹60,000"
         ]
       },
       {
         "qNum": 14,
         "title": "Commission Percentage on Incremental Slabs",
-        "problem": "A salesman is allowed 9% commission on total sales plus a bonus of 1% on sales over \u20b920,000. If his total earnings are \u20b96800, find his total sales.",
+        "problem": "A salesman is allowed 9% commission on total sales plus a bonus of 1% on sales over ₹20,000. If his total earnings are ₹6800, find his total sales.",
         "concept": "Model earnings across the threshold slab: Earnings $= 9\\% \\text{ of } S + 1\\% \\text{ of } (S - 20,000)$.",
         "method1": "Step-by-step algebraic derivation.",
         "method2": "Rodha fast shortcut or inspection trick.",
-        "finalAnswer": "\u20b970,000",
+        "finalAnswer": "₹70,000",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
-          "\u20b970,000"
+          "₹56,000",
+          "₹84,000",
+          "₹70,000",
+          "₹1,05,000"
         ]
       },
       {
@@ -793,9 +902,7 @@ window.QA_TOPICS_DATA = [
         "finalAnswer": "25 kg",
         "trap": "Watch out for boundary conditions and parity constraints.",
         "isTita": true,
-        "options": [
-          "25 kg"
-        ]
+        "options": []
       },
       {
         "qNum": 16,
@@ -806,9 +913,12 @@ window.QA_TOPICS_DATA = [
         "method2": "Rodha fast shortcut or inspection trick.",
         "finalAnswer": "3.2% decrease",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
-          "3.2% decrease"
+          "3.2% decrease",
+          "8.2%",
+          "13.2%",
+          "6.4%"
         ]
       },
       {
@@ -820,9 +930,12 @@ window.QA_TOPICS_DATA = [
         "method2": "Rodha fast shortcut or inspection trick.",
         "finalAnswer": "40%",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
-          "40%"
+          "45%",
+          "40%",
+          "35%",
+          "80%"
         ]
       },
       {
@@ -834,19 +947,29 @@ window.QA_TOPICS_DATA = [
         "method2": "Rodha fast shortcut or inspection trick.",
         "finalAnswer": "1% decrease",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
-          "1% decrease"
+          "6%",
+          "11%",
+          "1% decrease",
+          "2%"
         ]
       }
-    ]
+    ],
+    "videoLecture": {
+      "title": "Rodha Quant: Percentages & Product Constancy A×B=C",
+      "directUrl": "https://www.youtube.com/results?search_query=Rodha+CAT+Percentages+Product+Constancy+Ravi+Prakash",
+      "embedUrl": "https://www.youtube-nocookie.com/embed/videoseries?list=PLG4bwc5fquzgfMh4YFDnv7fttM0RIKiUQ",
+      "highlight": "Fraction-Percentage Equivalents, Multiplier Scaling & Constant Product Shifts",
+      "duration": "Complete Playlist • 6 Parts"
+    }
   },
   {
     "id": "qa_alligation",
     "title": "Averages, Mixtures & Alligations",
     "domain": "Arithmetic",
     "tier": "Tier S",
-    "weightage": "1 \u2013 2 Questions (3 \u2013 6 Marks)",
+    "weightage": "1 – 2 Questions (3 – 6 Marks)",
     "prepTime": "2.5 Hours",
     "theoryHtml": "<h4>1. The Alligation Cross Rule & First-Principle Derivation</h4>\n<div class='theory-block'>Alligation is the graphical implementation of the **Weighted Average equation**. It determines the ratio in which two distinct ingredients of prices/concentrations $A_1$ and $A_2$ must be blended to produce a mixture of average concentration $A_m$.\n\n### 1.1 First-Principle Derivation (The Lever / Fulcrum Principle)\nLet ingredient 1 have concentration $A_1$ and quantity $n_1$.  \nLet ingredient 2 have concentration $A_2$ and quantity $n_2$ (assume without loss of generality that $A_1 < A_m < A_2$).  \nThe weighted average concentration of the mixture is:\n$$A_m = \\frac{n_1 A_1 + n_2 A_2}{n_1 + n_2}$$\nMultiply both sides by $(n_1 + n_2)$:\n$$A_m(n_1 + n_2) = n_1 A_1 + n_2 A_2$$\n$$n_1 A_m + n_2 A_m = n_1 A_1 + n_2 A_2$$\nRearrange terms by grouping $n_1$ on the left and $n_2$ on the right:\n$$n_1(A_m - A_1) = n_2(A_2 - A_m)$$\nDividing both sides to isolate the quantity ratio $\\frac{n_1}{n_2}$:\n\n$$\\mathbf{\\frac{n_1}{n_2} = \\frac{A_2 - A_m}{A_m - A_1}}$$\n\n### 1.2 The Alligation Cross Diagram\n$$\\begin{array}{ccc}\n\\text{Ingredient 1 } (A_1) & & \\text{Ingredient 2 } (A_2) \\\\\n& \\mathbf{A_m} & \\\\\n(A_2 - A_m) & & (A_m - A_1) \\\\\n\\downarrow & & \\downarrow \\\\\n\\mathbf{n_1} & \\mathbf{:} & \\mathbf{n_2}</div>\n<h4>2. Deciding the Denominator Base in Alligation</h4>\n<div class='theory-block'>A critical error students make in CAT is misidentifying what ratio the bottom line of the Alligation cross represents.\n\n> [!IMPORTANT] **The Universal Denominator Rule:**  \n> The Alligation ratio at the bottom **ALWAYS represents the units of the DENOMINATOR** of whatever rate or percentage is placed at the top!\n\n| Value Placed at Top ($A_1, A_2$) | Mathematical Units | Resulting Ratio at Bottom ($n_1 : n_2$) |\n| :--- | :--- | :--- |\n| **Speed** ($\\text{km/hr}$) | $\\frac{\\text{Distance}}{\\mathbf{\\text{Time}}}$ | **Ratio of Time Taken** |\n| **Profit% / Loss%** | $\\frac{\\text{Profit}}{\\mathbf{\\text{Cost Price}}}$ | **Ratio of Cost Prices (CP)** |\n| **Discount%** | $\\frac{\\text{Discount}}{\\mathbf{\\text{Marked Price}}}$ | **Ratio of Marked Prices (MP)** |\n| **Solution Concentration** ($40\\%$ acid) | $\\frac{\\text{Pure Acid}}{\\mathbf{\\text{Total Solution}}}$ | **Ratio of Total Solution Volumes** |\n| **Average Marks** | $\\frac{\\text{Total Marks}}{\\mathbf{\\text{Number of Students}}}$ | **Ratio of Number of Students** |\n\n---</div>\n<h4>3. Repeated Dilution / Replacement Mechanics</h4>\n<div class='theory-block'>A vessel initially contains a volume $V$ of pure liquid (e.g. pure milk or alcohol). A volume $x$ is drawn out and replaced with water. This operation is repeated $n$ times.\n\n### 3.1 First-Principle Derivation of the Master Dilution Formula\n* **After 1st Operation:**  \n  Amount of liquid removed $= x$.  \n  Liquid remaining $= V - x = V\\left(1 - \\frac{x}{V}\\right)$.  \n  Concentration of pure liquid $= \\left(1 - \\frac{x}{V}\\right)$.\n* **After 2nd Operation:**  \n  When volume $x$ of mixture is drawn out, the quantity of pure liquid removed is proportional to its concentration:\n  $$\\text{Liquid removed} = x \\times \\left(1 - \\frac{x}{V}\\right)$$\n  Liquid remaining in the container:\n  $$\\text{Remaining} = V\\left(1 - \\frac{x}{V}\\right) - x\\left(1 - \\frac{x}{V}\\right) = (V - x)\\left(1 - \\frac{x}{V}\\right) = \\mathbf{V\\left(1 - \\frac{x}{V}\\right)^2}$$\n* **By Mathematical Induction after $n$ iterations:**\n\n$$\\mathbf{\\text{Final Quantity of Original Liquid } (F) = \\text{Initial Quantity } (I) \\times \\left(1 - \\frac{x}{V}\\right)^n}$$\n\n$$\\mathbf{\\frac{\\text{Final Volume of Pure Liquid}}{\\text{Total Capacity of Container}} = \\left(1 - \\frac{x}{V}\\right)^n}$$\n\n### 3.2 Non-Uniform Replacements\nIf varying volumes $x_1, x_2, \\dots, x_n$ are successively removed:\n$$\\mathbf{F = I \\left(1 - \\frac{x_1}{V}\\right)\\left(1 - \\frac{x_2}{V}\\right)\\dots\\left(1 - \\frac{x_n}{V}\\right)}$$\n\n---</div>\n<h4>4. The Invariant Mass Principle (Drying Fruits & Dehydration)</h4>\n<div class='theory-block'>In evaporation or dehydration problems (e.g. fresh grapes turning into dry raisins):\n* Water evaporates into vapor.\n* **The solid mass (pulp / dry matter) remains STRICTLY CONSTANT throughout the process!**\n\n$$\\mathbf{\\text{Pulp in Fresh Fruit} = \\text{Pulp in Dry Fruit}}$$\n$$\\mathbf{W_{\\text{fresh}} \\times (100 - \\text{Water}_{\\text{fresh}}\\%) = W_{\\text{dry}} \\times (100 - \\text{Water}_{\\text{dry}}\\%)}$$\n\n* **Example:** Fresh fruit contains $80\\%$ water; dry fruit contains $20\\%$ water. How much dry fruit can be obtained from $100\\text{ kg}$ of fresh fruit?\n  $$\\text{Pulp}_{\\text{fresh}} = 100\\text{ kg} \\times (1 - 0.80) = 20\\text{ kg}$$\n  In dry fruit, this $20\\text{ kg}$ forms $(1 - 0.20) = 80\\%$ of the total dry weight:\n  $$0.80 \\times W_{\\text{dry}} = 20\\text{ kg} \\implies W_{\\text{dry}} = \\frac{20}{0.80} = \\mathbf{25\\text{ kg}}.$$\n\n---</div>",
     "formulas": [
@@ -879,9 +1002,12 @@ window.QA_TOPICS_DATA = [
         "method2": "Rodha fast shortcut or inspection trick.",
         "finalAnswer": "87.86 (or 615/7)",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
-          "87.86 (or 615/7)"
+          "96.65 (or 615/7)",
+          "79.07 (or 615/7)",
+          "87.86 (or 615/7)",
+          "89.86 (or 615/7)"
         ]
       },
       {
@@ -893,8 +1019,11 @@ window.QA_TOPICS_DATA = [
         "method2": "Rodha fast shortcut or inspection trick.",
         "finalAnswer": "37",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
+          "44",
+          "30",
+          "56",
           "37"
         ]
       },
@@ -907,9 +1036,12 @@ window.QA_TOPICS_DATA = [
         "method2": "Rodha fast shortcut or inspection trick.",
         "finalAnswer": "85 kg",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
-          "85 kg"
+          "85 kg",
+          "102 kg",
+          "68 kg",
+          "128 kg"
         ]
       },
       {
@@ -921,9 +1053,12 @@ window.QA_TOPICS_DATA = [
         "method2": "Rodha fast shortcut or inspection trick.",
         "finalAnswer": "37 years",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
-          "37 years"
+          "33 years",
+          "37 years",
+          "43 years",
+          "56 years"
         ]
       },
       {
@@ -936,9 +1071,7 @@ window.QA_TOPICS_DATA = [
         "finalAnswer": "174 runs",
         "trap": "Watch out for boundary conditions and parity constraints.",
         "isTita": true,
-        "options": [
-          "174 runs"
-        ]
+        "options": []
       },
       {
         "qNum": 111,
@@ -949,8 +1082,11 @@ window.QA_TOPICS_DATA = [
         "method2": "Rodha fast shortcut or inspection trick.",
         "finalAnswer": "35 runs",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
+          "42 runs",
+          "28 runs",
+          "53 runs",
           "35 runs"
         ]
       },
@@ -963,37 +1099,46 @@ window.QA_TOPICS_DATA = [
         "method2": "Rodha fast shortcut or inspection trick.",
         "finalAnswer": "85 wickets",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
-          "85 wickets"
+          "85 wickets",
+          "102 wickets",
+          "68 wickets",
+          "128 wickets"
         ]
       },
       {
         "qNum": 113,
         "title": "Alligation Cross Rule for Blending Varieties",
-        "problem": "In what ratio must a grocer mix tea at \u20b960 per kg and tea at \u20b975 per kg so that the mixture is worth \u20b965 per kg?",
+        "problem": "In what ratio must a grocer mix tea at ₹60 per kg and tea at ₹75 per kg so that the mixture is worth ₹65 per kg?",
         "concept": "Alligation Cross Method: $\\frac{Q_1}{Q_2} = \\frac{P_2 - P_m}{P_m - P_1}$.",
         "method1": "Step-by-step algebraic derivation.",
         "method2": "Rodha fast shortcut or inspection trick.",
         "finalAnswer": "2 : 1",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
-          "2 : 1"
+          "1 : 2",
+          "2 : 1",
+          "3 : 1",
+          "2 : 2"
         ]
       },
       {
         "qNum": 114,
         "title": "Alligation with Profit on Selling Price",
-        "problem": "In what ratio should a merchant mix wheat at \u20b928/kg with wheat at \u20b936/kg so that by selling the mixture at \u20b938.50/kg, he makes a profit of 10%?",
+        "problem": "In what ratio should a merchant mix wheat at ₹28/kg with wheat at ₹36/kg so that by selling the mixture at ₹38.50/kg, he makes a profit of 10%?",
         "concept": "Must calculate the COST PRICE of the mixture first: $CP_m = \\frac{SP_m}{1 + P\\%}$.",
         "method1": "Step-by-step algebraic derivation.",
         "method2": "Rodha fast shortcut or inspection trick.",
         "finalAnswer": "1 : 7",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
-          "1 : 7"
+          "7 : 1",
+          "2 : 7",
+          "1 : 7",
+          "1 : 8"
         ]
       },
       {
@@ -1006,9 +1151,7 @@ window.QA_TOPICS_DATA = [
         "finalAnswer": "58.32 liters",
         "trap": "Watch out for boundary conditions and parity constraints.",
         "isTita": true,
-        "options": [
-          "58.32 liters"
-        ]
+        "options": []
       },
       {
         "qNum": 116,
@@ -1019,23 +1162,29 @@ window.QA_TOPICS_DATA = [
         "method2": "Rodha fast shortcut or inspection trick.",
         "finalAnswer": "50 liters",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
-          "50 liters"
+          "50 liters",
+          "60 liters",
+          "40 liters",
+          "75 liters"
         ]
       },
       {
         "qNum": 117,
         "title": "Alligation with Zero-Cost Adulterant",
-        "problem": "In what ratio must water be mixed with milk costing \u20b940 per liter so that the mixture can be sold at cost price (\u20b940/liter) with a profit of 25%?",
+        "problem": "In what ratio must water be mixed with milk costing ₹40 per liter so that the mixture can be sold at cost price (₹40/liter) with a profit of 25%?",
         "concept": "Profit arises entirely from the free water added: $\\frac{\\text{Water}}{\\text{Milk}} = \\text{Profit Fraction}$.",
         "method1": "Step-by-step algebraic derivation.",
         "method2": "Rodha fast shortcut or inspection trick.",
         "finalAnswer": "1 : 4",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
-          "1 : 4"
+          "4 : 1",
+          "1 : 4",
+          "2 : 4",
+          "1 : 5"
         ]
       },
       {
@@ -1047,9 +1196,12 @@ window.QA_TOPICS_DATA = [
         "method2": "Rodha fast shortcut or inspection trick.",
         "finalAnswer": "16 liters",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
-          "16 liters"
+          "19 liters",
+          "13 liters",
+          "16 liters",
+          "24 liters"
         ]
       },
       {
@@ -1061,8 +1213,11 @@ window.QA_TOPICS_DATA = [
         "method2": "Rodha fast shortcut or inspection trick.",
         "finalAnswer": "67",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
+          "80",
+          "54",
+          "101",
           "67"
         ]
       },
@@ -1076,11 +1231,16 @@ window.QA_TOPICS_DATA = [
         "finalAnswer": "36 liters",
         "trap": "Watch out for boundary conditions and parity constraints.",
         "isTita": true,
-        "options": [
-          "36 liters"
-        ]
+        "options": []
       }
-    ]
+    ],
+    "videoLecture": {
+      "title": "Rodha Quant: Mixtures, Alligations & Weighted Averages",
+      "directUrl": "https://www.youtube.com/results?search_query=Rodha+CAT+Averages+Mixtures+Alligations+Ravi+Prakash",
+      "embedUrl": "https://www.youtube-nocookie.com/embed/videoseries?list=PLG4bwc5fquzgfMh4YFDnv7fttM0RIKiUQ",
+      "highlight": "Alligation Cross Rule, Removal & Replacement Multiplier & Weighted Mean Pivot",
+      "duration": "Complete Playlist • 7 Parts"
+    }
   },
   {
     "id": "qa_cyclicity",
@@ -1120,9 +1280,12 @@ window.QA_TOPICS_DATA = [
         "method2": "Rodha fast shortcut or inspection trick.",
         "finalAnswer": "180",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
-          "180"
+          "216",
+          "144",
+          "180",
+          "270"
         ]
       },
       {
@@ -1134,8 +1297,11 @@ window.QA_TOPICS_DATA = [
         "method2": "Rodha fast shortcut or inspection trick.",
         "finalAnswer": "(1054)_6",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
+          "(1053)_6",
+          "(1055)_6",
+          "(1104)_6",
           "(1054)_6"
         ]
       },
@@ -1148,9 +1314,12 @@ window.QA_TOPICS_DATA = [
         "method2": "Rodha fast shortcut or inspection trick.",
         "finalAnswer": "(1134)_7",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
-          "(1134)_7"
+          "(1134)_7",
+          "(1133)_7",
+          "(1135)_7",
+          "(1144)_7"
         ]
       },
       {
@@ -1162,9 +1331,12 @@ window.QA_TOPICS_DATA = [
         "method2": "Rodha fast shortcut or inspection trick.",
         "finalAnswer": "(432)_5",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
-          "(432)_5"
+          "(431)_5",
+          "(432)_5",
+          "(433)_5",
+          "(442)_5"
         ]
       },
       {
@@ -1177,9 +1349,7 @@ window.QA_TOPICS_DATA = [
         "finalAnswer": "b = 7",
         "trap": "Watch out for boundary conditions and parity constraints.",
         "isTita": true,
-        "options": [
-          "b = 7"
-        ]
+        "options": []
       },
       {
         "qNum": 91,
@@ -1190,8 +1360,11 @@ window.QA_TOPICS_DATA = [
         "method2": "Rodha fast shortcut or inspection trick.",
         "finalAnswer": "Sum of digits is divisible by (b - 1)",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
+          "Sum of digits is divisible by b",
+          "Last digit is divisible by (b - 1)",
+          "Alternating sum of digits is divisible by (b + 1)",
           "Sum of digits is divisible by (b - 1)"
         ]
       },
@@ -1204,9 +1377,12 @@ window.QA_TOPICS_DATA = [
         "method2": "Rodha fast shortcut or inspection trick.",
         "finalAnswer": "Divisibility by (b + 1)",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
-          "Divisibility by (b + 1)"
+          "Divisibility by (b + 1)",
+          "Divisibility by (b - 1)",
+          "Divisibility by b",
+          "Divisibility by (b^2 - 1)"
         ]
       },
       {
@@ -1218,9 +1394,12 @@ window.QA_TOPICS_DATA = [
         "method2": "Rodha fast shortcut or inspection trick.",
         "finalAnswer": "(0.2)_6",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
-          "(0.2)_6"
+          "0.22 ()_6",
+          "(0.2)_6",
+          "0.18 ()_6",
+          "2.2 ()_6"
         ]
       },
       {
@@ -1232,9 +1411,12 @@ window.QA_TOPICS_DATA = [
         "method2": "Rodha fast shortcut or inspection trick.",
         "finalAnswer": "1/2",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
-          "1/2"
+          "2/1",
+          "2/2",
+          "1/2",
+          "1/3"
         ]
       },
       {
@@ -1247,9 +1429,7 @@ window.QA_TOPICS_DATA = [
         "finalAnswer": "No; in odd base parity depends on the sum of all digits",
         "trap": "Watch out for boundary conditions and parity constraints.",
         "isTita": true,
-        "options": [
-          "No; in odd base parity depends on the sum of all digits"
-        ]
+        "options": []
       },
       {
         "qNum": 96,
@@ -1260,9 +1440,12 @@ window.QA_TOPICS_DATA = [
         "method2": "Rodha fast shortcut or inspection trick.",
         "finalAnswer": "11 digits",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
-          "11 digits"
+          "11 digits",
+          "13 digits",
+          "9 digits",
+          "17 digits"
         ]
       },
       {
@@ -1274,9 +1457,12 @@ window.QA_TOPICS_DATA = [
         "method2": "Rodha fast shortcut or inspection trick.",
         "finalAnswer": "(DAF)_16",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
-          "(DAF)_16"
+          "(DAE)_16",
+          "(DAF)_16",
+          "(DB0)_16",
+          "(DBF)_16"
         ]
       },
       {
@@ -1288,9 +1474,12 @@ window.QA_TOPICS_DATA = [
         "method2": "Rodha fast shortcut or inspection trick.",
         "finalAnswer": "11",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
-          "11"
+          "13",
+          "9",
+          "11",
+          "17"
         ]
       },
       {
@@ -1302,8 +1491,11 @@ window.QA_TOPICS_DATA = [
         "method2": "Rodha fast shortcut or inspection trick.",
         "finalAnswer": "Yes, always (b + 1)^2 for all b >= 3",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
+          "No, only for even bases",
+          "No, only for prime bases",
+          "Yes, always (b - 1)^2",
           "Yes, always (b + 1)^2 for all b >= 3"
         ]
       },
@@ -1317,9 +1509,7 @@ window.QA_TOPICS_DATA = [
         "finalAnswer": "40",
         "trap": "Watch out for boundary conditions and parity constraints.",
         "isTita": true,
-        "options": [
-          "40"
-        ]
+        "options": []
       },
       {
         "qNum": 101,
@@ -1330,9 +1520,12 @@ window.QA_TOPICS_DATA = [
         "method2": "Rodha fast shortcut or inspection trick.",
         "finalAnswer": "48",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
-          "48"
+          "58",
+          "48",
+          "38",
+          "72"
         ]
       },
       {
@@ -1344,9 +1537,12 @@ window.QA_TOPICS_DATA = [
         "method2": "Rodha fast shortcut or inspection trick.",
         "finalAnswer": "22",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
-          "22"
+          "26",
+          "18",
+          "22",
+          "33"
         ]
       },
       {
@@ -1358,8 +1554,11 @@ window.QA_TOPICS_DATA = [
         "method2": "Rodha fast shortcut or inspection trick.",
         "finalAnswer": "12",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
+          "14",
+          "10",
+          "18",
           "12"
         ]
       },
@@ -1372,9 +1571,12 @@ window.QA_TOPICS_DATA = [
         "method2": "Rodha fast shortcut or inspection trick.",
         "finalAnswer": "37",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
-          "37"
+          "37",
+          "44",
+          "30",
+          "56"
         ]
       },
       {
@@ -1387,18 +1589,23 @@ window.QA_TOPICS_DATA = [
         "finalAnswer": "0 (No such n exists)",
         "trap": "Watch out for boundary conditions and parity constraints.",
         "isTita": true,
-        "options": [
-          "0 (No such n exists)"
-        ]
+        "options": []
       }
-    ]
+    ],
+    "videoLecture": {
+      "title": "Rodha Quant: Number System - Cyclicity, Unit Digits & Factorials",
+      "directUrl": "https://www.youtube.com/results?search_query=Rodha+CAT+Number+System+Cyclicity+Unit+Digit+Ravi+Prakash",
+      "embedUrl": "https://www.youtube-nocookie.com/embed/videoseries?list=PLG4bwc5fquzgfMh4YFDnv7fttM0RIKiUQ",
+      "highlight": "Unit Digit Cyclicity mod 4, Legendre Highest Power in n! & Trailing Zeros Formula",
+      "duration": "Complete Playlist • 8 Parts"
+    }
   },
   {
     "id": "qa_quadratic",
     "title": "Quadratic Equations & Vieta's Roots",
     "domain": "Algebra",
     "tier": "Tier A",
-    "weightage": "1 \u2013 2 Questions (3 \u2013 6 Marks)",
+    "weightage": "1 – 2 Questions (3 – 6 Marks)",
     "prepTime": "3.0 Hours",
     "theoryHtml": "<h4>1. The Quadratic Equation & First-Principle Derivation</h4>\n<div class='theory-block'>A polynomial equation of degree 2 in $x$:\n$$\\mathbf{ax^2 + bx + c = 0 \\quad (a \\ne 0, \\; a, b, c \\in \\mathbb{R})}$$\n\n### 1.1 First-Principle Derivation: Completing the Square\nDivide the entire equation by the leading coefficient $a$:\n$$x^2 + \\frac{b}{a}x + \\frac{c}{a} = 0 \\implies x^2 + \\frac{b}{a}x = -\\frac{c}{a}$$\nTo form a perfect square on the left side, add $\\left(\\frac{b}{2a}\\right)^2$ to both sides:\n$$x^2 + 2\\left(\\frac{b}{2a}\\right)x + \\left(\\frac{b}{2a}\\right)^2 = \\left(\\frac{b}{2a}\\right)^2 - \\frac{c}{a}$$\n$$\\left(x + \\frac{b}{2a}\\right)^2 = \\frac{b^2}{4a^2} - \\frac{4ac}{4a^2} = \\frac{b^2 - 4ac}{4a^2}$$\nTake the square root of both sides:\n$$x + \\frac{b}{2a} = \\pm \\frac{\\sqrt{b^2 - 4ac}}{2a}$$\n\n$$\\mathbf{x = \\frac{-b \\pm \\sqrt{b^2 - 4ac}}{2a}} \\quad \\blacksquare$$\n\n---</div>\n<h4>2. Nature of Roots & The Discriminant ($\\Delta = b^2 - 4ac$)</h4>\n<div class='theory-block'>The discriminant $\\Delta = b^2 - 4ac$ completely determines the algebraic and geometric character of the roots:\n\n| Discriminant ($\\Delta$) | Condition on Coefficients | Nature of Roots ($\\alpha, \\beta$) | Geometric Interpretation on $xy$-Plane |\n| :---: | :---: | :---: | :--- |\n| $\\mathbf{\\Delta > 0}$ | $a, b, c \\in \\mathbb{R}$ | **Real and Distinct** | Parabola cuts the x-axis at **two distinct points** |\n| $\\mathbf{\\Delta > 0}$ | $a, b, c \\in \\mathbb{Q}$ and $\\Delta$ is a **perfect square** | **Rational and Distinct** | Roots are clean fractions or integers |\n| $\\mathbf{\\Delta > 0}$ | $a, b, c \\in \\mathbb{Q}$ and $\\Delta$ is **NOT a square** | **Irrational Conjugate Pairs** ($p \\pm \\sqrt{q}$) | One root $p + \\sqrt{q} \\implies$ Other root $p - \\sqrt{q}$ |\n| $\\mathbf{\\Delta = 0}$ | $a, b, c \\in \\mathbb{R}$ | **Real and Equal (Coincident)** ($\\alpha = \\beta = -b/2a$) | Parabola **touches** the x-axis at its vertex |\n| $\\mathbf{\\Delta < 0}$ | $a, b, c \\in \\mathbb{R}$ | **Complex / Imaginary Conjugate Pairs** ($p \\pm iq$) | Parabola **never intersects** the x-axis (entirely above or below) |\n\n---</div>\n<h4>3. Vieta's Relations & Symmetric Functions of Roots</h4>\n<div class='theory-block'>Let $\\alpha$ and $\\beta$ be the roots of $ax^2 + bx + c = 0$:\n$$\\mathbf{\\text{Sum of Roots } (\\alpha + \\beta) = -\\frac{b}{a}}$$\n$$\\mathbf{\\text{Product of Roots } (\\alpha \\cdot \\beta) = \\frac{c}{a}}$$\n$$\\mathbf{\\text{Difference of Roots } |\\alpha - \\beta| = \\frac{\\sqrt{b^2 - 4ac}}{|a|} = \\frac{\\sqrt{\\Delta}}{|a|}}$$\n\n### 3.1 Higher Symmetric Powers of Roots\n1. **Sum of Squares:**\n   $$\\alpha^2 + \\beta^2 = (\\alpha + \\beta)^2 - 2\\alpha\\beta = \\mathbf{\\left(-\\frac{b}{a}\\right)^2 - 2\\left(\\frac{c}{a}\\right) = \\frac{b^2 - 2ac}{a^2}}$$\n2. **Sum of Cubes:**\n   $$\\alpha^3 + \\beta^3 = (\\alpha + \\beta)^3 - 3\\alpha\\beta(\\alpha + \\beta) = \\mathbf{\\frac{-b^3 + 3abc}{a^3}}$$\n\n### 3.2 Newton's Sums for Quadratics (99%ile Recurrence Relation)\nLet $S_n = \\alpha^n + \\beta^n$. Since $\\alpha$ and $\\beta$ satisfy $ax^2 + bx + c = 0$:\n$$a\\alpha^2 + b\\alpha + c = 0 \\implies a\\alpha^n + b\\alpha^{n-1} + c\\alpha^{n-2} = 0$$\n$$a\\beta^2 + b\\beta + c = 0 \\implies a\\beta^n + b\\beta^{n-1} + c\\beta^{n-2} = 0$$\nAdding the two equations:\n\n$$\\mathbf{a \\cdot S_n + b \\cdot S_{n-1} + c \\cdot S_{n-2} = 0}$$\nThis master recurrence calculates $\\alpha^5 + \\beta^5$ or $\\alpha^7 + \\beta^7$ in 15 seconds without polynomial expansion!\n\n---</div>\n<h4>4. Conditions for Common Roots</h4>\n<div class='theory-block'>Consider two quadratic equations:\n$$a_1 x^2 + b_1 x + c_1 = 0 \\quad \\text{and} \\quad a_2 x^2 + b_2 x + c_2 = 0$$\n\n### 4.1 Case 1: Both Roots are Common\nThe two equations are scalar multiples of each other:\n$$\\mathbf{\\frac{a_1}{a_2} = \\frac{b_1}{b_2} = \\frac{c_1}{c_2}}$$\n\n### 4.2 Case 2: Exactly ONE Root is Common\nLet the common root be $\\alpha$.  \nUsing Cramer's Rule / cross-multiplication on $a_1 \\alpha^2 + b_1 \\alpha + c_1 = 0$ and $a_2 \\alpha^2 + b_2 \\alpha + c_2 = 0$:\n$$\\frac{\\alpha^2}{b_1 c_2 - b_2 c_1} = \\frac{\\alpha}{c_1 a_2 - c_2 a_1} = \\frac{1}{a_1 b_2 - a_2 b_1}$$\nEquating $\\alpha = \\frac{c_1 a_2 - c_2 a_1}{a_1 b_2 - a_2 b_1}$ and $\\alpha^2$:\n\n$$\\mathbf{(a_1 b_2 - a_2 b_1)(b_1 c_2 - b_2 c_1) = (c_1 a_2 - c_2 a_1)^2}$$\n\n---</div>",
     "formulas": [
@@ -1431,9 +1638,12 @@ window.QA_TOPICS_DATA = [
         "method2": "Rodha fast shortcut or inspection trick.",
         "finalAnswer": "Real and Rational",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
-          "Real and Rational"
+          "Real and Irrational",
+          "Real and Rational",
+          "Non-real Complex (Imaginary)",
+          "Real and Equal"
         ]
       },
       {
@@ -1445,9 +1655,12 @@ window.QA_TOPICS_DATA = [
         "method2": "Rodha fast shortcut or inspection trick.",
         "finalAnswer": "k = 3",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
-          "k = 3"
+          "k = 4",
+          "k = 2",
+          "k = 3",
+          "k = 6"
         ]
       },
       {
@@ -1459,8 +1672,11 @@ window.QA_TOPICS_DATA = [
         "method2": "Rodha fast shortcut or inspection trick.",
         "finalAnswer": "47",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
+          "56",
+          "38",
+          "71",
           "47"
         ]
       },
@@ -1473,9 +1689,12 @@ window.QA_TOPICS_DATA = [
         "method2": "Rodha fast shortcut or inspection trick.",
         "finalAnswer": "5",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
-          "5"
+          "5",
+          "6",
+          "4",
+          "7"
         ]
       },
       {
@@ -1488,9 +1707,7 @@ window.QA_TOPICS_DATA = [
         "finalAnswer": "2x^2 - 19x + 43 = 0",
         "trap": "Watch out for boundary conditions and parity constraints.",
         "isTita": true,
-        "options": [
-          "2x^2 - 19x + 43 = 0"
-        ]
+        "options": []
       },
       {
         "qNum": 26,
@@ -1501,9 +1718,12 @@ window.QA_TOPICS_DATA = [
         "method2": "Rodha fast shortcut or inspection trick.",
         "finalAnswer": "9x^2 - 10x + 1 = 0",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
-          "9x^2 - 10x + 1 = 0"
+          "10 x^2 - 10x + 1 = 0",
+          "8 x^2 - 10x + 1 = 0",
+          "9x^2 - 10x + 1 = 0",
+          "11 x^2 - 10x + 1 = 0"
         ]
       },
       {
@@ -1515,8 +1735,11 @@ window.QA_TOPICS_DATA = [
         "method2": "Rodha fast shortcut or inspection trick.",
         "finalAnswer": "k = 7 and k = -7",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
+          "8 k =  and k = -7",
+          "6 k =  and k = -7",
+          "9 k =  and k = -7",
           "k = 7 and k = -7"
         ]
       },
@@ -1529,9 +1752,12 @@ window.QA_TOPICS_DATA = [
         "method2": "Rodha fast shortcut or inspection trick.",
         "finalAnswer": "3b^2 = 16ac",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
-          "3b^2 = 16ac"
+          "3b^2 = 16ac",
+          "4 b^2 = 16ac",
+          "2 b^2 = 16ac",
+          "5 b^2 = 16ac"
         ]
       },
       {
@@ -1543,9 +1769,12 @@ window.QA_TOPICS_DATA = [
         "method2": "Rodha fast shortcut or inspection trick.",
         "finalAnswer": "p^3 - 3pq - q^2 - q = 0",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
-          "p^3 - 3pq - q^2 - q = 0"
+          "4 p^ - 3pq - q^2 - q = 0",
+          "p^3 - 3pq - q^2 - q = 0",
+          "2 p^ - 3pq - q^2 - q = 0",
+          "5 p^ - 3pq - q^2 - q = 0"
         ]
       },
       {
@@ -1558,9 +1787,7 @@ window.QA_TOPICS_DATA = [
         "finalAnswer": "Common root = 1, p + q = -1",
         "trap": "Watch out for boundary conditions and parity constraints.",
         "isTita": true,
-        "options": [
-          "Common root = 1, p + q = -1"
-        ]
+        "options": []
       },
       {
         "qNum": 31,
@@ -1571,8 +1798,11 @@ window.QA_TOPICS_DATA = [
         "method2": "Rodha fast shortcut or inspection trick.",
         "finalAnswer": "k = -3 or k = -27/4",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
+          "-2 k =  or k = -27/4",
+          "0 k =  or k = -27/4",
+          "-1 k =  or k = -27/4",
           "k = -3 or k = -27/4"
         ]
       },
@@ -1585,9 +1815,12 @@ window.QA_TOPICS_DATA = [
         "method2": "Rodha fast shortcut or inspection trick.",
         "finalAnswer": "1 <= m < 2",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
-          "1 <= m < 2"
+          "1 <= m < 2",
+          "2 <= m < 2",
+          "0 <= m < 2",
+          "3 <= m < 2"
         ]
       },
       {
@@ -1599,9 +1832,12 @@ window.QA_TOPICS_DATA = [
         "method2": "Rodha fast shortcut or inspection trick.",
         "finalAnswer": "a > 11/9",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
-          "a > 11/9"
+          "13 a > /9",
+          "a > 11/9",
+          "9 a > /9",
+          "17 a > /9"
         ]
       },
       {
@@ -1613,9 +1849,12 @@ window.QA_TOPICS_DATA = [
         "method2": "Rodha fast shortcut or inspection trick.",
         "finalAnswer": "m > 10",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
-          "m > 10"
+          "11 m >",
+          "9 m >",
+          "m > 10",
+          "12 m >"
         ]
       },
       {
@@ -1628,9 +1867,7 @@ window.QA_TOPICS_DATA = [
         "finalAnswer": "k > -3",
         "trap": "Watch out for boundary conditions and parity constraints.",
         "isTita": true,
-        "options": [
-          "k > -3"
-        ]
+        "options": []
       },
       {
         "qNum": 36,
@@ -1641,9 +1878,12 @@ window.QA_TOPICS_DATA = [
         "method2": "Rodha fast shortcut or inspection trick.",
         "finalAnswer": "k = 2 and k = 6",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
-          "k = 2 and k = 6"
+          "k = 2 and k = 6",
+          "3 k =  and k = 6",
+          "1 k =  and k = 6",
+          "4 k =  and k = 6"
         ]
       },
       {
@@ -1655,9 +1895,12 @@ window.QA_TOPICS_DATA = [
         "method2": "Rodha fast shortcut or inspection trick.",
         "finalAnswer": "Sum of squares = 14, Sum of reciprocals = 11/6",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
-          "Sum of squares = 14, Sum of reciprocals = 11/6"
+          "17 Sum of squares = , Sum of reciprocals = 11/6",
+          "Sum of squares = 14, Sum of reciprocals = 11/6",
+          "11 Sum of squares = , Sum of reciprocals = 11/6",
+          "21 Sum of squares = , Sum of reciprocals = 11/6"
         ]
       },
       {
@@ -1669,21 +1912,31 @@ window.QA_TOPICS_DATA = [
         "method2": "Rodha fast shortcut or inspection trick.",
         "finalAnswer": "1, 4, 7",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
-          "1, 4, 7"
+          "2 , 4, 7",
+          "0 , 4, 7",
+          "1, 4, 7",
+          "3 , 4, 7"
         ]
       }
-    ]
+    ],
+    "videoLecture": {
+      "title": "Rodha Quant: Quadratic Equations & Higher Degree Polynomials",
+      "directUrl": "https://www.youtube.com/results?search_query=Rodha+CAT+Quadratic+Equations+Vieta+Roots+Ravi+Prakash",
+      "embedUrl": "https://www.youtube-nocookie.com/embed/videoseries?list=PLG4bwc5fquzgfMh4YFDnv7fttM0RIKiUQ",
+      "highlight": "Vieta's Relations, Discriminant Sign Nature, Parabola Vertex Min/Max & Common Roots",
+      "duration": "Complete Playlist • 8 Parts"
+    }
   },
   {
     "id": "qa_progressions",
     "title": "Sequences, Progressions & Telescoping (AP/GP)",
     "domain": "Algebra",
     "tier": "Tier A",
-    "weightage": "1 \u2013 2 Questions (3 \u2013 6 Marks)",
+    "weightage": "1 – 2 Questions (3 – 6 Marks)",
     "prepTime": "3.0 Hours",
-    "theoryHtml": "<h4>1. Executive Concept Architecture</h4>\n<div class='theory-block'>```\n                       SEQUENCES, SERIES & PROGRESSIONS\n                                      \u2502\n         \u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u253c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510\n         \u25bc                            \u25bc                           \u25bc\n  STANDARD PROGRESSIONS        HYBRID / ADVANCED SERIES      SPECIAL ALGEBRAIC SUMS\n   \u2022 Arithmetic (AP)            \u2022 Arithmetico-Geometric (AGP) \u2022 Telescopic Fractions\n   \u2022 Geometric (GP)             \u2022 Method of Differences (\u0394)   \u2022 Power Sums (\u03a3k, \u03a3k\u00b2, \u03a3k\u00b3)\n   \u2022 Harmonic (HP)              \u2022 Common Terms of 2 APs       \u2022 Product Telescoping\n   \u2022 AM - GM - HM Inequalities  \u2022 Recurrence & Periodic       \u2022 Nested / Floor Sums\n```\n\n---</div>\n<h4>2. Arithmetic Progression (AP) \u2014 Foundations & Rigorous Derivations</h4>\n<div class='theory-block'>### 2.1 Formal Definition & Common Difference\nAn **Arithmetic Progression (AP)** is a sequence of numbers in which the difference between any two consecutive terms is a constant, denoted by $d$ (the common difference).\n$$a_1, \\; a_2, \\; a_3, \\; \\dots, \\; a_n \\quad \\text{where} \\quad a_{k+1} - a_k = d \\; \\forall k \\ge 1$$\n* If $d > 0$, the AP is strictly increasing.\n* If $d < 0$, the AP is strictly decreasing.\n* If $d = 0$, the AP is constant ($a, a, a, \\dots$).\n\n### 2.2 First-Principle Derivation: The $n^{\\text{th}}$ Term ($T_n$)\nLet the first term be $a$ and the common difference be $d$:\n* $T_1 = a = a + 0 \\cdot d$\n* $T_2 = T_1 + d = a + 1 \\cdot d$\n* $T_3 = T_2 + d = a + 2d$\n* By mathematical induction, the coefficient of $d$ for the $n^{\\text{th}}$ term is $(n - 1)$:\n$$\\mathbf{T_n = a + (n - 1)d}$$\n\n### 2.3 First-Principle Derivation: Sum of First $n$ Terms ($S_n$)\nLet $S_n = T_1 + T_2 + T_3 + \\dots + T_{n-1} + T_n$.  \nWrite the sum forward and backward (the Gaussian Inversion):\n$$S_n = a + (a + d) + (a + 2d) + \\dots + (l - 2d) + (l - d) + l$$\n$$S_n = l + (l - d) + (l - 2d) + \\dots + (a + 2d) + (a + d) + a$$\nAdd the two equations column by column. Every corresponding pair sums identically to $(a + l)$:\n$$2S_n = (a + l) + (a + l) + (a + l) + \\dots + (a + l) \\quad \\text{($n$ identical pairs)}$$\n$$2S_n = n(a + l)$$</div>\n<h4>3. Geometric Progression (GP) \u2014 Foundations & Rigorous Derivations</h4>\n<div class='theory-block'>### 3.1 Formal Definition & Common Ratio\nA **Geometric Progression (GP)** is a sequence of non-zero terms where the quotient of any term and its predecessor is a constant, denoted by $r$ (the common ratio).\n$$a_1, \\; a_2, \\; a_3, \\; \\dots, \\; a_n \\quad \\text{where} \\quad \\frac{a_{k+1}}{a_k} = r \\; \\forall k \\ge 1$$\n\n### 3.2 First-Principle Derivation: The $n^{\\text{th}}$ Term ($T_n$)\n* $T_1 = a = a \\cdot r^0$\n* $T_2 = a \\cdot r^1$\n* $T_3 = a \\cdot r^2$\n* By induction:\n$$\\mathbf{T_n = a \\cdot r^{n-1}}$$\n\n### 3.3 First-Principle Derivation: Sum of First $n$ Terms ($S_n$)\nLet $S_n = a + ar + ar^2 + \\dots + ar^{n-1}$.  \nMultiply both sides by the common ratio $r$:\n$$r S_n = ar + ar^2 + ar^3 + \\dots + ar^{n-1} + ar^n$$\nSubtract the second equation from the first:\n$$S_n - r S_n = a + (ar - ar) + (ar^2 - ar^2) + \\dots + (ar^{n-1} - ar^{n-1}) - ar^n$$\n$$(1 - r)S_n = a(1 - r^n)$$\nFor $r \\ne 1$:\n$$\\mathbf{S_n = \\frac{a(1 - r^n)}{1 - r} = \\frac{a(r^n - 1)}{r - 1}}$$\n\n### 3.4 First-Principle Derivation: Infinite GP Sum ($S_\\infty$)\nConsider the limit as $n \\to \\infty$ of $S_n = \\frac{a(1 - r^n)}{1 - r}$.</div>\n<h4>4. Harmonic Progression (HP) & The Classical Means Inequality</h4>\n<div class='theory-block'>### 4.1 Definition & Properties\nA sequence $h_1, h_2, h_3, \\dots, h_n$ is a **Harmonic Progression (HP)** if and only if their reciprocals form an Arithmetic Progression:\n$$\\frac{1}{h_1}, \\; \\frac{1}{h_2}, \\; \\frac{1}{h_3}, \\; \\dots, \\; \\frac{1}{h_n} \\quad \\text{is an AP}$$\n* **$n^{\\text{th}}$ Term of an HP:**\n  $$\\frac{1}{h_n} = \\frac{1}{h_1} + (n - 1)d \\implies \\mathbf{h_n = \\frac{1}{\\frac{1}{h_1} + (n - 1)d}}$$\n* **Warning:** There is **no general closed-form formula** for the sum of $n$ terms of an HP. Every problem involving sums must be inverted back to AP or solved through reciprocal relationships.\n\n### 4.2 Harmonic Mean (HM) of Two Numbers\nLet $H$ be the Harmonic Mean between $a$ and $b$. Then $a, H, b$ are in HP $\\implies \\frac{1}{a}, \\frac{1}{H}, \\frac{1}{b}$ are in AP:\n$$\\frac{1}{H} - \\frac{1}{a} = \\frac{1}{b} - \\frac{1}{H} \\implies \\frac{2}{H} = \\frac{1}{a} + \\frac{1}{b} = \\frac{a + b}{ab}$$\n$$\\mathbf{H = \\frac{2ab}{a + b}}$$\n\n### 4.3 General $n$-Term Harmonic Mean\n$$\\mathbf{\\text{HM} = \\frac{n}{\\frac{1}{x_1} + \\frac{1}{x_2} + \\dots + \\frac{1}{x_n}}}$$\n\n### 4.4 The Unified Means Hierarchy: $\\text{AM} \\ge \\text{GM} \\ge \\text{HM}$\nFor any set of positive real numbers $a$ and $b$:\n* $\\text{AM} = \\frac{a + b}{2}$\n* $\\text{GM} = \\sqrt{ab}$\n* $\\text{HM} = \\frac{2ab}{a + b}$\n\n#### Mathematical Proof of $\\text{GM}^2 = \\text{AM} \\times \\text{HM}$:\n$$\\text{AM} \\times \\text{HM} = \\left(\\frac{a + b}{2}\\right) \\times \\left(\\frac{2ab}{a + b}\\right) = ab = (\\sqrt{ab})^2 = \\mathbf{\\text{GM}^2}$$</div>",
+    "theoryHtml": "<h4>1. Executive Concept Architecture</h4>\n<div class='theory-block'>```\n                       SEQUENCES, SERIES & PROGRESSIONS\n                                      │\n         ┌────────────────────────────┼───────────────────────────┐\n         ▼                            ▼                           ▼\n  STANDARD PROGRESSIONS        HYBRID / ADVANCED SERIES      SPECIAL ALGEBRAIC SUMS\n   • Arithmetic (AP)            • Arithmetico-Geometric (AGP) • Telescopic Fractions\n   • Geometric (GP)             • Method of Differences (Δ)   • Power Sums (Σk, Σk², Σk³)\n   • Harmonic (HP)              • Common Terms of 2 APs       • Product Telescoping\n   • AM - GM - HM Inequalities  • Recurrence & Periodic       • Nested / Floor Sums\n```\n\n---</div>\n<h4>2. Arithmetic Progression (AP) — Foundations & Rigorous Derivations</h4>\n<div class='theory-block'>### 2.1 Formal Definition & Common Difference\nAn **Arithmetic Progression (AP)** is a sequence of numbers in which the difference between any two consecutive terms is a constant, denoted by $d$ (the common difference).\n$$a_1, \\; a_2, \\; a_3, \\; \\dots, \\; a_n \\quad \\text{where} \\quad a_{k+1} - a_k = d \\; \\forall k \\ge 1$$\n* If $d > 0$, the AP is strictly increasing.\n* If $d < 0$, the AP is strictly decreasing.\n* If $d = 0$, the AP is constant ($a, a, a, \\dots$).\n\n### 2.2 First-Principle Derivation: The $n^{\\text{th}}$ Term ($T_n$)\nLet the first term be $a$ and the common difference be $d$:\n* $T_1 = a = a + 0 \\cdot d$\n* $T_2 = T_1 + d = a + 1 \\cdot d$\n* $T_3 = T_2 + d = a + 2d$\n* By mathematical induction, the coefficient of $d$ for the $n^{\\text{th}}$ term is $(n - 1)$:\n$$\\mathbf{T_n = a + (n - 1)d}$$\n\n### 2.3 First-Principle Derivation: Sum of First $n$ Terms ($S_n$)\nLet $S_n = T_1 + T_2 + T_3 + \\dots + T_{n-1} + T_n$.  \nWrite the sum forward and backward (the Gaussian Inversion):\n$$S_n = a + (a + d) + (a + 2d) + \\dots + (l - 2d) + (l - d) + l$$\n$$S_n = l + (l - d) + (l - 2d) + \\dots + (a + 2d) + (a + d) + a$$\nAdd the two equations column by column. Every corresponding pair sums identically to $(a + l)$:\n$$2S_n = (a + l) + (a + l) + (a + l) + \\dots + (a + l) \\quad \\text{($n$ identical pairs)}$$\n$$2S_n = n(a + l)$$</div>\n<h4>3. Geometric Progression (GP) — Foundations & Rigorous Derivations</h4>\n<div class='theory-block'>### 3.1 Formal Definition & Common Ratio\nA **Geometric Progression (GP)** is a sequence of non-zero terms where the quotient of any term and its predecessor is a constant, denoted by $r$ (the common ratio).\n$$a_1, \\; a_2, \\; a_3, \\; \\dots, \\; a_n \\quad \\text{where} \\quad \\frac{a_{k+1}}{a_k} = r \\; \\forall k \\ge 1$$\n\n### 3.2 First-Principle Derivation: The $n^{\\text{th}}$ Term ($T_n$)\n* $T_1 = a = a \\cdot r^0$\n* $T_2 = a \\cdot r^1$\n* $T_3 = a \\cdot r^2$\n* By induction:\n$$\\mathbf{T_n = a \\cdot r^{n-1}}$$\n\n### 3.3 First-Principle Derivation: Sum of First $n$ Terms ($S_n$)\nLet $S_n = a + ar + ar^2 + \\dots + ar^{n-1}$.  \nMultiply both sides by the common ratio $r$:\n$$r S_n = ar + ar^2 + ar^3 + \\dots + ar^{n-1} + ar^n$$\nSubtract the second equation from the first:\n$$S_n - r S_n = a + (ar - ar) + (ar^2 - ar^2) + \\dots + (ar^{n-1} - ar^{n-1}) - ar^n$$\n$$(1 - r)S_n = a(1 - r^n)$$\nFor $r \\ne 1$:\n$$\\mathbf{S_n = \\frac{a(1 - r^n)}{1 - r} = \\frac{a(r^n - 1)}{r - 1}}$$\n\n### 3.4 First-Principle Derivation: Infinite GP Sum ($S_\\infty$)\nConsider the limit as $n \\to \\infty$ of $S_n = \\frac{a(1 - r^n)}{1 - r}$.</div>\n<h4>4. Harmonic Progression (HP) & The Classical Means Inequality</h4>\n<div class='theory-block'>### 4.1 Definition & Properties\nA sequence $h_1, h_2, h_3, \\dots, h_n$ is a **Harmonic Progression (HP)** if and only if their reciprocals form an Arithmetic Progression:\n$$\\frac{1}{h_1}, \\; \\frac{1}{h_2}, \\; \\frac{1}{h_3}, \\; \\dots, \\; \\frac{1}{h_n} \\quad \\text{is an AP}$$\n* **$n^{\\text{th}}$ Term of an HP:**\n  $$\\frac{1}{h_n} = \\frac{1}{h_1} + (n - 1)d \\implies \\mathbf{h_n = \\frac{1}{\\frac{1}{h_1} + (n - 1)d}}$$\n* **Warning:** There is **no general closed-form formula** for the sum of $n$ terms of an HP. Every problem involving sums must be inverted back to AP or solved through reciprocal relationships.\n\n### 4.2 Harmonic Mean (HM) of Two Numbers\nLet $H$ be the Harmonic Mean between $a$ and $b$. Then $a, H, b$ are in HP $\\implies \\frac{1}{a}, \\frac{1}{H}, \\frac{1}{b}$ are in AP:\n$$\\frac{1}{H} - \\frac{1}{a} = \\frac{1}{b} - \\frac{1}{H} \\implies \\frac{2}{H} = \\frac{1}{a} + \\frac{1}{b} = \\frac{a + b}{ab}$$\n$$\\mathbf{H = \\frac{2ab}{a + b}}$$\n\n### 4.3 General $n$-Term Harmonic Mean\n$$\\mathbf{\\text{HM} = \\frac{n}{\\frac{1}{x_1} + \\frac{1}{x_2} + \\dots + \\frac{1}{x_n}}}$$\n\n### 4.4 The Unified Means Hierarchy: $\\text{AM} \\ge \\text{GM} \\ge \\text{HM}$\nFor any set of positive real numbers $a$ and $b$:\n* $\\text{AM} = \\frac{a + b}{2}$\n* $\\text{GM} = \\sqrt{ab}$\n* $\\text{HM} = \\frac{2ab}{a + b}$\n\n#### Mathematical Proof of $\\text{GM}^2 = \\text{AM} \\times \\text{HM}$:\n$$\\text{AM} \\times \\text{HM} = \\left(\\frac{a + b}{2}\\right) \\times \\left(\\frac{2ab}{a + b}\\right) = ab = (\\sqrt{ab})^2 = \\mathbf{\\text{GM}^2}$$</div>",
     "formulas": [
       {
         "formula": "a_1, \\; a_2, \\; a_3, \\; \\dots, \\; a_n \\quad \\text{where} \\quad a_{k+1} - a_k = d \\; \\forall k \\ge 1"
@@ -1714,9 +1967,12 @@ window.QA_TOPICS_DATA = [
         "method2": "Rodha fast shortcut or inspection trick.",
         "finalAnswer": "a = 8, d = 6, T_20 = 122",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
-          "a = 8, d = 6, T_20 = 122"
+          "9 a = , d = 6, T_20 = 122",
+          "a = 8, d = 6, T_20 = 122",
+          "7 a = , d = 6, T_20 = 122",
+          "10 a = , d = 6, T_20 = 122"
         ]
       },
       {
@@ -1728,9 +1984,12 @@ window.QA_TOPICS_DATA = [
         "method2": "Rodha fast shortcut or inspection trick.",
         "finalAnswer": "4/3",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
-          "4/3"
+          "3/4",
+          "5/3",
+          "4/3",
+          "4/4"
         ]
       },
       {
@@ -1742,8 +2001,11 @@ window.QA_TOPICS_DATA = [
         "method2": "Rodha fast shortcut or inspection trick.",
         "finalAnswer": "900",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
+          "1080",
+          "720",
+          "1350",
           "900"
         ]
       },
@@ -1756,9 +2018,12 @@ window.QA_TOPICS_DATA = [
         "method2": "Rodha fast shortcut or inspection trick.",
         "finalAnswer": "10",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
-          "10"
+          "10",
+          "11",
+          "9",
+          "12"
         ]
       },
       {
@@ -1771,9 +2036,7 @@ window.QA_TOPICS_DATA = [
         "finalAnswer": "1/4",
         "trap": "Watch out for boundary conditions and parity constraints.",
         "isTita": true,
-        "options": [
-          "1/4"
-        ]
+        "options": []
       },
       {
         "qNum": 146,
@@ -1784,9 +2047,12 @@ window.QA_TOPICS_DATA = [
         "method2": "Rodha fast shortcut or inspection trick.",
         "finalAnswer": "3/4",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
-          "3/4"
+          "4/3",
+          "4/4",
+          "3/4",
+          "3/5"
         ]
       },
       {
@@ -1798,8 +2064,11 @@ window.QA_TOPICS_DATA = [
         "method2": "Rodha fast shortcut or inspection trick.",
         "finalAnswer": "1/29",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
+          "29/1",
+          "2/29",
+          "1/30",
           "1/29"
         ]
       },
@@ -1812,9 +2081,12 @@ window.QA_TOPICS_DATA = [
         "method2": "Rodha fast shortcut or inspection trick.",
         "finalAnswer": "9/4",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
-          "9/4"
+          "9/4",
+          "4/9",
+          "10/4",
+          "9/5"
         ]
       },
       {
@@ -1826,9 +2098,12 @@ window.QA_TOPICS_DATA = [
         "method2": "Rodha fast shortcut or inspection trick.",
         "finalAnswer": "99/100 (or 0.99)",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
-          "99/100 (or 0.99)"
+          "119 /100 (or 0.99)",
+          "99/100 (or 0.99)",
+          "79 /100 (or 0.99)",
+          "149 /100 (or 0.99)"
         ]
       },
       {
@@ -1841,9 +2116,7 @@ window.QA_TOPICS_DATA = [
         "finalAnswer": "20/61",
         "trap": "Watch out for boundary conditions and parity constraints.",
         "isTita": true,
-        "options": [
-          "20/61"
-        ]
+        "options": []
       },
       {
         "qNum": 151,
@@ -1854,8 +2127,11 @@ window.QA_TOPICS_DATA = [
         "method2": "Rodha fast shortcut or inspection trick.",
         "finalAnswer": "65/264",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
+          "264/65",
+          "66/264",
+          "65/265",
           "65/264"
         ]
       },
@@ -1868,9 +2144,12 @@ window.QA_TOPICS_DATA = [
         "method2": "Rodha fast shortcut or inspection trick.",
         "finalAnswer": "495",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
-          "495"
+          "495",
+          "594",
+          "396",
+          "743"
         ]
       },
       {
@@ -1882,9 +2161,12 @@ window.QA_TOPICS_DATA = [
         "method2": "Rodha fast shortcut or inspection trick.",
         "finalAnswer": "440",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
-          "440"
+          "528",
+          "440",
+          "352",
+          "660"
         ]
       },
       {
@@ -1896,9 +2178,12 @@ window.QA_TOPICS_DATA = [
         "method2": "Rodha fast shortcut or inspection trick.",
         "finalAnswer": "2 ln|a - c|",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
-          "2 ln|a - c|"
+          "3 ln|a - c|",
+          "1 ln|a - c|",
+          "2 ln|a - c|",
+          "4 ln|a - c|"
         ]
       },
       {
@@ -1911,9 +2196,7 @@ window.QA_TOPICS_DATA = [
         "finalAnswer": "18",
         "trap": "Watch out for boundary conditions and parity constraints.",
         "isTita": true,
-        "options": [
-          "18"
-        ]
+        "options": []
       },
       {
         "qNum": 156,
@@ -1924,9 +2207,12 @@ window.QA_TOPICS_DATA = [
         "method2": "Rodha fast shortcut or inspection trick.",
         "finalAnswer": "1024",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
-          "1024"
+          "1024",
+          "1229",
+          "819",
+          "1536"
         ]
       },
       {
@@ -1938,9 +2224,12 @@ window.QA_TOPICS_DATA = [
         "method2": "Rodha fast shortcut or inspection trick.",
         "finalAnswer": "2500",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
-          "2500"
+          "3000",
+          "2500",
+          "2000",
+          "3750"
         ]
       },
       {
@@ -1952,9 +2241,12 @@ window.QA_TOPICS_DATA = [
         "method2": "Rodha fast shortcut or inspection trick.",
         "finalAnswer": "440",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
-          "440"
+          "528",
+          "352",
+          "440",
+          "660"
         ]
       },
       {
@@ -1966,8 +2258,11 @@ window.QA_TOPICS_DATA = [
         "method2": "Rodha fast shortcut or inspection trick.",
         "finalAnswer": "1",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
+          "2",
+          "0",
+          "3",
           "1"
         ]
       },
@@ -1981,9 +2276,7 @@ window.QA_TOPICS_DATA = [
         "finalAnswer": "9",
         "trap": "Watch out for boundary conditions and parity constraints.",
         "isTita": true,
-        "options": [
-          "9"
-        ]
+        "options": []
       }
     ],
     "videoLecture": {
@@ -1991,7 +2284,7 @@ window.QA_TOPICS_DATA = [
       "directUrl": "https://www.youtube.com/results?search_query=Rodha+CAT+Progressions+AP+GP+HP+AGP+Ravi+Prakash",
       "embedUrl": "https://www.youtube-nocookie.com/embed/videoseries?list=PLG4bwc5fquzgfMh4YFDnv7fttM0RIKiUQ",
       "highlight": "Infinite GP Sum, Telescope Cancellation & Middle Term Symmetry",
-      "duration": "Complete Playlist \u2022 7 Parts"
+      "duration": "Complete Playlist • 7 Parts"
     }
   },
   {
@@ -1999,9 +2292,9 @@ window.QA_TOPICS_DATA = [
     "title": "Profit, Loss, Discounts & Faulty Weights",
     "domain": "Arithmetic",
     "tier": "Tier A",
-    "weightage": "1 \u2013 2 Questions (3 \u2013 6 Marks)",
+    "weightage": "1 – 2 Questions (3 – 6 Marks)",
     "prepTime": "3.0 Hours",
-    "theoryHtml": "<h4>1. Commercial Pricing Foundations & First Principles</h4>\n<div class='theory-block'>Every commercial transaction revolves around three reference prices:\n\n```\n                    + Markup (M%)                   - Discount (D%)\n   Cost Price (CP) \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500> Marked Price (MP) \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500> Selling Price (SP)\n          \u2502                                                                   \u25b2\n          \u2514\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500 Profit% / Loss% \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2518\n```\n\n### 1.1 Formal Mathematical Definitions\n1. **Cost Price ($\\text{CP}$):** The total financial expenditure incurred by the seller to acquire or manufacture the article.\n2. **Selling Price ($\\text{SP}$):** The actual revenue realized upon sale to the customer.\n3. **Marked Price ($\\text{MP}$):** The sticker, catalogue, or listed retail price printed on the article.\n4. **Markup ($\\text{M}$):** The premium added above Cost Price to establish Marked Price:\n   $$\\mathbf{\\text{Markup } \\% = \\frac{\\text{MP} - \\text{CP}}{\\text{CP}} \\times 100\\%}$$\n5. **Discount ($\\text{D}$):** The price reduction offered on the Marked Price:\n   $$\\mathbf{\\text{Discount } \\% = \\frac{\\text{MP} - \\text{SP}}{\\text{MP}} \\times 100\\%}$$\n6. **Profit ($\\text{P}$) / Loss ($\\text{L}$):**\n   $$\\mathbf{\\text{Profit } \\% = \\frac{\\text{SP} - \\text{CP}}{\\text{CP}} \\times 100\\% \\qquad \\text{Loss } \\% = \\frac{\\text{CP} - \\text{SP}}{\\text{CP}} \\times 100\\%}$$\n\n> [!IMPORTANT] **The Benchmark Base Rule:**  \n> * **Profit% and Loss% are ALWAYS calculated on Cost Price ($\\text{CP}$)** (unless explicitly stated otherwise).  \n> * **Discount% is ALWAYS calculated on Marked Price ($\\text{MP}$)**.</div>\n<h4>2. The Commercial Chain Equation & Core Derivations</h4>\n<div class='theory-block'>### 2.1 First-Principle Derivation: The Master Pipeline\nUsing Multiplying Factors, the pricing chain connects:\n$$\\text{MP} = \\text{CP} \\times \\left(1 + \\frac{M\\%}{100}\\right)$$\n$$\\text{SP} = \\text{MP} \\times \\left(1 - \\frac{D\\%}{100}\\right)$$\nSubstituting $\\text{MP}$:\n$$\\mathbf{\\text{SP} = \\text{CP} \\times \\left(1 + \\frac{M\\%}{100}\\right) \\times \\left(1 - \\frac{D\\%}{100}\\right)}$$\nSince $\\text{SP} = \\text{CP} \\times \\left(1 + \\frac{P\\%}{100}\\right)$, dividing both sides by $\\text{CP}$:\n$$\\mathbf{1 + \\frac{P\\%}{100} = \\left(1 + \\frac{M\\%}{100}\\right) \\times \\left(1 - \\frac{D\\%}{100}\\right)}$$\nExpanding this in additive percentage terms:\n$$\\mathbf{\\text{Net Profit } \\% = M - D - \\frac{M \\times D}{100}}$$\n\n---\n\n### 2.2 First-Principle Derivation: The $\\frac{\\text{MP}}{\\text{CP}}$ Ratio Identity\nExpress $\\text{SP}$ in two independent ways:\n$$\\text{SP} = \\text{CP} \\left(\\frac{100 + P\\%}{100}\\right) \\quad \\text{and} \\quad \\text{SP} = \\text{MP} \\left(\\frac{100 - D\\%}{100}\\right)$$\nEquating both expressions for $\\text{SP}$:\n$$\\text{CP} (100 + P\\%) = \\text{MP} (100 - D\\%)$$\nDividing to form the ratio:\n$$\\mathbf{\\frac{\\text{MP}}{\\text{CP}} = \\frac{100 + P\\%}{100 - D\\%}}$$\n*(If the transaction results in a loss of $L\\%$, replace $+P\\%$ with $-L\\%$)*.\n\n---</div>\n<h4>3. Equal Selling Price vs. Equal Cost Price Scenarios</h4>\n<div class='theory-block'>### 3.1 Two Articles Sold at Equal Selling Price ($\\text{SP}_1 = \\text{SP}_2$)\n**Case: One sold at $+x\\%$ profit, the other sold at $-x\\%$ loss.**\n\n#### First-Principle Proof of Universal Loss:\nLet the common selling price be $\\text{SP}$.\n$$\\text{CP}_1 = \\frac{\\text{SP}}{1 + \\frac{x}{100}} = \\frac{100 \\cdot \\text{SP}}{100 + x}$$\n$$\\text{CP}_2 = \\frac{\\text{SP}}{1 - \\frac{x}{100}} = \\frac{100 \\cdot \\text{SP}}{100 - x}$$\nTotal Cost Price:\n$$\\text{Total CP} = \\text{CP}_1 + \\text{CP}_2 = 100 \\cdot \\text{SP} \\left[\\frac{1}{100 + x} + \\frac{1}{100 - x}\\right] = \\frac{20,000 \\cdot \\text{SP}}{10,000 - x^2}$$\nTotal Selling Price:\n$$\\text{Total SP} = 2 \\cdot \\text{SP}$$\nTotal Net Loss:\n$$\\text{Net Loss (\u20b9)} = \\text{Total CP} - \\text{Total SP} = 2 \\cdot \\text{SP} \\left[\\frac{10,000}{10,000 - x^2} - 1\\right] = \\mathbf{\\frac{2 \\cdot \\text{SP} \\cdot x^2}{10,000 - x^2}}$$\nPercentage Net Loss:\n$$\\text{Net Loss } \\% = \\frac{\\text{Total CP} - \\text{Total SP}}{\\text{Total CP}} \\times 100\\% = \\frac{\\frac{2 \\cdot \\text{SP} \\cdot x^2}{10,000 - x^2}}{\\frac{20,000 \\cdot \\text{SP}}{10,000 - x^2}} \\times 100\\% = \\mathbf{\\frac{x^2}{100}\\%} \\quad \\blacksquare$$\n\n### 3.2 Contrast: Two Articles at Equal Cost Price ($\\text{CP}_1 = \\text{CP}_2$)\n* One sold at $+x\\%$ profit, other at $-x\\%$ loss:\n  $$\\text{Net Profit / Loss} = \\frac{(+x) + (-x)}{2} = \\mathbf{0\\% \\quad (\\text{No Profit, No Loss})}$$\n\n---</div>\n<h4>4. Dishonest Shopkeepers & Faulty Weights: The Multiplying Ratio Engine</h4>\n<div class='theory-block'>Dishonest shopkeeper problems often seem confusing because frauds happen at multiple stages: marking up, discounting, cheating during buying, and cheating during selling.\n\n### 4.1 The Fundamental Insight\nA merchant's total profit ratio is simply:\n$$\\mathbf{\\text{Overall Multiplier } (M_{\\text{net}}) = \\frac{\\text{Total Money Received}}{\\text{Total Cost of Goods Given}} = \\frac{\\text{Effective SP}}{\\text{Effective CP}}}$$\n\nEvery distinct operational fraud acts as an independent factor in a multiplicative chain:\n$$\\mathbf{M_{\\text{net}} = M_{\\text{pricing}} \\times M_{\\text{selling weight}} \\times M_{\\text{buying weight}} \\times M_{\\text{adulteration}}}$$\n\n### 4.2 The Four Multiplication Factors:\n1. **Pricing Factor ($M_{\\text{pricing}}$):**  \n   Markup by $M\\%$ and discount by $D\\%$:\n   $$M_{\\text{pricing}} = \\left(\\frac{100 + M\\%}{100}\\right) \\times \\left(\\frac{100 - D\\%}{100}\\right)$$\n2. **Selling Weight Fraud ($M_{\\text{sell}}$):**  \n   The shopkeeper charges for $W_{\\text{claimed}}$ (nominal weight) but physically gives only $W_{\\text{actual}}$:\n   $$\\mathbf{M_{\\text{sell}} = \\frac{\\text{Claimed Weight Given to Customer}}{\\text{Actual Weight Given from Inventory}} = \\frac{W_{\\text{claimed}}}{W_{\\text{actual}}}}$$\n   * *Example:* Uses an $800\\text{ g}$ weight for $1\\text{ kg}$: $M_{\\text{sell}} = \\frac{1000}{800} = \\frac{5}{4}$.\n3. **Buying Weight Fraud ($M_{\\text{buy}}$):**  \n   While purchasing from the wholesaler, uses a fraudulent scale to take $W_{\\text{taken}}$ while paying only for $W_{\\text{paid}}$:\n   $$\\mathbf{M_{\\text{buy}} = \\frac{\\text{Actual Weight Taken}}{\\text{Nominal Weight Paid For}} = \\frac{W_{\\text{taken}}}{W_{\\text{paid}}}}$$\n   * *Example:* Takes $1100\\text{ g}$ for the price of $1\\text{ kg}$: $M_{\\text{buy}} = \\frac{1100}{1000} = \\frac{11}{10}$.\n4. **Adulteration Factor ($M_{\\text{adulter}}$):**  \n   Adds free diluent (e.g., adds $200\\text{ mL}$ water to $1000\\text{ mL}$ milk):</div>",
+    "theoryHtml": "<h4>1. Commercial Pricing Foundations & First Principles</h4>\n<div class='theory-block'>Every commercial transaction revolves around three reference prices:\n\n```\n                    + Markup (M%)                   - Discount (D%)\n   Cost Price (CP) ───────────────> Marked Price (MP) ───────────────> Selling Price (SP)\n          │                                                                   ▲\n          └───────────────────── Profit% / Loss% ─────────────────────────────┘\n```\n\n### 1.1 Formal Mathematical Definitions\n1. **Cost Price ($\\text{CP}$):** The total financial expenditure incurred by the seller to acquire or manufacture the article.\n2. **Selling Price ($\\text{SP}$):** The actual revenue realized upon sale to the customer.\n3. **Marked Price ($\\text{MP}$):** The sticker, catalogue, or listed retail price printed on the article.\n4. **Markup ($\\text{M}$):** The premium added above Cost Price to establish Marked Price:\n   $$\\mathbf{\\text{Markup } \\% = \\frac{\\text{MP} - \\text{CP}}{\\text{CP}} \\times 100\\%}$$\n5. **Discount ($\\text{D}$):** The price reduction offered on the Marked Price:\n   $$\\mathbf{\\text{Discount } \\% = \\frac{\\text{MP} - \\text{SP}}{\\text{MP}} \\times 100\\%}$$\n6. **Profit ($\\text{P}$) / Loss ($\\text{L}$):**\n   $$\\mathbf{\\text{Profit } \\% = \\frac{\\text{SP} - \\text{CP}}{\\text{CP}} \\times 100\\% \\qquad \\text{Loss } \\% = \\frac{\\text{CP} - \\text{SP}}{\\text{CP}} \\times 100\\%}$$\n\n> [!IMPORTANT] **The Benchmark Base Rule:**  \n> * **Profit% and Loss% are ALWAYS calculated on Cost Price ($\\text{CP}$)** (unless explicitly stated otherwise).  \n> * **Discount% is ALWAYS calculated on Marked Price ($\\text{MP}$)**.</div>\n<h4>2. The Commercial Chain Equation & Core Derivations</h4>\n<div class='theory-block'>### 2.1 First-Principle Derivation: The Master Pipeline\nUsing Multiplying Factors, the pricing chain connects:\n$$\\text{MP} = \\text{CP} \\times \\left(1 + \\frac{M\\%}{100}\\right)$$\n$$\\text{SP} = \\text{MP} \\times \\left(1 - \\frac{D\\%}{100}\\right)$$\nSubstituting $\\text{MP}$:\n$$\\mathbf{\\text{SP} = \\text{CP} \\times \\left(1 + \\frac{M\\%}{100}\\right) \\times \\left(1 - \\frac{D\\%}{100}\\right)}$$\nSince $\\text{SP} = \\text{CP} \\times \\left(1 + \\frac{P\\%}{100}\\right)$, dividing both sides by $\\text{CP}$:\n$$\\mathbf{1 + \\frac{P\\%}{100} = \\left(1 + \\frac{M\\%}{100}\\right) \\times \\left(1 - \\frac{D\\%}{100}\\right)}$$\nExpanding this in additive percentage terms:\n$$\\mathbf{\\text{Net Profit } \\% = M - D - \\frac{M \\times D}{100}}$$\n\n---\n\n### 2.2 First-Principle Derivation: The $\\frac{\\text{MP}}{\\text{CP}}$ Ratio Identity\nExpress $\\text{SP}$ in two independent ways:\n$$\\text{SP} = \\text{CP} \\left(\\frac{100 + P\\%}{100}\\right) \\quad \\text{and} \\quad \\text{SP} = \\text{MP} \\left(\\frac{100 - D\\%}{100}\\right)$$\nEquating both expressions for $\\text{SP}$:\n$$\\text{CP} (100 + P\\%) = \\text{MP} (100 - D\\%)$$\nDividing to form the ratio:\n$$\\mathbf{\\frac{\\text{MP}}{\\text{CP}} = \\frac{100 + P\\%}{100 - D\\%}}$$\n*(If the transaction results in a loss of $L\\%$, replace $+P\\%$ with $-L\\%$)*.\n\n---</div>\n<h4>3. Equal Selling Price vs. Equal Cost Price Scenarios</h4>\n<div class='theory-block'>### 3.1 Two Articles Sold at Equal Selling Price ($\\text{SP}_1 = \\text{SP}_2$)\n**Case: One sold at $+x\\%$ profit, the other sold at $-x\\%$ loss.**\n\n#### First-Principle Proof of Universal Loss:\nLet the common selling price be $\\text{SP}$.\n$$\\text{CP}_1 = \\frac{\\text{SP}}{1 + \\frac{x}{100}} = \\frac{100 \\cdot \\text{SP}}{100 + x}$$\n$$\\text{CP}_2 = \\frac{\\text{SP}}{1 - \\frac{x}{100}} = \\frac{100 \\cdot \\text{SP}}{100 - x}$$\nTotal Cost Price:\n$$\\text{Total CP} = \\text{CP}_1 + \\text{CP}_2 = 100 \\cdot \\text{SP} \\left[\\frac{1}{100 + x} + \\frac{1}{100 - x}\\right] = \\frac{20,000 \\cdot \\text{SP}}{10,000 - x^2}$$\nTotal Selling Price:\n$$\\text{Total SP} = 2 \\cdot \\text{SP}$$\nTotal Net Loss:\n$$\\text{Net Loss (₹)} = \\text{Total CP} - \\text{Total SP} = 2 \\cdot \\text{SP} \\left[\\frac{10,000}{10,000 - x^2} - 1\\right] = \\mathbf{\\frac{2 \\cdot \\text{SP} \\cdot x^2}{10,000 - x^2}}$$\nPercentage Net Loss:\n$$\\text{Net Loss } \\% = \\frac{\\text{Total CP} - \\text{Total SP}}{\\text{Total CP}} \\times 100\\% = \\frac{\\frac{2 \\cdot \\text{SP} \\cdot x^2}{10,000 - x^2}}{\\frac{20,000 \\cdot \\text{SP}}{10,000 - x^2}} \\times 100\\% = \\mathbf{\\frac{x^2}{100}\\%} \\quad \\blacksquare$$\n\n### 3.2 Contrast: Two Articles at Equal Cost Price ($\\text{CP}_1 = \\text{CP}_2$)\n* One sold at $+x\\%$ profit, other at $-x\\%$ loss:\n  $$\\text{Net Profit / Loss} = \\frac{(+x) + (-x)}{2} = \\mathbf{0\\% \\quad (\\text{No Profit, No Loss})}$$\n\n---</div>\n<h4>4. Dishonest Shopkeepers & Faulty Weights: The Multiplying Ratio Engine</h4>\n<div class='theory-block'>Dishonest shopkeeper problems often seem confusing because frauds happen at multiple stages: marking up, discounting, cheating during buying, and cheating during selling.\n\n### 4.1 The Fundamental Insight\nA merchant's total profit ratio is simply:\n$$\\mathbf{\\text{Overall Multiplier } (M_{\\text{net}}) = \\frac{\\text{Total Money Received}}{\\text{Total Cost of Goods Given}} = \\frac{\\text{Effective SP}}{\\text{Effective CP}}}$$\n\nEvery distinct operational fraud acts as an independent factor in a multiplicative chain:\n$$\\mathbf{M_{\\text{net}} = M_{\\text{pricing}} \\times M_{\\text{selling weight}} \\times M_{\\text{buying weight}} \\times M_{\\text{adulteration}}}$$\n\n### 4.2 The Four Multiplication Factors:\n1. **Pricing Factor ($M_{\\text{pricing}}$):**  \n   Markup by $M\\%$ and discount by $D\\%$:\n   $$M_{\\text{pricing}} = \\left(\\frac{100 + M\\%}{100}\\right) \\times \\left(\\frac{100 - D\\%}{100}\\right)$$\n2. **Selling Weight Fraud ($M_{\\text{sell}}$):**  \n   The shopkeeper charges for $W_{\\text{claimed}}$ (nominal weight) but physically gives only $W_{\\text{actual}}$:\n   $$\\mathbf{M_{\\text{sell}} = \\frac{\\text{Claimed Weight Given to Customer}}{\\text{Actual Weight Given from Inventory}} = \\frac{W_{\\text{claimed}}}{W_{\\text{actual}}}}$$\n   * *Example:* Uses an $800\\text{ g}$ weight for $1\\text{ kg}$: $M_{\\text{sell}} = \\frac{1000}{800} = \\frac{5}{4}$.\n3. **Buying Weight Fraud ($M_{\\text{buy}}$):**  \n   While purchasing from the wholesaler, uses a fraudulent scale to take $W_{\\text{taken}}$ while paying only for $W_{\\text{paid}}$:\n   $$\\mathbf{M_{\\text{buy}} = \\frac{\\text{Actual Weight Taken}}{\\text{Nominal Weight Paid For}} = \\frac{W_{\\text{taken}}}{W_{\\text{paid}}}}$$\n   * *Example:* Takes $1100\\text{ g}$ for the price of $1\\text{ kg}$: $M_{\\text{buy}} = \\frac{1100}{1000} = \\frac{11}{10}$.\n4. **Adulteration Factor ($M_{\\text{adulter}}$):**  \n   Adds free diluent (e.g., adds $200\\text{ mL}$ water to $1000\\text{ mL}$ milk):</div>",
     "formulas": [
       {
         "formula": "\\mathbf{\\text{Markup } \\% = \\frac{\\text{MP} - \\text{CP}}{\\text{CP}} \\times 100\\%}"
@@ -2026,43 +2319,52 @@ window.QA_TOPICS_DATA = [
       {
         "qNum": 26,
         "title": "Cost Price from Selling Price at Profit and Loss",
-        "problem": "An article is sold at a profit of 20%. If it had been sold for \u20b960 less, there would have been a loss of 10%. Find the cost price of the article.",
+        "problem": "An article is sold at a profit of 20%. If it had been sold for ₹60 less, there would have been a loss of 10%. Find the cost price of the article.",
         "concept": "Difference in selling prices corresponds to difference between profit and loss percentages.",
         "method1": "Step-by-step algebraic derivation.",
         "method2": "Rodha fast shortcut or inspection trick.",
-        "finalAnswer": "\u20b9200",
+        "finalAnswer": "₹200",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
-          "\u20b9200"
+          "₹160",
+          "₹240",
+          "₹200",
+          "₹300"
         ]
       },
       {
         "qNum": 27,
         "title": "Two Articles Sold at Equal SP: One Profit, One Loss",
-        "problem": "Two watches are sold for \u20b91980 each. On one, the seller gains 10%, and on the other, he loses 10%. Find the overall profit or loss percentage and the net amount.",
+        "problem": "Two watches are sold for ₹1980 each. On one, the seller gains 10%, and on the other, he loses 10%. Find the overall profit or loss percentage and the net amount.",
         "concept": "When two articles are sold at EQUAL selling prices, one at $x\\%$ profit and the other at $x\\%$ loss, there is ALWAYS an overall loss of $\\frac{x^2}{100}\\%$.",
         "method1": "Step-by-step algebraic derivation.",
         "method2": "Rodha fast shortcut or inspection trick.",
-        "finalAnswer": "1% loss (\u20b940 loss)",
+        "finalAnswer": "1% loss (₹40 loss)",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
-          "1% loss (\u20b940 loss)"
+          "1% profit",
+          "2% loss",
+          "No profit, no loss",
+          "1% loss (₹40 loss)"
         ]
       },
       {
         "qNum": 28,
         "title": "Equal CP with Opposite Profit and Loss",
-        "problem": "A merchant buys two bicycles for \u20b93500 each. He sells one at a profit of 15% and the other at a loss of 15%. Find his overall profit or loss percentage.",
+        "problem": "A merchant buys two bicycles for ₹3500 each. He sells one at a profit of 15% and the other at a loss of 15%. Find his overall profit or loss percentage.",
         "concept": "When Cost Prices are equal, overall profit/loss is simply the arithmetic average of individual percentage changes.",
         "method1": "Step-by-step algebraic derivation.",
         "method2": "Rodha fast shortcut or inspection trick.",
         "finalAnswer": "No profit, no loss (0%)",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
-          "No profit, no loss (0%)"
+          "No profit, no loss (0%)",
+          "1% loss",
+          "1% profit",
+          "2% loss"
         ]
       },
       {
@@ -2074,9 +2376,12 @@ window.QA_TOPICS_DATA = [
         "method2": "Rodha fast shortcut or inspection trick.",
         "finalAnswer": "31.6%",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
-          "31.6%"
+          "36.6%",
+          "31.6%",
+          "26.6%",
+          "63.2%"
         ]
       },
       {
@@ -2089,9 +2394,7 @@ window.QA_TOPICS_DATA = [
         "finalAnswer": "5% profit",
         "trap": "Watch out for boundary conditions and parity constraints.",
         "isTita": true,
-        "options": [
-          "5% profit"
-        ]
+        "options": []
       },
       {
         "qNum": 31,
@@ -2102,8 +2405,11 @@ window.QA_TOPICS_DATA = [
         "method2": "Rodha fast shortcut or inspection trick.",
         "finalAnswer": "40%",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
+          "45%",
+          "35%",
+          "80%",
           "40%"
         ]
       },
@@ -2116,9 +2422,12 @@ window.QA_TOPICS_DATA = [
         "method2": "Rodha fast shortcut or inspection trick.",
         "finalAnswer": "37.5%",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
-          "37.5%"
+          "37.5%",
+          "42.5%",
+          "32.5%",
+          "75%"
         ]
       },
       {
@@ -2130,9 +2439,12 @@ window.QA_TOPICS_DATA = [
         "method2": "Rodha fast shortcut or inspection trick.",
         "finalAnswer": "36%",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
-          "36%"
+          "41%",
+          "36%",
+          "31%",
+          "72%"
         ]
       },
       {
@@ -2144,9 +2456,12 @@ window.QA_TOPICS_DATA = [
         "method2": "Rodha fast shortcut or inspection trick.",
         "finalAnswer": "11.11% (or 11 1/9%)",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
-          "11.11% (or 11 1/9%)"
+          "16.11%",
+          "6.109999999999999%",
+          "11.11% (or 11 1/9%)",
+          "22.22%"
         ]
       },
       {
@@ -2159,9 +2474,7 @@ window.QA_TOPICS_DATA = [
         "finalAnswer": "35%",
         "trap": "Watch out for boundary conditions and parity constraints.",
         "isTita": true,
-        "options": [
-          "35%"
-        ]
+        "options": []
       },
       {
         "qNum": 36,
@@ -2172,9 +2485,12 @@ window.QA_TOPICS_DATA = [
         "method2": "Rodha fast shortcut or inspection trick.",
         "finalAnswer": "22.22% (or 22 2/9%)",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
-          "22.22% (or 22 2/9%)"
+          "22.22% (or 22 2/9%)",
+          "27.22%",
+          "17.22%",
+          "44.44%"
         ]
       },
       {
@@ -2186,9 +2502,12 @@ window.QA_TOPICS_DATA = [
         "method2": "Rodha fast shortcut or inspection trick.",
         "finalAnswer": "50%",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
-          "50%"
+          "55%",
+          "50%",
+          "45%",
+          "100%"
         ]
       },
       {
@@ -2200,9 +2519,12 @@ window.QA_TOPICS_DATA = [
         "method2": "Rodha fast shortcut or inspection trick.",
         "finalAnswer": "10%",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
-          "10%"
+          "15%",
+          "5%",
+          "10%",
+          "20%"
         ]
       },
       {
@@ -2214,8 +2536,11 @@ window.QA_TOPICS_DATA = [
         "method2": "Rodha fast shortcut or inspection trick.",
         "finalAnswer": "25%",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
+          "20%",
+          "33.33%",
+          "50%",
           "25%"
         ]
       },
@@ -2229,36 +2554,40 @@ window.QA_TOPICS_DATA = [
         "finalAnswer": "14%",
         "trap": "Watch out for boundary conditions and parity constraints.",
         "isTita": true,
-        "options": [
-          "14%"
-        ]
+        "options": []
       },
       {
         "qNum": 41,
         "title": "Fixed Recovery Quantity with Variable Units",
-        "problem": "A fruit seller buys oranges at 5 for \u20b910 and sells them at 4 for \u20b910. Find his profit percentage.",
+        "problem": "A fruit seller buys oranges at 5 for ₹10 and sells them at 4 for ₹10. Find his profit percentage.",
         "concept": "Equalize the number of items or find the unit CP and unit SP.",
         "method1": "Step-by-step algebraic derivation.",
         "method2": "Rodha fast shortcut or inspection trick.",
         "finalAnswer": "25%",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
-          "25%"
+          "20%",
+          "25%",
+          "33.33%",
+          "50%"
         ]
       },
       {
         "qNum": 42,
         "title": "Cross-Rate Buying from Two Sources and Mixing",
-        "problem": "A person buys some pens at 6 for \u20b95 and an equal number of pens at 5 for \u20b96. He mixes them and sells them at 11 for \u20b911. Find his profit or loss percentage.",
+        "problem": "A person buys some pens at 6 for ₹5 and an equal number of pens at 5 for ₹6. He mixes them and sells them at 11 for ₹11. Find his profit or loss percentage.",
         "concept": "Equalize quantity bought from both sources using LCM of 6 and 5 = 30.",
         "method1": "Step-by-step algebraic derivation.",
         "method2": "Rodha fast shortcut or inspection trick.",
         "finalAnswer": "1 39/61% loss (or ~1.64% loss)",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
-          "1 39/61% loss (or ~1.64% loss)"
+          "1% profit",
+          "2% loss",
+          "1 39/61% loss (or ~1.64% loss)",
+          "No profit, no loss"
         ]
       },
       {
@@ -2270,40 +2599,51 @@ window.QA_TOPICS_DATA = [
         "method2": "Rodha fast shortcut or inspection trick.",
         "finalAnswer": "42.85% (or 42 6/7%)",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
+          "47.85%",
+          "37.85%",
+          "85.7%",
           "42.85% (or 42 6/7%)"
         ]
       },
       {
         "qNum": 44,
         "title": "Selling at Successive Markups with Target Net Profit",
-        "problem": "A manufacturer sells an article to a wholesaler at 10% profit, the wholesaler sells it to a retailer at 20% profit, and the retailer sells it to a customer for \u20b93300 at a 25% profit. Find the cost of manufacture.",
+        "problem": "A manufacturer sells an article to a wholesaler at 10% profit, the wholesaler sells it to a retailer at 20% profit, and the retailer sells it to a customer for ₹3300 at a 25% profit. Find the cost of manufacture.",
         "concept": "Chain of compounding multipliers: $CP_{mfg} \\times 1.10 \\times 1.20 \\times 1.25 = 3300$.",
         "method1": "Step-by-step algebraic derivation.",
         "method2": "Rodha fast shortcut or inspection trick.",
-        "finalAnswer": "\u20b92000",
+        "finalAnswer": "₹2000",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
-          "\u20b92000"
+          "₹2000",
+          "₹1,600",
+          "₹2,400",
+          "₹3,000"
         ]
       },
       {
         "qNum": 45,
         "title": "Discount Calculation with Unknown Second Discount",
-        "problem": "The marked price of a watch is \u20b91600. After two successive discounts, it is sold for \u20b91224. If the first discount is 10%, find the second discount percentage.",
+        "problem": "The marked price of a watch is ₹1600. After two successive discounts, it is sold for ₹1224. If the first discount is 10%, find the second discount percentage.",
         "concept": "Apply the first discount to find the intermediate price, then calculate the second discount on that intermediate price.",
         "method1": "Step-by-step algebraic derivation.",
         "method2": "Rodha fast shortcut or inspection trick.",
         "finalAnswer": "15%",
         "trap": "Watch out for boundary conditions and parity constraints.",
         "isTita": true,
-        "options": [
-          "15%"
-        ]
+        "options": []
       }
-    ]
+    ],
+    "videoLecture": {
+      "title": "Rodha Quant: Profit, Loss, Marked Price & Faulty Balances",
+      "directUrl": "https://www.youtube.com/results?search_query=Rodha+CAT+Profit+Loss+Discounts+Faulty+Weights+Ravi+Prakash",
+      "embedUrl": "https://www.youtube-nocookie.com/embed/videoseries?list=PLG4bwc5fquzgfMh4YFDnv7fttM0RIKiUQ",
+      "highlight": "Effective Multiplying Factors, Successive Discounts & True vs Claimed Weight Ratios",
+      "duration": "Complete Playlist • 6 Parts"
+    }
   },
   {
     "id": "qa_sfft",
@@ -2312,7 +2652,7 @@ window.QA_TOPICS_DATA = [
     "tier": "Tier A",
     "weightage": "1 Question (3 Marks)",
     "prepTime": "2.5 Hours",
-    "theoryHtml": "<h4>1. Systems of Simultaneous Linear Equations: First Principles</h4>\n<div class='theory-block'>Consider a system of two linear equations in two variables:\n$$\\begin{aligned}\na_1 x + b_1 y &= c_1 \\\\\na_2 x + b_2 y &= c_2\n\\end{aligned}$$\n\nGeometrically, each equation represents a straight line in the Cartesian plane $\\mathbb{R}^2$. The solutions represent points of intersection:\n\n| Condition on Coefficients | Geometric Nature | Nature of Solution | Algebraic Consistency |\n| :---: | :---: | :---: | :---: |\n| $\\mathbf{\\frac{a_1}{a_2} \\neq \\frac{b_1}{b_2}}$ | **Intersecting Lines** at a single unique point | **Unique Solution** (Consistent) | Slopes are different ($m_1 \\ne m_2$) |\n| $\\mathbf{\\frac{a_1}{a_2} = \\frac{b_1}{b_2} \\neq \\frac{c_1}{c_2}}$ | **Parallel Lines** (Never intersect) | **No Solution** (Inconsistent) | Equal slopes, different y-intercepts |\n| $\\mathbf{\\frac{a_1}{a_2} = \\frac{b_1}{b_2} = \\frac{c_1}{c_2}}$ | **Coincident Lines** (Overlap completely) | **Infinitely Many Solutions** (Dependent) | Identical lines |\n\n---</div>\n<h4>2. Linear Diophantine Equations ($ax + by = c$): First Principles</h4>\n<div class='theory-block'>A linear equation where coefficients $a, b, c \\in \\mathbb{Z}$ and solutions are restricted strictly to **integers** ($x, y \\in \\mathbb{Z}$).\n\n### 2.1 B\u00e9zout's Identity & Condition for Existence of Integer Solutions\nThe linear Diophantine equation $ax + by = c$ has integer solutions if and only if:\n$$\\mathbf{\\gcd(a, b) \\text{ divides } c}$$\n* **Proof:** Let $g = \\gcd(a, b)$. Then $a = g \\cdot a'$ and $b = g \\cdot b'$.  \n  For any integers $x, y$: $ax + by = g(a'x + b'y)$. Since $(a'x + b'y)$ is an integer, the left-hand side is always a multiple of $g$. Therefore, $c$ must be divisible by $g$. If $g \\nmid c$, no integer solution can ever exist.\n\n---\n\n### 2.2 General Solution Parameterization\nOnce a single base solution $(x_0, y_0)$ is found:\n$$\\mathbf{x = x_0 + \\left(\\frac{b}{g}\\right) t, \\qquad y = y_0 - \\left(\\frac{a}{g}\\right) t \\quad (t \\in \\mathbb{Z})}$$\nwhere $g = \\gcd(a, b)$.\n* Notice that as $t$ increases by $1$, $x$ increases by $\\frac{b}{g}$ and $y$ decreases by $\\frac{a}{g}$, maintaining $a x + b y = c$.\n\n---\n\n### 2.3 Counting Non-Negative Integer Solutions ($x \\ge 0, y \\ge 0$)\nTo find the number of non-negative integer pairs $(x, y)$ satisfying $ax + by = c$ (assume $\\gcd(a, b) = 1$):\n\n#### Step-by-Step Algorithm:\n1. Find the smallest non-negative integer $x_0$ satisfying the equation (by testing $x = 0, 1, 2, \\dots, b-1$).</div>\n<h4>3. Simon's Favorite Factoring Trick (SFFT) for Rectangular Systems</h4>\n<div class='theory-block'>For non-linear equations containing the product term $xy$:\n$$xy + ax + by = c$$\n\n### 3.1 First-Principle Derivation:\nGroup $x$ from the first two terms:\n$$x(y + a) + by = c$$\nTo factor out $(y + a)$ from the remaining terms, add $ab$ to both sides:\n$$x(y + a) + by + ab = c + ab$$\n$$x(y + a) + b(y + a) = c + ab$$\n\n$$\\mathbf{(x + b)(y + a) = c + ab}$$\n\n#### Application Protocol:\n1. Transform equation into $(x + b)(y + a) = K$.\n2. Factorize constant $K$ into all possible integer factor pairs $(d_1, d_2)$ such that $d_1 \\times d_2 = K$.\n3. Each factor pair yields a unique solution: $x = d_1 - b$ and $y = d_2 - a$.\n\n---</div>\n<h4>4. Digit Reversal Problems & Place-Value Symmetries</h4>\n<div class='theory-block'>Let a 2-digit number be $N = 10a + b$ ($a \\in \\{1, \\dots, 9\\}, b \\in \\{0, \\dots, 9\\}$).  \nLet its digit-reversed counterpart be $N' = 10b + a$.\n\n1. **Difference of Number and Reversal:**\n   $$N - N' = (10a + b) - (10b + a) = 9(a - b)$$\n   * The difference is **strictly a multiple of 9**.\n   * Dividing the difference by 9 gives the difference of the digits: $\\mathbf{\\frac{N - N'}{9} = a - b}$.\n2. **Sum of Number and Reversal:**\n   $$N + N' = (10a + b) + (10b + a) = 11(a + b)$$\n   * The sum is **strictly a multiple of 11**.\n   * Dividing the sum by 11 gives the sum of the digits: $\\mathbf{\\frac{N + N'}{11} = a + b}$.\n\n---</div>",
+    "theoryHtml": "<h4>1. Systems of Simultaneous Linear Equations: First Principles</h4>\n<div class='theory-block'>Consider a system of two linear equations in two variables:\n$$\\begin{aligned}\na_1 x + b_1 y &= c_1 \\\\\na_2 x + b_2 y &= c_2\n\\end{aligned}$$\n\nGeometrically, each equation represents a straight line in the Cartesian plane $\\mathbb{R}^2$. The solutions represent points of intersection:\n\n| Condition on Coefficients | Geometric Nature | Nature of Solution | Algebraic Consistency |\n| :---: | :---: | :---: | :---: |\n| $\\mathbf{\\frac{a_1}{a_2} \\neq \\frac{b_1}{b_2}}$ | **Intersecting Lines** at a single unique point | **Unique Solution** (Consistent) | Slopes are different ($m_1 \\ne m_2$) |\n| $\\mathbf{\\frac{a_1}{a_2} = \\frac{b_1}{b_2} \\neq \\frac{c_1}{c_2}}$ | **Parallel Lines** (Never intersect) | **No Solution** (Inconsistent) | Equal slopes, different y-intercepts |\n| $\\mathbf{\\frac{a_1}{a_2} = \\frac{b_1}{b_2} = \\frac{c_1}{c_2}}$ | **Coincident Lines** (Overlap completely) | **Infinitely Many Solutions** (Dependent) | Identical lines |\n\n---</div>\n<h4>2. Linear Diophantine Equations ($ax + by = c$): First Principles</h4>\n<div class='theory-block'>A linear equation where coefficients $a, b, c \\in \\mathbb{Z}$ and solutions are restricted strictly to **integers** ($x, y \\in \\mathbb{Z}$).\n\n### 2.1 Bézout's Identity & Condition for Existence of Integer Solutions\nThe linear Diophantine equation $ax + by = c$ has integer solutions if and only if:\n$$\\mathbf{\\gcd(a, b) \\text{ divides } c}$$\n* **Proof:** Let $g = \\gcd(a, b)$. Then $a = g \\cdot a'$ and $b = g \\cdot b'$.  \n  For any integers $x, y$: $ax + by = g(a'x + b'y)$. Since $(a'x + b'y)$ is an integer, the left-hand side is always a multiple of $g$. Therefore, $c$ must be divisible by $g$. If $g \\nmid c$, no integer solution can ever exist.\n\n---\n\n### 2.2 General Solution Parameterization\nOnce a single base solution $(x_0, y_0)$ is found:\n$$\\mathbf{x = x_0 + \\left(\\frac{b}{g}\\right) t, \\qquad y = y_0 - \\left(\\frac{a}{g}\\right) t \\quad (t \\in \\mathbb{Z})}$$\nwhere $g = \\gcd(a, b)$.\n* Notice that as $t$ increases by $1$, $x$ increases by $\\frac{b}{g}$ and $y$ decreases by $\\frac{a}{g}$, maintaining $a x + b y = c$.\n\n---\n\n### 2.3 Counting Non-Negative Integer Solutions ($x \\ge 0, y \\ge 0$)\nTo find the number of non-negative integer pairs $(x, y)$ satisfying $ax + by = c$ (assume $\\gcd(a, b) = 1$):\n\n#### Step-by-Step Algorithm:\n1. Find the smallest non-negative integer $x_0$ satisfying the equation (by testing $x = 0, 1, 2, \\dots, b-1$).</div>\n<h4>3. Simon's Favorite Factoring Trick (SFFT) for Rectangular Systems</h4>\n<div class='theory-block'>For non-linear equations containing the product term $xy$:\n$$xy + ax + by = c$$\n\n### 3.1 First-Principle Derivation:\nGroup $x$ from the first two terms:\n$$x(y + a) + by = c$$\nTo factor out $(y + a)$ from the remaining terms, add $ab$ to both sides:\n$$x(y + a) + by + ab = c + ab$$\n$$x(y + a) + b(y + a) = c + ab$$\n\n$$\\mathbf{(x + b)(y + a) = c + ab}$$\n\n#### Application Protocol:\n1. Transform equation into $(x + b)(y + a) = K$.\n2. Factorize constant $K$ into all possible integer factor pairs $(d_1, d_2)$ such that $d_1 \\times d_2 = K$.\n3. Each factor pair yields a unique solution: $x = d_1 - b$ and $y = d_2 - a$.\n\n---</div>\n<h4>4. Digit Reversal Problems & Place-Value Symmetries</h4>\n<div class='theory-block'>Let a 2-digit number be $N = 10a + b$ ($a \\in \\{1, \\dots, 9\\}, b \\in \\{0, \\dots, 9\\}$).  \nLet its digit-reversed counterpart be $N' = 10b + a$.\n\n1. **Difference of Number and Reversal:**\n   $$N - N' = (10a + b) - (10b + a) = 9(a - b)$$\n   * The difference is **strictly a multiple of 9**.\n   * Dividing the difference by 9 gives the difference of the digits: $\\mathbf{\\frac{N - N'}{9} = a - b}$.\n2. **Sum of Number and Reversal:**\n   $$N + N' = (10a + b) + (10b + a) = 11(a + b)$$\n   * The sum is **strictly a multiple of 11**.\n   * Dividing the sum by 11 gives the sum of the digits: $\\mathbf{\\frac{N + N'}{11} = a + b}$.\n\n---</div>",
     "formulas": [
       {
         "formula": "\\begin{aligned}\na_1 x + b_1 y &= c_1 \\\\\na_2 x + b_2 y &= c_2\n\\end{aligned}"
@@ -2343,9 +2683,12 @@ window.QA_TOPICS_DATA = [
         "method2": "Rodha fast shortcut or inspection trick.",
         "finalAnswer": "k = 2",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
-          "k = 2"
+          "k = 3",
+          "k = 2",
+          "k = 1",
+          "k = 4"
         ]
       },
       {
@@ -2357,9 +2700,12 @@ window.QA_TOPICS_DATA = [
         "method2": "Rodha fast shortcut or inspection trick.",
         "finalAnswer": "m = 2 and m = -2",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
-          "m = 2 and m = -2"
+          "3 m =  and m = -2",
+          "1 m =  and m = -2",
+          "m = 2 and m = -2",
+          "4 m =  and m = -2"
         ]
       },
       {
@@ -2371,8 +2717,11 @@ window.QA_TOPICS_DATA = [
         "method2": "Rodha fast shortcut or inspection trick.",
         "finalAnswer": "x = 5 + 11t, y = 15 - 7t for t in Z",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
+          "6 x =  + 11t, y = 15 - 7t for t in Z",
+          "4 x =  + 11t, y = 15 - 7t for t in Z",
+          "7 x =  + 11t, y = 15 - 7t for t in Z",
           "x = 5 + 11t, y = 15 - 7t for t in Z"
         ]
       },
@@ -2385,9 +2734,12 @@ window.QA_TOPICS_DATA = [
         "method2": "Rodha fast shortcut or inspection trick.",
         "finalAnswer": "6 pairs",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
-          "6 pairs"
+          "6 pairs",
+          "7 pairs",
+          "5 pairs",
+          "8 pairs"
         ]
       },
       {
@@ -2400,9 +2752,7 @@ window.QA_TOPICS_DATA = [
         "finalAnswer": "4 solutions",
         "trap": "Watch out for boundary conditions and parity constraints.",
         "isTita": true,
-        "options": [
-          "4 solutions"
-        ]
+        "options": []
       },
       {
         "qNum": 6,
@@ -2413,9 +2763,12 @@ window.QA_TOPICS_DATA = [
         "method2": "Rodha fast shortcut or inspection trick.",
         "finalAnswer": "65 solutions",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
-          "65 solutions"
+          "78 solutions",
+          "52 solutions",
+          "65 solutions",
+          "98 solutions"
         ]
       },
       {
@@ -2427,37 +2780,46 @@ window.QA_TOPICS_DATA = [
         "method2": "Rodha fast shortcut or inspection trick.",
         "finalAnswer": "227",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
+          "272",
+          "182",
+          "341",
           "227"
         ]
       },
       {
         "qNum": 8,
         "title": "Budget Allocation Word Problem with Diophantine Model",
-        "problem": "A student spent exactly \u20b9500 on buying pens at \u20b914 each and notebooks at \u20b923 each. If he bought at least one of each item, what is the maximum number of pens he could have purchased?",
+        "problem": "A student spent exactly ₹500 on buying pens at ₹14 each and notebooks at ₹23 each. If he bought at least one of each item, what is the maximum number of pens he could have purchased?",
         "concept": "Model as $14p + 23n = 500$, where $p, n \\in \\mathbb{Z}^+$. To maximize $p$, we must minimize $n$.",
         "method1": "Step-by-step algebraic derivation.",
         "method2": "Rodha fast shortcut or inspection trick.",
         "finalAnswer": "16 pens",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
-          "16 pens"
+          "16 pens",
+          "19 pens",
+          "13 pens",
+          "24 pens"
         ]
       },
       {
         "qNum": 9,
         "title": "Coin Count & Value System with Constraints",
-        "problem": "A bag contains \u20b92, \u20b95, and \u20b910 coins with a total value of \u20b9105. If there are 25 coins in total and at least two coins of each denomination, find the maximum possible number of \u20b910 coins.",
+        "problem": "A bag contains ₹2, ₹5, and ₹10 coins with a total value of ₹105. If there are 25 coins in total and at least two coins of each denomination, find the maximum possible number of ₹10 coins.",
         "concept": "System: $x + y + z = 25$ and $2x + 5y + 10z = 105$, with $x, y, z \\ge 2$.",
         "method1": "Step-by-step algebraic derivation.",
         "method2": "Rodha fast shortcut or inspection trick.",
         "finalAnswer": "5",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
-          "5"
+          "6",
+          "5",
+          "4",
+          "7"
         ]
       },
       {
@@ -2470,9 +2832,7 @@ window.QA_TOPICS_DATA = [
         "finalAnswer": "{2, 3, 4} (all permutations)",
         "trap": "Watch out for boundary conditions and parity constraints.",
         "isTita": true,
-        "options": [
-          "{2, 3, 4} (all permutations)"
-        ]
+        "options": []
       },
       {
         "qNum": 11,
@@ -2483,8 +2843,11 @@ window.QA_TOPICS_DATA = [
         "method2": "Rodha fast shortcut or inspection trick.",
         "finalAnswer": "x + y = 11 (Individual x+y+z is non-unique without 3rd equation)",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
+          "13 x + y =  (Individual x+y+z is non-unique without 3rd equation)",
+          "9 x + y =  (Individual x+y+z is non-unique without 3rd equation)",
+          "17 x + y =  (Individual x+y+z is non-unique without 3rd equation)",
           "x + y = 11 (Individual x+y+z is non-unique without 3rd equation)"
         ]
       },
@@ -2497,9 +2860,12 @@ window.QA_TOPICS_DATA = [
         "method2": "Rodha fast shortcut or inspection trick.",
         "finalAnswer": "0",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
-          "0"
+          "0",
+          "1",
+          "2",
+          "-1"
         ]
       },
       {
@@ -2511,9 +2877,12 @@ window.QA_TOPICS_DATA = [
         "method2": "Rodha fast shortcut or inspection trick.",
         "finalAnswer": "10 pairs",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
-          "10 pairs"
+          "11 pairs",
+          "10 pairs",
+          "9 pairs",
+          "12 pairs"
         ]
       },
       {
@@ -2525,9 +2894,12 @@ window.QA_TOPICS_DATA = [
         "method2": "Rodha fast shortcut or inspection trick.",
         "finalAnswer": "8 pairs",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
-          "8 pairs"
+          "9 pairs",
+          "7 pairs",
+          "8 pairs",
+          "10 pairs"
         ]
       },
       {
@@ -2540,9 +2912,7 @@ window.QA_TOPICS_DATA = [
         "finalAnswer": "15 pairs",
         "trap": "Watch out for boundary conditions and parity constraints.",
         "isTita": true,
-        "options": [
-          "15 pairs"
-        ]
+        "options": []
       },
       {
         "qNum": 16,
@@ -2553,9 +2923,12 @@ window.QA_TOPICS_DATA = [
         "method2": "Rodha fast shortcut or inspection trick.",
         "finalAnswer": "8 pairs",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
-          "8 pairs"
+          "8 pairs",
+          "9 pairs",
+          "7 pairs",
+          "10 pairs"
         ]
       },
       {
@@ -2567,9 +2940,12 @@ window.QA_TOPICS_DATA = [
         "method2": "Rodha fast shortcut or inspection trick.",
         "finalAnswer": "17 pairs",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
-          "17 pairs"
+          "20 pairs",
+          "17 pairs",
+          "14 pairs",
+          "26 pairs"
         ]
       },
       {
@@ -2581,12 +2957,22 @@ window.QA_TOPICS_DATA = [
         "method2": "Rodha fast shortcut or inspection trick.",
         "finalAnswer": "27 pairs",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
-          "27 pairs"
+          "32 pairs",
+          "22 pairs",
+          "27 pairs",
+          "41 pairs"
         ]
       }
-    ]
+    ],
+    "videoLecture": {
+      "title": "Rodha Quant: Linear Equations, Diophantine & SFFT Factorization",
+      "directUrl": "https://www.youtube.com/results?search_query=Rodha+CAT+Diophantine+Linear+Equations+SFFT+Ravi+Prakash",
+      "embedUrl": "https://www.youtube-nocookie.com/embed/videoseries?list=PLG4bwc5fquzgfMh4YFDnv7fttM0RIKiUQ",
+      "highlight": "Simon's Favorite Factoring Trick, Integral Solutions of ax + by = c & Non-Negative Roots",
+      "duration": "Complete Playlist • 6 Parts"
+    }
   },
   {
     "id": "qa_factors",
@@ -2626,9 +3012,12 @@ window.QA_TOPICS_DATA = [
         "method2": "Rodha fast shortcut or inspection trick.",
         "finalAnswer": "2",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
-          "2"
+          "3",
+          "2",
+          "1",
+          "4"
         ]
       },
       {
@@ -2640,9 +3029,12 @@ window.QA_TOPICS_DATA = [
         "method2": "Rodha fast shortcut or inspection trick.",
         "finalAnswer": "10",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
-          "10"
+          "11",
+          "9",
+          "10",
+          "12"
         ]
       },
       {
@@ -2654,8 +3046,11 @@ window.QA_TOPICS_DATA = [
         "method2": "Rodha fast shortcut or inspection trick.",
         "finalAnswer": "16",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
+          "19",
+          "13",
+          "24",
           "16"
         ]
       },
@@ -2668,9 +3063,12 @@ window.QA_TOPICS_DATA = [
         "method2": "Rodha fast shortcut or inspection trick.",
         "finalAnswer": "12",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
-          "12"
+          "12",
+          "14",
+          "10",
+          "18"
         ]
       },
       {
@@ -2683,9 +3081,7 @@ window.QA_TOPICS_DATA = [
         "finalAnswer": "48",
         "trap": "Watch out for boundary conditions and parity constraints.",
         "isTita": true,
-        "options": [
-          "48"
-        ]
+        "options": []
       },
       {
         "qNum": 26,
@@ -2696,9 +3092,12 @@ window.QA_TOPICS_DATA = [
         "method2": "Rodha fast shortcut or inspection trick.",
         "finalAnswer": "3",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
-          "3"
+          "4",
+          "2",
+          "3",
+          "5"
         ]
       },
       {
@@ -2710,8 +3109,11 @@ window.QA_TOPICS_DATA = [
         "method2": "Rodha fast shortcut or inspection trick.",
         "finalAnswer": "4",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
+          "5",
+          "3",
+          "6",
           "4"
         ]
       },
@@ -2724,9 +3126,12 @@ window.QA_TOPICS_DATA = [
         "method2": "Rodha fast shortcut or inspection trick.",
         "finalAnswer": "2",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
-          "2"
+          "2",
+          "3",
+          "1",
+          "4"
         ]
       },
       {
@@ -2738,9 +3143,12 @@ window.QA_TOPICS_DATA = [
         "method2": "Rodha fast shortcut or inspection trick.",
         "finalAnswer": "21",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
-          "21"
+          "25",
+          "21",
+          "17",
+          "32"
         ]
       },
       {
@@ -2753,9 +3161,7 @@ window.QA_TOPICS_DATA = [
         "finalAnswer": "01",
         "trap": "Watch out for boundary conditions and parity constraints.",
         "isTita": true,
-        "options": [
-          "01"
-        ]
+        "options": []
       },
       {
         "qNum": 31,
@@ -2766,8 +3172,11 @@ window.QA_TOPICS_DATA = [
         "method2": "Rodha fast shortcut or inspection trick.",
         "finalAnswer": "84",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
+          "101",
+          "67",
+          "126",
           "84"
         ]
       },
@@ -2780,9 +3189,12 @@ window.QA_TOPICS_DATA = [
         "method2": "Rodha fast shortcut or inspection trick.",
         "finalAnswer": "44",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
-          "44"
+          "44",
+          "53",
+          "35",
+          "66"
         ]
       },
       {
@@ -2794,9 +3206,12 @@ window.QA_TOPICS_DATA = [
         "method2": "Rodha fast shortcut or inspection trick.",
         "finalAnswer": "2 (Last two digits are 25)",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
-          "2 (Last two digits are 25)"
+          "3 (Last two digits are 25)",
+          "2 (Last two digits are 25)",
+          "1 (Last two digits are 25)",
+          "4 (Last two digits are 25)"
         ]
       },
       {
@@ -2808,9 +3223,12 @@ window.QA_TOPICS_DATA = [
         "method2": "Rodha fast shortcut or inspection trick.",
         "finalAnswer": "8",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
-          "8"
+          "9",
+          "7",
+          "8",
+          "10"
         ]
       },
       {
@@ -2823,9 +3241,7 @@ window.QA_TOPICS_DATA = [
         "finalAnswer": "13",
         "trap": "Watch out for boundary conditions and parity constraints.",
         "isTita": true,
-        "options": [
-          "13"
-        ]
+        "options": []
       },
       {
         "qNum": 36,
@@ -2836,9 +3252,12 @@ window.QA_TOPICS_DATA = [
         "method2": "Rodha fast shortcut or inspection trick.",
         "finalAnswer": "0",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
-          "0"
+          "0",
+          "1",
+          "2",
+          "-1"
         ]
       },
       {
@@ -2850,9 +3269,12 @@ window.QA_TOPICS_DATA = [
         "method2": "Rodha fast shortcut or inspection trick.",
         "finalAnswer": "3",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
-          "3"
+          "4",
+          "3",
+          "2",
+          "5"
         ]
       },
       {
@@ -2864,12 +3286,22 @@ window.QA_TOPICS_DATA = [
         "method2": "Rodha fast shortcut or inspection trick.",
         "finalAnswer": "25",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
-          "25"
+          "30",
+          "20",
+          "25",
+          "38"
         ]
       }
-    ]
+    ],
+    "videoLecture": {
+      "title": "Rodha Quant: Number System - Factors, Divisors & Euler Totient",
+      "directUrl": "https://www.youtube.com/results?search_query=Rodha+CAT+Factors+Divisors+Coprime+Pairs+Ravi+Prakash",
+      "embedUrl": "https://www.youtube-nocookie.com/embed/videoseries?list=PLG4bwc5fquzgfMh4YFDnv7fttM0RIKiUQ",
+      "highlight": "Prime Factorization Exponent Products, Odd/Even Divisors, Sum of Factors & Coprime Pairs",
+      "duration": "Complete Playlist • 7 Parts"
+    }
   },
   {
     "id": "qa_interest",
@@ -2878,7 +3310,7 @@ window.QA_TOPICS_DATA = [
     "tier": "Tier A",
     "weightage": "1 Question (3 Marks)",
     "prepTime": "2.5 Hours",
-    "theoryHtml": "<h4>1. Simple vs. Compound Interest: Foundations & First Principles</h4>\n<div class='theory-block'>Let Principal be $P$, annual interest rate be $R\\%$, and time duration be $T$ years.\n\n### 1.1 Simple Interest (SI): Linear Growth\nIn Simple Interest, the interest is calculated **strictly on the original principal $P$** for each period.\n$$\\mathbf{\\text{SI} = \\frac{P \\times R \\times T}{100}}$$\n$$\\mathbf{\\text{Amount } (A) = P + \\text{SI} = P\\left(1 + \\frac{RT}{100}\\right)}$$\n* **The Constant Increment Property:**  \n  The interest accrued in every individual year is identical: $\\Delta I = \\frac{PR}{100}$.\n\n---\n\n### 1.2 Compound Interest (CI): Geometric Growth\nIn Compound Interest, interest accrued in each period is added to the principal to form the new principal base for subsequent periods (\"Interest on Interest\").\n$$\\mathbf{\\text{Amount } (A) = P \\left(1 + \\frac{R}{100}\\right)^T = P \\times M^T}$$\n$$\\mathbf{\\text{CI} = A - P = P \\left[\\left(1 + \\frac{R}{100}\\right)^T - 1\\right]}$$\nwhere $M = \\left(1 + \\frac{R}{100}\\right)$ is the annual Multiplying Factor.\n\n---</div>\n<h4>2. Mathematical Derivations of CI vs. SI Differences</h4>\n<div class='theory-block'>### 2.1 First-Principle Derivation: Difference for 2 Years ($D_2$)\n* For Year 1: $\\text{SI}_1 = \\text{CI}_1 = \\frac{PR}{100}$.\n* For Year 2:\n  * $\\text{SI}_2 = \\frac{PR}{100}$.\n  * $\\text{CI}_2 = \\frac{PR}{100} + \\text{Interest on Year 1 Interest} = \\frac{PR}{100} + \\left(\\frac{PR}{100} \\times \\frac{R}{100}\\right)$.\nSubtracting the two-year totals:\n$$(\\text{CI}_2 - \\text{SI}_2) = \\text{Interest on 1st Year's Interest}$$\n\n$$\\mathbf{D_2 = \\text{CI}_2 - \\text{SI}_2 = P\\left(\\frac{R}{100}\\right)^2}$$\n\n---\n\n### 2.2 First-Principle Derivation: Difference for 3 Years ($D_3$)\nExpanding the 3-year compound interest:\n$$\\text{CI}_3 = P\\left(1 + \\frac{R}{100}\\right)^3 - P = P\\left[\\frac{3R}{100} + 3\\left(\\frac{R}{100}\\right)^2 + \\left(\\frac{R}{100}\\right)^3\\right]$$\nSince $\\text{SI}_3 = \\frac{3PR}{100}$:\n$$\\mathbf{D_3 = \\text{CI}_3 - \\text{SI}_3 = 3P\\left(\\frac{R}{100}\\right)^2 + P\\left(\\frac{R}{100}\\right)^3 = P\\left(\\frac{R}{100}\\right)^2 \\left(3 + \\frac{R}{100}\\right)}$$\n\n$$\\mathbf{D_3 = 3 \\cdot D_2 + P\\left(\\frac{R}{100}\\right)^3}$$\n\n#### The Master Ratio Shortcut:\nDividing $D_3$ by $D_2$:\n$$\\mathbf{\\frac{D_3}{D_2} = \\frac{P(R/100)^2 (3 + R/100)}{P(R/100)^2} = 3 + \\frac{R}{100} = \\frac{300 + R}{100}}$$</div>\n<h4>3. Compounding Frequency Transformations</h4>\n<div class='theory-block'>When interest is compounded $k$ times per year:\n* The effective periodic rate becomes: $\\mathbf{r' = \\frac{R}{k}\\%}$.\n* The total number of conversion periods becomes: $\\mathbf{n' = k \\cdot T}$.\n\n$$\\mathbf{A = P\\left(1 + \\frac{R/k}{100}\\right)^{k \\cdot T}}$$\n\n| Frequency ($k$) | Rate per Period ($r'$) | Total Periods ($n'$) |\n| :---: | :---: | :---: |\n| **Half-Yearly (Semi-Annual, $k=2$)** | $\\frac{R}{2}\\%$ | $2T$ |\n| **Quarterly ($k=4$)** | $\\frac{R}{4}\\%$ | $4T$ |\n| **Monthly ($k=12$)** | $\\frac{R}{12}\\%$ | $12T$ |\n\n---</div>\n<h4>4. Equal Loan Installments (EMI Mechanics)</h4>\n<div class='theory-block'>### 4.1 Compound Interest Equal Annual Installments\nA borrower takes a loan of Principal $P$ and agrees to pay it off in $n$ equal annual installments of \u20b9$x$ each at rate $R\\%$:\n\n#### First-Principle Derivation (Discounted Present Value):\nThe sum of the present values of all future installment cash flows must equal the principal borrowed today:\n$$P = \\frac{x}{1 + \\frac{R}{100}} + \\frac{x}{\\left(1 + \\frac{R}{100}\\right)^2} + \\dots + \\frac{x}{\\left(1 + \\frac{R}{100}\\right)^n}$$\n\nLet $k = \\left(1 + \\frac{R}{100}\\right)$.  \nThis forms a geometric progression:\n$$\\mathbf{P = x \\left[\\frac{1}{k} + \\frac{1}{k^2} + \\dots + \\frac{1}{k^n}\\right] = x \\cdot \\left[\\frac{1 - k^{-n}}{k - 1}\\right]}$$\n\n* **For 2 Equal Installments ($n = 2$):**\n  $$\\mathbf{P = \\frac{x}{k} + \\frac{x}{k^2} = \\frac{x(k + 1)}{k^2} \\quad \\text{where } k = 1 + \\frac{R}{100}}$$\n\n---\n\n### 4.2 Simple Interest Installments (Debt Discharge)\nWhen a future accumulated debt $A$ due after $n$ years is discharged in $n$ equal annual installments of \u20b9$x$:\n$$\\mathbf{A = n \\cdot x + \\frac{x \\cdot R}{100} \\times \\frac{n(n - 1)}{2}}$$\n\n---</div>",
+    "theoryHtml": "<h4>1. Simple vs. Compound Interest: Foundations & First Principles</h4>\n<div class='theory-block'>Let Principal be $P$, annual interest rate be $R\\%$, and time duration be $T$ years.\n\n### 1.1 Simple Interest (SI): Linear Growth\nIn Simple Interest, the interest is calculated **strictly on the original principal $P$** for each period.\n$$\\mathbf{\\text{SI} = \\frac{P \\times R \\times T}{100}}$$\n$$\\mathbf{\\text{Amount } (A) = P + \\text{SI} = P\\left(1 + \\frac{RT}{100}\\right)}$$\n* **The Constant Increment Property:**  \n  The interest accrued in every individual year is identical: $\\Delta I = \\frac{PR}{100}$.\n\n---\n\n### 1.2 Compound Interest (CI): Geometric Growth\nIn Compound Interest, interest accrued in each period is added to the principal to form the new principal base for subsequent periods (\"Interest on Interest\").\n$$\\mathbf{\\text{Amount } (A) = P \\left(1 + \\frac{R}{100}\\right)^T = P \\times M^T}$$\n$$\\mathbf{\\text{CI} = A - P = P \\left[\\left(1 + \\frac{R}{100}\\right)^T - 1\\right]}$$\nwhere $M = \\left(1 + \\frac{R}{100}\\right)$ is the annual Multiplying Factor.\n\n---</div>\n<h4>2. Mathematical Derivations of CI vs. SI Differences</h4>\n<div class='theory-block'>### 2.1 First-Principle Derivation: Difference for 2 Years ($D_2$)\n* For Year 1: $\\text{SI}_1 = \\text{CI}_1 = \\frac{PR}{100}$.\n* For Year 2:\n  * $\\text{SI}_2 = \\frac{PR}{100}$.\n  * $\\text{CI}_2 = \\frac{PR}{100} + \\text{Interest on Year 1 Interest} = \\frac{PR}{100} + \\left(\\frac{PR}{100} \\times \\frac{R}{100}\\right)$.\nSubtracting the two-year totals:\n$$(\\text{CI}_2 - \\text{SI}_2) = \\text{Interest on 1st Year's Interest}$$\n\n$$\\mathbf{D_2 = \\text{CI}_2 - \\text{SI}_2 = P\\left(\\frac{R}{100}\\right)^2}$$\n\n---\n\n### 2.2 First-Principle Derivation: Difference for 3 Years ($D_3$)\nExpanding the 3-year compound interest:\n$$\\text{CI}_3 = P\\left(1 + \\frac{R}{100}\\right)^3 - P = P\\left[\\frac{3R}{100} + 3\\left(\\frac{R}{100}\\right)^2 + \\left(\\frac{R}{100}\\right)^3\\right]$$\nSince $\\text{SI}_3 = \\frac{3PR}{100}$:\n$$\\mathbf{D_3 = \\text{CI}_3 - \\text{SI}_3 = 3P\\left(\\frac{R}{100}\\right)^2 + P\\left(\\frac{R}{100}\\right)^3 = P\\left(\\frac{R}{100}\\right)^2 \\left(3 + \\frac{R}{100}\\right)}$$\n\n$$\\mathbf{D_3 = 3 \\cdot D_2 + P\\left(\\frac{R}{100}\\right)^3}$$\n\n#### The Master Ratio Shortcut:\nDividing $D_3$ by $D_2$:\n$$\\mathbf{\\frac{D_3}{D_2} = \\frac{P(R/100)^2 (3 + R/100)}{P(R/100)^2} = 3 + \\frac{R}{100} = \\frac{300 + R}{100}}$$</div>\n<h4>3. Compounding Frequency Transformations</h4>\n<div class='theory-block'>When interest is compounded $k$ times per year:\n* The effective periodic rate becomes: $\\mathbf{r' = \\frac{R}{k}\\%}$.\n* The total number of conversion periods becomes: $\\mathbf{n' = k \\cdot T}$.\n\n$$\\mathbf{A = P\\left(1 + \\frac{R/k}{100}\\right)^{k \\cdot T}}$$\n\n| Frequency ($k$) | Rate per Period ($r'$) | Total Periods ($n'$) |\n| :---: | :---: | :---: |\n| **Half-Yearly (Semi-Annual, $k=2$)** | $\\frac{R}{2}\\%$ | $2T$ |\n| **Quarterly ($k=4$)** | $\\frac{R}{4}\\%$ | $4T$ |\n| **Monthly ($k=12$)** | $\\frac{R}{12}\\%$ | $12T$ |\n\n---</div>\n<h4>4. Equal Loan Installments (EMI Mechanics)</h4>\n<div class='theory-block'>### 4.1 Compound Interest Equal Annual Installments\nA borrower takes a loan of Principal $P$ and agrees to pay it off in $n$ equal annual installments of ₹$x$ each at rate $R\\%$:\n\n#### First-Principle Derivation (Discounted Present Value):\nThe sum of the present values of all future installment cash flows must equal the principal borrowed today:\n$$P = \\frac{x}{1 + \\frac{R}{100}} + \\frac{x}{\\left(1 + \\frac{R}{100}\\right)^2} + \\dots + \\frac{x}{\\left(1 + \\frac{R}{100}\\right)^n}$$\n\nLet $k = \\left(1 + \\frac{R}{100}\\right)$.  \nThis forms a geometric progression:\n$$\\mathbf{P = x \\left[\\frac{1}{k} + \\frac{1}{k^2} + \\dots + \\frac{1}{k^n}\\right] = x \\cdot \\left[\\frac{1 - k^{-n}}{k - 1}\\right]}$$\n\n* **For 2 Equal Installments ($n = 2$):**\n  $$\\mathbf{P = \\frac{x}{k} + \\frac{x}{k^2} = \\frac{x(k + 1)}{k^2} \\quad \\text{where } k = 1 + \\frac{R}{100}}$$\n\n---\n\n### 4.2 Simple Interest Installments (Debt Discharge)\nWhen a future accumulated debt $A$ due after $n$ years is discharged in $n$ equal annual installments of ₹$x$:\n$$\\mathbf{A = n \\cdot x + \\frac{x \\cdot R}{100} \\times \\frac{n(n - 1)}{2}}$$\n\n---</div>",
     "formulas": [
       {
         "formula": "\\mathbf{\\text{SI} = \\frac{P \\times R \\times T}{100}}"
@@ -2909,9 +3341,12 @@ window.QA_TOPICS_DATA = [
         "method2": "Rodha fast shortcut or inspection trick.",
         "finalAnswer": "24 years",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
-          "24 years"
+          "24 years",
+          "20 years",
+          "30 years",
+          "36 years"
         ]
       },
       {
@@ -2923,37 +3358,46 @@ window.QA_TOPICS_DATA = [
         "method2": "Rodha fast shortcut or inspection trick.",
         "finalAnswer": "15 years",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
-          "15 years"
+          "11 years",
+          "15 years",
+          "21 years",
+          "23 years"
         ]
       },
       {
         "qNum": 58,
         "title": "Difference Between CI and SI for 2 Years",
-        "problem": "The difference between compound interest and simple interest on a certain sum for 2 years at 10% per annum is \u20b9150. Find the principal sum.",
+        "problem": "The difference between compound interest and simple interest on a certain sum for 2 years at 10% per annum is ₹150. Find the principal sum.",
         "concept": "Formula: Difference for 2 years $\\Delta_2 = P \\left(\\frac{R}{100}\\right)^2$.",
         "method1": "Step-by-step algebraic derivation.",
         "method2": "Rodha fast shortcut or inspection trick.",
-        "finalAnswer": "\u20b915,000",
+        "finalAnswer": "₹15,000",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
-          "\u20b915,000"
+          "₹12,000",
+          "₹18,000",
+          "₹15,000",
+          "₹22,500"
         ]
       },
       {
         "qNum": 59,
         "title": "Difference Between CI and SI for 3 Years",
-        "problem": "The difference between compound interest and simple interest on a sum of \u20b98000 for 3 years at 5% per annum is what amount?",
+        "problem": "The difference between compound interest and simple interest on a sum of ₹8000 for 3 years at 5% per annum is what amount?",
         "concept": "Formula: $\\Delta_3 = P \\left(\\frac{R}{100}\\right)^2 \\left(3 + \\frac{R}{100}\\right) = \\Delta_2 \\left(3 + \\frac{R}{100}\\right)$.",
         "method1": "Step-by-step algebraic derivation.",
         "method2": "Rodha fast shortcut or inspection trick.",
-        "finalAnswer": "\u20b961",
+        "finalAnswer": "₹61",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
-          "\u20b961"
+          "₹49",
+          "₹73",
+          "₹92",
+          "₹61"
         ]
       },
       {
@@ -2966,9 +3410,7 @@ window.QA_TOPICS_DATA = [
         "finalAnswer": "12.5% p.a.",
         "trap": "Watch out for boundary conditions and parity constraints.",
         "isTita": true,
-        "options": [
-          "12.5% p.a."
-        ]
+        "options": []
       },
       {
         "qNum": 61,
@@ -2979,107 +3421,126 @@ window.QA_TOPICS_DATA = [
         "method2": "Rodha fast shortcut or inspection trick.",
         "finalAnswer": "12.36%",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
-          "12.36%"
+          "17.36%",
+          "12.36%",
+          "7.359999999999999%",
+          "24.72%"
         ]
       },
       {
         "qNum": 62,
         "title": "Finding Principal and Rate from Consecutive CI Amounts",
-        "problem": "A sum of money invested at compound interest amounts to \u20b92400 in 3 years and to \u20b92520 in 4 years. Find the rate of interest and the original principal.",
+        "problem": "A sum of money invested at compound interest amounts to ₹2400 in 3 years and to ₹2520 in 4 years. Find the rate of interest and the original principal.",
         "concept": "In CI, the amount at the end of year $(n+1)$ is obtained by adding one year's interest to the amount at year $n$: $R = \\frac{A_{n+1} - A_n}{A_n} \\times 100\\%$.",
         "method1": "Step-by-step algebraic derivation.",
         "method2": "Rodha fast shortcut or inspection trick.",
-        "finalAnswer": "Rate = 5%, Principal = \u20b92073.21 (or 19200000/9261)",
+        "finalAnswer": "Rate = 5%, Principal = ₹2073.21 (or 19200000/9261)",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
-          "Rate = 5%, Principal = \u20b92073.21 (or 19200000/9261)"
+          "(1, 2] U [3, 4)",
+          "[1, 4]",
+          "Rate = 5%, Principal = ₹2073.21 (or 19200000/9261)",
+          "(2, 3)"
         ]
       },
       {
         "qNum": 63,
         "title": "Sum Amounts to $A_1$ in $t$ Years and $A_2$ in $2t$ Years",
-        "problem": "A sum invested at compound interest amounts to \u20b94500 in 2 years and to \u20b96750 in 4 years. Find the principal sum.",
+        "problem": "A sum invested at compound interest amounts to ₹4500 in 2 years and to ₹6750 in 4 years. Find the principal sum.",
         "concept": "If $P$ amounts to $A_1$ in $t$ years and $A_2$ in $2t$ years, the multiplying factor is constant: $\\frac{A_1}{P} = \\frac{A_2}{A_1} \\implies P = \\frac{A_1^2}{A_2}$.",
         "method1": "Step-by-step algebraic derivation.",
         "method2": "Rodha fast shortcut or inspection trick.",
-        "finalAnswer": "\u20b93000",
+        "finalAnswer": "₹3000",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
-          "\u20b93000"
+          "₹2,400",
+          "₹3,600",
+          "₹4,500",
+          "₹3000"
         ]
       },
       {
         "qNum": 64,
         "title": "Equated Annual Installment in Simple Interest",
-        "problem": "What annual installment will discharge a debt of \u20b96450 due in 4 years at 5% simple interest per annum?",
+        "problem": "What annual installment will discharge a debt of ₹6450 due in 4 years at 5% simple interest per annum?",
         "concept": "Formula for annual installment $x$ under SI: $\\text{Debt} = n x + \\frac{x R}{100} \\times \\frac{n(n - 1)}{2}$.",
         "method1": "Step-by-step algebraic derivation.",
         "method2": "Rodha fast shortcut or inspection trick.",
-        "finalAnswer": "\u20b91500",
+        "finalAnswer": "₹1500",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
-          "\u20b91500"
+          "₹1500",
+          "₹1,200",
+          "₹1,800",
+          "₹2,250"
         ]
       },
       {
         "qNum": 65,
         "title": "Equated Annual Installment in Compound Interest",
-        "problem": "A loan of \u20b92100 is to be paid back in two equal annual installments at 10% compound interest per annum. Find the value of each installment.",
+        "problem": "A loan of ₹2100 is to be paid back in two equal annual installments at 10% compound interest per annum. Find the value of each installment.",
         "concept": "Formula: Loan Principal $P = \\frac{x}{1 + r} + \\frac{x}{(1 + r)^2}$.",
         "method1": "Step-by-step algebraic derivation.",
         "method2": "Rodha fast shortcut or inspection trick.",
-        "finalAnswer": "\u20b91210",
+        "finalAnswer": "₹1210",
         "trap": "Watch out for boundary conditions and parity constraints.",
         "isTita": true,
-        "options": [
-          "\u20b91210"
-        ]
+        "options": []
       },
       {
         "qNum": 66,
         "title": "Equal Amount Inheritance Distribution under CI",
-        "problem": "A father divides \u20b916,400 between his two sons aged 17 and 18 years such that both get equal amounts when they turn 20 years old, at 5% compound interest per annum. How much did the younger son receive?",
+        "problem": "A father divides ₹16,400 between his two sons aged 17 and 18 years such that both get equal amounts when they turn 20 years old, at 5% compound interest per annum. How much did the younger son receive?",
         "concept": "Let shares be $S_1$ (for 17-yr old, invested for 3 years) and $S_2$ (for 18-yr old, invested for 2 years). Equal maturity amount: $S_1 (1 + r)^3 = S_2 (1 + r)^2 \\implies S_2 = S_1 (1 + r)$.",
         "method1": "Step-by-step algebraic derivation.",
         "method2": "Rodha fast shortcut or inspection trick.",
-        "finalAnswer": "\u20b98000",
+        "finalAnswer": "₹8000",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
-          "\u20b98000"
+          "₹6,400",
+          "₹9,600",
+          "₹8000",
+          "₹12,000"
         ]
       },
       {
         "qNum": 67,
         "title": "Equal Interest Split under Simple Interest",
-        "problem": "A sum of \u20b912,000 is divided into two parts such that the simple interest on the first part for 3 years at 12% per annum is equal to the simple interest on the second part for 4.5 years at 16% per annum. Find the first part.",
+        "problem": "A sum of ₹12,000 is divided into two parts such that the simple interest on the first part for 3 years at 12% per annum is equal to the simple interest on the second part for 4.5 years at 16% per annum. Find the first part.",
         "concept": "Equal interest: $P_1 \\times R_1 \\times T_1 = P_2 \\times R_2 \\times T_2$.",
         "method1": "Step-by-step algebraic derivation.",
         "method2": "Rodha fast shortcut or inspection trick.",
-        "finalAnswer": "\u20b98000",
+        "finalAnswer": "₹8000",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
-          "\u20b98000"
+          "₹6,400",
+          "₹9,600",
+          "₹12,000",
+          "₹8000"
         ]
       },
       {
         "qNum": 68,
         "title": "Marginal Rate Increase in Simple Interest",
-        "problem": "A sum of money was invested at simple interest at a certain rate for 3 years. Had it been invested at 4% higher rate, it would have fetched \u20b9600 more. Find the principal sum.",
+        "problem": "A sum of money was invested at simple interest at a certain rate for 3 years. Had it been invested at 4% higher rate, it would have fetched ₹600 more. Find the principal sum.",
         "concept": "Extra interest $= P \\times \\Delta R \\times T / 100$.",
         "method1": "Step-by-step algebraic derivation.",
         "method2": "Rodha fast shortcut or inspection trick.",
-        "finalAnswer": "\u20b95000",
+        "finalAnswer": "₹5000",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
-          "\u20b95000"
+          "₹5000",
+          "₹4,000",
+          "₹6,000",
+          "₹7,500"
         ]
       },
       {
@@ -3091,96 +3552,114 @@ window.QA_TOPICS_DATA = [
         "method2": "Rodha fast shortcut or inspection trick.",
         "finalAnswer": "9 years (approx), 9.01 years (exact)",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
-          "9 years (approx), 9.01 years (exact)"
+          "(1, 2] U [3, 4)",
+          "9 years (approx), 9.01 years (exact)",
+          "[1, 4]",
+          "(2, 3)"
         ]
       },
       {
         "qNum": 70,
         "title": "Difference in CI Earned in Consecutive Years",
-        "problem": "A sum is invested at compound interest of 10% per annum. The interest earned in the 3rd year is \u20b91210. Find the interest earned in the 2nd year.",
+        "problem": "A sum is invested at compound interest of 10% per annum. The interest earned in the 3rd year is ₹1210. Find the interest earned in the 2nd year.",
         "concept": "Interest in year $(n+1)$ is $(1 + r)$ times the interest in year $n$: $I_{n+1} = I_n (1 + r)$.",
         "method1": "Step-by-step algebraic derivation.",
         "method2": "Rodha fast shortcut or inspection trick.",
-        "finalAnswer": "\u20b91100",
+        "finalAnswer": "₹1100",
         "trap": "Watch out for boundary conditions and parity constraints.",
         "isTita": true,
-        "options": [
-          "\u20b91100"
-        ]
+        "options": []
       },
       {
         "qNum": 71,
         "title": "Cash Down Payment with Installment Interest Calculation",
-        "problem": "A refrigerator is available for \u20b926,000 cash or for \u20b97,000 cash down payment followed by three equal monthly installments of \u20b96,600 each. Find the rate of simple interest charged under the installment scheme.",
+        "problem": "A refrigerator is available for ₹26,000 cash or for ₹7,000 cash down payment followed by three equal monthly installments of ₹6,600 each. Find the rate of simple interest charged under the installment scheme.",
         "concept": "Principal financed = Cash Price - Down Payment. Total interest = Total Installments Paid - Principal Financed.",
         "method1": "Step-by-step algebraic derivation.",
         "method2": "Rodha fast shortcut or inspection trick.",
         "finalAnswer": "25.8% p.a. (or 800/31%)",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
+          "30.8%",
+          "20.8%",
+          "51.6%",
           "25.8% p.a. (or 800/31%)"
         ]
       },
       {
         "qNum": 72,
         "title": "Quarterly Compounding Effective Return",
-        "problem": "Find the compound interest on \u20b910,000 for 1 year at 20% per annum compounded quarterly.",
+        "problem": "Find the compound interest on ₹10,000 for 1 year at 20% per annum compounded quarterly.",
         "concept": "Quarterly rate $r = 20 / 4 = 5\\% = 0.05$. Number of quarters $n = 4$.",
         "method1": "Step-by-step algebraic derivation.",
         "method2": "Rodha fast shortcut or inspection trick.",
-        "finalAnswer": "\u20b92155.06",
+        "finalAnswer": "₹2155.06",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
-          "\u20b92155.06"
+          "₹2155.06",
+          "₹1,724",
+          "₹2,586",
+          "₹3,233"
         ]
       },
       {
         "qNum": 73,
         "title": "Equated 3-Year Installment under CI",
-        "problem": "A sum of \u20b918,200 is borrowed at 20% compound interest per annum. If it is repaid in 3 equal annual installments, find the value of each installment.",
+        "problem": "A sum of ₹18,200 is borrowed at 20% compound interest per annum. If it is repaid in 3 equal annual installments, find the value of each installment.",
         "concept": "Formula: $P = x \\left[ \\frac{1}{1.2} + \\frac{1}{1.2^2} + \\frac{1}{1.2^3} \\right] = x \\left[ \\frac{5}{6} + \\frac{25}{36} + \\frac{125}{216} \\right]$.",
         "method1": "Step-by-step algebraic derivation.",
         "method2": "Rodha fast shortcut or inspection trick.",
-        "finalAnswer": "\u20b98640",
+        "finalAnswer": "₹8640",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
-          "\u20b98640"
+          "₹6,912",
+          "₹8640",
+          "₹10,368",
+          "₹12,960"
         ]
       },
       {
         "qNum": 74,
         "title": "Simple Interest Rate Equivalent to Double Compounding",
-        "problem": "A person lent a sum at 10% per annum simple interest for 2 years. Had he lent it at 10% per annum compound interest, he would have earned \u20b950 more. Find the sum.",
+        "problem": "A person lent a sum at 10% per annum simple interest for 2 years. Had he lent it at 10% per annum compound interest, he would have earned ₹50 more. Find the sum.",
         "concept": "Difference for 2 years at 10% is $1\\%$ of principal.",
         "method1": "Step-by-step algebraic derivation.",
         "method2": "Rodha fast shortcut or inspection trick.",
-        "finalAnswer": "\u20b95000",
+        "finalAnswer": "₹5000",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
-          "\u20b95000"
+          "₹4,000",
+          "₹6,000",
+          "₹5000",
+          "₹7,500"
         ]
       },
       {
         "qNum": 75,
         "title": "Growth of Sum under Increasing Annual CI Rates",
-        "problem": "Find the compound interest on \u20b910,000 in 3 years if the rate of interest is 4% for the 1st year, 5% for the 2nd year, and 6% for the 3rd year.",
+        "problem": "Find the compound interest on ₹10,000 in 3 years if the rate of interest is 4% for the 1st year, 5% for the 2nd year, and 6% for the 3rd year.",
         "concept": "Amount $= P(1 + r_1)(1 + r_2)(1 + r_3)$.",
         "method1": "Step-by-step algebraic derivation.",
         "method2": "Rodha fast shortcut or inspection trick.",
-        "finalAnswer": "\u20b91575.20",
+        "finalAnswer": "₹1575.20",
         "trap": "Watch out for boundary conditions and parity constraints.",
         "isTita": true,
-        "options": [
-          "\u20b91575.20"
-        ]
+        "options": []
       }
-    ]
+    ],
+    "videoLecture": {
+      "title": "Rodha Quant: Simple & Compound Interest, Equated Installments",
+      "directUrl": "https://www.youtube.com/results?search_query=Rodha+CAT+Simple+Compound+Interest+Installments+Ravi+Prakash",
+      "embedUrl": "https://www.youtube-nocookie.com/embed/videoseries?list=PLG4bwc5fquzgfMh4YFDnv7fttM0RIKiUQ",
+      "highlight": "P(R/100)^2 Difference Formula, Compounding Periods & Present Value Annuity Matrix",
+      "duration": "Complete Playlist • 5 Parts"
+    }
   },
   {
     "id": "qa_ratios",
@@ -3220,9 +3699,12 @@ window.QA_TOPICS_DATA = [
         "method2": "Rodha fast shortcut or inspection trick.",
         "finalAnswer": "A:B:C:D = 16:24:30:35, A:D = 16:35",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
-          "A:B:C:D = 16:24:30:35, A:D = 16:35"
+          "A:B:C:D = 16:24:30:35, A:D = 16:35",
+          "19 A:B:C:D = :24:30:35, A:D = 16:35",
+          "13 A:B:C:D = :24:30:35, A:D = 16:35",
+          "24 A:B:C:D = :24:30:35, A:D = 16:35"
         ]
       },
       {
@@ -3234,65 +3716,75 @@ window.QA_TOPICS_DATA = [
         "method2": "Rodha fast shortcut or inspection trick.",
         "finalAnswer": "6 : 4 : 3",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
-          "6 : 4 : 3"
+          "3 : 4 : 6",
+          "6 : 4 : 3",
+          "6 : 3 : 4",
+          "7 : 4 : 3"
         ]
       },
       {
         "qNum": 78,
         "title": "Income, Expenditure and Equal Savings Model",
-        "problem": "The incomes of A and B are in the ratio $5 : 3$, and their expenditures are in the ratio $9 : 5$. If each saves \u20b92600 per month, find their monthly incomes.",
+        "problem": "The incomes of A and B are in the ratio $5 : 3$, and their expenditures are in the ratio $9 : 5$. If each saves ₹2600 per month, find their monthly incomes.",
         "concept": "Equation: $\\text{Income} - \\text{Expenditure} = \\text{Savings}$.",
         "method1": "Step-by-step algebraic derivation.",
         "method2": "Rodha fast shortcut or inspection trick.",
-        "finalAnswer": "A = \u20b926,000, B = \u20b915,600",
+        "finalAnswer": "A = ₹26,000, B = ₹15,600",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
-          "A = \u20b926,000, B = \u20b915,600"
+          "31 A = ₹,000, B = ₹15,600",
+          "21 A = ₹,000, B = ₹15,600",
+          "A = ₹26,000, B = ₹15,600",
+          "39 A = ₹,000, B = ₹15,600"
         ]
       },
       {
         "qNum": 79,
         "title": "Income, Expenditure with Unequal Savings",
-        "problem": "The ratio of incomes of A and B is $4 : 3$ and the ratio of their expenditures is $3 : 2$. If A saves \u20b96000 and B saves \u20b94000, find A's income.",
+        "problem": "The ratio of incomes of A and B is $4 : 3$ and the ratio of their expenditures is $3 : 2$. If A saves ₹6000 and B saves ₹4000, find A's income.",
         "concept": "Cross-multiplication method: $\\frac{4x - 6000}{3x - 4000} = \\frac{3}{2}$.",
         "method1": "Step-by-step algebraic derivation.",
         "method2": "Rodha fast shortcut or inspection trick.",
-        "finalAnswer": "\u20b94000",
+        "finalAnswer": "₹4000",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
-          "\u20b94000"
+          "₹3,200",
+          "₹4,800",
+          "₹6,000",
+          "₹4000"
         ]
       },
       {
         "qNum": 80,
         "title": "Coin Bag Denomination and Total Value",
-        "problem": "A box contains \u20b91, 50-paise, and 25-paise coins in the ratio $3 : 4 : 8$. If the total value of all coins is \u20b9140, find the total number of coins in the box.",
+        "problem": "A box contains ₹1, 50-paise, and 25-paise coins in the ratio $3 : 4 : 8$. If the total value of all coins is ₹140, find the total number of coins in the box.",
         "concept": "Value of coins = Number of coins $\\times$ Face value.",
         "method1": "Step-by-step algebraic derivation.",
         "method2": "Rodha fast shortcut or inspection trick.",
         "finalAnswer": "300 coins",
         "trap": "Watch out for boundary conditions and parity constraints.",
         "isTita": true,
-        "options": [
-          "300 coins"
-        ]
+        "options": []
       },
       {
         "qNum": 81,
         "title": "Coin Problem with Given Coin Count",
-        "problem": "A bag contains 378 coins of \u20b91, 50p, and 25p whose values are in the ratio $13 : 11 : 7$. Find the number of 50-paise coins.",
+        "problem": "A bag contains 378 coins of ₹1, 50p, and 25p whose values are in the ratio $13 : 11 : 7$. Find the number of 50-paise coins.",
         "concept": "Given the ratio of VALUES, convert to ratio of NUMBER of coins.",
         "method1": "Step-by-step algebraic derivation.",
         "method2": "Rodha fast shortcut or inspection trick.",
         "finalAnswer": "132",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
-          "132"
+          "158",
+          "132",
+          "106",
+          "198"
         ]
       },
       {
@@ -3304,9 +3796,12 @@ window.QA_TOPICS_DATA = [
         "method2": "Rodha fast shortcut or inspection trick.",
         "finalAnswer": "Third = 27, Mean = 8",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
-          "Third = 27, Mean = 8"
+          "32 Third = , Mean = 8",
+          "22 Third = , Mean = 8",
+          "Third = 27, Mean = 8",
+          "41 Third = , Mean = 8"
         ]
       },
       {
@@ -3318,8 +3813,11 @@ window.QA_TOPICS_DATA = [
         "method2": "Rodha fast shortcut or inspection trick.",
         "finalAnswer": "35",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
+          "42",
+          "28",
+          "53",
           "35"
         ]
       },
@@ -3332,9 +3830,12 @@ window.QA_TOPICS_DATA = [
         "method2": "Rodha fast shortcut or inspection trick.",
         "finalAnswer": "4",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
-          "4"
+          "4",
+          "5",
+          "3",
+          "6"
         ]
       },
       {
@@ -3347,36 +3848,40 @@ window.QA_TOPICS_DATA = [
         "finalAnswer": "8",
         "trap": "Watch out for boundary conditions and parity constraints.",
         "isTita": true,
-        "options": [
-          "8"
-        ]
+        "options": []
       },
       {
         "qNum": 86,
         "title": "Partly Constant and Partly Variable Cost (Hostel Model)",
-        "problem": "The monthly expenses of a student club are partly constant and partly vary directly as the number of members. If expenses are \u20b910,400 for 60 members and \u20b916,000 for 100 members, find the expenses for 120 members.",
+        "problem": "The monthly expenses of a student club are partly constant and partly vary directly as the number of members. If expenses are ₹10,400 for 60 members and ₹16,000 for 100 members, find the expenses for 120 members.",
         "concept": "Model: $E = F + n \\times V$, where $F$ is fixed cost and $V$ is variable cost per member.",
         "method1": "Step-by-step algebraic derivation.",
         "method2": "Rodha fast shortcut or inspection trick.",
-        "finalAnswer": "\u20b918,800",
+        "finalAnswer": "₹18,800",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
-          "\u20b918,800"
+          "₹15,040",
+          "₹22,560",
+          "₹18,800",
+          "₹28,200"
         ]
       },
       {
         "qNum": 87,
         "title": "Diamond Breaking Problem (Value Proportional to Weight Squared)",
-        "problem": "A diamond falls and breaks into three pieces whose weights are in the ratio $1 : 2 : 3$. If the value of the diamond is directly proportional to the square of its weight and the total loss incurred due to breaking is \u20b944,000, find the original value of the diamond.",
+        "problem": "A diamond falls and breaks into three pieces whose weights are in the ratio $1 : 2 : 3$. If the value of the diamond is directly proportional to the square of its weight and the total loss incurred due to breaking is ₹44,000, find the original value of the diamond.",
         "concept": "Value $V = k W^2$. Compare $(W_1 + W_2 + W_3)^2$ with $(W_1^2 + W_2^2 + W_3^2)$.",
         "method1": "Step-by-step algebraic derivation.",
         "method2": "Rodha fast shortcut or inspection trick.",
-        "finalAnswer": "\u20b972,000",
+        "finalAnswer": "₹72,000",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
-          "\u20b972,000"
+          "₹57,600",
+          "₹86,400",
+          "₹1,08,000",
+          "₹72,000"
         ]
       },
       {
@@ -3388,65 +3893,75 @@ window.QA_TOPICS_DATA = [
         "method2": "Rodha fast shortcut or inspection trick.",
         "finalAnswer": "110 wagons",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
-          "110 wagons"
+          "110 wagons",
+          "132 wagons",
+          "88 wagons",
+          "165 wagons"
         ]
       },
       {
         "qNum": 89,
         "title": "Basic Partnership Profit Sharing",
-        "problem": "A, B, and C enter into a partnership with investments of \u20b940,000, \u20b950,000, and \u20b960,000 respectively. If the total annual profit is \u20b945,000, find B's share of the profit.",
+        "problem": "A, B, and C enter into a partnership with investments of ₹40,000, ₹50,000, and ₹60,000 respectively. If the total annual profit is ₹45,000, find B's share of the profit.",
         "concept": "Profit is divided in the ratio of capital invested (when time period is equal).",
         "method1": "Step-by-step algebraic derivation.",
         "method2": "Rodha fast shortcut or inspection trick.",
-        "finalAnswer": "\u20b915,000",
+        "finalAnswer": "₹15,000",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
-          "\u20b915,000"
+          "₹12,000",
+          "₹15,000",
+          "₹18,000",
+          "₹22,500"
         ]
       },
       {
         "qNum": 90,
         "title": "Partnership with Unequal Time Periods",
-        "problem": "A starts a business with \u20b935,000. After 5 months, B joins with \u20b950,000. At the end of the year, the total profit is \u20b930,000. Find B's share of the profit.",
+        "problem": "A starts a business with ₹35,000. After 5 months, B joins with ₹50,000. At the end of the year, the total profit is ₹30,000. Find B's share of the profit.",
         "concept": "Profit Ratio $= (C_A \\times T_A) : (C_B \\times T_B)$.",
         "method1": "Step-by-step algebraic derivation.",
         "method2": "Rodha fast shortcut or inspection trick.",
-        "finalAnswer": "\u20b913,636.36 (or 150000/11)",
+        "finalAnswer": "₹13,636.36 (or 150000/11)",
         "trap": "Watch out for boundary conditions and parity constraints.",
         "isTita": true,
-        "options": [
-          "\u20b913,636.36 (or 150000/11)"
-        ]
+        "options": []
       },
       {
         "qNum": 91,
         "title": "Active Managing Partner with Salary",
-        "problem": "A and B enter into a partnership with capitals in the ratio $7 : 5$. A is an active partner and receives 10% of the total profit as a management salary. The remaining profit is divided in the ratio of their capitals. If A receives a total of \u20b914,600, find the total profit.",
+        "problem": "A and B enter into a partnership with capitals in the ratio $7 : 5$. A is an active partner and receives 10% of the total profit as a management salary. The remaining profit is divided in the ratio of their capitals. If A receives a total of ₹14,600, find the total profit.",
         "concept": "Total Profit $= P$. Management salary to A $= 0.10 P$. Remaining profit $= 0.90 P$, split $7:5$.",
         "method1": "Step-by-step algebraic derivation.",
         "method2": "Rodha fast shortcut or inspection trick.",
-        "finalAnswer": "\u20b923,360",
+        "finalAnswer": "₹23,360",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
-          "\u20b923,360"
+          "₹18,688",
+          "₹28,032",
+          "₹35,040",
+          "₹23,360"
         ]
       },
       {
         "qNum": 92,
         "title": "Capital Alteration During the Year",
-        "problem": "A, B, and C start a business. A invests \u20b920,000 for the whole year. B puts in \u20b930,000 initially and withdraws \u20b910,000 after 6 months. C puts in \u20b940,000 initially and adds \u20b910,000 after 9 months. Find the ratio in which they should divide the annual profit.",
+        "problem": "A, B, and C start a business. A invests ₹20,000 for the whole year. B puts in ₹30,000 initially and withdraws ₹10,000 after 6 months. C puts in ₹40,000 initially and adds ₹10,000 after 9 months. Find the ratio in which they should divide the annual profit.",
         "concept": "Effective capital = $\\sum (\\text{Capital} \\times \\text{Months})$.",
         "method1": "Step-by-step algebraic derivation.",
         "method2": "Rodha fast shortcut or inspection trick.",
         "finalAnswer": "8 : 10 : 17",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
-          "8 : 10 : 17"
+          "8 : 10 : 17",
+          "17 : 10 : 8",
+          "8 : 17 : 10",
+          "9 : 10 : 17"
         ]
       },
       {
@@ -3458,9 +3973,12 @@ window.QA_TOPICS_DATA = [
         "method2": "Rodha fast shortcut or inspection trick.",
         "finalAnswer": "6 years",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
-          "6 years"
+          "2 years",
+          "6 years",
+          "12 years",
+          "9 years"
         ]
       },
       {
@@ -3472,9 +3990,12 @@ window.QA_TOPICS_DATA = [
         "method2": "Rodha fast shortcut or inspection trick.",
         "finalAnswer": "60 liters",
         "trap": "Watch out for boundary conditions and parity constraints.",
-        "isTita": true,
+        "isTita": false,
         "options": [
-          "60 liters"
+          "72 liters",
+          "48 liters",
+          "60 liters",
+          "90 liters"
         ]
       },
       {
@@ -3487,18 +4008,23 @@ window.QA_TOPICS_DATA = [
         "finalAnswer": "7 : 5",
         "trap": "Watch out for boundary conditions and parity constraints.",
         "isTita": true,
-        "options": [
-          "7 : 5"
-        ]
+        "options": []
       }
-    ]
+    ],
+    "videoLecture": {
+      "title": "Rodha Quant: Ratios, Proportions, Joint Variation & Partnerships",
+      "directUrl": "https://www.youtube.com/results?search_query=Rodha+CAT+Ratio+Proportion+Variations+Partnerships+Ravi+Prakash",
+      "embedUrl": "https://www.youtube-nocookie.com/embed/videoseries?list=PLG4bwc5fquzgfMh4YFDnv7fttM0RIKiUQ",
+      "highlight": "Constant Sum/Difference Bridges, Joint Variation Equations & Profit-Capital-Time Sharing",
+      "duration": "Complete Playlist • 6 Parts"
+    }
   },
   {
     "id": "qa_tsd",
     "title": "Time, Speed, Distance, Races & Escalators",
     "domain": "Arithmetic",
     "tier": "Tier S",
-    "weightage": "2 \u2013 3 Questions (6 \u2013 9 Marks)",
+    "weightage": "2 – 3 Questions (6 – 9 Marks)",
     "prepTime": "3.5 Hours",
     "theoryHtml": "<h4>1. Classical Proportionality Mechanics: First Principles</h4>\n<div class='theory-block'>The governing equation of motion is $\\mathbf{\\text{Distance } (D) = \\text{Speed } (S) \\times \\text{Time } (T)}$.\n* **Constant Time ($T_1 = T_2$):** $\\mathbf{D \\propto S \\iff \\frac{D_1}{D_2} = \\frac{S_1}{S_2}}$.\n* **Constant Distance ($D_1 = D_2$):** $\\mathbf{S \\propto \\frac{1}{T} \\iff \\frac{S_1}{S_2} = \\frac{T_2}{T_1}}$. (Speed and time are strictly inversely proportional).\n* **Constant Speed ($S_1 = S_2$):** $\\mathbf{D \\propto T \\iff \\frac{D_1}{D_2} = \\frac{T_1}{T_2}}$.\n---</div>\n<h4>2. Average Speed & Harmonic Mean Derivation</h4>\n<div class='theory-block'>Average speed is strictly $\\frac{\\text{Total Distance}}{\\text{Total Time}}$.\n* **Equal Distances ($d$ each way at speeds $s_1, s_2$):**\n  $$T = \\frac{d}{s_1} + \\frac{d}{s_2} = d\\left(\\frac{s_1+s_2}{s_1s_2}\\right) \\implies \\mathbf{\\text{Avg Speed} = \\frac{2s_1s_2}{s_1+s_2}} \\quad (\\text{Harmonic Mean})$$\n* **Equal Time Intervals ($t$ at $s_1$, $t$ at $s_2$):**\n  $$\\mathbf{\\text{Avg Speed} = \\frac{s_1+s_2}{2}} \\quad (\\text{Arithmetic Mean})$$\n---</div>\n<h4>3. Circular Tracks: First Meeting vs. Starting Point</h4>\n<div class='theory-block'>Two runners A and B on circular track of length $L$ with speeds $S_1, S_2$:\n* **Time for First Meeting Anywhere:**\n  * Opposite directions: $\\mathbf{T = \\frac{L}{S_1 + S_2}}$\n  * Same direction: $\\mathbf{T = \\frac{L}{|S_1 - S_2|}}$\n* **Time for First Meeting at STARTING POINT:**\n  $$\\mathbf{T_{\\text{start}} = \\operatorname{LCM}\\left(\\frac{L}{S_1}, \\frac{L}{S_2}\\right)}$$\n* **Number of Distinct Meeting Points on Track:**\n  Reduce speed ratio to coprime integers: $\\frac{S_1}{S_2} = \\frac{a}{b}$ ($\\gcd(a, b) = 1$).\n  * Opposite directions: $\\mathbf{a + b}$ distinct points.\n  * Same direction: $\\mathbf{|a - b|}$ distinct points.\n---</div>\n<h4>4. Escalators: Step-Counting Formulation (CAT Benchmark)</h4>\n<div class='theory-block'>Let stationary visible steps be $N$, walking speed be $S_p$ steps/s, escalator speed be $S_e$ steps/s:\n* **Walking in SAME direction as Escalator:** $\\mathbf{N = (S_p + S_e) \\times T = \\text{Steps Walked} + S_e \\times T}$\n* **Walking in OPPOSITE direction:** $\\mathbf{N = (S_p - S_e) \\times T = \\text{Steps Walked} - S_e \\times T}$\n* **Proportionality Rule:** $\\frac{\\text{Steps Walked}}{\\text{Time Taken}} = S_p$.\n---</div>\n<h4>5. Ravi Sir's Exam Traps & Warnings</h4>\n<div class='theory-block'>> [!CAUTION] **The Distinct Meeting Points Trap:**  \n> Never add raw speeds! If speeds are $15\\text{ m/s}$ and $10\\text{ m/s}$, simplify $\\frac{15}{10} = \\frac{3}{2} \\implies a=3, b=2$. Opposite points $= 3+2 = 5$. Same direction $= 3-2 = 1$. Raw $15+10=25$ is a disaster!</div>",
     "formulas": [
@@ -3531,8 +4057,11 @@ window.QA_TOPICS_DATA = [
         "method2": "Inspection: Ratio of times taken = 30 : 20 = 3 : 2. Escalator steps moved ratio = 3 : 2. Difference 1 part = 40 - 30 = 10 steps. Hence escalator contributed 3 * 10 = 30 steps in Case 1. Total N = 30 + 30 = 60.",
         "finalAnswer": "60",
         "trap": "Thinking doubling speed halves the steps walked. In reality, moving faster means the escalator helps less, so you take MORE steps!",
-        "isTita": true,
+        "isTita": false,
         "options": [
+          "72",
+          "48",
+          "90",
           "60"
         ]
       },
@@ -3579,9 +4108,12 @@ window.QA_TOPICS_DATA = [
         "method2": "Speed ratio A : B = 1000 : 900 = 10 : 9. Since distance is constant, time ratio T_A : T_B = 9 : 10. Difference 1 unit = 10 s => T_A = 9 * 10 = 90 seconds.",
         "finalAnswer": "90 seconds",
         "trap": "Subtracting 10s from A instead of adding to B.",
-        "isTita": true,
+        "isTita": false,
         "options": [
-          "90 seconds"
+          "108 seconds",
+          "72 seconds",
+          "90 seconds",
+          "135 seconds"
         ]
       },
       {
@@ -3644,9 +4176,12 @@ window.QA_TOPICS_DATA = [
         "method2": "Ratio of speeds = 5 : 7.5 = 2 : 3. Coprime sum = 2 + 3 = 5 meeting points. Each point is 1200 / 5 = 240m apart. 2nd meeting at 192 s.",
         "finalAnswer": "192 seconds",
         "trap": "Converting km/h to m/s by multiplying 18/5 instead of 5/18.",
-        "isTita": true,
+        "isTita": false,
         "options": [
-          "192 seconds"
+          "192 seconds",
+          "230 seconds",
+          "154 seconds",
+          "288 seconds"
         ]
       },
       {
@@ -3658,9 +4193,12 @@ window.QA_TOPICS_DATA = [
         "method2": "Harmonic Mean formula: N = 2 * S_down * S_up / (S_down + S_up) = (2 * 90 * 150) / 240 = 112.5 steps.",
         "finalAnswer": "112.5",
         "trap": "Averaging 90 and 150 to get 120 (AM is wrong!).",
-        "isTita": true,
+        "isTita": false,
         "options": [
-          "112.5"
+          "123.75",
+          "112.5",
+          "101.25",
+          "114.5"
         ]
       },
       {
@@ -3706,9 +4244,12 @@ window.QA_TOPICS_DATA = [
         "method2": "Speed drops by 1/4 => Time increases by 1/(4 - 1) = 1/3. 1/3 of normal time = 20 min => Normal time = 60 min.",
         "finalAnswer": "60 minutes",
         "trap": "Calculating 3/4 of 20 = 15 minutes.",
-        "isTita": true,
+        "isTita": false,
         "options": [
-          "60 minutes"
+          "60 minutes",
+          "72 minutes",
+          "48 minutes",
+          "90 minutes"
         ]
       },
       {
@@ -3720,9 +4261,12 @@ window.QA_TOPICS_DATA = [
         "method2": "LCM(600, 300, 200) = 600 seconds flat.",
         "finalAnswer": "600 seconds",
         "trap": "Dividing length by relative speeds instead of taking LCM of individual lap times.",
-        "isTita": true,
+        "isTita": false,
         "options": [
-          "600 seconds"
+          "720 seconds",
+          "600 seconds",
+          "480 seconds",
+          "900 seconds"
         ]
       },
       {
@@ -3765,7 +4309,7 @@ window.QA_TOPICS_DATA = [
       "directUrl": "https://www.youtube.com/results?search_query=Rodha+CAT+Time+Speed+Distance+Races+Escalators+Ravi+Prakash",
       "embedUrl": "https://www.youtube-nocookie.com/embed/videoseries?list=PLG4bwc5fquzgfMh4YFDnv7fttM0RIKiUQ",
       "highlight": "Circular Track Relative Velocity, Head-Start Ratio & Escalator Step Sums",
-      "duration": "Complete Playlist \u2022 12 Parts"
+      "duration": "Complete Playlist • 12 Parts"
     }
   },
   {
@@ -3773,7 +4317,7 @@ window.QA_TOPICS_DATA = [
     "title": "Functions, Domain-Range & Graph Transformations",
     "domain": "Algebra",
     "tier": "Tier S",
-    "weightage": "1 \u2013 2 Questions (3 \u2013 6 Marks)",
+    "weightage": "1 – 2 Questions (3 – 6 Marks)",
     "prepTime": "3.0 Hours",
     "theoryHtml": "<h4>1. Domain & Range Analysis: First Principles</h4>\n<div class='theory-block'>A function $f: A \\to B$ assigns to each $x \\in A$ exactly one element $y \\in B$.\n* **Four Non-Negotiable Domain Constraints in $\\mathbb{R}$:**\n  1. Denominators cannot be zero: $\\frac{1}{g(x)} \\implies \\mathbf{g(x) \\ne 0}$.\n  2. Even roots must be non-negative: $\\sqrt{g(x)} \\implies \\mathbf{g(x) \\ge 0}$.\n  3. Log arguments must be strictly positive: $\\log_b[g(x)] \\implies \\mathbf{g(x) > 0}$.\n  4. Log base: $\\log_{b(x)}[A] \\implies \\mathbf{b(x) > 0 \\text{ and } b(x) \\ne 1}$.\n---</div>\n<h4>2. Standard Functional Equations (CAT 99%ile Catalog)</h4>\n<div class='theory-block'>Recognize the underlying algebraic function immediately:\n* $\\mathbf{f(x + y) = f(x) + f(y)} \\implies \\mathbf{f(x) = kx}$ (Linear)\n* $\\mathbf{f(xy) = f(x) + f(y)} \\implies \\mathbf{f(x) = k \\ln x}$ (Logarithmic)\n* $\\mathbf{f(x + y) = f(x) \\cdot f(y)} \\implies \\mathbf{f(x) = a^x}$ (Exponential)\n* $\\mathbf{f(xy) = f(x) \\cdot f(y)} \\implies \\mathbf{f(x) = x^k}$ (Power)\n* $\\mathbf{f(x) + f\\left(\\frac{1}{x}\\right) = f(x)f\\left(\\frac{1}{x}\\right)} \\implies \\mathbf{f(x) = 1 \\pm x^n}$ (Polynomial)\n---</div>\n<h4>3. Graph Transformations</h4>\n<div class='theory-block'>* $y = f(x) + c$: Shift UP by $c$.\n* $y = f(x + c)$: Shift LEFT by $c$.\n* $y = |f(x)|$: Reflect portion below $x$-axis UPWARDS ($y < 0 \\to y > 0$).\n* $y = f(|x|)$: Erase $x < 0$, mirror right half across $y$-axis.\n* Invertible function $f^{-1}(x)$ is the reflection of $f(x)$ across the line $\\mathbf{y = x}$.\n---</div>",
     "formulas": [
@@ -3803,9 +4347,12 @@ window.QA_TOPICS_DATA = [
         "method2": "Direct inspection: 65 = 4^3 + 1 => n = 3. f(3) = 3^3 + 1 = 28 in 5 seconds.",
         "finalAnswer": "28",
         "trap": "Assuming f(x) = x^3 without the +1 constant.",
-        "isTita": true,
+        "isTita": false,
         "options": [
-          "28"
+          "28",
+          "34",
+          "22",
+          "42"
         ]
       },
       {
@@ -3869,9 +4416,7 @@ window.QA_TOPICS_DATA = [
         "finalAnswer": "48",
         "trap": "Thinking f is non-linear.",
         "isTita": true,
-        "options": [
-          "48"
-        ]
+        "options": []
       },
       {
         "qNum": 250,
@@ -3882,9 +4427,12 @@ window.QA_TOPICS_DATA = [
         "method2": "GP sum: 3(3^4 - 1)/(3 - 1) = 3(80)/2 = 120.",
         "finalAnswer": "120",
         "trap": "Multiplying the terms instead of adding them.",
-        "isTita": true,
+        "isTita": false,
         "options": [
-          "120"
+          "144",
+          "96",
+          "120",
+          "180"
         ]
       },
       {
@@ -3930,9 +4478,12 @@ window.QA_TOPICS_DATA = [
         "method2": "Direct: Shift by 2 flips sign; two shifts of 2 (shift of 4) flips sign twice back to positive. Period = 4.",
         "finalAnswer": "4",
         "trap": "Stating period is 2 (2 inverts sign, it does not repeat).",
-        "isTita": true,
+        "isTita": false,
         "options": [
-          "4"
+          "5",
+          "4",
+          "3",
+          "6"
         ]
       },
       {
@@ -3995,9 +4546,12 @@ window.QA_TOPICS_DATA = [
         "method2": "By logarithmic law: f(32) = 5 f(2) = 5.",
         "finalAnswer": "5",
         "trap": "Multiplying 32 by 1.",
-        "isTita": true,
+        "isTita": false,
         "options": [
-          "5"
+          "6",
+          "5",
+          "4",
+          "7"
         ]
       },
       {
@@ -4009,9 +4563,12 @@ window.QA_TOPICS_DATA = [
         "method2": "Formula: 2! * S(4, 2) = 2 * 7 = 14.",
         "finalAnswer": "14",
         "trap": "Forgetting to subtract the 2 constant functions.",
-        "isTita": true,
+        "isTita": false,
         "options": [
-          "14"
+          "17",
+          "11",
+          "14",
+          "21"
         ]
       },
       {
@@ -4024,9 +4581,7 @@ window.QA_TOPICS_DATA = [
         "finalAnswer": "1",
         "trap": "Attempting to substitute the large number 2026.",
         "isTita": true,
-        "options": [
-          "1"
-        ]
+        "options": []
       }
     ],
     "videoLecture": {
@@ -4034,7 +4589,7 @@ window.QA_TOPICS_DATA = [
       "directUrl": "https://www.youtube.com/results?search_query=Rodha+CAT+Functions+Graphs+Transformations+Ravi+Prakash",
       "embedUrl": "https://www.youtube-nocookie.com/embed/videoseries?list=PLG4bwc5fquzgfMh4YFDnv7fttM0RIKiUQ",
       "highlight": "f(x) Shifting, Reflection, Composite Iterations f^n(x) & Functional Equations",
-      "duration": "Complete Playlist \u2022 7 Parts"
+      "duration": "Complete Playlist • 7 Parts"
     }
   },
   {
@@ -4042,7 +4597,7 @@ window.QA_TOPICS_DATA = [
     "title": "Inequalities, Modulus & Wavy Curve Method",
     "domain": "Algebra",
     "tier": "Tier A",
-    "weightage": "1 \u2013 2 Questions (3 \u2013 6 Marks)",
+    "weightage": "1 – 2 Questions (3 – 6 Marks)",
     "prepTime": "2.5 Hours",
     "theoryHtml": "<h4>1. The Wavy Curve (Sign Scheme) Protocol</h4>\n<div class='theory-block'>To solve rational polynomial inequalities $\\frac{P(x)}{Q(x)} \\ge 0$:\n1. Factorize completely: $\\frac{(x - r_1)^{k_1} (x - r_2)^{k_2}}{(x - d_1)^{m_1}} \\ge 0$ with coefficient of $x$ strictly $+1$.\n2. Plot roots in ascending order on number line.\n3. Start curve from extreme right above the line ($+ve$).\n4. **Odd Multiplicity ($1, 3, 5$):** Curve **crosses** the line (sign flips).\n5. **Even Multiplicity ($2, 4, 6$):** Curve **bounces off** the line (sign remains same).\n6. Denominator roots $d_i$ are ALWAYS strictly excluded (open circle) to prevent division by zero!\n---</div>\n<h4>2. Modulus Function & Distance Plateau</h4>\n<div class='theory-block'>$|x - a|$ represents geometric distance from $a$ on the number line.\n* $|x - a| \\le k \\iff a - k \\le x \\le a + k$.\n* For $f(x) = |x - a| + |x - b|$ with $a < b$:\n  $$\\mathbf{\\text{Minimum Value} = b - a}$$\n  achieved on the **entire plateau interval $[a, b]$**.\n* For odd points $|x - a| + |x - b| + |x - c|$ ($a < b < c$), minimum occurs uniquely at the **median point $x = b$**: $\\text{Min} = c - a$.\n---</div>",
     "formulas": [
@@ -4069,8 +4624,11 @@ window.QA_TOPICS_DATA = [
         "method2": "Shortcut: Minimum is simply the distance between the two outermost points: 12 - 3 = 9.",
         "finalAnswer": "9",
         "trap": "Testing the mean (3+7+12)/3 = 7.33 instead of the integer median 7.",
-        "isTita": true,
+        "isTita": false,
         "options": [
+          "10",
+          "8",
+          "11",
           "9"
         ]
       },
@@ -4100,9 +4658,12 @@ window.QA_TOPICS_DATA = [
         "method2": "Rodha Shortcut: Sum of distances between paired outer points = (12 - 1) + (8 - 3) = 11 + 5 = 16.",
         "finalAnswer": "16",
         "trap": "Testing only single boundary points instead of the entire plateau.",
-        "isTita": true,
+        "isTita": false,
         "options": [
-          "16"
+          "16",
+          "19",
+          "13",
+          "24"
         ]
       },
       {
@@ -4132,9 +4693,7 @@ window.QA_TOPICS_DATA = [
         "finalAnswer": "26",
         "trap": "Substituting y = 6 giving |8 - 18| = 10.",
         "isTita": true,
-        "options": [
-          "26"
-        ]
+        "options": []
       },
       {
         "qNum": 263,
@@ -4179,9 +4738,12 @@ window.QA_TOPICS_DATA = [
         "method2": "Equality when a = 2b = 4c = 8 => a=8, b=4, c=2. Sum = 8 + 8 + 8 = 24.",
         "finalAnswer": "24",
         "trap": "Taking (abc)^(1/3) = 4 without multiplying by the coefficients 2 and 4.",
-        "isTita": true,
+        "isTita": false,
         "options": [
-          "24"
+          "29",
+          "24",
+          "19",
+          "36"
         ]
       },
       {
@@ -4211,9 +4773,7 @@ window.QA_TOPICS_DATA = [
         "finalAnswer": "25",
         "trap": "Testing integer points like (0, 5) giving 20, missing the optimal point (3, 4) which gives 25.",
         "isTita": true,
-        "options": [
-          "25"
-        ]
+        "options": []
       },
       {
         "qNum": 268,
@@ -4224,9 +4784,12 @@ window.QA_TOPICS_DATA = [
         "method2": "Direct minimum = 3^2 = 9.",
         "finalAnswer": "9",
         "trap": "Setting x = y = z = 1 (violating the constraint x + y + z = 1).",
-        "isTita": true,
+        "isTita": false,
         "options": [
-          "9"
+          "9",
+          "10",
+          "8",
+          "11"
         ]
       },
       {
@@ -4255,9 +4818,12 @@ window.QA_TOPICS_DATA = [
         "method2": "Each side gives 5 integers: total 10.",
         "finalAnswer": "10",
         "trap": "Only solving the positive case and missing the 5 negative/small integer solutions.",
-        "isTita": true,
+        "isTita": false,
         "options": [
-          "10"
+          "11",
+          "9",
+          "10",
+          "12"
         ]
       },
       {
@@ -4269,8 +4835,11 @@ window.QA_TOPICS_DATA = [
         "method2": "At x = 1: 1 + 1 + 4 = 6.",
         "finalAnswer": "6",
         "trap": "Assuming minimum occurs at x = 0 (undefined at x = 0).",
-        "isTita": true,
+        "isTita": false,
         "options": [
+          "7",
+          "5",
+          "8",
           "6"
         ]
       },
@@ -4297,7 +4866,7 @@ window.QA_TOPICS_DATA = [
       "directUrl": "https://www.youtube.com/results?search_query=Rodha+CAT+Inequalities+Modulus+Wavy+Curve+Ravi+Prakash",
       "embedUrl": "https://www.youtube-nocookie.com/embed/videoseries?list=PLG4bwc5fquzgfMh4YFDnv7fttM0RIKiUQ",
       "highlight": "Wavy Curve Sign Alteration, Critical Point Method for Nested Modulus",
-      "duration": "Complete Playlist \u2022 6 Parts"
+      "duration": "Complete Playlist • 6 Parts"
     }
   },
   {
@@ -4329,9 +4898,12 @@ window.QA_TOPICS_DATA = [
         "method2": "Inspection: 2 * sqrt(4 * 9) = 2 * 6 = 12.",
         "finalAnswer": "12",
         "trap": "Applying AM-GM when x could be negative (for x < 0, expression goes to -infinity).",
-        "isTita": true,
+        "isTita": false,
         "options": [
-          "12"
+          "14",
+          "12",
+          "10",
+          "18"
         ]
       },
       {
@@ -4360,9 +4932,12 @@ window.QA_TOPICS_DATA = [
         "method2": "Evaluate endpoints: f(3) = 11, f(6) = -2(36) + 48 + 5 = -19. Maximum is 11.",
         "finalAnswer": "11",
         "trap": "Blindly calculating the unconstrained vertex value f(2) = 13, which is unreachable on [3, 6]!",
-        "isTita": true,
+        "isTita": false,
         "options": [
-          "11"
+          "13",
+          "11",
+          "9",
+          "17"
         ]
       },
       {
@@ -4392,9 +4967,7 @@ window.QA_TOPICS_DATA = [
         "finalAnswer": "3",
         "trap": "Differentiating and making an arithmetic error.",
         "isTita": true,
-        "options": [
-          "3"
-        ]
+        "options": []
       },
       {
         "qNum": 276,
@@ -4422,9 +4995,12 @@ window.QA_TOPICS_DATA = [
         "method2": "Symmetry: minimum occurs when x = y = z = 12/3 = 4. 3 * 4^2 = 48.",
         "finalAnswer": "48",
         "trap": "Assuming variables must be integers.",
-        "isTita": true,
+        "isTita": false,
         "options": [
-          "48"
+          "58",
+          "48",
+          "38",
+          "72"
         ]
       },
       {
@@ -4436,9 +5012,12 @@ window.QA_TOPICS_DATA = [
         "method2": "Direct: 13 + 7 = 20.",
         "finalAnswer": "20",
         "trap": "Adding 5 + 12 + 7 = 24 (sin and cos cannot be 1 simultaneously).",
-        "isTita": true,
+        "isTita": false,
         "options": [
-          "20"
+          "24",
+          "16",
+          "20",
+          "30"
         ]
       },
       {
@@ -4468,9 +5047,7 @@ window.QA_TOPICS_DATA = [
         "finalAnswer": "10",
         "trap": "Expanding to 4th degree and attempting differentiation.",
         "isTita": true,
-        "options": [
-          "10"
-        ]
+        "options": []
       },
       {
         "qNum": 281,
@@ -4481,9 +5058,12 @@ window.QA_TOPICS_DATA = [
         "method2": "At x = 2: 2^2 + 2^2 = 4 + 4 = 8.",
         "finalAnswer": "8",
         "trap": "Substituting x = 0 giving 1 + 16 = 17.",
-        "isTita": true,
+        "isTita": false,
         "options": [
-          "8"
+          "9",
+          "8",
+          "7",
+          "10"
         ]
       },
       {
@@ -4495,9 +5075,12 @@ window.QA_TOPICS_DATA = [
         "method2": "At x = 3: 27 - 36 + 14 = 5.",
         "finalAnswer": "5",
         "trap": "Computing vertex value f(2) = 12 - 24 + 14 = 2, which is outside [3, 8].",
-        "isTita": true,
+        "isTita": false,
         "options": [
-          "5"
+          "6",
+          "4",
+          "5",
+          "7"
         ]
       },
       {
@@ -4509,8 +5092,11 @@ window.QA_TOPICS_DATA = [
         "method2": "Direct: (8 - 2)^2 / 4 = 36 / 4 = 9.",
         "finalAnswer": "9",
         "trap": "Expanding to -x^2 + 10x - 16 and miscalculating -b/(2a).",
-        "isTita": true,
+        "isTita": false,
         "options": [
+          "10",
+          "8",
+          "11",
           "9"
         ]
       },
@@ -4554,7 +5140,7 @@ window.QA_TOPICS_DATA = [
       "directUrl": "https://www.youtube.com/results?search_query=Rodha+CAT+Maxima+and+Minima+AM+GM+Inequality+Ravi+Prakash",
       "embedUrl": "https://www.youtube-nocookie.com/embed/videoseries?list=PLG4bwc5fquzgfMh4YFDnv7fttM0RIKiUQ",
       "highlight": "AM >= GM Equality Condition & Vertex Form -D/(4a) Optimization",
-      "duration": "Complete Playlist \u2022 6 Parts"
+      "duration": "Complete Playlist • 6 Parts"
     }
   },
   {
@@ -4562,7 +5148,7 @@ window.QA_TOPICS_DATA = [
     "title": "Algebraic Identities, Polynomials & Remainder Theorem",
     "domain": "Algebra",
     "tier": "Tier A",
-    "weightage": "1 \u2013 2 Questions (3 \u2013 6 Marks)",
+    "weightage": "1 – 2 Questions (3 – 6 Marks)",
     "prepTime": "2.5 Hours",
     "theoryHtml": "<h4>1. Master Algebraic Identities: First Principles</h4>\n<div class='theory-block'>* **Euler Three-Variable Identity:**\n  $$\\mathbf{a^3 + b^3 + c^3 - 3abc = \\frac{1}{2}(a + b + c)\\left[(a - b)^2 + (b - c)^2 + (c - a)^2\\right]}$$\n* **The $a^3 + b^3 + c^3 = 3abc$ Condition:** Holds if $\\mathbf{a + b + c = 0}$ OR $\\mathbf{a = b = c}$.\n---</div>\n<h4>2. The Reciprocal $x + 1/x = k$ Chain</h4>\n<div class='theory-block'>$$\\begin{aligned}\nx^2 + \\frac{1}{x^2} &= k^2 - 2 \\\\\nx^3 + \\frac{1}{x^3} &= k^3 - 3k \\\\\nx^4 + \\frac{1}{x^4} &= (k^2 - 2)^2 - 2\n\\end{aligned}$$\n* **Special Invariants:**\n  * If $x + \\frac{1}{x} = 1 \\implies \\mathbf{x^3 = -1}$ (powers differing by 3 cancel: $x^{n+3} + x^n = 0$).\n  * If $x + \\frac{1}{x} = -1 \\implies \\mathbf{x^3 = +1}$.\n---</div>\n<h4>3. Polynomial Remainder & Factor Theorems</h4>\n<div class='theory-block'>* **Remainder Theorem:** When polynomial $P(x)$ is divided by $(x - a)$, the remainder is strictly $\\mathbf{R = P(a)}$.\n* **Factor Theorem:** $(x - a)$ is a factor of $P(x) \\iff \\mathbf{P(a) = 0}$.\n* **Quadratic Divisor $(x - a)(x - b)$:** Remainder is linear $R(x) = Ax + B$.\n---</div>",
     "formulas": [
@@ -4609,9 +5195,12 @@ window.QA_TOPICS_DATA = [
         "method2": "Direct: (-1)^33 + 1/(-1)^33 = -2 in 5 seconds.",
         "finalAnswer": "-2",
         "trap": "Confusing (-1)^33 with (-1)^32 and answering +2.",
-        "isTita": true,
+        "isTita": false,
         "options": [
-          "-2"
+          "-2",
+          "-1",
+          "1",
+          "0"
         ]
       },
       {
@@ -4640,9 +5229,12 @@ window.QA_TOPICS_DATA = [
         "method2": "Rodha Shortcut: 7 * 18 - 3 = 126 - 3 = 123 in 15 seconds.",
         "finalAnswer": "123",
         "trap": "Attempting (x + 1/x)^5 directly using binomial expansion.",
-        "isTita": true,
+        "isTita": false,
         "options": [
-          "123"
+          "148",
+          "98",
+          "123",
+          "185"
         ]
       },
       {
@@ -4655,9 +5247,7 @@ window.QA_TOPICS_DATA = [
         "finalAnswer": "3",
         "trap": "Assuming the answer depends on the individual values of a, b, c.",
         "isTita": true,
-        "options": [
-          "3"
-        ]
+        "options": []
       },
       {
         "qNum": 288,
@@ -4668,9 +5258,12 @@ window.QA_TOPICS_DATA = [
         "method2": "14^2 - 2 = 194.",
         "finalAnswer": "194",
         "trap": "Subtracting 4 instead of 2 in the second squaring step.",
-        "isTita": true,
+        "isTita": false,
         "options": [
-          "194"
+          "194",
+          "233",
+          "155",
+          "291"
         ]
       },
       {
@@ -4682,9 +5275,12 @@ window.QA_TOPICS_DATA = [
         "method2": "Direct synthetic substitution gives -3.",
         "finalAnswer": "-3",
         "trap": "Performing long polynomial division and making an arithmetic error.",
-        "isTita": true,
+        "isTita": false,
         "options": [
-          "-3"
+          "-2",
+          "-3",
+          "0",
+          "-1"
         ]
       },
       {
@@ -4696,9 +5292,12 @@ window.QA_TOPICS_DATA = [
         "method2": "1 + 1 + 1 = 3.",
         "finalAnswer": "3",
         "trap": "Confusing x + 1/x = -1 (which gives x^3 = 1) with x + 1/x = 1 (which gives x^3 = -1).",
-        "isTita": true,
+        "isTita": false,
         "options": [
-          "3"
+          "4",
+          "2",
+          "3",
+          "5"
         ]
       },
       {
@@ -4728,9 +5327,7 @@ window.QA_TOPICS_DATA = [
         "finalAnswer": "2",
         "trap": "Assuming a, b, c can take non-equal complex numbers.",
         "isTita": true,
-        "options": [
-          "2"
-        ]
+        "options": []
       },
       {
         "qNum": 293,
@@ -4758,9 +5355,12 @@ window.QA_TOPICS_DATA = [
         "method2": "Formula: 1^3 + 3(1) = 4.",
         "finalAnswer": "4",
         "trap": "Confusing (x + 1/x)^3 with (x - 1/x)^3.",
-        "isTita": true,
+        "isTita": false,
         "options": [
-          "4"
+          "5",
+          "3",
+          "4",
+          "6"
         ]
       },
       {
@@ -4807,9 +5407,7 @@ window.QA_TOPICS_DATA = [
         "finalAnswer": "2",
         "trap": "Thinking large power 2026 requires binomial theorem.",
         "isTita": true,
-        "options": [
-          "2"
-        ]
+        "options": []
       }
     ],
     "videoLecture": {
@@ -4817,7 +5415,7 @@ window.QA_TOPICS_DATA = [
       "directUrl": "https://www.youtube.com/results?search_query=Rodha+CAT+Polynomials+Algebraic+Identities+Remainder+Theorem+Ravi+Prakash",
       "embedUrl": "https://www.youtube-nocookie.com/embed/videoseries?list=PLG4bwc5fquzgfMh4YFDnv7fttM0RIKiUQ",
       "highlight": "Remainder Theorem P(r)=R, a^3+b^3+c^3-3abc Identity & Higher Degree Roots",
-      "duration": "Complete Playlist \u2022 5 Parts"
+      "duration": "Complete Playlist • 5 Parts"
     }
   }
 ];

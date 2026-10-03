@@ -141,23 +141,39 @@ function runKaTeX(element = document.body) {
 // CURRICULUM HUBS RENDERING
 // ==========================================================================
 const paretoYieldMap = {
-  'qa_tsd': '~2.0 Qs/paper • Tier 1 Master',
-  'qa_quad': '~2.0 Qs/paper • Tier 1 Master',
-  'qa_tw': '~1.7 Qs/paper • Tier 1 Master',
-  'qa_ratio': '~1.5 Qs/paper • Tier 1 Master',
-  'qa_seq': '~1.4 Qs/paper • Tier 1 Master',
-  'qa_logs': '~1.4 Qs/paper • Tier 1 Master',
-  'qa_mix': '~1.3 Qs/paper • Tier 1 Master',
-  'qa_avg': '~1.1 Qs/paper • Tier 1 Master',
-  'qa_pl': '~1.0 Qs/paper • Tier 1 Master',
-  'qa_perc': '~0.8 Qs/paper • Tier 1 Master',
-  'qa_si_ci': '~0.7 Qs/paper • Tier 1 Master',
-  'qa_func': '~1.3 Qs/paper • Tier 1 Master',
-  'qa_ineq': '~1.2 Qs/paper • Tier 1 Master',
-  'qa_maxmin': '~0.5 Qs/paper • Tier 1 Master',
-  'qa_poly': '~1.0 Qs/paper • Tier 1 Master',
-  'qa_pnc': '~1.2 Qs/paper • High-Yield',
-  'qa_prob': '~0.8 Qs/paper • High-Yield'
+  // Quant
+  'qa_logs': '~1.5 Qs/paper • Tier S Master',
+  'qa_tw': '~1.8 Qs/paper • Tier S Master',
+  'qa_perc': '~1.2 Qs/paper • Tier S Master',
+  'qa_alligation': '~1.3 Qs/paper • Tier S Master',
+  'qa_allig': '~1.3 Qs/paper • Tier S Master',
+  'qa_cyclicity': '~1.0 Qs/paper • Tier A Master',
+  'qa_quadratic': '~2.0 Qs/paper • Tier S Master',
+  'qa_quad': '~2.0 Qs/paper • Tier S Master',
+  'qa_progressions': '~1.5 Qs/paper • Tier S Master',
+  'qa_pl': '~1.4 Qs/paper • Tier S Master',
+  'qa_sfft': '~1.0 Qs/paper • Tier A Master',
+  'qa_factors': '~1.2 Qs/paper • Tier A Master',
+  'qa_interest': '~0.8 Qs/paper • Tier A Master',
+  'qa_ratios': '~1.6 Qs/paper • Tier S Master',
+  'qa_tsd': '~2.2 Qs/paper • Tier S Master',
+  'qa_functions': '~1.4 Qs/paper • Tier S Master',
+  'qa_inequalities': '~1.5 Qs/paper • Tier S Master',
+  'qa_maxima_minima': '~1.0 Qs/paper • Tier A Master',
+  'qa_polynomials': '~1.2 Qs/paper • Tier A Master',
+  // DILR
+  'dilr_chocolate': '1 Full Set (~15 Marks) • Tier S',
+  'dilr_games': '1 Full Set (~15 Marks) • Tier S',
+  'dilr_pie': '1 Full Set (~15 Marks) • Tier A',
+  'dilr_routes': '1 Full Set (~15 Marks) • Tier S',
+  'dilr_puzzles': '1 Full Set (~15 Marks) • Tier A',
+  'dilr_missing_tables': '1 Full Set (~15 Marks) • Tier S',
+  // VARC
+  'varc_parasummary': '2–3 Qs (6–9 Marks) • Tier S',
+  'varc_insertion': '2 Qs (6 Marks) • Tier A',
+  'varc_pj': '2–3 Qs (6–9 Marks, TITA) • Tier S',
+  'varc_main_idea': '3–4 Qs (9–12 Marks) • Tier S',
+  'varc_rc_science': '1 Full RC (12 Marks) • Tier S'
 };
 
 function renderHubs() {
@@ -539,6 +555,38 @@ function stopSprintStopwatch() {
   }
 }
 
+function isAnswerMatch(user, actual) {
+  if (!user || !actual) return false;
+  const u = String(user).trim().toLowerCase();
+  const a = String(actual).trim().toLowerCase();
+  if (u === a) return true;
+  // If user selected option text that contains the answer or vice-versa
+  if (u.includes(a) || a.includes(u)) return true;
+  // Numerical equality (e.g. 1.5 vs 1.50 or 3/2 vs 1.5)
+  const numU = parseFloat(u.replace(/[^\d.-]/g, ''));
+  const numA = parseFloat(a.replace(/[^\d.-]/g, ''));
+  if (!isNaN(numU) && !isNaN(numA) && Math.abs(numU - numA) < 0.001) return true;
+  return false;
+}
+
+function handleTitaKeyPress(k) {
+  const inp = document.getElementById('tita-sprint-input') || document.getElementById('tita-mock-input') || document.querySelector('.tita-input');
+  if (!inp) return;
+  let val = inp.value || '';
+  if (k === '⌫') {
+    val = val.slice(0, -1);
+  } else {
+    val += k;
+  }
+  inp.value = val;
+  if (activeSprint && activeSprint.questions && activeSprint.questions.length) {
+    selectSprintAnswer(val);
+  } else if (activeMock && activeMock.isRunning) {
+    activeMock.userAnswers[activeMock.currentIndex] = val;
+    renderMockPalette();
+  }
+}
+
 // Step 2: Render Practice Question
 function renderSprintQuestion() {
   const qs = activeSprint.questions;
@@ -546,13 +594,15 @@ function renderSprintQuestion() {
   if (!qs || qs.length === 0 || !qs[idx]) return;
 
   const q = qs[idx];
+  const isMcq = !q.isTita && Array.isArray(q.options) && q.options.length >= 2;
+
   document.getElementById('sprint-q-badge').innerText = `Question ${idx + 1} of ${qs.length} (${q.title || ''})`;
   document.getElementById('sprint-q-text').innerHTML = formatMarkdownText(q.problem);
 
   // Provenance & 80/20 Yield Badges
   const provEl = document.getElementById('sprint-provenance-pill');
   if (provEl) {
-    const defaultProv = `${(activeSprint.subject || 'QA').toUpperCase()} • CAT ${2020 + (idx % 6)} Slot ${(idx % 3) + 1} Caliber • ${q.options && q.options.length ? 'MCQ (+3/-1)' : 'TITA'}`;
+    const defaultProv = `${(activeSprint.subject || 'QA').toUpperCase()} • CAT ${2020 + (idx % 6)} Slot ${(idx % 3) + 1} Caliber • ${isMcq ? 'MCQ (+3/-1)' : 'TITA (+3/0)'}`;
     provEl.innerText = q.provenance || defaultProv;
   }
 
@@ -567,7 +617,7 @@ function renderSprintQuestion() {
 
   const curAns = activeSprint.userAnswers[idx] ? activeSprint.userAnswers[idx].answer : '';
 
-  if (q.options && q.options.length > 0) {
+  if (isMcq) {
     q.options.forEach((opt, optIdx) => {
       const btn = document.createElement('button');
       btn.className = 'option-btn' + (curAns === opt ? ' selected' : '');
@@ -576,10 +626,23 @@ function renderSprintQuestion() {
       optContainer.appendChild(btn);
     });
   } else {
-    // TITA Input
+    // Authentic TITA Input (Never single-answer button!)
     optContainer.innerHTML = `
-      <label style="font-size:0.85rem; color:var(--text-muted); font-weight:700;">Type In The Answer (TITA):</label>
-      <input type="text" id="tita-sprint-input" class="tita-input" value="${curAns}" placeholder="Enter numerical or integer answer..." oninput="selectSprintAnswer(this.value)" />
+      <div class="tita-input-container">
+        <div class="tita-label-row">
+          <span class="tita-badge">⌨️ Type In The Answer (TITA)</span>
+          <span class="tita-hint">No Negative Marking (+3 / 0)</span>
+        </div>
+        <div class="tita-field-group">
+          <input type="text" id="tita-sprint-input" class="tita-input" value="${curAns}" placeholder="Type your answer (e.g. 6, 12, 1.5)..." oninput="selectSprintAnswer(this.value)" autocomplete="off" />
+          <button type="button" class="tita-clear-btn" onclick="selectSprintAnswer(''); const inp=document.getElementById('tita-sprint-input'); if(inp){inp.value=''; inp.focus();}">Clear</button>
+        </div>
+        <div class="tita-keypad">
+          ${['1','2','3','4','5','6','7','8','9','-','0','.','⌫'].map(k => `
+            <button type="button" class="tita-key" onclick="handleTitaKeyPress('${k}')">${k}</button>
+          `).join('')}
+        </div>
+      </div>
     `;
   }
 
@@ -594,7 +657,12 @@ function selectSprintAnswer(val) {
     activeSprint.userAnswers[idx].answer = val;
     activeSprint.userAnswers[idx].status = 'answered';
   }
-  renderSprintQuestion();
+  // If user selected an MCQ option, re-render question buttons to show selection; for TITA input, keep input focus
+  const q = activeSprint.questions[idx];
+  const isMcq = q && !q.isTita && Array.isArray(q.options) && q.options.length >= 2;
+  if (isMcq) {
+    renderSprintQuestion();
+  }
   renderSprintPalette();
 }
 
@@ -734,8 +802,28 @@ function renderAutopsyQuestion() {
   if (!qs || qs.length === 0 || !qs[idx]) return;
 
   const q = qs[idx];
+  const userEntry = activeSprint.userAnswers[idx];
+  const userAns = userEntry ? userEntry.answer : '';
+  const isCorrect = userAns && isAnswerMatch(userAns, q.finalAnswer);
+  
+  let evaluationHtml = '';
+  if (userAns) {
+    if (isCorrect) {
+      evaluationHtml = `<span class="autopsy-status-pill correct">✅ Correct (+3 Marks) • Your Choice: ${userAns}</span>`;
+    } else {
+      evaluationHtml = `<span class="autopsy-status-pill wrong">❌ Incorrect • Your Choice: ${userAns}</span>`;
+    }
+  } else {
+    evaluationHtml = `<span class="autopsy-status-pill unattempted">⚪ Unattempted</span>`;
+  }
+
   document.getElementById('autopsy-q-title').innerText = `Question ${idx + 1} Solution Autopsy`;
-  document.getElementById('autopsy-final-ans').innerText = `Answer: ${q.finalAnswer}`;
+  document.getElementById('autopsy-final-ans').innerHTML = `
+    <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
+      <span>Answer: <strong>${q.finalAnswer}</strong></span>
+      ${evaluationHtml}
+    </div>
+  `;
   document.getElementById('autopsy-q-stmt').innerHTML = formatMarkdownText(q.problem);
   document.getElementById('autopsy-m1-text').innerHTML = formatMarkdownText(q.method1);
   document.getElementById('autopsy-m2-text').innerHTML = formatMarkdownText(q.method2);
@@ -886,6 +974,8 @@ function toggleSpacedRep(id, key) {
   if (item) {
     item[key] = !item[key];
     localStorage.setItem('cat_chook_diary', JSON.stringify(entries));
+    if (typeof checkDueTodaySpacedRep === 'function') checkDueTodaySpacedRep();
+    updateDashboardStats();
   }
 }
 
@@ -1022,7 +1112,9 @@ function renderMockQuestion() {
   const q = activeMock.questions[activeMock.currentIndex];
   if (!q) return;
 
-  document.getElementById('mock-q-badge').innerText = `Question ${activeMock.currentIndex + 1} of ${activeMock.questions.length} [${q.section || 'CAT'}]`;
+  const isMcq = !q.isTita && Array.isArray(q.options) && q.options.length >= 2;
+
+  document.getElementById('mock-q-badge').innerText = `Question ${activeMock.currentIndex + 1} of ${activeMock.questions.length} [${q.section || 'CAT'}] • ${isMcq ? 'MCQ (+3/-1)' : 'TITA (+3/0)'}`;
   document.getElementById('mock-q-text').innerHTML = formatMarkdownText(q.problem || q.statement);
 
   const container = document.getElementById('mock-options-container');
@@ -1030,7 +1122,7 @@ function renderMockQuestion() {
 
   const cur = activeMock.userAnswers[activeMock.currentIndex] || '';
 
-  if (q.options && q.options.length > 0) {
+  if (isMcq) {
     q.options.forEach((opt, idx) => {
       const btn = document.createElement('button');
       btn.className = 'option-btn' + (cur === opt ? ' selected' : '');
@@ -1044,7 +1136,21 @@ function renderMockQuestion() {
     });
   } else {
     container.innerHTML = `
-      <input type="text" class="tita-input" value="${cur}" placeholder="Enter answer..." oninput="activeMock.userAnswers[activeMock.currentIndex] = this.value; renderMockPalette();" />
+      <div class="tita-input-container">
+        <div class="tita-label-row">
+          <span class="tita-badge">⌨️ Type In The Answer (TITA)</span>
+          <span class="tita-hint">No Negative Marking (+3 / 0)</span>
+        </div>
+        <div class="tita-field-group">
+          <input type="text" id="tita-mock-input" class="tita-input" value="${cur}" placeholder="Enter answer..." oninput="activeMock.userAnswers[activeMock.currentIndex] = this.value; renderMockPalette();" autocomplete="off" />
+          <button type="button" class="tita-clear-btn" onclick="activeMock.userAnswers[activeMock.currentIndex] = ''; renderMockQuestion(); renderMockPalette();">Clear</button>
+        </div>
+        <div class="tita-keypad">
+          ${['1','2','3','4','5','6','7','8','9','-','0','.','⌫'].map(k => `
+            <button type="button" class="tita-key" onclick="handleTitaKeyPress('${k}')">${k}</button>
+          `).join('')}
+        </div>
+      </div>
     `;
   }
   runKaTeX();
@@ -1081,22 +1187,25 @@ function submitMockTest() {
   if (activeMock.timerInterval) clearInterval(activeMock.timerInterval);
 
   let correct = 0;
-  let wrong = 0;
+  let mcqWrong = 0;
+  let titaWrong = 0;
   let unattempted = 0;
 
   activeMock.questions.forEach((q, i) => {
     const userAns = activeMock.userAnswers[i];
     const trueAns = q.finalAnswer || q.correctAnswer;
+    const isMcq = !q.isTita && Array.isArray(q.options) && q.options.length >= 2;
     if (!userAns) {
       unattempted++;
-    } else if (String(userAns).trim().toLowerCase().includes(String(trueAns).trim().toLowerCase()) || String(trueAns).trim().toLowerCase().includes(String(userAns).trim().toLowerCase())) {
+    } else if (isAnswerMatch(userAns, trueAns)) {
       correct++;
     } else {
-      wrong++;
+      if (isMcq) mcqWrong++;
+      else titaWrong++;
     }
   });
 
-  const netScore = (correct * 3) - (wrong * 1);
+  const netScore = (correct * 3) - (mcqWrong * 1);
   let percentile = '85.0%ile';
   if (netScore >= 36) percentile = '99.5%ile (IIM Call)';
   else if (netScore >= 30) percentile = '98.5%ile (Top Tier)';
@@ -1196,6 +1305,10 @@ function openSpeedMathCardio() {
   document.getElementById('cardio-feedback').innerText = 'Test your squares, cubes, reciprocals, and speed arithmetic under 60 seconds!';
   document.getElementById('cardio-start-btn').style.display = 'block';
   document.getElementById('cardio-start-btn').innerText = '🚀 Start Cardio Session';
+}
+
+function startSpeedMathCardio() {
+  openSpeedMathCardio();
 }
 
 function closeSpeedMathCardio() {
@@ -1651,6 +1764,14 @@ function getTopicAudioCapsule(topicId) {
       ],
       speech: "Ravi Sir's 30-second golden rule for Time and Work: Never work with fractions! Immediately assign total work as the lowest common multiple of days. Remember: work equals efficiency times time. Always assign drain pipes negative efficiency!"
     },
+    'qa_alligation': {
+      bullets: [
+        'Rule 1: Quantity ratio is INVERSE to price differences: w1/w2 = (P2 - Pm) / (Pm - P1).',
+        'Rule 2: Alligation is simply a physical balance see-saw with the pivot at Mean Price.',
+        'Rule 3: Denominator of the rate determines the reference quantity (cost price vs weight).'
+      ],
+      speech: "Ravi Sir's rule for Mixtures and Alligations: Alligation is just a seesaw balance! Quantity ratio is inversely proportional to the price deviation from the mean. The heavier quantity pulls the mean closer to itself!"
+    },
     'qa_allig': {
       bullets: [
         'Rule 1: Quantity ratio is INVERSE to price differences: w1/w2 = (P2 - Pm) / (Pm - P1).',
@@ -2050,7 +2171,7 @@ function renderFormulaSandboxHtml(topicId) {
         </div>
       </div>
     `;
-  } else if (topicId === 'qa_allig') {
+  } else if (topicId === 'qa_allig' || topicId === 'qa_alligation') {
     return `
       <div class="sandbox-card">
         <div class="sandbox-header">
@@ -2126,15 +2247,20 @@ function initSandboxSliders(topicId) {
   else if (topicId === 'qa_polynomials') updatePolySandbox();
   else if (topicId === 'qa_tw') updateTwSandbox();
   else if (topicId === 'qa_logs') updateLogSandbox();
-  else if (topicId === 'qa_allig') updateAlligSandbox();
+  else if (topicId === 'qa_allig' || topicId === 'qa_alligation') updateAlligSandbox();
   else updateGenSandbox();
 }
 
 function updateTsdSandbox() {
-  const s1 = parseInt(document.getElementById('tsd-slider-s1').value, 10);
-  const s2 = parseInt(document.getElementById('tsd-slider-s2').value, 10);
-  document.getElementById('tsd-s1-val').innerText = `${s1} m/s`;
-  document.getElementById('tsd-s2-val').innerText = `${s2} m/s`;
+  const s1El = document.getElementById('tsd-slider-s1');
+  const s2El = document.getElementById('tsd-slider-s2');
+  if (!s1El || !s2El) return;
+  const s1 = parseInt(s1El.value, 10);
+  const s2 = parseInt(s2El.value, 10);
+  const s1Val = document.getElementById('tsd-s1-val');
+  const s2Val = document.getElementById('tsd-s2-val');
+  if (s1Val) s1Val.innerText = `${s1} m/s`;
+  if (s2Val) s2Val.innerText = `${s2} m/s`;
 
   const hm = ((2 * s1 * s2) / (s1 + s2)).toFixed(1);
   const relOpp = s1 + s2;
@@ -2143,59 +2269,92 @@ function updateTsdSandbox() {
   const a = s1 / g;
   const b = s2 / g;
 
-  document.getElementById('tsd-hm-speed').innerText = `${hm} m/s`;
-  document.getElementById('tsd-rel-opp').innerText = `${relOpp} m/s`;
-  document.getElementById('tsd-rel-same').innerText = `${relSame} m/s`;
-  document.getElementById('tsd-distinct-pts').innerText = `${Math.abs(a - b)} pt (Same) / ${a + b} pts (Opp)`;
+  const hmEl = document.getElementById('tsd-hm-speed');
+  const relOppEl = document.getElementById('tsd-rel-opp');
+  const relSameEl = document.getElementById('tsd-rel-same');
+  const distEl = document.getElementById('tsd-distinct-pts');
+
+  if (hmEl) hmEl.innerText = `${hm} m/s`;
+  if (relOppEl) relOppEl.innerText = `${relOpp} m/s`;
+  if (relSameEl) relSameEl.innerText = `${relSame} m/s`;
+  if (distEl) distEl.innerText = `${Math.abs(a - b)} pt (Same) / ${a + b} pts (Opp)`;
 }
 
 function updateFuncSandbox() {
-  const c = parseInt(document.getElementById('func-slider-c').value, 10);
-  const a = parseInt(document.getElementById('func-slider-a').value, 10);
-  document.getElementById('func-c-val').innerText = `${c >= 0 ? '+' : ''}${c} (${c >= 0 ? 'Left' : 'Right'} Shift)`;
-  document.getElementById('func-a-val').innerText = `${a}x`;
+  const cEl = document.getElementById('func-slider-c');
+  const aEl = document.getElementById('func-slider-a');
+  if (!cEl || !aEl) return;
+  const c = parseInt(cEl.value, 10);
+  const a = parseInt(aEl.value, 10);
+  const cVal = document.getElementById('func-c-val');
+  const aVal = document.getElementById('func-a-val');
+  if (cVal) cVal.innerText = `${c >= 0 ? '+' : ''}${c} (${c >= 0 ? 'Left' : 'Right'} Shift)`;
+  if (aVal) aVal.innerText = `${a}x`;
 
-  document.getElementById('func-equation').innerText = `y = ${a}(x ${c >= 0 ? '+ ' + c : '- ' + Math.abs(c)})²`;
-  document.getElementById('func-vertex').innerText = `(${-c}, 0)`;
+  const eqEl = document.getElementById('func-equation');
+  const vEl = document.getElementById('func-vertex');
+  if (eqEl) eqEl.innerText = `y = ${a}(x ${c >= 0 ? '+ ' + c : '- ' + Math.abs(c)})²`;
+  if (vEl) vEl.innerText = `(${-c}, 0)`;
 }
 
 function updateIneqSandbox() {
-  let a = parseInt(document.getElementById('ineq-slider-a').value, 10);
-  let b = parseInt(document.getElementById('ineq-slider-b').value, 10);
+  const aEl = document.getElementById('ineq-slider-a');
+  const bEl = document.getElementById('ineq-slider-b');
+  if (!aEl || !bEl) return;
+  let a = parseInt(aEl.value, 10);
+  let b = parseInt(bEl.value, 10);
   if (b <= a) b = a + 1;
-  document.getElementById('ineq-a-val').innerText = `${a}`;
-  document.getElementById('ineq-b-val').innerText = `${b}`;
+  const aVal = document.getElementById('ineq-a-val');
+  const bVal = document.getElementById('ineq-b-val');
+  if (aVal) aVal.innerText = `${a}`;
+  if (bVal) bVal.innerText = `${b}`;
 
-  document.getElementById('ineq-min-val').innerText = `${b - a}`;
-  document.getElementById('ineq-plateau').innerText = `[${a}, ${b}]`;
+  const minEl = document.getElementById('ineq-min-val');
+  const platEl = document.getElementById('ineq-plateau');
+  if (minEl) minEl.innerText = `${b - a}`;
+  if (platEl) platEl.innerText = `[${a}, ${b}]`;
 }
 
 function updateMaxSandbox() {
-  const a = parseInt(document.getElementById('max-slider-a').value, 10);
-  const b = parseInt(document.getElementById('max-slider-b').value, 10);
-  document.getElementById('max-a-val').innerText = `${a}`;
-  document.getElementById('max-b-val').innerText = `${b}`;
+  const aEl = document.getElementById('max-slider-a');
+  const bEl = document.getElementById('max-slider-b');
+  if (!aEl || !bEl) return;
+  const a = parseInt(aEl.value, 10);
+  const b = parseInt(bEl.value, 10);
+  const aVal = document.getElementById('max-a-val');
+  const bVal = document.getElementById('max-b-val');
+  if (aVal) aVal.innerText = `${a}`;
+  if (bVal) bVal.innerText = `${b}`;
 
   const minVal = (2 * Math.sqrt(a * b)).toFixed(2);
   const optX = Math.sqrt(b / a).toFixed(2);
   const half = (minVal / 2).toFixed(1);
 
-  document.getElementById('max-min-val').innerText = `${minVal}`;
-  document.getElementById('max-opt-x').innerText = `${optX}`;
-  document.getElementById('max-terms-equal').innerText = `${half} = ${half}`;
+  const minEl = document.getElementById('max-min-val');
+  const optEl = document.getElementById('max-opt-x');
+  const termsEl = document.getElementById('max-terms-equal');
+  if (minEl) minEl.innerText = `${minVal}`;
+  if (optEl) optEl.innerText = `${optX}`;
+  if (termsEl) termsEl.innerText = `${half} = ${half}`;
 }
 
 function updatePolySandbox() {
-  const k = parseInt(document.getElementById('poly-slider-k').value, 10);
-  document.getElementById('poly-k-val').innerText = `${k}`;
+  const kEl = document.getElementById('poly-slider-k');
+  if (!kEl) return;
+  const k = parseInt(kEl.value, 10);
+  const kVal = document.getElementById('poly-k-val');
+  if (kVal) kVal.innerText = `${k}`;
 
   const pow2 = k * k - 2;
   const pow3 = k * k * k - 3 * k;
   const pow4 = pow2 * pow2 - 2;
 
-  document.getElementById('poly-pow2').innerText = `${pow2}`;
-  document.getElementById('poly-pow3').innerText = `${pow3}`;
-  document.getElementById('poly-pow4').innerText = `${pow4}`;
+  const p2El = document.getElementById('poly-pow2');
+  const p3El = document.getElementById('poly-pow3');
+  const p4El = document.getElementById('poly-pow4');
+  if (p2El) p2El.innerText = `${pow2}`;
+  if (p3El) p3El.innerText = `${pow3}`;
+  if (p4El) p4El.innerText = `${pow4}`;
 }
 
 function gcd(a, b) {
@@ -2312,6 +2471,12 @@ function getTopicMicroCheckpoints(topicId) {
       options: ['15 units', '30 units', '60 units', '150 units'],
       correctIdx: 1,
       explanation: '✓ Exactly! LCM(10, 15) = 30 units. A does 3 u/day, B does 2 u/day.'
+    },
+    'qa_alligation': {
+      question: 'Quick Check: Rice at ₹30 and ₹40 are mixed to get a mixture worth ₹33. What is the mixing ratio (Cheaper : Dearer)?',
+      options: ['7 : 3', '3 : 7', '1 : 2', '2 : 3'],
+      correctIdx: 0,
+      explanation: '✓ Correct! w₁/w₂ = (40 - 33)/(33 - 30) = 7/3. Cheaper is closer to mean, so more of it is needed!'
     },
     'qa_allig': {
       question: 'Quick Check: Rice at ₹30 and ₹40 are mixed to get a mixture worth ₹33. What is the mixing ratio (Cheaper : Dearer)?',
@@ -2954,12 +3119,13 @@ window.addEventListener('keydown', (e) => {
   const key = e.key.toUpperCase();
   const q = activeSprint.questions[activeSprint.currentIndex];
 
-  if (['A', 'B', 'C', 'D'].includes(key) && q && q.options && q.options.length) {
+  const isMcq = q && !q.isTita && Array.isArray(q.options) && q.options.length >= 2;
+  if (['A', 'B', 'C', 'D'].includes(key) && isMcq) {
     const optIdx = key.charCodeAt(0) - 65;
     if (q.options[optIdx]) {
       selectSprintAnswer(q.options[optIdx]);
     }
-  } else if (['1', '2', '3', '4'].includes(key) && q && q.options && q.options.length) {
+  } else if (['1', '2', '3', '4'].includes(key) && isMcq) {
     const optIdx = parseInt(key, 10) - 1;
     if (q.options[optIdx]) {
       selectSprintAnswer(q.options[optIdx]);
@@ -2990,10 +3156,21 @@ function launchDaily15MinChallenge() {
   // 1. RC Question from VARC
   if (window.VARC_MODULES_DATA && window.VARC_MODULES_DATA.length > 0) {
     const rcModule = window.VARC_MODULES_DATA[0];
-    if (rcModule.questions && rcModule.questions[0]) {
+    const drill = rcModule.drills && rcModule.drills[0];
+    if (drill) {
+      let stmt = drill.paragraph || drill.passage || (drill.sentences ? drill.sentences.join('\n') : drill.context || '');
+      let prob = `${stmt}\n\n${drill.question || drill.sentenceToInsert ? 'Question: ' + (drill.question || drill.sentenceToInsert || '') : ''}`;
       challengeQs.push({
-        ...rcModule.questions[0],
+        qNum: 1,
         title: "Daily RC Focus: Parasummary & Elimination",
+        problem: prob,
+        concept: "VARC Scope & Structural Logic",
+        method1: drill.explanation,
+        method2: drill.shortcut || "Eliminate options introducing external new scope.",
+        finalAnswer: drill.correctAnswer,
+        trap: drill.trap || "Extreme tone or distorted causality.",
+        isTita: !drill.options || drill.options.length < 2,
+        options: drill.options || [],
         provenance: "VARC • Daily Challenge • CAT 2024 Caliber",
         domain: "VARC"
       });
@@ -3024,7 +3201,7 @@ function launchDaily15MinChallenge() {
 
   // 3. 4 QA Questions from Tier 1 Arithmetic & Algebra
   if (window.QA_TOPICS_DATA) {
-    const t1Topics = ['qa_tsd', 'qa_tw', 'qa_logs', 'qa_quad'];
+    const t1Topics = ['qa_tsd', 'qa_tw', 'qa_logs', 'qa_quadratic'];
     t1Topics.forEach((tId, idx) => {
       const top = window.QA_TOPICS_DATA.find(t => t.id === tId);
       if (top && top.questions && top.questions[0]) {

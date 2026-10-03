@@ -285,7 +285,7 @@ window.DILR_ARCHETYPES_DATA = [
       "directUrl": "https://www.youtube.com/results?search_query=Rodha+CAT+DILR+Venn+Diagrams+Chocolate+Method+Ravi+Prakash",
       "embedUrl": "https://www.youtube-nocookie.com/embed/videoseries?list=PLG4bwc5fquzh3Ybh_NlW5pA_M-h0f2xXU",
       "highlight": "Bucket Dumping Formulation for Overlapping Set Extreme Bounds",
-      "duration": "Complete Masterclass \u2022 5 Parts"
+      "duration": "Complete Masterclass • 5 Parts"
     }
   },
   {
@@ -568,7 +568,14 @@ window.DILR_ARCHETYPES_DATA = [
           }
         ]
       }
-    ]
+    ],
+    "videoLecture": {
+      "title": "Rodha DILR: Calculation-Based DI, Pie Charts & Angle Conversions",
+      "directUrl": "https://www.youtube.com/results?search_query=Rodha+CAT+DILR+Pie+Charts+Angle+Equivalences+Ravi+Prakash",
+      "embedUrl": "https://www.youtube-nocookie.com/embed/videoseries?list=PLG4bwc5fquzh3Ybh_NlW5pA_M-h0f2xXU",
+      "highlight": "3.6° per 1% Conversion Rule, Quick Ratio Approximations & Weighted Percent Changes",
+      "duration": "Complete Masterclass • 4 Parts"
+    }
   },
   {
     "id": "dilr_tournaments",
@@ -841,7 +848,7 @@ window.DILR_ARCHETYPES_DATA = [
       "directUrl": "https://www.youtube.com/results?search_query=Rodha+CAT+DILR+Games+and+Tournaments+Ravi+Prakash",
       "embedUrl": "https://www.youtube-nocookie.com/embed/videoseries?list=PLG4bwc5fquzh3Ybh_NlW5pA_M-h0f2xXU",
       "highlight": "Seeding Inversion Trees & Points Table Balance Equations",
-      "duration": "Complete Masterclass \u2022 7 Parts"
+      "duration": "Complete Masterclass • 7 Parts"
     }
   },
   {
@@ -1115,7 +1122,14 @@ window.DILR_ARCHETYPES_DATA = [
           }
         ]
       }
-    ]
+    ],
+    "videoLecture": {
+      "title": "Rodha DILR: Quant-Based Puzzles, Counterfeit Coins & Binary Weighing",
+      "directUrl": "https://www.youtube.com/results?search_query=Rodha+CAT+DILR+Weighing+Puzzles+Binary+Splits+Ravi+Prakash",
+      "embedUrl": "https://www.youtube-nocookie.com/embed/videoseries?list=PLG4bwc5fquzh3Ybh_NlW5pA_M-h0f2xXU",
+      "highlight": "Ternary Search 3^k Division Tree, Parity Balances & Logic Minimization",
+      "duration": "Complete Masterclass • 5 Parts"
+    }
   },
   {
     "id": "dilr_missing_tables",
@@ -1394,7 +1408,14 @@ window.DILR_ARCHETYPES_DATA = [
           }
         ]
       }
-    ]
+    ],
+    "videoLecture": {
+      "title": "Rodha DILR: Missing Data Tables, Matrix Reasoning & Row-Column Intersections",
+      "directUrl": "https://www.youtube.com/results?search_query=Rodha+CAT+DILR+Missing+Data+Tables+Matrix+Grids+Ravi+Prakash",
+      "embedUrl": "https://www.youtube-nocookie.com/embed/videoseries?list=PLG4bwc5fquzh3Ybh_NlW5pA_M-h0f2xXU",
+      "highlight": "Row-Column Constrained Elimination, Boundary Deduction & Dual-Condition Pruning",
+      "duration": "Complete Masterclass • 6 Parts"
+    }
   },
   {
     "id": "dilr_arrangements",
@@ -1679,7 +1700,7 @@ window.DILR_ARCHETYPES_DATA = [
       "directUrl": "https://www.youtube.com/results?search_query=Rodha+CAT+DILR+Arrangements+Linear+Circular+Ravi+Prakash",
       "embedUrl": "https://www.youtube-nocookie.com/embed/videoseries?list=PLG4bwc5fquzh3Ybh_NlW5pA_M-h0f2xXU",
       "highlight": "Anchor-Clue Chaining & Facing Direction Constraint Tables",
-      "duration": "Complete Masterclass \u2022 6 Parts"
+      "duration": "Complete Masterclass • 6 Parts"
     }
   }
 ];

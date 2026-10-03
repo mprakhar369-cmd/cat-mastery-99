@@ -3,13 +3,13 @@ window.VARC_MODULES_DATA = [
     "id": "varc_parasummary",
     "title": "Parasummary: The Scope Filter Protocol",
     "tier": "Tier S",
-    "weightage": "2 \u2013 3 Questions (6 \u2013 9 Marks)",
+    "weightage": "2 – 3 Questions (6 – 9 Marks)",
     "prepTime": "1.5 Hours",
     "theoryHtml": "<h4>The Scope Filter Protocol</h4><p>A true summary covers the author's primary premise and mandatory conclusion in under 100 words. Apply the 3 Scope Elimination Filters:</p><ul><li><strong>Too Narrow:</strong> Mentions an illustrative detail from body paragraphs but drops the conclusion.</li><li><strong>Too Broad:</strong> Over-generalizes the scope beyond the stated experiment or demographic.</li><li><strong>Distorted:</strong> Replaces tentative claims ('may lead to') with absolute causality ('causes').</li></ul>",
     "drills": [
       {
         "id": "PS_01",
-        "paragraph": "Artificial intelligence systems trained on historical lending data frequently reproduce socioeconomic disparities in credit approval. While developers often sanitize explicit protected attributes such as race and gender, deep neural architectures readily infer latent proxy variables\u2014such as ZIP codes, school names, and shopping patterns\u2014which closely correlate with marginalized communities. Consequently, algorithmic impartiality cannot be achieved merely by scrubbing sensitive demographic labels from training sets.",
+        "paragraph": "Artificial intelligence systems trained on historical lending data frequently reproduce socioeconomic disparities in credit approval. While developers often sanitize explicit protected attributes such as race and gender, deep neural architectures readily infer latent proxy variables—such as ZIP codes, school names, and shopping patterns—which closely correlate with marginalized communities. Consequently, algorithmic impartiality cannot be achieved merely by scrubbing sensitive demographic labels from training sets.",
         "options": [
           "A) AI credit systems reproduce historical disparities because developers fail to include race and gender labels in training algorithms.",
           "B) Algorithmic impartiality in lending cannot be achieved simply by removing demographic labels, as deep neural networks easily reconstruct proxies from correlated non-sensitive data.",
@@ -18,12 +18,12 @@ window.VARC_MODULES_DATA = [
         ],
         "correctAnswer": "B",
         "explanation": "Option B perfectly captures both the mechanism (latent proxies in correlated data) and the author's conclusion (scrubbing labels is insufficient). A is factually inverted. C is overly broad and fatalistic. D asserts a false claim directly contradicted by the text.",
-        "shortcut": "Look for the sentence with 'Consequently' or 'Therefore' \u2014 Option B mirrors the final sentence while retaining the proxy mechanism.",
+        "shortcut": "Look for the sentence with 'Consequently' or 'Therefore' — Option B mirrors the final sentence while retaining the proxy mechanism.",
         "trap": "Option A inverts causality; always check the causal direction of nouns!"
       },
       {
         "id": "PS_02",
-        "paragraph": "Biologists long regarded cellular senescence\u2014the irreversible cessation of cell division\u2014primarily as an evolved defense against malignant tumor growth. By permanently disarming damaged cells, senescence prevents unchecked oncogenic proliferation. However, recent discoveries demonstrate that senescent cells remain metabolically hyperactive, secreting a cocktail of inflammatory cytokines termed the SASP. In aging tissue, the chronic accumulation of these non-cleared senescent cells paradoxically degrades extracellular matrix and fosters microenvironments favorable to late-life carcinogenesis.",
+        "paragraph": "Biologists long regarded cellular senescence—the irreversible cessation of cell division—primarily as an evolved defense against malignant tumor growth. By permanently disarming damaged cells, senescence prevents unchecked oncogenic proliferation. However, recent discoveries demonstrate that senescent cells remain metabolically hyperactive, secreting a cocktail of inflammatory cytokines termed the SASP. In aging tissue, the chronic accumulation of these non-cleared senescent cells paradoxically degrades extracellular matrix and fosters microenvironments favorable to late-life carcinogenesis.",
         "options": [
           "A) Cellular senescence, initially identified as an anticancer mechanism, paradoxically promotes tissue decay and late-life cancer due to the chronic accumulation of inflammatory secretions.",
           "B) Senescent cells prevent cancer by ceasing cellular division, rendering them inert and harmless in aging tissues.",
@@ -41,7 +41,7 @@ window.VARC_MODULES_DATA = [
       "directUrl": "https://www.youtube.com/results?search_query=Rodha+CAT+VARC+Parasummary+Ravi+Prakash",
       "embedUrl": "https://www.youtube-nocookie.com/embed/videoseries?list=PLG4bwc5fquzgfMh4YFDnv7fttM0RIKiUQ",
       "highlight": "Narrow, Broad & Distorted Option Elimination Protocols",
-      "duration": "Complete Masterclass \u2022 4 Parts"
+      "duration": "Complete Masterclass • 4 Parts"
     }
   },
   {
@@ -56,12 +56,26 @@ window.VARC_MODULES_DATA = [
         "id": "SI_01",
         "sentenceToInsert": "This apparent contradiction dissolves when one distinguishes between nominal gross domestic product and genuine median household purchasing power.",
         "passage": "Over the past two decades, national economic indicators consistently reported record-breaking industrial output and steady macro growth. [1] Financial analysts celebrated what appeared to be an unprecedented era of widespread national prosperity. [2] Yet consumer confidence surveys and household savings metrics over the identical period revealed widespread financial anxiety and stagnant living standards. [3] The top decile captured nearly all productivity gains through asset appreciation, while basic costs of housing and healthcare escalated far faster than typical wages. [4]",
+        "options": [
+          "[1]",
+          "[2]",
+          "[3]",
+          "[4]"
+        ],
+        "isTita": false,
         "correctAnswer": "[3]",
         "explanation": "Slot [3] is the only valid location. The 'apparent contradiction' refers directly to the conflict between macro prosperity in [2] and household stagnation in the sentence preceding [3]. The sentence immediately following [3] explains why the distinction between nominal GDP and median purchasing power matters.",
         "shortcut": "Locate the noun behind 'This apparent contradiction'. The contradiction is stated between [2] and [3].",
         "trap": "Placing it at [1] before the contradiction is even introduced."
       }
-    ]
+    ],
+    "videoLecture": {
+      "title": "Rodha VARC: Sentence Insertion & Para-Completion Mastery",
+      "directUrl": "https://www.youtube.com/results?search_query=Rodha+CAT+VARC+Sentence+Insertion+Para+Completion+Ravi+Prakash",
+      "embedUrl": "https://www.youtube-nocookie.com/embed/videoseries?list=PLG4bwc5fquzgfMh4YFDnv7fttM0RIKiUQ",
+      "highlight": "Pronoun-Antecedent Bridges, Chronological Transitions & Contextual Anchors",
+      "duration": "Complete Masterclass • 4 Parts"
+    }
   },
   {
     "id": "varc_pj",
@@ -79,18 +93,27 @@ window.VARC_MODULES_DATA = [
           "3. This conventional 'gray infrastructure' paradigm regarded rainwater strictly as a municipal hazard to be eliminated rather than a resource to be retained.",
           "4. Known as 'sponge city' design, this bio-mimetic approach integrates green roofs, bioswales, and urban floodplains to capture and recharge local aquifers."
         ],
+        "isTita": true,
+        "options": [],
         "correctAnswer": "2314",
         "explanation": "Sentence 2 introduces the historical twentieth-century concrete conduits. Sentence 3 directly refers to this as 'This conventional gray infrastructure paradigm' (Mandatory Pair 2-3). Sentence 1 introduces the modern contrast with 'however'. Sentence 4 explains 'this bio-mimetic approach' introduced in 1 (Mandatory Pair 1-4). Final order: 2-3-1-4.",
         "shortcut": "Mandatory Pair 2-3 (concrete conduits -> gray infrastructure) and 1-4 (permeable wetlands -> sponge city biomimetic approach).",
         "trap": "Placing 1 as opening sentence despite the contrast marker 'however'."
       }
-    ]
+    ],
+    "videoLecture": {
+      "title": "Rodha VARC: TITA Parajumbles & Odd-One-Out Strategy",
+      "directUrl": "https://www.youtube.com/results?search_query=Rodha+CAT+VARC+TITA+Parajumbles+Odd+One+Out+Ravi+Prakash",
+      "embedUrl": "https://www.youtube-nocookie.com/embed/videoseries?list=PLG4bwc5fquzgfMh4YFDnv7fttM0RIKiUQ",
+      "highlight": "Mandatory Pair Formation, Acronym-Noun Sequencing & Elimination of Outliers",
+      "duration": "Complete Masterclass • 5 Parts"
+    }
   },
   {
     "id": "varc_main_idea",
     "title": "RC Question Archetype: Main Idea & Central Theme",
     "tier": "Tier A",
-    "weightage": "3 \u2013 4 Questions (9 \u2013 12 Marks)",
+    "weightage": "3 – 4 Questions (9 – 12 Marks)",
     "prepTime": "2.0 Hours",
     "theoryHtml": "<h4>The Headline Rule</h4><p>To identify the main idea: combine the Opening Hook (Paragraph 1) with the Author's Final Verdict (Final Paragraph). Eliminate options that are merely true facts from one paragraph.</p>",
     "drills": [
@@ -109,7 +132,14 @@ window.VARC_MODULES_DATA = [
         "shortcut": "The thesis always reframes a common misconception. Notice the contrast ('not merely X, but Y').",
         "trap": "Option D is a popular pop-psychology claim, but too narrow for the passage's neurological focus."
       }
-    ]
+    ],
+    "videoLecture": {
+      "title": "Rodha VARC: Reading Comprehension - Main Idea & Central Theme",
+      "directUrl": "https://www.youtube.com/results?search_query=Rodha+CAT+VARC+Reading+Comprehension+Main+Idea+Ravi+Prakash",
+      "embedUrl": "https://www.youtube-nocookie.com/embed/videoseries?list=PLG4bwc5fquzgfMh4YFDnv7fttM0RIKiUQ",
+      "highlight": "Paragraph Skimming, Author's Stance Identification & Tone Analysis",
+      "duration": "Complete Masterclass • 6 Parts"
+    }
   },
   {
     "id": "varc_rc_science",
@@ -135,6 +165,13 @@ window.VARC_MODULES_DATA = [
         "shortcut": "Search for 'high-fidelity' in your paragraph map and read the mechanism sentence directly.",
         "trap": "Option A sounds like a plausible engineering fix, but is nowhere mentioned in the text."
       }
-    ]
+    ],
+    "videoLecture": {
+      "title": "Rodha VARC: RC Passages - Dense Science & Business Frameworks",
+      "directUrl": "https://www.youtube.com/results?search_query=Rodha+CAT+VARC+Science+Business+Passages+Ravi+Prakash",
+      "embedUrl": "https://www.youtube-nocookie.com/embed/videoseries?list=PLG4bwc5fquzgfMh4YFDnv7fttM0RIKiUQ",
+      "highlight": "Deconstructing Jargon-Dense Science Passages & Business Case Arguments",
+      "duration": "Complete Masterclass • 5 Parts"
+    }
   }
 ];

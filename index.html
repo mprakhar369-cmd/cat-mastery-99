@@ -11,6 +11,7 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
   <meta name="apple-mobile-web-app-title" content="CAT Mastery 99" />
   <link rel="apple-touch-icon" href="./icons/icon-192.png" />
+  <link rel="icon" type="image/png" href="./icons/icon-192.png" />
 
   <!-- Google Fonts: Outfit (Display), Plus Jakarta Sans (Headings), Inter & JetBrains Mono (Numbers/Code) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -129,6 +130,17 @@
     <!-- 1. DASHBOARD VIEW (APPLE TITANIUM BENTO GRID) -->
     <section id="view-dashboard" class="view-panel active">
       
+      <!-- Due Today Urgent Revision Banner -->
+      <div id="due-today-dashboard-banner" class="due-banner hidden" onclick="reviewDueTodayErrors()">
+        <div class="due-banner-content">
+          <span class="due-banner-icon">🔔</span>
+          <div class="due-banner-text">
+            <strong>Spaced Repetition Active:</strong> You have <span id="due-banner-count" class="due-banner-counter">0</span> blunder(s) due for scheduled review today (T+1 / T+7 / T+21).
+          </div>
+        </div>
+        <button class="btn-due-review" onclick="event.stopPropagation(); reviewDueTodayErrors();">Review Now ➔</button>
+      </div>
+
       <!-- Bento Grid Top Row: Welcome Banner + Streak + Spaced Repetition -->
       <div class="bento-grid-hero">
         
