@@ -1142,10 +1142,8 @@
     </button>
   </nav>
 
-  <!-- Curriculum data engines (deferred, non-blocking). Video catalog lazy-loads on demand. -->
-  <script defer src="./data_qa.min.js"></script>
-  <script defer src="./data_dilr.min.js"></script>
-  <script defer src="./data_varc.min.js"></script>
+  <!-- Curriculum data engines lazy-load on demand via ensureDataLoaded()
+       (first paint ships zero question bytes). Video catalog likewise. -->
   <!-- Load App Controller -->
   <script defer src="./app.min.js"></script>
 </body>

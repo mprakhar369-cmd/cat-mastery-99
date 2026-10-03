@@ -38,14 +38,29 @@ function loadScriptOnce(src) {
 }
 
 const LAZY_DATA_SRC = {
-  resources: './data_resources.min.js'
+  resources: './data_resources.min.js',
+  qa: './data_qa.min.js',
+  dilr: './data_dilr.min.js',
+  varc: './data_varc.min.js'
 };
 const LAZY_DATA_GLOBAL = {
-  resources: 'PERCENTYL_RESOURCES_DATA'
+  resources: 'PERCENTYL_RESOURCES_DATA',
+  qa: 'QA_TOPICS_DATA',
+  dilr: 'DILR_ARCHETYPES_DATA',
+  varc: 'VARC_MODULES_DATA'
 };
 function ensureDataLoaded(name) {
   if (window[LAZY_DATA_GLOBAL[name]]) return Promise.resolve(true);
   return loadScriptOnce(LAZY_DATA_SRC[name]).then(() => true);
+}
+function curriculumReady() {
+  return !!(window.QA_TOPICS_DATA && window.DILR_ARCHETYPES_DATA && window.VARC_MODULES_DATA);
+}
+function ensureCurriculum() {
+  return ensureDataLoaded('qa')
+    .then(() => ensureDataLoaded('dilr'))
+    .then(() => ensureDataLoaded('varc'))
+    .then(() => true);
 }
 
 let _katexPromise = null;
@@ -103,9 +118,8 @@ document.addEventListener('DOMContentLoaded', () => {
   initTheme();
   initServiceWorker();
   initPwaInstall();
-  renderHubs();
-  // NOTE: renderFormulaCards() is deferred to first formulas-view open —
-  // its $$ math would otherwise pull KaTeX into first paint.
+  // NOTE: hubs/formulas render lazily on first open — zero curriculum
+  // bytes in first paint (see switchView branches).
   renderChookDiaryList();
   updateDashboardStats();
   runKaTeX(document.getElementById('diary-list-container'));
@@ -203,7 +217,7 @@ function switchView(viewName) {
   }
 
   if (viewName === 'schedule') {
-    ensureLab().then(() => renderSchedule());
+    ensureLab().then(() => ensureCurriculum()).then(() => renderSchedule());
   }
 
   if (viewName === 'lab') {
@@ -215,8 +229,12 @@ function switchView(viewName) {
     renderTestRunner();
   }
 
+  if (viewName === 'qa' || viewName === 'dilr' || viewName === 'varc') {
+    ensureCurriculum().then(() => renderHubs());
+  }
+
   if (viewName === 'formulas') {
-    renderFormulaCards();
+    ensureDataLoaded('qa').then(() => renderFormulaCards());
   }
 
   // Close mobile sidebar if open
@@ -433,6 +451,8 @@ function getTopicQuestions(subject, topicId) {
 }
 
 function startTopicSprint(subject, topicId) {
+  const k = { qa: 'qa', dilr: 'dilr', varc: 'varc' }[subject] || 'qa';
+  if (!window[LAZY_DATA_GLOBAL[k]]) { ensureDataLoaded(k).then(() => startTopicSprint(subject, topicId)); return; }
   activeSprint.subject = subject;
   activeSprint.currentStep = 1;
   activeSprint.currentIndex = 0;
@@ -1173,6 +1193,7 @@ function renderFormulaCards() {
 // CBT SECTIONAL MOCK SIMULATOR (40 MINS)
 // ==========================================================================
 function launchSectionalMock() {
+  if (!curriculumReady()) { ensureCurriculum().then(() => launchSectionalMock()); return; }
   activeMock.isRunning = true;
   activeMock.secondsLeft = 40 * 60;
   activeMock.currentIndex = 0;
@@ -2965,6 +2986,7 @@ document.addEventListener('keydown', (e) => {
 // QUICK COMMAND SEARCH MODAL (LINEAR-STYLE JUMP BAR)
 // ==========================================================================
 function openSearchModal() {
+  if (!curriculumReady()) { ensureCurriculum().then(() => openSearchModal()); return; }
   const modal = document.getElementById('search-modal');
   if (!modal) return;
   modal.classList.add('active');
@@ -3587,6 +3609,9 @@ function jumpToResourceTopic(topicTitle, subjectHint) {
     ensureDataLoaded('resources').then(() => jumpToResourceTopic(topicTitle, subjectHint));
     return;
   }
+  const needKey = subjectHint === 'qa' ? 'qa' : (subjectHint === 'dilr' ? 'dilr' : (subjectHint === 'varc' ? 'varc' : null));
+  if (needKey && !window[LAZY_DATA_GLOBAL[needKey]]) { ensureDataLoaded(needKey).then(() => jumpToResourceTopic(topicTitle, subjectHint)); return; }
+  if (!needKey && !curriculumReady()) { ensureCurriculum().then(() => jumpToResourceTopic(topicTitle, subjectHint)); return; }
 
   const clean = (topicTitle || '').toLowerCase();
   let found = window.PERCENTYL_RESOURCES_DATA.find(c => {

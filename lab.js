@@ -499,7 +499,7 @@ function buildDailyChallenge() {
 }
 
 function startDailyChallenge() {
-  if (!window.QA_TOPICS_DATA) return;
+  if (!curriculumReady()) { ensureCurriculum().then(() => startDailyChallenge()); return; }
   const key = 'daily-' + dailyDateKey(0);
   startTimedTest({
     key, title: "Today's Challenge", subtitle: 'Daily • ~25 min',
@@ -560,6 +560,8 @@ function renderDailyLanding() {
 // F2 — TOPIC TESTS (Foundational / Advanced split per chapter)
 // ==========================================================================
 function startTopicTest(subject, topicId, level) {
+  const k = { qa: 'qa', dilr: 'dilr', varc: 'varc' }[subject] || 'qa';
+  if (!window[LAZY_DATA_GLOBAL[k]]) { ensureDataLoaded(k).then(() => startTopicTest(subject, topicId, level)); return; }
   const { topic, questions } = getTopicQuestions(subject, topicId);
   if (!topic || !questions.length) return;
   let qs = questions, label = 'Full Drill Set';
@@ -598,7 +600,7 @@ function startTopicTest(subject, topicId, level) {
 // F3 — FULL SYLLABUS MOCK (VARC → DILR → Quant, section locks, percentile)
 // ==========================================================================
 function startFullMock() {
-  if (!window.QA_TOPICS_DATA) return;
+  if (!curriculumReady()) { ensureCurriculum().then(() => startFullMock()); return; }
   const seed = dailySeedInt();
   const sections = [];
   // VARC: whole 6-drill bank, 15 min
@@ -851,6 +853,7 @@ function trapFamilyOf(q) {
   return 'general';
 }
 function startTrapDrill(familyId) {
+  if (!window.QA_TOPICS_DATA || !window.DILR_ARCHETYPES_DATA) { ensureDataLoaded('qa').then(() => ensureDataLoaded('dilr')).then(() => startTrapDrill(familyId)); return; }
   let pool = [];
   const tag = (q, label) => Object.assign({}, q, { topicLabel: label });
   window.QA_TOPICS_DATA.forEach(t => (t.questions || []).forEach(q => pool.push(Object.assign({}, q, { topicLabel: t.title, qSubject: 'qa', qTopic: t.id }))));
@@ -891,6 +894,7 @@ function renderTrapFamilies() {
 // ==========================================================================
 // (owned by core: let triageState = null;)
 function startTriageDrill() {
+  if (!window.QA_TOPICS_DATA) { ensureDataLoaded('qa').then(() => startTriageDrill()); return; }
   let pool = [];
   window.QA_TOPICS_DATA.forEach(t => (t.questions || []).forEach(q => pool.push(Object.assign({}, q, { topicLabel: t.title, qSubject: 'qa', qTopic: t.id }))));
   const qs = seededPick(pool, dailySeedInt() + 5, 8);
@@ -972,6 +976,7 @@ function resolveDiaryRef(entry) {
   return questions.find(q => String(q.qNum) === String(qNum)) || null;
 }
 function startRecallQuiz() {
+  if (!curriculumReady()) { ensureCurriculum().then(() => startRecallQuiz()); return; }
   const entries = JSON.parse(localStorage.getItem('cat_chook_diary') || '[]');
   const due = entries.filter(e => isEntryDueToday(e));
   const qs = [];

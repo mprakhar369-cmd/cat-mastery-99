@@ -1,19 +1,17 @@
-const CACHE_NAME = 'cat-mastery-v14';
+const CACHE_NAME = 'cat-mastery-v15';
 const ASSETS_TO_CACHE = [
   './',
   './index.html',
   './styles.css',
   './app.min.js',
-  './data_qa.min.js',
-  './data_dilr.min.js',
-  './data_varc.min.js',
   './manifest.json',
   './assets/mobile_qr.png',
   './icons/icon-192.png',
   './icons/icon-512.png'
 ];
-// NOTE: data_resources.min.js + KaTeX are lazy-loaded on demand and cached
-// at runtime by the network-first fetch handler below — not precached.
+// NOTE: data_*.min.js, lab.min.js + KaTeX lazy-load on demand and are cached
+// at runtime by the network-first fetch handler — not precached, keeping
+// install + first paint lean while staying fully offline-capable after visit.
 
 // Install Event - immediately activate new worker
 self.addEventListener('install', (event) => {
