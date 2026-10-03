@@ -56,10 +56,20 @@ document.addEventListener('DOMContentLoaded', () => {
 // ==========================================================================
 function initServiceWorker() {
   if ('serviceWorker' in navigator) {
-    window.addEventListener('load', () => {
-      navigator.serviceWorker.register('./sw.js')
-        .then(reg => console.log('[PWA] Service Worker registered', reg.scope))
-        .catch(err => console.warn('[PWA] Service Worker registration failed', err));
+    navigator.serviceWorker.register('./sw.js')
+      .then((reg) => {
+        console.log('[PWA] Service Worker registered', reg.scope);
+        // Promptly check for fresh sw.js version
+        if (reg.update) reg.update();
+      })
+      .catch((err) => console.warn('[PWA] Service Worker registration failed', err));
+
+    let refreshing = false;
+    navigator.serviceWorker.addEventListener('controllerchange', () => {
+      if (!refreshing) {
+        refreshing = true;
+        window.location.reload();
+      }
     });
   }
 }
@@ -2989,14 +2999,6 @@ updatePwaNetworkStatus();
 // ==========================================================================
 // PWA SERVICE WORKER & APP INSTALL LIFECYCLE
 // ==========================================================================
-if ('serviceWorker' in navigator) {
-  window.addEventListener('load', () => {
-    navigator.serviceWorker.register('./sw.js')
-      .then(reg => console.log('[PWA] ServiceWorker registered with scope:', reg.scope))
-      .catch(err => console.warn('[PWA] ServiceWorker registration failed:', err));
-  });
-}
-
 let deferredPrompt = null;
 window.addEventListener('beforeinstallprompt', (e) => {
   e.preventDefault();
